@@ -1,0 +1,22 @@
+<div class="popup" id="popup-get-badges">
+    <div class="popupContainer">
+		<a class="closePopup" href="#">[CLOSE X]</a>
+    	<div class="popup-entry">
+        	<div class="badges-get fl">
+        	 	<img class="badgesimages" src=""/>
+            </div>
+			<div class="badges-desc fl">
+            	<h1 class="blockred">YOU GOT</h1>
+        		<h2 class="red badgesName">THE DOUBLE DECKER</h2>
+                <div class="badgesdescription">
+                </div>
+                {*}
+                <div class="badgesdescs">
+                </div>
+                {/*}
+            </div>
+			<div class="descWonBadges">
+            </div>
+        </div>
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->

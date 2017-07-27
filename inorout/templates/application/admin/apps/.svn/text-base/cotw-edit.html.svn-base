@@ -1,0 +1,55 @@
+ 
+
+
+<div id="theContainer" class="inboxPage">
+    <div class="theContainer">
+        <div class="head-title">
+            <h1 class="fl">Update COTW</h1>
+        </div> <!-- /.head-title -->
+        <div class="formContent">
+            <form method="POST" action="{$basedomain}shareandbrag/saveData" enctype="multipart/form-data">
+			<table border=1>
+				 
+				
+				<tr>
+					<td>Event Date</td>
+					<td>:</td>
+					<td><input type="text" class="half-width" id="datepicker" name="eventdate" value="{$list.event_date}" style="width:100px" /></td>
+				</tr>
+				   
+				<tr>
+					<td>image</td>
+					<td>:</td>
+					<td>
+					{if $list.img}
+						<img src="{$basedomainpath}public_assets/event/{$list.img}" width="100px" height="100px"/>
+					{/if}
+					<input type="file" name="images" />
+					</td>
+				</tr>								
+				 
+				<tr>
+					<td>Status</td>
+					<td>:</td>
+					<td>
+						<select name="n_status">
+							<option value="1" {if $list.n_status==1}selected="selected"{/if}>Upload Phase ( Show Finalist Until finalist choosen ) </option>
+							<option value="2" {if $list.n_status==2}selected="selected"{/if}>Winner Phase</option>							
+							<option value="3" {if $list.n_status==3}selected="selected"{/if}>Unpublished</option>
+							<option value="0" {if $list.n_status==0}selected="selected"{/if}>deleted</option>
+						</select>
+					</td>
+				</tr>		
+				<tr>
+					<td colspan="3" >
+						<input type="hidden" name="eventid" value="{$list.id}" />
+						<input type="submit" name="submit" value="submit" />
+						<input type="button" class="btn" value="Cancel" onclick="javascript: window.location.href='{$basedomain}shareandbrag/cotw' ;" />
+					</td>
+				</tr>
+			</table>
+            </form>
+		</div>
+	</div>
+</div>
+ 

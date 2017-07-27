@@ -1,0 +1,100 @@
+<div id="updatePage" class="container">
+	<div class="entry-container">
+    	<div id="navClues" class="center">
+        	<a href="{$basedomain}articles" class="current">UPDATES</a>
+        	<a href="{$basedomain}clues">CLUES</a>  
+        </div>
+        <div class="post-container">
+            <div class="post-content">
+            	<div class="box-prof">
+            	<div id="the-content">
+                	<div class="entry-detailupdates">
+                        <h3 class="labelPost">{if $getEventByID.past_event eq '1'}past{else}upcoming:{/if} events:</h3>
+                        <h1 class="bigTItle">{$getEventByID.title}</h1>
+                        <div class="post-venue">
+                            <div class="fl">
+                                <span class="iconArrowGrey">&nbsp;</span>
+                                <h4><span class="red">when:</span><br />
+                                    <span class="date-event">{$getEventByID.changeDate}</span></h4>
+                            </div><!-- END .fl -->
+                            <div class="fl">
+                                <span class="iconArrowGrey">&nbsp;</span>
+                                <h4><span class="red">where:</span><br />
+                                    <span class="date-event">{$getEventByID.city}</span></h4>
+                            </div><!-- END .fl -->
+                        </div><!-- END .post-venue -->
+                    </div>
+                	<a href="#" class="detailimg">
+                        <img src="{$basedomainpath}public_assets/news/{$getEventByID.img}" />
+                    </a>
+                    <div class="entry-detailupdates">
+                    	<p>{$getEventByID.content|unescape:"html"}</p>
+                    </div><!-- END .entry-detail -->
+                    <div id="galeryPhotos">
+                    	<div class="tittlePhotoEv">
+                        {if $getEventByID.gallery}
+						<div class="lineEvent"></div>
+                    	<h3>event's photos:</h3>
+                        </div>
+						
+                    	<div class="galeryPhotos">
+							{foreach $getEventByID.gallery as $key => $val}
+                        	<a href="#"> <img src="{$basedomainpath}public_assets/event/{$val.img}" /></a>
+							{/foreach}
+							{*}
+                        	<a href="#"> <img src="{$basedomain}assets/content/photos/85x85.jpg" /></a>
+                        	<a href="#"> <img src="{$basedomain}assets/content/photos/85x85.jpg" /></a>
+                        	<a href="#"> <img src="{$basedomain}assets/content/photos/85x85.jpg" /></a>
+                        	<a href="#"> <img src="{$basedomain}assets/content/photos/85x85.jpg" /></a>
+							{/*}
+                        </div>
+						{/if}
+                    </div>
+                </div><!-- END #the-content -->
+                </div><!-- END #box-prof -->
+                <div class="box-prof">
+                <div id="sidebar">
+					<div startpage="3" total="{$total}" id="moreEventPaging" lastrow="0">
+                	<h3 class="black" >More Events</h3>
+                        {foreach $otherEvent as $key => $val}
+						<div class="post">
+                            <div class="entry-post">
+                                <span class="date">{$val.changeDate}</span>
+                                <p>{$val.brief}</p>
+                                <a href="{$basedomain}articles/detail/{$val.id}" class="more">more &raquo;</a>
+                            </div><!-- END .entry-post -->
+                        </div><!-- END .post -->
+						{/foreach}
+						
+						<script>
+						{literal}
+							
+							pagescroll('moreEventPaging','articles/getPastEvent',1,'mobileMoreEventPaging');
+						{/literal}
+						</script>
+
+						{*}
+                        <div class="post">
+                            <div class="entry-post">
+                                <span class="date">12 March 2014</span>
+                                <p>Nulla facilisi. Aliquam luctus tellus 
+        nec eros congue consectetur.</p>
+                                <a href="{$basedomain}articles/detail" class="more">more &raquo;</a>
+                            </div><!-- END .entry-post -->
+                        </div><!-- END .post -->
+                        <div class="post">
+                            <div class="entry-post">
+                                <span class="date">12 March 2014</span>
+                                <p>Nulla facilisi. Aliquam luctus tellus 
+        nec eros congue consectetur.</p>
+                                <a href="{$basedomain}articles/detail" class="more">more &raquo;</a>
+                            </div><!-- END .entry-post -->
+                        </div><!-- END .post -->
+						{/*}
+						</div>
+                </div><!-- END #sidebar -->
+                </div><!-- END #box-prof -->
+            </div><!-- END .post-content -->
+        </div><!-- END .post-container -->
+    </div><!-- END .entry-container -->
+</div><!-- END .container -->

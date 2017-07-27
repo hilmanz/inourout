@@ -1,0 +1,30 @@
+<div id="entercodePopup" class="container">
+	<div class="entry-container center">
+    	<div id="box-content" class="relative">
+        	<a class="closing" href="{$basedomain}entercode">[CLOSE X]</a>
+            <div id="entry-content">
+            	<div class="box-prof">
+                	<div class="aspiration-body">
+                    	<div class="wonBagdes">
+                        	{if $data.result}
+							<div class="badges badges-m">
+                                <img src="{$basedomain}assets/images/badges/{$data.images}" />
+                            </div>
+                            <h2>YOU got:</h2>
+							{/if}
+                            <h1>{$data.badgesnames}</h1>
+                            {if $data.result}<h3>{$data.badgesdesc}</h3>
+                            <h4 class="fl">this badge has been added to your collection.</h4><a href="{$basedomain}profile" class="orangebtn fl">See All >></a>{/if}
+                        </div><!-- end .wonBagdes -->
+                        {if $data.result}
+						<div class="row descWonBadges">
+                			<h3 class="message-wonBadges">{$data.messagetooltips}</h3>
+                	
+                		</div>
+						{/if}
+                    </div><!-- END .aspiration-body -->
+            	</div><!-- END .box-prof -->
+            </div><!-- END .entry-content -->
+        </div><!-- END .box-content -->
+    </div><!-- END .entry-container -->
+</div><!-- END .popup -->

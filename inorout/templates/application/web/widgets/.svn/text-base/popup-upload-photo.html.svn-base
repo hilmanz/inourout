@@ -1,0 +1,29 @@
+<div class="popup" id="popup-upload-photo">
+    <div class="popupContainer">
+		<a class="closePopup" href="#">[CLOSE X]</a>
+    	<div class="popup-head">
+        	<h2 class="bigTItle">UPLOAD PHOTO</h2>
+        </div><!-- END .popup-head -->
+    	<div class="popup-entry">
+            <div id="editPhotoBox">
+                <form class="uploadForm" action="{$basedomain}profile/editPhoto" method="post" enctype="multipart/form-data" >
+                    <input type="hidden" name="editPhoto" value="1">
+                        <div class="fakeUpload">
+                            <input type="text" class="uploadpath" />
+                            <label class="orangebtn fakebtn">
+                                browse
+                                <span>
+                                    <input type="file" class="uploadfile"  name="profile_photo" />
+                                </span>
+                            </label>
+                        </div><!-- END .fakeUpload -->
+                        <div class="previewBox">
+                        	<img src="{$basedomain}assets/images/blank_image.png" />
+                            <div class="loader"><img src="{$basedomain}assets/images/loader.gif" /></div>
+                        </div><!-- END .previewBox -->
+                    <input type="submit" name="submit" value="SAVE" class="orangebtn savebtn">
+                </form>
+            </div><!-- end #editPhotoBox -->
+        </div><!-- END .popup-entry -->
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->

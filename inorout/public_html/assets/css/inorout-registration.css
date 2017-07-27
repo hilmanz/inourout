@@ -1,0 +1,385 @@
+/*
+Theme Name:  Marlboro In Or Out
+Version: 1.0
+Author: Acit Jazz 2013
+*/
+@font-face {
+    font-family: 'maybebold';
+    src: url('font/maybe-bold-webfont.eot');
+    src: url('font/maybe-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/maybe-bold-webfont.woff') format('woff'),
+         url('font/maybe-bold-webfont.ttf') format('truetype'),
+         url('font/maybe-bold-webfont.svg#maybebold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'HelveticaNeueLTStd45Light';
+    src: url('font/helveticaneueltstd-lt-webfont.eot');
+    src: url('font/helveticaneueltstd-lt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/helveticaneueltstd-lt-webfont.woff') format('woff'),
+         url('font/helveticaneueltstd-lt-webfont.ttf') format('truetype'),
+         url('font/helveticaneueltstd-lt-webfont.svg#HelveticaNeueLTStd45Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*  Reset  */
+html, body, applet, object, iframe, blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 14px;
+	font: inherit;
+	outline:none;
+	vertical-align: baseline;
+	font-family: 'HelveticaNeueLTStd45Light',Tahoma, Geneva, sans-serif;
+}
+*{
+	outline:none;
+}
+input{
+	outline:none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-spacing: 0;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.clearfix {
+	zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearboth {
+	clear: both;
+}
+a {
+	text-decoration: none;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	color:#bf1323;
+	text-decoration:underline;
+}
+a:hover{
+	color:#F00;
+}
+.red{
+	color:#cc0000;
+}
+.black{
+	color:#333;
+}
+.blue{
+	color:#53a9ff;
+}
+/*=====================================Typography=====================================*/
+h1, h2, h3, h4, h5, h6 {
+	font-weight:normal;
+	font-family: 'maybebold', serif;
+}
+h1 {
+	font-size: 30px;
+	margin: 0 0 15px 0;
+}
+h2 {
+	font-size: 24px;
+	margin: 0 0 15px 0;
+}
+h3 {
+	font-size: 20px;
+	margin: 0 0 15px 0;
+}
+h4 {
+	font-size: 16px;
+	margin: 0 0 15px 0;
+}
+h5 {
+	font-size: 16px;
+	margin: 0 0 15px 0;
+}
+h6 {
+	font-size: 14px;
+	margin: 0 0 15px 0;
+}
+p{
+	margin:0 0 15px 0;
+}
+blockquote {
+	border-left: 7px solid;
+	padding: 0 0 0 20px;
+}
+i,em{
+	font-style:italic;
+}
+strong,b{
+	font-family: 'maybebold', serif;
+}
+/*=====================================LAYOUT===================================== */
+body{
+	background:url(images/bg.jpg) repeat;
+	font-size:14px;
+	padding:0 0 300px 0;
+}
+.mainPage{
+	width:1000px;
+	margin:0 auto;
+	padding:40px 0 0 0;
+}
+.header h1{
+	display:inline-block;
+	zoom: 1;
+	*display: inline;
+	background:#cc3401;
+	padding:0 20px;
+	line-height:40px;
+	color:#fff;
+}
+.landingPage .mainPage{
+	width:auto;
+}
+.landingPage .mainPage .content{
+	background:url(images/bg_login.png) no-repeat;
+	width:1000px;
+	min-height:912px;
+	margin:0 auto;
+}
+.formLanding{
+	position:relative;
+	min-height:600px;
+}
+fieldset .row{
+	padding:5px;
+	margin:0 0 10px 0;
+}
+fieldset .row label{
+	font-family: 'maybebold', serif;
+	font-size:20px;
+	float:left;
+	width:200px;
+	display:block;
+	line-height:30px;
+}
+input[type=text]{
+	width:300px;
+	padding:5px;
+	font-family: 'maybebold', serif;
+	font-size:18px;
+	height:20px;
+	border:solid 1px #ccc;
+}
+input[type=text].dob{
+	width:40px;
+}
+input[type=checkbox]{
+	float:left;
+}
+#lblErrorConfirmAbove18{
+	font-family: 'maybebold', serif;
+	font-size:20px;
+}
+.confirmations .row label{
+	width:auto;
+    font-family: 'HelveticaNeueLTStd45Light';
+	font-size:14px;
+	line-height:18px;
+	padding:20px 0;
+}
+.loginBox{
+	position:absolute;
+	top:415px;
+	left:43px;
+}
+.loginBox .row{
+	clear:both;
+	padding:0 0 10px 0;
+	overflow:hidden;
+}
+.loginBox .row label{
+	display:block;
+	width:80px;
+	float:left;
+	font-family: 'maybebold', serif;
+	font-size:20px;
+	line-height:30px;
+}
+.loginBox .row input{
+	width:200px;
+	border:solid 1px #ccc;
+	padding:5px;
+	height:20px;
+	font-family: 'maybebold', serif;
+	font-size:20px;
+}
+.error{
+	color:#c00;
+	font-family: 'maybebold', serif;
+}
+.loginBox .error{
+	position:absolute;
+	top:180px;
+	margin:0;
+}
+#lnkBtnForgotPwd{
+	position:absolute;
+	font-family: 'maybebold', serif;
+	text-decoration:none;
+	top:98px;
+	left:80px;
+}
+#lnkBtnSubmit,#lnkBtnRegister{
+	background:url(images/btn_reg.png) no-repeat;
+	display:block;
+	width:124px;
+	height:36px;
+	left:50%;
+	float:left;
+	text-indent:-8000px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	position:absolute;
+	top:130px;
+	left:0;
+}
+#lnkBtnRegister{
+	background:url(images/btn_reg.png) no-repeat -124px 0;
+}
+#lnkBtnSubmit:hover{
+	background:url(images/btn_reg.png) no-repeat 0 -36px;
+}
+#lnkBtnRegister:hover{
+	background:url(images/btn_reg.png) no-repeat -124px -36px;
+}
+#divRegisterBox{
+	position:absolute;
+	top:415px;
+	left:190px;
+}
+.text{
+	text-align:center;
+	padding:10px 0;
+	font-size:12px;
+	display:none;
+}
+.footer{
+	position:fixed;
+	width:100%;
+	background:url(images/18+.png) right no-repeat #FFF;
+	left:0; bottom:0;
+	padding:10px 0;
+	text-align:center;
+	font-size:12px;
+}
+.footer .text{
+	display:block;
+}
+.footer .navigation li{
+	display:inline;
+	border-right:solid 1px #000;
+	padding:0 20px;
+}
+.footer .navigation li:last-child{
+	border:none;
+}
+.footer .navigation li a{
+	text-transform:uppercase;
+	color:#000;
+	text-decoration:none;
+}
+.footer .navigation li a:hover{
+	color:#c00;
+}
+.submit{
+	float:left;
+	margin:20px 20px 0 0;
+}
+.submit p{
+	margin:0;
+}
+.edit,.next{
+	float:left;
+	margin:0 20px 20px 0;
+}
+.submit a,.edit a,.next a{
+    font-family: 'maybebold';
+	font-size:20px;
+	text-decoration:none;
+	display:inline-block;
+	zoom: 1;
+	*display: inline;
+	background:#cc3401;
+	padding:0 20px;
+	line-height:40px;
+	color:#fff;
+}
+.submit a:hover,.edit a:hover,.next a:hover{
+	background:#666;
+}
+#divPopUpOpacity{
+	background:url(images/tr.png) repeat;
+	width:100%; height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+}
+#LightBox{
+	position:absolute;
+	width:740px;
+	top:100px;
+	margin:0 0 0 -370px;
+	left:50%;
+	background:#fff;
+	box-shadow:0 0 140px rgba(0,0,0,0.3),0 0 140px rgba(0,0,0,0.3);
+	display:none;
+	height:auto !important;
+}
+#lbClose{
+}
+#lbClose a{
+	background:#c00 !important;
+	width:30px !important; height:30px !important;
+	color:#fff;
+	text-align:center !important;
+	line-height:30px;
+	top:-10px; right:-10px;
+	position:absolute;
+	border-radius:100px;
+	cursor:pointer;
+	text-decoration:none !important;
+	padding:0 !important;
+}
+#lbClose a:hover{
+	background:#666 !important;
+}
+#LightBox #ContentID{
+	padding:20px;
+}

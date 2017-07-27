@@ -1,0 +1,22 @@
+<div class="popup" id="popup-trade-confirm">
+    <div class="popupContainer center">
+		<a class="closePopup" href="#">[CLOSE X]</a>
+    	<div class="popup-head">
+        	<h2><img src="{$basedomain}assets/images/content/placing_trade.png" /></h2>
+        </div>
+    	<div class="popup-entry">
+                <form id="tradeFormConfirm">
+                <div class="badgesListConfirm badgesListConfirm_offer">
+                    
+                </div><!-- END .badgesListConfirm -->
+                <h3 class="TradeWith">Trade With</h3>
+                <div class="badgesListConfirm badgesListConfirm_request">
+                    
+                </div><!-- END .badgesListConfirm -->
+                <div class="row rowclear">
+      				  <a id="submitTradeBtn" href="#popup-trade-success" class="orangebtn showPopup bigBtn">CONFIRM TRADE</a>
+                </div><!-- END .row -->
+                </form>
+        </div>
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->

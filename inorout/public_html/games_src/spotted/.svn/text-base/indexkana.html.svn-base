@@ -1,0 +1,27 @@
+
+  <div id="gamesPage" class="container">
+	<div class="entry-container center">
+    	<div class="col">
+        	<div class="line-game"></div>
+ 
+			<div class="gameContainer" id="gameContainer" align="center"></div>		 
+ 				<script type="text/javascript">
+
+	 				var basedomain = "http://preview.kanadigital.com/marlboro_inorout/public_html/";
+                  	var basedomainlocal = "http://192.168.1.99/";
+  					var serverurl = basedomain+"service/games/";
+                    var gameassetspath = basedomainlocal+'games_src/spotted/assets/';
+                    var backbutton = basedomain+'games';
+	            </script> 
+
+	            <script src="lib/jquery-2.1.0.min.js"></script>
+        		<script src="lib/phaser.min.js"></script>
+       		 	<script src="lib/phaser-state-transition.min.js"></script>
+        		<script src="lib/utility.js"></script>
+        		<script src="lib/sha1.js"></script>
+        		<script src="spotted.js"></script>				 
+        </div><!-- END .col -->
+    </div>
+</div><!-- END .container -->
+
+     

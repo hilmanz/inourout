@@ -1,0 +1,15 @@
+<div class="popup" id="popup-video" style="display:block;">
+    <div class="popupContainer">
+        <div id="videoBox">
+              <video id="landingVideo" class="video-js vjs-default-skin" controls preload="none" width="640" height="360"
+                  poster="{$basedomain}assets/video/landing.png"
+                  data-setup="">
+                <source src="{$basedomain}assets/video/landing.mp4" type='video/mp4' />
+                <source src="{$basedomain}assets/video/landing.webm" type='video/webm' />
+                <source src="{$basedomain}assets/video/landing.ogv" type='video/ogg' />
+              </video>
+        </div>
+        <a href="{$basedomain}howto" class="orangebtn">SKIP VIDEO</a>
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->
+<div id="bg-popup3" style="display:block;"></div>

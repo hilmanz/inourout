@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/marlboro-in-or-out/!svn/ver/992/trunk/inorout/templates/application/web
+END
+login_message.html
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/marlboro-in-or-out/!svn/ver/490/trunk/inorout/templates/application/web/login_message.html
+END
+landing.html
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/marlboro-in-or-out/!svn/ver/912/trunk/inorout/templates/application/web/landing.html
+END
+footer.html
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/marlboro-in-or-out/!svn/ver/866/trunk/inorout/templates/application/web/footer.html
+END
+landing2.html
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/marlboro-in-or-out/!svn/ver/820/trunk/inorout/templates/application/web/landing2.html
+END
+meta.html
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/marlboro-in-or-out/!svn/ver/869/trunk/inorout/templates/application/web/meta.html
+END
+home.html
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/marlboro-in-or-out/!svn/ver/59/trunk/inorout/templates/application/web/home.html
+END
+header.html
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/marlboro-in-or-out/!svn/ver/866/trunk/inorout/templates/application/web/header.html
+END
+master.html
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/marlboro-in-or-out/!svn/ver/709/trunk/inorout/templates/application/web/master.html
+END

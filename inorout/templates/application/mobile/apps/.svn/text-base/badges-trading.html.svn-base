@@ -1,0 +1,38 @@
+<div id="tradePage" class="container">
+	<div class="entry-container">
+    	<div id="box-content">
+        	<div class="box-prof">
+                <div id="head-content" class="bg-head-trading">
+                    <h1><span class="orange">Badges</span> <span class="reds">Trading</span></h1>
+                    <h3>Trade badge kamu dengan peserta lain untuk melengkapi koleksimu<br />
+                    <span><a class="fl" href="{$basedomain}badges/tradingRules">[mekanisme]</a></span></h3>
+                </div><!-- END #head-content -->
+            </div>
+            <div id="entry-content">
+                <div id="tabs">
+                <div class="box-prof">
+                      <div id="tabNavigation">
+                          <ul id="tabNav">
+                            <li><a href="#AllTrades" onclick="load_all_trade({},0);">All Trades</a></li>
+                            <li><a href="#CreateTrade">Create a Trade</a></li>
+                            <li><a href="#MyTrade">My Trades</a></li>
+                          </ul>
+                      </div><!-- END #tabNavigation -->
+                  </div>
+                  <div id="AllTrades">
+					{include file="application/mobile/widgets/trade-all.html"}
+                  </div><!-- END #AllTrades -->
+                  <div id="CreateTrade">
+					{include file="application/mobile/widgets/trade-create.html"}
+                  </div><!-- END #CreateTrade -->
+                  <div id="MyTrade">
+					{include file="application/mobile/widgets/trade-user.html"}
+                  </div><!-- END #MyTrade -->
+                </div><!-- END #tabs -->
+            </div><!-- END #entry-content -->
+        </div><!-- END #box-content -->
+    </div><!-- END .entry-container -->
+</div><!-- END .container -->
+{include file="application/web/widgets/popup-findtrade.html"}
+{include file="application/web/widgets/popup-trade-confirm.html"}
+{include file="application/web/widgets/popup-trade-success.html"}

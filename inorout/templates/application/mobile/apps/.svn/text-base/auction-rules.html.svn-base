@@ -1,0 +1,21 @@
+<div id="auctionRules" class="container">
+	<div class="entry-container center">
+    	<div id="box-content" class="relative">
+        	<a class="closing" href="{$basedomain}badges/auction">[CLOSE X]</a>
+            <div class="mekanisme-head">
+                <h2><span class="reds">MEKANISME</span><br />auction</h2>
+           	</div>
+            <div id="entry-content">
+            	<div class="rulesContent">
+                	<p>Pastikan jumlah poin badge kamu cukup untuk melakukan Auction</p>
+                    <p>Pilih item favorit dan pasang bid kamu dengan poin lebih besar dari jumlah poin minimum yang diperlukan</p>
+                    <p>Bid ulang diperbolehkan setelah 2 peserta lain memasang bid mereka</p>
+                    <p>Pemenang adalah peserta dengan nilai tertinggi pada saat penutupan waktu bid</p>
+                    <p>Badge yang sudah dikonversi menjadi poin tidak dapat digunakan untuk hal lain sampai proses Auction selesai</p>
+                    <p>Peserta yang tidak menang auction akan mendapatkan kembali badgenya</p>
+                    <p>Peserta hanya dapat memenangkan auction maksimal 2 (dua) kali dengan hadiah yang berbeda</p>
+                </div>  
+            </div><!-- END .entry-conten -->
+         </div><!-- END .box-content -->
+    </div><!-- END .entry-container -->
+</div><!-- END .placingBid -->

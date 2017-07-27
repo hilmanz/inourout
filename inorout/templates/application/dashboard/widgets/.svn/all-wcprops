@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/marlboro-in-or-out/!svn/ver/995/trunk/inorout/templates/application/dashboard/widgets
+END
+user.html
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/marlboro-in-or-out/!svn/ver/980/trunk/inorout/templates/application/dashboard/widgets/user.html
+END
+device.html
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/marlboro-in-or-out/!svn/ver/995/trunk/inorout/templates/application/dashboard/widgets/device.html
+END
+brand_engagement.html
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/marlboro-in-or-out/!svn/ver/985/trunk/inorout/templates/application/dashboard/widgets/brand_engagement.html
+END
+redeem.html
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/marlboro-in-or-out/!svn/ver/916/trunk/inorout/templates/application/dashboard/widgets/redeem.html
+END
+auction.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/marlboro-in-or-out/!svn/ver/916/trunk/inorout/templates/application/dashboard/widgets/auction.html
+END
+badge.html
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/marlboro-in-or-out/!svn/ver/971/trunk/inorout/templates/application/dashboard/widgets/badge.html
+END
+ba_performances.html
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/marlboro-in-or-out/!svn/ver/985/trunk/inorout/templates/application/dashboard/widgets/ba_performances.html
+END
+ga.html
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/marlboro-in-or-out/!svn/ver/990/trunk/inorout/templates/application/dashboard/widgets/ga.html
+END
+topvisitedpage.html
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/marlboro-in-or-out/!svn/ver/916/trunk/inorout/templates/application/dashboard/widgets/topvisitedpage.html
+END
+game.html
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/marlboro-in-or-out/!svn/ver/916/trunk/inorout/templates/application/dashboard/widgets/game.html
+END

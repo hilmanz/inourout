@@ -1,0 +1,89 @@
+<div id="cluesPage" class="container">
+	<div class="entry-container center">
+    	<div id="navClues">
+        	<a href="{$basedomain}articles">UPDATES</a>
+        	<a href="{$basedomain}clues" class="current">CLUES</a>  
+        </div>
+        <div class="rowText">
+            <div id="tabs">
+            <div class="box-prof">
+              <div id="cluesNavigation">
+                  <ul id="tabNav">
+					{foreach $clue as $keys => $values}
+                    <li><a href="{if $keys==0}#clues1{else}#clues2{/if}" class="getclues" eventid="{$values.id}">
+                            <div class="badges badgesYellowCab">
+                                <img src="{$basedomainpath}public_assets/event/{$values.img}" />
+                            </div>
+                            <h4>{$val.title}</h4>
+                        </a>
+                    </li>
+					{/foreach}
+					{*}
+                    <li><a href="#clues2">
+                            <div class="badges badgesPhoneBox">
+                                <img src="{$basedomain}assets/images/badges/badges-8.png" />
+                            </div>
+                            <h4>Find out where the next phone booth</h4>
+                        </a>
+                    </li>
+					{/*}
+                  </ul>
+              </div><!-- END #cluesNavigation -->
+              {foreach $clue as $key => $value}
+              <div id="{if $key==0}clues1{else}clues2{/if}" >
+              		<div class="clues-head">
+                    	<div class="arrow-up"></div>
+                        <h3>{$value.content}</h3>
+                    </div><!-- END .clues-head -->
+              </div><!-- END #clues1 -->
+			  {/foreach}
+			  {*}
+              <div id="clues2">
+                    <div class="clues-head">
+                    	<div class="arrow-up"></div>
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet molestie dictum. Aenean quis volutpat quameu adipiscing ligula. Donec bibendum turpis ut fermentum porttitor. Sed tempor enim vel dolor pretium</h3>
+                    </div><!-- END .clues-head -->
+              </div><!-- END #clues2 -->
+				{/*}
+			  </div><!-- END .box-prof -->
+            <div class="box-prof">
+				<!--
+             	<div class="selectCity">
+                	<form class="formSelect">
+                        	<select class="styled cluesCity" eventid="{$clue[0].id}">
+                            	{foreach $city as $key=>$val}
+								<option value="{$val.id}">{$val.city}</option>
+								{/foreach}
+							</select>
+                        </form>
+                </div>
+                -->
+				
+                 <div class="clues-entry">
+				 
+                         <div class="jcarousel-wrapper">
+                            <div class="jcarousel">
+                                <ul id="maps">
+                                    {foreach $firstclue.maps as $key => $val}
+									<li>
+                       					 <img src="{$basedomainpath}public_assets/event/{$val.img}" />
+                                    </li>
+                                    {/foreach}
+                                </ul>
+                            </div> 
+                            <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                            <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                        </div>
+                    </div><!-- END .clues-entry -->
+				{*}
+            	<div class="clues-entry" id="maps1">
+					{foreach $firstclue.maps as $key => $val}
+   			 		<img src="{$basedomainpath}public_assets/event/{$val.img}" />
+					{/foreach}
+				</div><!-- END .clues-entry -->
+				{/*}
+            </div>
+            </div><!-- END #tabs -->
+        </div><!-- END .rowText -->
+    </div><!-- END .entry-container -->
+</div><!-- END .container -->

@@ -1,0 +1,74 @@
+<div id="aboutPage" class="container">
+	<div class="entry-container center">
+    	<div id="navAbout">
+        	<a href="{$basedomain}about/whatis">What is it?</a>
+        	<a href="{$basedomain}about/howto">Howto</a>
+        	<a href="{$basedomain}about/prizes">Prizes</a>
+        	<a href="{$basedomain}about/rules" class="current">Rules</a>  
+        </div>
+        <div class="mekanisme-head">
+                <h2><span class="reds">Rules</span></h2>
+           	</div>
+            <div id="entry-content">
+            	<div class="rulesContent">
+                	<h2>Syarat dan Ketentuan Untuk Partisipasi Dalam Marlboro IN OR OUT</h2>
+                	<div class="scroll-pane">
+        	<ol>
+            	<li>Pembelian rokok tidak diisyaratkan untuk berpartisipasi dalam kegiatan ini. Dengan memilih bagian syarat-syarat dan ketentuan-ketentuan ini, anda membenarkan bahwa anda adalah penduduk di Indonesia, berusia lebih dari 18 (delapan belas) tahun dan perokok.</li>
+                <li>Karyawan-karyawan dan perwakilan-perwakilan dari PT Philip Morris Indonesia (PMID), afiliasinya, distributor, agen kreatif dan badan usaha lainnya yang bertindak untuk mewakili PMID dalam mengadakan Promosi, serta kerabat dekat mereka, tidak diperbolehkan untuk berpartisipasi dalam Promosi.</li>
+                <li>Para Peserta dapat mendaftar melalui situs <a href="http://www.neversaymaybe.co.id">www.neversaymaybe.co.id</a> atau melalui aplikasi yang diperoleh melalui Marlboro Brand Ambassador atau Brand Presenter pada lokasi yang telah ditentukan oleh penyelenggara Promosi.</li>
+                <li>Para Peserta diwajibkan untuk mengisi formulir aplikasi yang tersedia melalui <a href="http://www.neversaymaybe.co.id">www.neversaymaybe.co.id</a> atau melalui proses pendaftaran melalui oleh Marlboro Brand Ambassador atau Brand Presenter sebagai ketentuan untuk mengikuti Promosi.</li>
+                <li>Para Peserta yang mendaftar melalui <a href="http://www.neversaymaybe.co.id">www.neversaymaybe.co.id</a>. diwajibkan untuk menyerahkan fotokopi Kartu Identitas (KTP) ke <a href="http://www.neversaymaybe.co.id">www.neversaymaybe.co.id</a>. sebagai bukti verifikasi data umur (harus paling tidak 18 tahun) tidak lebih dari 30 (tiga puluh) hari setelah pendaftaran pertama.</li>
+                <li>Para Peserta yang mendaftar melalui Marlboro Brand Ambassador atau Brand Presenter diwajibkan untuk menunjukkan Kartu Identitas (KTP) selama proses pendaftaran sebagai bukti verifikasi data umur untuk mengikuti Promosi.</li>
+                <li>Masing-masing peserta mempunyai kesempatan untuk mendaftar hanya satu kali. Jika para peserta mencoba untuk mendaftar lebih dari satu kali, aplikasi pertama yang diterima oleh penyelenggara Promosi akan dianggap sah dan aplikasi-aplikasi selanjutnya akan dibatalkan.</li>
+                <li>Seleksi para peserta akan dilaksanakan oleh penyelenggara Promosi berdasarkan kelengkapan pendaftaran, dokumen yang diserahkan dan kualitas jawaban menurut kriteria yang ditentukan oleh penyelenggara Promosi.</li>
+                <li>Para Peserta tidak boleh terlibat dalam kejahatan atau kegiatan kriminal atau obat-obatan terlarang. </li>
+                <li>Para Peserta diwajibkan untuk menemukan IN OR OUT Codes dan ikut serta dalam kegiatan di <a href="http://www.neversaymaybe.co.id">www.neversaymaybe.co.id</a> untuk mendapatkan lencana (badges). Rincian dimana IN OR OUT Code dapat diperoleh secara jelas di <a href="http://www.neversaymaybe.co.id">www.neversaymaybe.co.id</a>. </li>
+                <li>Para Peserta dapat menukar IN OR OUT Code untuk lencana (badges) melalui <a href="http://www.neversaymaybe.co.id">www.neversaymaybe.co.id</a>. Ini adalah tanggung jawab peserta untuk memasukkan IN OR OUT Code secara benar pada tempat yang tersedia di <a href="http://www.neversaymaybe.co.id">www.neversaymaybe.co.id</a> agar memperoleh lencana (badges). Penyelenggara Promosi tidak akan bertanggungjawab terhadap kehilangan atau kegagalan untuk memasukkan IN OR OUT Code dengan benar selama masa Promosi.</li>
+                <li>Tidak ada IN OR OUT Code yang berlaku setelah tanggal 30 Juni 2014.</li>
+                <li>Tiap-tiap IN OR OUT Code hanya akan sesuai dengan satu lencana (badges). Tiap-tiap IN OR OUT Code akan berlaku untuk periode yang telah ditentukan dengan wajar oleh penyelenggara Promosi. Ini akan menjadi tanggung jawab peserta untuk memasukan IN OR OUT Code dengan benar selama masa berlaku melalui <a href="http://www.neversaymaybe.co.id">www.neversaymaybe.co.id</a>.</li>
+                <li>Para Peserta dapat mengklaim hadiah dengan menukarkan serangkaian lencana (badges) sesuai dengan satu atau lebih kota. Lencana (badges) hanya dapat ditukarkan antara tanggal 2 April 2014 dan 30 Juni 2014 dan hanya melalui <a href="http://www.neversaymaybe.co.id">www.neversaymaybe.co.id</a>. </li>
+                <li>Lencana (badges) yang ditukarkan untuk hadiah akan hilang dari set lencana peserta dan tidak akan terlihat di halaman profil peserta. Para peserta yang menukarkan lencana (badges)  dapat melanjutkan untuk mengumpulkan lencana (badges) dengan cara yang sama sebagaimana yang mereka lakukan sebelum menukarkan lencana (badges).</li>
+                <li>Para peserta dapat mengklaim hadiah melalui <a href="http://www.neversaymaybe.co.id">www.neversaymaybe.co.id</a>. Untuk mengklaim hadiah, para peserta harus menukarkan lencana-lencana (badges) yang sesuai dengan hadiah tersebut. Hanya lencana (badges) yang ditampilkan pada halaman profil peserta yang akan dihitung terhadap lencana (badges) yang diperlukan untuk masing-masing hadiah. Tanggal akhir untuk penukaran hadiah adalah tanggal 30 Juni 2014.</li>
+                <li>Jumlah dan tipe lencana (badges) diperlukan untuk mengklaim masing-masing hadiah dapat dilihat di <a href="http://www.neversaymaybe.co.id">www.neversaymaybe.co.id</a>.</li>
+                <li>Tiap-tiap peserta hanya bisa menukar 1 kali untuk masing-masing Redeem Prize Items (Collectibles).</li>
+                <li>Tiap-tiap peserta dapat mengikuti lelang harian selama periode program. Terdapat 1 barang baru yang akan dilelang setiap hari. Masa waktu lelang untuk setiap barang adalah 3 hari. </li>
+                <li>Tiap-tiap peserta bisa menawar lebih dari satu barang yang di lelang, tetapi hanya bisa memenangkan maksimum 2 barang lelang yang berbeda. Apabila sudah memenangkan 2 barang lelang yang berbeda, maka peserta tidak dapat mengikuti aktivitas lelang lainnya.</li>
+                <li>Hadiah barang lelang akan diberikan pada penawar tertinggi di akhir periode lelang barang tersebut.</li>
+                <li>Peserta harus menggunakan lencana (badges) mereka yang tersedia untuk melakukan penawaran pada barang lelang.</li>
+                <li>Pemenang lelang bisa mendapatkan hadiah barang lelang dengan menukarkan lencana (badges) sejumlah dengan penawaran akhir untuk barang tersebut.</li>
+                <li>Hadiah Redeem/Collectibles dan lelang akan diterima Kira-kira 30 hari setelah hadiah di klaim.</li>
+                <li>Penyelenggara Promosi mempunyai hak untuk mengganti ketersediaan dari IN OR OUT Code, lencana (badges) dan hadiah setiap saat, tanpa pemberitahuan sebelumnya dan untuk alasan apapun.</li>
+                <li>Penyelenggara Promosi mempunyai hak untuk mengganti jumlah mutlak minimal hadiah, serta pelaksanaan syarat dan ketentuan untuk setiap kegiatan Promosi tanpa pemberitahuan sebelumnya dan untuk alasan apapun.</li>
+                <li>Para peserta akan dianggap finalis jika mereka mempunyai seluruh 12 lencana (badges) yang berbedayang secara benar terpajang di situs pada tanggal 30 Juni 2014.Penyelenggara produksi berhak untuk mengikutsertakan peserta yang memiliki kurang dari 12 lencana (badges) sebagai finalis. Penyelenggara Promosi akan memilih 10 pemenang dari kelompok finalis yang memiliki skor hasil tertinggi dalam akhir kegiatan, berdasarkan jumlah lencana (badges) dan akumulasi hasil wawancara. Penyelenggara Promosi akan menghubungi finalis sehubungan dengan kegiatan yang perlu mereka lakukan untuk menjadi pemenang.</li>
+                <li>Penyelenggara promosi akan melakukan 2 tahap wawancara kepada finalis, yaitu wawancara via telepon dan wawancara langsung (face to face).</li>
+                <li>Para pemenang 10 hari perjalanan diwajibkan untuk menyediakan sertifikat kesehatan dan harus menandatangani surat partisipasi dan kesediaan untuk mengikuti kegiatan-kegiatan selama perjalanan Promosi di Inggris, Jepang dan Amerika Serikat pada bulan April 2015, kepada penyelenggara Promosi selambat-lambatnya November 2014.</li>
+                <li>Para pemenang 10 hari perjalanan harus memilki passport yang berlaku dan harus menyerahkan passport kepada penyelenggara Promosi untuk pengurusan visa selambat-lambatnya akhir bulan November 2014.</li>
+                <li>Hanya formulir dan aplikasi lainnya yang (i) yang diterima oleh PMID selama jangka waktu yang diatur dalam Pasal 3 diatas, (ii) disiapkan dan dilengkapi secara benar, dan (iii) sepenuhnya mudah terbaca akan dipertimbangkan untuk Promosi. Tanda terima formulir tersebut dan aplikasi lainnya tidak akan diakui.</li>
+                <li>Seluruh formulir dan kiriman lainnya yang diterima menjadi milik PMID, dengan hak kepemilikan penuh dan bebas, termasuk tetapi tidak terbatas pada hak untuk membuat kompilasi, menerbitkan dan menggunakan bahan dan informasi di dalamnya sebagian atau seluruhnya, tanpa pertimbangan lebih lanjut atau pembayaran kepada peserta.Selanjutnya, untuk formulir dan aplikasi berisi data pribadi, dilindungi oleh Pasal 41 dibawah ini.</li>
+                <li>Semua pemenang akan mendapatkan kesempatan untuk mengunjungi Tokyo, London dan New York. Dokumen pribadi seperti paspor dan kartu identitas harus disiapkan secara pribadi oleh masing-masing pemenang. Penyelenggara promosi akan membantu para pemenang dalam pengurusan visa.</li>
+                <li>Apabila kemudian ada pemenang yang tidak mendapatkan visa untuk mengunjungi satu kota tujuan atau lebih, maka penyelenggara Promosi bebas dari segala kewajiban untuk mengganti rugi atau kewajiban memberikan hadiah pengganti.</li>
+                <li>Seluruh keputusan oleh atau atas nama PMID dalam hal-hal yang berkaitan dengan pemilihan pemenang bersifat final dan pada kebijakan penuh PMID atau mereka yang bertindak atas nama PMID.</li>
+                <li>Hadiah dapat berbeda dari apa yang disebutkan atau yang diilustrasikan dalam materi sehubungan dengan Promosi. Hadiah tidak dapat ditukar atau dikembalikan, dan tidak dapat diganti dengan uang tunai.</li>
+                <li>Pemenang hadiah bertanggungjawab penuh atas pajak-pajak, baik pajak penghasilan atau sebaliknya, yang mungkin muncul akibat memenangkan hadiah. Pemenang hadiah akan bertanggung jawab sepenuhnya terhadap hadiah yang dimenangkan, dan segala kerusakan ataupun kejadian yang berhubungan dengan hadiah tersebut adalah menjadi tanggung jawab pemenang hadiah mulai dari hadiah itu di terima.</li>
+                <li>PMID memiliki hak dengan kebijakannya sendiri (i) untuk mengubah tanggal, lokasi, acara dan/atau hadiah yang ada pada Promosi; dan (ii) untuk membatalkan Promosi secara keseluruhan atau sebagian. PMID berhak untuk melaksanakan hak tersebut tanpa pemberitahuan sebelumnya atau kompensasi kepada para peserta.</li>
+                <li>Untuk mengklaim hadiah, pemenang harus (i) menunjukan dokumen identifikasi asli, yang berlaku dan diakui yang menyatakan bahwa dia memang peserta dan setidaknya berusia 18 tahun dan (ii) menandatangani formulir pelepasan kewajiban yang diberikan oleh PMID.</li>
+                <li>Seluruh hadiah harus telah diklaim tanggal 30 Juni 2014. Setelah tanggal tersebut, PMID berhak untuk meniadakan hadiah. </li>
+                <li>Para peserta dalam Promosi memberikan persetujuan kepada PMID untuk:
+                	<ul>
+                    	<li>menyimpan dan menggunakan informasi pribadi untuk memverifikasi usia mereka dan ketaatan atas kebijakan internal PMID, dan/atau menghubungi mereka;</li>
+                        <li>mengirimkan mereka dengan cara apapun (surat, surat elektronik/email, sms, dll) komunikasi yang berhubungan dengan produk tembakau, termasuk namun tidak terbatas pada informasi dan materi pada peluncuran merk, perubahan kemasan, event, kegiatan pemasaran dan/atau peraturan produk tembakau, sepanjang diizinkan oleh hukum yang berlaku;</li>
+                        <li>memproses data pribadi di negara selain negara dimana mereka hidup (sebagai contoh, lokasi database di satu negara dan mengakses database jarak jauh dari yang lain);</li>
+                        <li>mengungkapkan informasi pribadi mereka kepada penyedia layanan PMID untuk tujuan diatas, dan afiliasi PMID untuk melakukan hal-hal diatas untuk tujuannya sendiri, serta (jika diperlukan oleh hukum) kepada pihak yang berwenang; dan </li>
+                        <li>menggunakan  gambar mereka untuk komunikasi di dalam dan diluar.</li>
+                    </ul>
+                    PMID tidak akan mengungkapkan data pribadi yang diterima dari para peserta kepada pihak ketiga untuk keperluan lain.<br />Para peserta dapat mencabut persetujuan untuk seluruh Pasal 41, atau hanya untuk dihubungi pada setiap saat oleh Marlboro melalui <a href="http://www.neversaymaybe.co.id">www.neversaymaybe.co.id</a>
+                </li>
+            </ol>
+            </div><!-- END .scrollPane -->
+            {literal}
+            <a id="back_top" onclick="jQuery('html, body').animate({scrollTop:0}, 'slow');" href="javascript:void(0);">BACK TO TOP ^</a>{/literal}
+                </div>  
+            </div><!-- END .entry-conten -->
+    </div><!-- END .entry-container -->
+</div><!-- END .container -->

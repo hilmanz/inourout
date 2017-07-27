@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/Predis/tests/Predis/Iterators
+END
+MultiBulkResponseSimpleTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/Predis/tests/Predis/Iterators/MultiBulkResponseSimpleTest.php
+END
+MultiBulkResponseTupleTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/Predis/tests/Predis/Iterators/MultiBulkResponseTupleTest.php
+END

@@ -1,0 +1,136 @@
+
+<div class="tabEntry">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    {if $todayauction.result}
+		{foreach $todayauction.result as $k => $v}
+		<tr class="{$v.queue}">
+			<td valign="top">
+				<a class="thumbPrizes"><img src="{$v.auctions.image_full_path}" /></a>
+			</td>
+			<td valign="top">
+				<div class="prizeDesc">
+					<h3>{$v.title}</h3>
+					<p>{$v.content}</p>
+				</div><!-- END .prizeDesc -->
+			</td>
+			<td valign="top">
+				<div class="timeLeft">
+					<span class="iconArrowGrey">&nbsp;</span>
+					<h3>Sisa waktu auction:</h3>
+					<div id="countdown_auction_{$v.id}" class="countdown"> 
+						<div class="dash hours_dash">
+							<span class="dash_title">HR</span>
+							<div class="digit">0</div>
+							<div class="digit">0</div>
+						</div>
+						<div class="dash minutes_dash">
+							<span class="dash_title">M</span>
+							<div class="digit">0</div>
+							<div class="digit">0</div>
+						</div>
+						<div class="dash seconds_dash">
+							<span class="dash_title">S</span>
+							<div class="digit">0</div>
+							<div class="digit">0</div>
+						</div>
+					</div><!-- END .countdown -->
+					<span class="iconArrowGrey">&nbsp;</span>
+					<h3>Bid Awal: </h3>
+					<h2 class="points">{$v.minimalBid|number_format}<span>points</span></h2>
+				</div><!-- END .prizeDesc -->
+			</td>
+			<td valign="top">
+				<div class="currentBid">
+					<span class="iconArrowGrey">&nbsp;</span>
+					<h3>Bid Saat Ini:</h3>
+					<h2 class="points">{if $v.currentBid eq 0}{$v.minimalBid|number_format}{else}{$v.currentBid|number_format}{/if}<span>points</span></h2>
+					<a href="#popup-auction" class="btnIncrease showPopup sendauctionitem" aid="{$v.id}" img="{$v.auctions.image_full_path}" desc="{$v.title}" opponentid="{$v.opponentid}" currentbid="{if $v.currentBid==0}{$v.minimalBid}{else}{$v.currentBid}{/if}" turn="{$v.nextturn}" >Tambah Bid</a>
+				</div><!-- END .currentBid -->
+			</td>
+		  </tr>
+          {/foreach}
+	  {/if}
+    </table>
+</div><!-- END .tabEntry -->
+{literal}
+<script type="text/javascript">
+function getstartauction(){
+	{/literal}
+			{if $todayauction.result}
+				{foreach $todayauction.result as $k => $v}
+				var days = {$v.auctiondate.days};
+				var month = {$v.auctiondate.month};
+				var year = {$v.auctiondate.year};
+				var hour = {$v.auctiondate.hour};
+				var minute = {$v.auctiondate.minute};
+				var sec = {$v.auctiondate.sec};
+				var theindex = {$v.id};
+		{literal}
+			$('#countdown_auction_'+theindex).countDown({
+				targetDate: {
+					'day': 		days,
+					'month': 	month,
+					'year': 	year,
+					'hour': 	hour,
+					'min': 		minute,
+					'sec': 		sec
+				},omitWeeks:true,
+				 onComplete: function() { 
+						$.post(basedomain+'badges'+'/ajax',{needs:'whoiswinner'},function(data){
+							window.location.reload()  
+						});
+						
+					
+				}
+			});
+			
+			{/literal}
+				{/foreach}
+			{/if}			  
+		{literal}
+}
+	$(document).ready(function() { 
+		getstartauction();
+	});
+
+$(document).on('click','.sendauctionitem',function(){
+ 
+	var aid=  $(this).attr('aid');
+	var img= $(this).attr('img');
+	var desc= $(this).attr('desc');
+	var currentbid= $(this).attr('currentbid');
+	var turn= $(this).attr('turn');
+	var opponentid= $(this).attr('opponentid');
+	$("#placeBidBtn").next().text('');
+	//add preload..
+		console.log('wait...........');
+	if(aid==0){
+		console.log(' not found');
+	}else{
+		console.log(' OKeh ');
+		$('.aidtoform').val(aid);
+		$('.badgestoform').val(0);
+		$('.amounttoform').val(0);
+		$('.oppponenttoform').val(opponentid);
+	 
+		$('.auctionimagesbid').attr('src',img);
+		$('.auctiondescbid').html(desc);
+		
+		$('.auctioncurrentbid').html(currentbid);
+		$('.myofferingpointsubbed').html(currentbid);
+		
+		if(turn>0){
+			if(turn>1)$("#placeBidBtn").val(turn+' turns left');
+			else $("#placeBidBtn").val(turn+' turn left');
+			$("#placeBidBtn").attr('disabled','disabled');
+                    $("#placeBidBtn").addClass('grayscale');
+            $("#placeBidBtn").next().text('Maaf, kamu baru dapat melakukan bidding kembali setelah '+turn+' pengguna lain. '); 
+		}else $("#placeBidBtn").val("tambah BID >>");
+		
+		$('.myofferingpointsubbed').attr('currentbidder',currentbid);
+ 
+	}
+	
+});	
+</script>
+{/literal}

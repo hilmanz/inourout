@@ -1,0 +1,580 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0075)https://staging-neversaymaybe-id.es-dm.com/Templates/RegistrationPage3.aspx -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <title>
+        RegistrationPage3
+
+    </title>
+   
+			  <link rel="stylesheet" href="inorout-registration.css" media="screen,screen" type="text/css" title="default">
+
+
+<link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/js/page_context.js"></script></head>
+<body screen_capture_injected="true">
+
+   
+    
+
+    <script src="./RegistrationPage3_files/swfobject.js" language="javascript"></script>
+
+    <script src="./RegistrationPage3_files/loadswf.js" language="javascript"></script>
+    <script type="text/javascript">
+        function CheckFlashAndShowLB(lightBoxID) {
+         
+                ShowLightBox(lightBoxID);
+            
+        }
+        </script>
+    <script language="javascript">
+        {
+            window.history.forward(1);
+        }
+    </script>
+
+    <script type="text/javascript">
+
+        // Flash Player Version Detection
+        // Detect Client Browser type
+        // Copyright 2005-2007 Adobe Systems Incorporated.  All rights reserved.
+        var isIE = (navigator.appVersion.indexOf("MSIE") != -1) ? true : false;
+        var isWin = (navigator.appVersion.toLowerCase().indexOf("win") != -1) ? true : false;
+        var isOpera = (navigator.userAgent.indexOf("Opera") != -1) ? true : false;
+
+        function CheckFlashAndShowLB(lightBoxID) {
+            if (GetSwfVer() == '-1') {
+                ShowLightBox('divGetFlash');
+            }
+            else {
+                ShowLightBox(lightBoxID);
+            }
+            return false;
+        }
+
+        function ControlVersion() {
+            var version;
+            var axo;
+            var e;
+
+            // NOTE : new ActiveXObject(strFoo) throws an exception if strFoo isn't in the registry
+
+            try {
+                // version will be set for 7.X or greater players
+                axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash.7");
+                version = axo.GetVariable("$version");
+            } catch (e) {
+            }
+
+            if (!version) {
+                try {
+                    // version will be set for 6.X players only
+                    axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash.6");
+
+                    // installed player is some revision of 6.0
+                    // GetVariable("$version") crashes for versions 6.0.22 through 6.0.29,
+                    // so we have to be careful. 
+
+                    // default to the first public version
+                    version = "WIN 6,0,21,0";
+
+                    // throws if AllowScripAccess does not exist (introduced in 6.0r47)		
+                    axo.AllowScriptAccess = "always";
+
+                    // safe to call for 6.0r47 or greater
+                    version = axo.GetVariable("$version");
+
+                } catch (e) {
+                }
+            }
+
+            if (!version) {
+                try {
+                    // version will be set for 4.X or 5.X player
+                    axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash.3");
+                    version = axo.GetVariable("$version");
+                } catch (e) {
+                }
+            }
+
+            if (!version) {
+                try {
+                    // version will be set for 3.X player
+                    axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash.3");
+                    version = "WIN 3,0,18,0";
+                } catch (e) {
+                }
+            }
+
+            if (!version) {
+                try {
+                    // version will be set for 2.X player
+                    axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash");
+                    version = "WIN 2,0,0,11";
+                } catch (e) {
+                    version = -1;
+                }
+            }
+
+            return version;
+        }
+
+        // JavaScript helper required to detect Flash Player PlugIn version information
+        function GetSwfVer() {
+            // NS/Opera version >= 3 check for Flash plugin in plugin array
+            var flashVer = -1;
+
+            if (navigator.plugins != null && navigator.plugins.length > 0) {
+                if (navigator.plugins["Shockwave Flash 2.0"] || navigator.plugins["Shockwave Flash"]) {
+                    var swVer2 = navigator.plugins["Shockwave Flash 2.0"] ? " 2.0" : "";
+                    var flashDescription = navigator.plugins["Shockwave Flash" + swVer2].description;
+                    var descArray = flashDescription.split(" ");
+                    var tempArrayMajor = descArray[2].split(".");
+                    var versionMajor = tempArrayMajor[0];
+                    var versionMinor = tempArrayMajor[1];
+                    var versionRevision = descArray[3];
+                    if (versionRevision == "") {
+                        versionRevision = descArray[4];
+                    }
+                    if (versionRevision[0] == "d") {
+                        versionRevision = versionRevision.substring(1);
+                    } else if (versionRevision[0] == "r") {
+                        versionRevision = versionRevision.substring(1);
+                        if (versionRevision.indexOf("d") > 0) {
+                            versionRevision = versionRevision.substring(0, versionRevision.indexOf("d"));
+                        }
+                    }
+                    var flashVer = versionMajor + "." + versionMinor + "." + versionRevision;
+                }
+            }
+            // MSN/WebTV 2.6 supports Flash 4
+            else if (navigator.userAgent.toLowerCase().indexOf("webtv/2.6") != -1) flashVer = 4;
+            // WebTV 2.5 supports Flash 3
+            else if (navigator.userAgent.toLowerCase().indexOf("webtv/2.5") != -1) flashVer = 3;
+            // older WebTV supports Flash 2
+            else if (navigator.userAgent.toLowerCase().indexOf("webtv") != -1) flashVer = 2;
+            else if (isIE && isWin && !isOpera) {
+                flashVer = ControlVersion();
+            }
+            return flashVer;
+        }
+    </script>
+
+    <script>
+
+
+        var SessionID = '15252591';
+        function Enable() {
+            var siteID = '291';
+            btn1 = document.getElementById("lnkBtnCheckOnline");
+            btn2 = document.getElementById("lnkBtnUploadingContinue");
+            btn3 = document.getElementById("lnkBtnPrintForm");
+            btn4 = document.getElementById("lnkBtnContinue");
+
+            btn4.disabled = false;
+
+            return true;
+        }
+
+        function getPDFGoTonextPage() {
+            window.document.forms[0].target = "_blank";
+            window.document.forms[0].submit();
+        }
+    </script>
+
+    
+    <form name="Form1" method="post" action="./RegistrationPage3_files/RegistrationPage3.html" id="Form1" enctype="multipart/form-data">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTk4NDg0MDUyMA9kFgxmD2QWAmYPFgIeBFRleHQFEVJlZ2lzdHJhdGlvblBhZ2UzZAIBD2QWAmYPFgIfAAWIATxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iaHR0cHM6Ly93d3cuYW1pbGQuY29tL2Ftbi9odG1sL2Nzcy9hbWlsZF9tb3AuY3NzIiBtZWRpYT0ic2NyZWVuLHNjcmVlbiIgdHlwZT0idGV4dC9jc3MiIHRpdGxlPSJkZWZhdWx0Ii8+DQpkAgIPFgIfAGVkAgMPFgIfAAUGPGJvZHk+ZAIEDxYCHgdlbmN0eXBlBRNtdWx0aXBhcnQvZm9ybS1kYXRhFhACAw8WAh8ABRI8SDE+VVBMT0FEIElEPC9IMT5kAgUPFgIfAAWeATxQPkNPTlNFQ1RFVFVSIEFESVBJU0NJTkcgRUxJVC4gUFJPSU4gVVQgRVVJU01PRCBGRUxJUy4gUVVJU1FVRSBFR0VUIFRFTVBVUyBFTElULCBFR0VUIEVMRU1FTlRVTSBOSVNJLiBQSEFTRUxMVVMgREFQSUJVUyBURUxMVVMgU0VEIEVSQVQgU0FHSVRUSVMgUE9TVUVSRS48L1A+ZAIHDw8WAh4HVmlzaWJsZWhkFgQCBQ8QDxYGHg1EYXRhVGV4dEZpZWxkBQhHSUlEVHlwZR4ORGF0YVZhbHVlRmllbGQFDUdJSURUeXBlVmFsdWUeC18hRGF0YUJvdW5kZ2QQFQMJU2VsZWN0Li4uA0tUUANTSU0VAwItMQExATIUKwMDZ2dnFgFmZAINDw8WAh8AZWRkAgkPZBYIZg8WAh8AZWQCAQ8WAh8ABS88SU1HIGFsdD0iIiBzcmM9Ii9JbWFnZXMvaWRfaWNvMi5qcGciIHZzcGFjZT01PmQCAw8PFgIfAAUNQUNDRVNTIFdFQkNBTRYCHgdPbkNsaWNrBS1yZXR1cm4gQ2hlY2tGbGFzaEFuZFNob3dMQignZGl2TEJDb250ZW50RkYnKTtkAgQPDxYCHwAFBlJFVEFLRWRkAgsPZBYGAgEPFgIfAGVkAgMPFgIfAAUoPElNRyBib3JkZXI9MCBzcmM9Ii9JbWFnZXMvaWRfaWNvMi5qcGciPmQCCQ8PFgIfAAUNPFA+U1VCTUlUPC9QPmRkAg0PZBYMAgEPFgIfAGVkAgMPFgIfAAUjPElNRyBib3JkZXI9MCBzcmM9Ii9JbWFnZXMvSUQuanBnIj5kAgUPZBYCAgEPDxYEHwBlHwJnFgIfBgUQcmV0dXJuIEVuYWJsZSgpO2QCBw9kFgICAQ8PFgIfAAUMPFA+UHJpbnQ8L1A+ZGQCCQ8PFgIfAAULPFA+TmV4dDwvUD5kZAILDw8WAh8ABQs8UD5OZXh0PC9QPmRkAhEPZBYIAgEPFgIfAAUMQ09ORklSTUFUSU9OZAIDDxYCHwAFugE8UD5MT1JFTSBJUFNVTSBET0xPUiBTSVQgQU1FVCwgQ09OU0VDVEVUVVIgQURJUElTQ0lORyBFTElULiBQUk9JTiBVVCBFVUlTTU9EIEZFTElTLiBRVUlTUVVFIEVHRVQgVEVNUFVTIEVMSVQsIEVHRVQgRUxFTUVOVFVNIE5JU0kuIFBIQVNFTExVUyBEQVBJQlVTIFRFTExVUyBTRUQgRVJBVCBTQUdJVFRJUyBQT1NVRVJFLjwvUD5kAgUPZBYCZg8WAh8ABQRFRElUZAIHD2QWAmYPFgIfAAUETkVYVGQCEw9kFgJmDxYCHwAFyQY8RElWIGNsYXNzPWZvb3Rlcj4NCjxESVYgY2xhc3M9InRleHQgc3R5bGUxIj5JbmZvcm1hc2kgZGFsYW0gd2Vic2l0ZSBpbmkgZGl0dWp1a2FuIHVudHVrIHBlcm9rb2sgYmVydXNpYSAxOCB0YWh1biBhdGF1IGxlYmloIGRhbiB0aW5nZ2FsIGRpIHdpbGF5YWggSW5kb25lc2lhPC9ESVY+DQo8RElWIGNsYXNzPW5hdmlnYXRpb24+DQo8VUw+DQo8TEkgPjxBIGhyZWY9Ii9UZW1wbGF0ZXMvTGFuZGluZ1BhZ2UuYXNweCI+SGFsYW1hbiBVdGFtYTwvQT4gDQo8TEkgPjxBIGhyZWY9Ii9UZW1wbGF0ZXMvVGVybXNhbmRjb25kaXRpb25zLmFzcHgiIHRhcmdldD1fQmxhbms+U3lhcmF0IGRhbiBrZXRlbnR1YW48L0E+IA0KPExJID48QSBocmVmPSIvVGVtcGxhdGVzL1JlbW92ZU1lLmFzcHgiPkhhcHVzIEFjY291bnQgU2F5YTwvQT4NCjxMSSBzdHlsZT0iZGlzcGxheTpub25lIj48QSBocmVmPSIvZGVtb1BhZ2VzL1BNSVNpdGUuaHRtIiB0YXJnZXQ9X0JsYW5rPlBNSSBDb3Jwb3JhdGU8L0E+DQo8TEkgPjxBIGhyZWY9Ii9UZW1wbGF0ZXMvRkFRLmFzcHgiIHRhcmdldD1fQmxhbms+RGFmdGFyIFBlcnRhbnlhYW48L0E+IA0KPExJID48QSBocmVmPSIvVGVtcGxhdGVzL0NvbnRhY3R1cy5hc3B4IiB0YXJnZXQ9X0JsYW5rPkh1YnVuZ2kgS2FtaTwvQT4gDQo8TEkgY2xhc3M9bGFzdCBpZD1oZWFsdGggPjxBIGhyZWY9Imh0dHA6Ly93d3cuc2FtcG9lcm5hLmNvbS9pZF9pZC90b2JhY2NvX3JlZ3VsYXRpb24vc21va2luZ19hbmRfaGVhbHRoL3BhZ2VzL3Ntb2tpbmdfYW5kX2hlYWx0aC5hc3B4IiB0YXJnZXQ9X0JsYW5rPlBlcmloYWwgTWVyb2tvazwvQT48L0xJPjwvVUw+PC9ESVY+PC9ESVY+ZAIFD2QWAmYPFgIfAmdkZJ0C+Gr+H9Uxtx0S0jrWAuUuv5rg">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+    
+   <link rel="stylesheet" href="./RegistrationPage3_files/lightbox.css" media="screen,screen" type="text/css" title="default">
+<script type="text/javascript">
+function ShowLightBox(contentSrcID)
+{
+	//alert("hi");
+//alert(document.getElementById('hidMoreDetails').value);
+var divElement = document.createElement('div');        
+
+divElement.id = "LightBox";
+divElement.style.display = "block";
+//divElement.style.left = window.screen.width*0.3 + 'px';
+//divElement.style.top = window.screen.height*0.2 + 'px';
+//divElement.style.position = "absolute"; 
+divElement.style.zIndex = "3001";
+//divElement.style="DISPLAY: none; Z-INDEX: 3000; BACKGROUND: #000; FILTER: alpha(opacity=50); LEFT: 0px; WIDTH: 100%; POSITION: absolute; TOP: 0px; HEIGHT: 100%; opacity: 0.5";
+document.body.appendChild(divElement);
+
+var divCloseButton = document.createElement('div');
+divCloseButton.id = "lbClose";
+divCloseButton.innerHTML = "<a href='javascript:void(0);' onClick='HideLightBox();'>X</a>";   
+divElement.appendChild(divCloseButton);
+var divContent = document.createElement('div');
+divContent.id = "ContentID";
+divContent.innerHTML = document.getElementById(contentSrcID).innerHTML;
+divElement.appendChild(divContent);
+getPageSizeWithScroll();
+ document.getElementById('divPopUpOpacity').style.display = 'block'; 
+return false;
+}
+
+function HideLightBox()
+{
+var div = document.getElementById('LightBox')			
+document.body.removeChild(div);
+document.getElementById('divPopUpOpacity').style.display = 'none';
+return false;
+}
+
+function getPageSizeWithScroll()
+{     
+if (window.innerHeight && window.scrollMaxY) 
+{// Firefox         
+	yWithScroll = window.innerHeight + window.scrollMaxY + 'px';         
+	xWithScroll = window.innerWidth + window.scrollMaxX + 'px';
+	document.getElementById('divPopUpOpacity').style.width = xWithScroll
+   				document.getElementById('divPopUpOpacity').style.height = yWithScroll     
+} 
+else if (document.body.scrollHeight > document.body.offsetHeight)
+{ // all but Explorer Mac         
+	yWithScroll = document.body.scrollHeight;         
+	xWithScroll = document.body.scrollWidth;    
+	document.getElementById('divPopUpOpacity').style.width = xWithScroll
+   				document.getElementById('divPopUpOpacity').style.height = yWithScroll 
+} 
+else 
+{ // works in Explorer 6 Strict, Mozilla (not FF) and Safari         
+	yWithScroll = document.body.offsetHeight;         
+	xWithScroll = document.body.offsetWidth;  
+	document.getElementById('divPopUpOpacity').style.width = xWithScroll;
+   	document.getElementById('divPopUpOpacity').style.height = yWithScroll;     
+} 
+}
+</script>
+
+<div class="opacity" id="divPopUpOpacity" style="display: block; z-index: 3000; background-color: rgb(0, 0, 0); left: 0px; position: absolute; top: 0px; opacity: 0.5; background-position: initial initial; background-repeat: initial initial;">
+</div>
+
+
+
+    <div class="mainPage">
+        <div class="header">
+            <div class="legalInfo">
+            </div>
+            <div class="intro">
+                <h1>UPLOAD ID</h1>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="content">
+            <div class="contentIntro">
+                <p>CONSECTETUR ADIPISCING ELIT. PROIN UT EUISMOD FELIS. QUISQUE EGET TEMPUS ELIT, EGET ELEMENTUM NISI. PHASELLUS DAPIBUS TELLUS SED ERAT SAGITTIS POSUERE.</p>
+            </div>            
+            <div class="r3WebcamSection">
+                
+                
+                <fieldset>
+                    
+                    <div class="row">
+                        <!-- CMS Placeholder - For image -->
+                        <img alt="" src="https://staging-neversaymaybe-id.es-dm.com/Images/id_ico2.jpg" vspace="5">
+                         <p class="error">
+                            <span id="lblErrorCapture"></span>
+                        </p>
+                    </div>
+                    <div class="submit">
+                        <a onclick="return CheckFlashAndShowLB(&#39;divLBContentFF&#39;);" id="lnkBtnAccessWebCam" href="javascript:__doPostBack('lnkBtnAccessWebCam','')">ACCESS WEBCAM</a></div>
+                    <div class="submit">
+                        <a id="lnkBtnCaptureContinue" href="javascript:__doPostBack('lnkBtnCaptureContinue','')">RETAKE</a></div>
+                    <div class="clear">
+                    </div>
+                    <div id="divLBContentFF" style="display: none;">
+                        <object id="main" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="700" height="350">
+                            <param name="_cx" value="5080">
+                            <param name="_cy" value="5080">
+                            <param name="FlashVars" value="TargetPageURL=/Templates/RegistrationPage3.aspx&amp;SessionId=15252591&amp;GeneralError=There is some problem with page. Please try after some time.&amp;InvalidSessionIdError=The recieved SessionID is invalid&amp;WebcamUnavailableError=No webcam available on this system.&amp;WebcamPermissionError=Webcam permission denied&amp;TargetPageURLMissingError=Target Page URL missing error&amp;MaxImagesAllowed=2&amp;MaxSaveLimitReachedError=You have reached the maximum save limit. Please close the webcam window and continue registration process&amp;SavedImageCount=0&amp;BtnCapture=Capture&amp;BtnSave=Save">
+                            <param name="Movie" value="take_picture.swf">
+                            <param name="Src" value="/Flash/take_picture.swf">
+                            <param name="WMode" value="Window">
+                            <param name="Play" value="-1">
+                            <param name="Loop" value="-1">
+                            <param name="Quality" value="High">
+                            <param name="SAlign" value="LT">
+                            <param name="Menu" value="-1">
+                            <param name="Base" value="">
+                            <param name="AllowScriptAccess" value="">
+                            <param name="Scale" value="NoScale">
+                            <param name="DeviceFont" value="0">
+                            <param name="EmbedMovie" value="0">
+                            <param name="BGColor" value="FFFFFF">
+                            <param name="SWRemote" value="">
+                            <param name="MovieData" value="">
+                            <param name="SeamlessTabbing" value="1">
+                            <param name="Profile" value="0">
+                            <param name="ProfileAddress" value="">
+                            <param name="ProfilePort" value="0">
+                            <param name="AllowNetworking" value="all">
+                            <param name="AllowFullScreen" value="true">
+                            <embed height="350" width="700" type="application/x-shockwave-flash" salign="" name="take_picture" flashvars="TargetPageURL=/Templates/RegistrationPage3.aspx&amp;SessionId=15252591&amp;GeneralError=There is some problem with page. Please try after some time.&amp;InvalidSessionIdError=The recieved SessionID is invalid&amp;WebcamUnavailableError=No webcam available on this system.&amp;WebcamPermissionError=Webcam permission denied&amp;TargetPageURLMissingError=Target Page URL missing error&amp;MaxImagesAllowed=2&amp;MaxSaveLimitReachedError=You have reached the maximum save limit. Please close the webcam window and continue registration process&amp;SavedImageCount=0&amp;BtnCapture=Capture&amp;BtnSave=Save" allowfullscreen="true" wmode="window" scale="noscale" play="true" bgcolor="#ffffff" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/Flash/take_picture.swf">
+                        </object>
+                    </div>
+                    <div id="divLBContentIE" style="display: none;">
+                        <embed height="350" width="700" type="application/x-shockwave-flash" salign="" name="take_picture" flashvars="TargetPageURL=/Templates/RegistrationPage3.aspx&amp;SessionId=15252591&amp;GeneralError=There is some problem with page. Please try after some time.&amp;InvalidSessionIdError=The recieved SessionID is invalid&amp;WebcamUnavailableError=No webcam available on this system.&amp;WebcamPermissionError=Webcam permission denied&amp;TargetPageURLMissingError=Target Page URL missing error&amp;MaxImagesAllowed=2&amp;MaxSaveLimitReachedError=You have reached the maximum save limit. Please close the webcam window and continue registration process&amp;SavedImageCount=0&amp;BtnCapture=Capture&amp;BtnSave=Save" allowfullscreen="true" wmode="window" scale="noscale" play="true" bgcolor="#ffffff" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/Flash/take_picture.swf">
+                            </div>
+                    <div id="divGetFlash" style="display: none;">
+                        <p align="center">
+                            This content requires the Adobe Flash Player.<br>
+                            <a href="http://www.adobe.com/go/getflashplayer">
+                                <img src="./RegistrationPage3_files/get_flash_player.gif" alt="Get Adobe Flash player"><br>
+                                </a><a href="http://www.macromedia.com/go/getflash">Get Flash</a></p>
+                    </div>
+                    
+                </fieldset>
+            
+            
+            </div>
+            <div class="r3UploadSection" visible="false">
+                
+                    
+                    <div class="row">
+                        </div>
+                    <div class="row">
+                           <input name="txtFileBrowse" type="file" id="txtFileBrowse" class="formField" style="display: none;">
+                        <input type="button" value="CHOOSE FILE" onclick="document.getElementById(&#39;txtFileBrowse&#39;).click();">
+                        <p class="error">
+                            </p>
+                    </div>
+                    <div class="submit">
+                        <a id="lnkBtnUploadingContinue" href="javascript:__doPostBack('lnkBtnUploadingContinue','')"><p>SUBMIT</p></a>
+                        </div>
+                    <div class="clear">
+                    </div>
+                
+            </div>
+            <!-- section 3 -->
+            <div class="r3FaxSection">
+                
+                    <!-- CMS Placeholder - Title -->
+                    
+                    <!-- CMS Placeholder Content END -->
+                    <div class="row" visible="false">
+                        <!-- CMS Placeholder - For image -->
+                        </div>
+                    
+                        <div class="submit">
+                            <a onclick="return Enable();" id="lnkBtnSaveForm" href="javascript:__doPostBack('lnkBtnSaveForm','')"></a></div>
+                    
+                    
+                        <div class="submit">
+                            </div>
+                    
+                    <div class="submit">
+                        
+                        
+                    </div>
+                    <div class="clear">
+                    </div>
+                
+            </div>
+        </div>
+            
+   <link rel="stylesheet" href="./RegistrationPage3_files/lightbox.css" media="screen,screen" type="text/css" title="default">
+<script type="text/javascript">
+function ShowLightBox(contentSrcID)
+{
+	//alert("hi");
+//alert(document.getElementById('hidMoreDetails').value);
+var divElement = document.createElement('div');        
+
+divElement.id = "LightBox";
+divElement.style.display = "block";
+//divElement.style.left = window.screen.width*0.3 + 'px';
+//divElement.style.top = window.screen.height*0.2 + 'px';
+//divElement.style.position = "absolute"; 
+divElement.style.zIndex = "3001";
+//divElement.style="DISPLAY: none; Z-INDEX: 3000; BACKGROUND: #000; FILTER: alpha(opacity=50); LEFT: 0px; WIDTH: 100%; POSITION: absolute; TOP: 0px; HEIGHT: 100%; opacity: 0.5";
+document.body.appendChild(divElement);
+
+var divCloseButton = document.createElement('div');
+divCloseButton.id = "lbClose";
+divCloseButton.innerHTML = "<a href='javascript:void(0);' onClick='HideLightBox();'>X</a>";   
+divElement.appendChild(divCloseButton);
+var divContent = document.createElement('div');
+divContent.id = "ContentID";
+divContent.innerHTML = document.getElementById(contentSrcID).innerHTML;
+divElement.appendChild(divContent);
+getPageSizeWithScroll();
+ document.getElementById('divPopUpOpacity').style.display = 'block'; 
+return false;
+}
+
+function HideLightBox()
+{
+var div = document.getElementById('LightBox')			
+document.body.removeChild(div);
+document.getElementById('divPopUpOpacity').style.display = 'none';
+return false;
+}
+
+function getPageSizeWithScroll()
+{     
+if (window.innerHeight && window.scrollMaxY) 
+{// Firefox         
+	yWithScroll = window.innerHeight + window.scrollMaxY + 'px';         
+	xWithScroll = window.innerWidth + window.scrollMaxX + 'px';
+	document.getElementById('divPopUpOpacity').style.width = xWithScroll
+   				document.getElementById('divPopUpOpacity').style.height = yWithScroll     
+} 
+else if (document.body.scrollHeight > document.body.offsetHeight)
+{ // all but Explorer Mac         
+	yWithScroll = document.body.scrollHeight;         
+	xWithScroll = document.body.scrollWidth;    
+	document.getElementById('divPopUpOpacity').style.width = xWithScroll
+   				document.getElementById('divPopUpOpacity').style.height = yWithScroll 
+} 
+else 
+{ // works in Explorer 6 Strict, Mozilla (not FF) and Safari         
+	yWithScroll = document.body.offsetHeight;         
+	xWithScroll = document.body.offsetWidth;  
+	document.getElementById('divPopUpOpacity').style.width = xWithScroll;
+   	document.getElementById('divPopUpOpacity').style.height = yWithScroll;     
+} 
+}
+</script>
+
+<div class="opacity" id="divPopUpOpacity" style="DISPLAY: none; Z-INDEX: 3000; BACKGROUND: #000; FILTER: alpha(opacity=50); LEFT: 0px; POSITION: absolute; TOP: 0px;opacity: 0.5;">
+</div>
+
+
+
+    <div id="divPopUp" style="display: none;">
+        <div class="header">
+            <h2>
+                CONFIRMATION</h2>
+        </div>
+        <div class="contentIntro">
+            <p>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. PROIN UT EUISMOD FELIS. QUISQUE EGET TEMPUS ELIT, EGET ELEMENTUM NISI. PHASELLUS DAPIBUS TELLUS SED ERAT SAGITTIS POSUERE.</p></div>
+        <div class="edit">
+            <a id="lnkEditBtn" tabindex="50" href="javascript:__doPostBack('lnkEditBtn','')">EDIT</a></div>
+        <div class="next">
+            <a id="lnkNext" tabindex="50" href="javascript:__doPostBack('lnkNext','')">NEXT</a></div>
+    </div>
+        <div class="footer">
+<div class="text style1">Informasi dalam website ini ditujukan untuk perokok berusia 18 tahun atau lebih dan tinggal di wilayah Indonesia</div>
+<div class="navigation">
+<ul>
+<li><a href="https://staging-neversaymaybe-id.es-dm.com/Templates/LandingPage.aspx">Halaman Utama</a> 
+</li><li><a href="https://staging-neversaymaybe-id.es-dm.com/Templates/Termsandconditions.aspx" target="_Blank">Syarat dan ketentuan</a> 
+</li><li><a href="https://staging-neversaymaybe-id.es-dm.com/Templates/RemoveMe.aspx">Hapus Account Saya</a>
+</li><li style="display:none"><a href="https://staging-neversaymaybe-id.es-dm.com/demoPages/PMISite.htm" target="_Blank">PMI Corporate</a>
+</li><li><a href="https://staging-neversaymaybe-id.es-dm.com/Templates/FAQ.aspx" target="_Blank">Daftar Pertanyaan</a> 
+</li><li><a href="https://staging-neversaymaybe-id.es-dm.com/Templates/Contactus.aspx" target="_Blank">Hubungi Kami</a> 
+</li><li class="last" id="health"><a href="http://www.sampoerna.com/id_id/tobacco_regulation/smoking_and_health/pages/smoking_and_health.aspx" target="_Blank">Perihal Merokok</a></li></ul></div></div>
+
+    </div>
+    <div>
+    </div>
+    <table>
+        <tbody><tr>
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody></table>
+    <p>
+        <input name="hidErrorMsgs" type="hidden" id="hidErrorMsgs"></p>
+
+    <script>
+        btn3 = document.getElementById("lnkBtnContinue");
+        if (btn3 != null)
+            btn3.disabled = true;
+    </script>
+
+    
+
+<script type="text/javascript">
+//<![CDATA[
+CheckFlashAndShowLB('divPopUp');//]]>
+</script>
+</form><div id="LightBox" style="z-index: 3001;"><div id="lbClose"><a href="javascript:void(0);" onclick="HideLightBox();">X</a></div><div id="ContentID">
+        <div class="header">
+            <h2>
+                CONFIRMATION</h2>
+        </div>
+        <div class="contentIntro">
+            <p>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. PROIN UT EUISMOD FELIS. QUISQUE EGET TEMPUS ELIT, EGET ELEMENTUM NISI. PHASELLUS DAPIBUS TELLUS SED ERAT SAGITTIS POSUERE.</p></div>
+        <div class="edit">
+            <a id="lnkEditBtn" tabindex="50" href="javascript:__doPostBack('lnkEditBtn','')">EDIT</a></div>
+        <div class="next">
+            <a id="lnkNext" tabindex="50" href="javascript:__doPostBack('lnkNext','')">NEXT</a></div>
+    </div></div>
+    
+<script type="text/javascript">
+    var trackercode = '';
+</script>
+
+
+	<script type="text/javascript">
+
+
+	var gaJsHost = (("https:" == document.location.protocol) ? "http_ga.js" : "ssl_ga.js");
+
+	document.write(unescape("%3Cscript src='/GoogleAnalytics/"+gaJsHost +"'  type='text/javascript'%3E%3C/script%3E"));	
+
+
+</script><script src="./RegistrationPage3_files/http_ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+try {
+var pageTracker = _gat._getTracker(trackercode);
+
+pageTracker._trackPageview();
+
+} catch(err) {}</script>
+<script src="./RegistrationPage3_files/gaAddons.js" type="text/javascript"></script>
+
+
+
+
+</body></html>

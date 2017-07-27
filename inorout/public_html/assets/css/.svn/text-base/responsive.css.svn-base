@@ -1,0 +1,83 @@
+/*
+Theme Name:  Marlboro In Or Out
+Version: 1.0
+Author: Acit Jazz 2013
+*/
+@media only screen and (max-width: 1500px) {
+#buttonDown{
+	margin:-10px 0 0 -54px
+}
+#tallent6{
+	margin:2115px 0 0 -22%;
+}
+#text2{
+	margin:-520px 0 0 -30%;
+	z-index:10000;
+}
+#tokyo{
+	margin:-420px 0 0 -20%;
+}
+#tallent3{
+	margin:450px 0 0 -35%;
+}
+#text3{
+	margin:-900px 0 0 -30%;
+}
+#tallent4{
+	margin:720px 0 0 -3%;
+}
+#text4{
+	margin:-1295px 0 0 -30%;
+}
+#tallent5{
+	margin:1550px 0 0 -25%;
+}
+#text5{
+	margin:-1913px 0 0 -35%;
+	width:30%;
+}
+#text6{
+	margin:1840px 0 0 -30%;
+}
+#cube9{
+	margin:1700px 0 0 -30%;
+}
+#cube7{
+	margin:2112px 0 0 -5%;
+	width:7%;
+}
+#prize{
+	margin:-2375px 0 0 -20%%;
+}
+#videoBox{
+	margin:-2110px 0 0 7%;
+}
+
+#actionlogin{
+    margin:25px 0 0 -485px;
+    bottom: 200px;
+}
+}
+@media only screen and (max-width: 1360px) {
+	
+	.ui-tooltip-content::after {
+		display:none;
+	}
+}
+
+@media only screen and (max-width: 1280px) {
+	#tallent6 {
+		margin: 2216px 0 0 -22%;
+	}
+	#actionlogin {
+	margin: 25px 0 0 -385px;
+	}
+}
+@media only screen and (max-width: 900px) {
+	#tallent6 {
+		margin: 2316px 0 0 -22%;
+	}
+	#text5 {
+	margin: -1913px 0 0 -40%;
+	}
+}

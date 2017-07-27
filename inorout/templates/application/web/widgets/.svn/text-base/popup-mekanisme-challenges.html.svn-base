@@ -1,0 +1,20 @@
+
+<div class="popup" id="popup-mekanisme-challenges">
+    <div class="popupContainer">
+		<a class="closePopup" href="#">[CLOSE X]</a>
+    	<div class="popup-head">
+        	<h2 class="bigTItle">MEKANISME AUCTION</h2>
+        </div><!-- END .popup-head -->
+        <div class="popup-entry popup-global">
+            <ul class="usefont">
+            	<li>Upload minimal 1 foto setiap harinya </li>
+            	<li>Setiap bulan akan ada 1 tema baru sesuai dengan kota tujuan INorOUT</li>
+            	<li>Foto harus asli hasil karya sendiri</li>
+            	<li>10 finalist terpilih akan dipublikasikan di website ini</li>
+            	<li>Foto dengan vote terbanyak akan memenangkan kompetisi, hanya ada 1 pemenang tiap bulannya</li>
+            	<li>Setiap pemenang kompetisi akan mendapatkan 1 badge tambahan senilai xxx poin</li>
+            	<li>Setiap peserta hanya diperbolehkan vote 1 kali saja untuk satu foto</li>
+            </ul>
+        </div><!-- END .popup-entry -->
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->

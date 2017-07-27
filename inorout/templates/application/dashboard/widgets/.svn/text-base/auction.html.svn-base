@@ -1,0 +1,78 @@
+<script type="text/x-handlebars" data-template-name="auction">
+    
+<div id="auction">
+    <div class="content-chart">
+    
+    
+   
+    </div><!---ENDcontent-chart-->
+</div><!-- /#auction -->
+
+</script>
+
+{*}
+
+<div class="row">
+      <div class="userRedeem col-lg-12">
+        <div class="table-info">
+          <table class="table table-bordered table-hover tablesorter">
+          <thead class="tittle-table">
+            <tr><td class="orange" colspan="11"><span class="icon-archive"></span><span class="title-table">Auction</span></td></tr>
+               <tr>
+                <th rowspan="2">Auction <i class="fa fa-sort"></i></th>
+                <th rowspan="2">Participant<i class="fa fa-sort"></i></th>
+                <td colspan="2">Highest Bidder</td>
+                <th rowspan="2">Winner<i class="fa fa-sort"></i></th>
+                <td colspan="2">Bidder</td>
+                <td colspan="2">Unique Bidder</td>
+              </tr>
+              <tr>
+                <th>Name<i class="fa fa-sort"></i></th>
+                <th>Point<i class="fa fa-sort"></i></th>
+                <th>Total User<i class="fa fa-sort"></i></th>
+                <th>Total Point<i class="fa fa-sort"></i></th>
+                <th>Total User<i class="fa fa-sort"></i></th>
+                <th>Total Point<i class="fa fa-sort"></i></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mobil</td>
+                <td>202</td>
+                <td>Ujang</td>
+                <td>202</td>
+                <td>Ujang</td>
+                <td>202</td>
+                <td>202</td>
+                <td>111</td>
+                <td>104</td>
+              </tr>
+              <tr>
+                <td>Mobil</td>
+                <td>202</td>
+                <td>Ujang</td>
+                <td>202</td>
+                <td>Ujang</td>
+                <td>202</td>
+                <td>202</td>
+                <td>111</td>
+                <td>104</td>
+              </tr>
+              <tr>
+                <td>Mobil</td>
+                <td>202</td>
+                <td>Ujang</td>
+                <td>202</td>
+                <td>Ujang</td>
+                <td>202</td>
+                <td>202</td>
+                <td>111</td>
+                <td>104</td>
+              </tr>
+            </tbody>
+          </table>
+      </div><!-- /.table-info -->
+      </div><!-- /.userRedeem  -->      
+    </div><!-- /.row -->
+
+{/*}

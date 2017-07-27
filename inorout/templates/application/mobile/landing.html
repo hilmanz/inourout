@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html dir="ltr" lang="en-US" class="ie6"> <![endif]-->
+<!--[if IE 7]>    <html dir="ltr" lang="en-US" class="ie7"> <![endif]-->
+<!--[if IE 8]>    <html dir="ltr" lang="en-US" class="ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html dir="ltr" lang="en-US" > 
+<!--<![endif]--><head>
+<!--Meta Tags-->
+<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--Title-->
+<title>Never Say Maybe</title>
+<!--Stylesheets-->
+<link rel="stylesheet" href="{$basedomain}assets/css/video-js.css" type="text/css"  media="all" />
+<link rel="stylesheet" href="{$basedomain}assets/css/parallax.css" type="text/css"  media="all" />
+<link rel="stylesheet" href="{$basedomain}assets/css/responsive.css" type="text/css"  media="all" />
+<link rel="stylesheet" href="{$basedomain}assets/css/reset.css" type="text/css"  media="all" />
+<link rel="stylesheet" href="{$basedomain}assets/css/inorout-ie.css" type="text/css"  media="all" />
+<!--Favicon-->
+<link rel="shortcut icon" href="{$basedomain}assets/images/favicon.png" type="image/x-icon" />
+<!--JavaScript-->
+<script type="text/javascript" src="{$basedomain}assets/js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="{$basedomain}assets/js/video.js"></script>
+  <script>
+    _V_.options.flash.swf = "{$basedomain}assets/js/video-js.swf";
+  </script>
+<script>
+	var basedomain = "{$basedomain}" ;
+	var pages = "{$pages}" ;
+	var locale = {$locale|@json_encode} ;
+	var lifetime = "{$lifetime}";
+	var isLogin = "{$isLogin}";	
+
+</script>
+<script>
+{literal}
+$(function() {
+    // the element inside of which  want to scroll
+        var $elem = $('body');
+ 
+        // clicking the "down" button will make the page scroll to the $elem's height
+    $('.scroll-down').click(
+        function (e) {
+            $('html, body').animate({scrollTop: $elem.height()}, 8500);
+        }
+    );
+        // clicking the "up" button will make the page scroll to the top of the page
+ });
+{/literal}
+</script>
+</head>
+<body class="the-{$pages} the-{$acts}" id="marlboro-{$pages}{$acts}">
+<div id="landing-paralax">
+    <!-- Section #1 -->
+    <div id="bg-landing" relative>
+    	<img src="{$basedomain}assets/images/mobile/bg-landing1.jpg"/>
+        <a class="scroll-down">&nbsp;</a>
+    </div>
+    <!-- Section #2 -->
+    <div id="bg-landing">
+    	<img src="{$basedomain}assets/images/mobile/bg-landing2.jpg"/>
+    </div>
+ <div id="bg-landing">
+    	<img src="{$basedomain}assets/images/mobile/bg-landing3.jpg"/>
+    </div>
+   
+   <div id="bg-landing">
+    	<img src="{$basedomain}assets/images/mobile/bg-landing4.jpg"/>
+        {*}
+         <div id="videoBox">
+              <video id="landingVideo" class="video-js vjs-default-skin" controls preload="none" width="100%" height="100%"
+                  poster="{$basedomain}assets/video/landing.jpg"
+                  data-setup="">
+                <source src="{$basedomain}assets/video/MARLBORO_60_WITHOUT BRAND.mp4" type='video/mp4' />
+                <source src="{$basedomain}assets/video/MARLBORO_60_WITHOUT BRAND.webm" type='video/webm' />
+                <source src="{$basedomain}assets/video/MARLBORO_60_WITHOUT BRAND.ogv" type='video/ogg' />
+              </video><br/>
+              <h2>Are You Ready For The Next ?</h2>
+        </div>
+        {/*}
+        <div class="login-field">
+        	<h2 id="textSign">Sign Up Now !</h2>
+            <div class="row rowSubmit">
+                <input type="hidden" value="1" name="login"/>
+                 <a href="{$basemopurl}{if $referralidmop}?ref={$referralidmop}{/if}" id="btnLoginMop">&nbsp;</a>
+                <a href="{$basemopurl}" id="btnRegisterMop">&nbsp;</a>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+    <div class="hw">
+    	<div class="boxfooter menuFooter">
+            <div class="universal">
+                <a href="/index.php">Halaman Utama</a>|
+                <a href="{$mopurl}Templates/Termsandconditions.aspx" target="_blank">Syarat dan Ketentuan</a>|
+                <a href="{$mopurl}Templates/RemoveMe.aspx" target="_blank">Hapus Saya</a>|
+                <a href="{$mopurl}Templates/FAQ.aspx" target="_blank">Daftar Pertanyaan</a>|
+                <a href="{$mopurl}Templates/Contactus.aspx" target="_blank">Kontak Kami</a>|
+                <a href="https://www.pmi.com/id/smokingandhealth" target="_blank">Perihal Merokok</a>
+            </div><!-- END .universal -->
+        </div><!-- END .boxfooter -->
+    </div><!-- END .hw -->
+</div><!-- END #footer --> 
+</div>
+
+<script>
+    {literal}
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-867847-60', 'neversaymaybe.co.id');
+      ga('send', 'pageview');
+      {/literal}
+    </script> 
+</body>
+</html>

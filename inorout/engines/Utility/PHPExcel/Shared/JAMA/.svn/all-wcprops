@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/PHPExcel/Shared/JAMA
+END
+LUDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/PHPExcel/Shared/JAMA/LUDecomposition.php
+END
+CholeskyDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/PHPExcel/Shared/JAMA/CholeskyDecomposition.php
+END
+SingularValueDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/PHPExcel/Shared/JAMA/SingularValueDecomposition.php
+END
+QRDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/PHPExcel/Shared/JAMA/QRDecomposition.php
+END
+EigenvalueDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/PHPExcel/Shared/JAMA/EigenvalueDecomposition.php
+END
+Matrix.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/PHPExcel/Shared/JAMA/Matrix.php
+END

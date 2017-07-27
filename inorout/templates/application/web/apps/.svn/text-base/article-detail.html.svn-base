@@ -1,0 +1,90 @@
+
+<div id="updatePage" class="container">
+	<div class="entry-container">
+    	<div id="navClues" class="center">
+        	<a href="{$basedomain}articles" class="current">UPDATES</a>
+        	<a href="{$basedomain}clues">CLUES</a>  
+        </div>
+        <div class="post-container">
+            <div class="post-content">
+            	<div id="the-content">
+                	<h3 class="labelPost">{if $getEventByID.past_event eq '1'}past{else}upcoming{/if} events:</h3>
+                	<h1 class="bigTItle">{$getEventByID.title|replace:'\\':'   '}</h1>
+                    <div class="post-venue">
+                        <div class="fl">
+                            <span class="iconArrowGrey">&nbsp;</span>
+                            <h4><span class="red">when:</span><br />
+                                <span class="date-event">{$getEventByID.changeDate}</span></h4>
+                        </div><!-- END .fl -->
+                        <div class="fl">
+                            <span class="iconArrowGrey">&nbsp;</span>
+                            <h4><span class="red">where:</span><br />
+                                <span class="date-event">{$getEventByID.city}</span></h4>
+                        </div><!-- END .fl -->
+                    </div><!-- END .post-venue -->
+                	<a href="#" class="detailimg">
+                        <img src="{$getEventByID.news_images.image_full_path}" />
+                    </a>
+                    <div class="entry-detail">
+                    	<p>{$getEventByID.content|html_entity_decode}</p>
+                    </div><!-- END .entry-detail -->
+					{if $getEventByID.gallery}
+                    <div id="galeryPhotos">
+                    	<h3>event's photos:</h3>
+						
+						<div class="galeryPhotos">
+                        	{foreach $getEventByID.gallery as $key => $val}
+							<a href="#popup-eventphoto-detail" class="showPopup"> <img src="{$basedomain}public_assets/event/{$val.img}" /></a>
+							{/foreach}
+					
+                        </div>
+						
+					</div>
+					{/if}
+                </div><!-- END #the-content -->
+                <div id="sidebar">
+                	<h3 class="black">More Events</h3>
+                    <div class="row-post">
+                        {foreach $otherEvent as $key => $val}
+						<div class="post">
+                            <a href="{$basedomain}articles/detail/{$val.id}" class="thumb moreEvent-thumb">
+                                <img src="{$basedomain}public_assets/news/{$val.img}" />
+                            </a>
+                            <div class="entry-post">
+                                <span class="date">{$val.changeDate}</span>
+                                <p>{$val.brief}</p>
+                                <a href="{$basedomain}articles/detail/{$val.id}" class="more">more &raquo;</a>
+                            </div><!-- END .entry-post -->
+                        </div><!-- END .post -->
+						{/foreach}
+						{*}
+                        <div class="post">
+                            <a href="{$basedomain}articles/detail" class="thumb" rel="superbox[gallery][my_gallery]">
+                                <img src="{$basedomain}assets/content/article/thumb_280x130.jpg" />
+                            </a>
+                            <div class="entry-post">
+                                <span class="date">12 March 2014</span>
+                                <p>Nulla facilisi. Aliquam luctus tellus 
+        nec eros congue consectetur.</p>
+                                <a href="{$basedomain}articles/detail" class="more">more &raquo;</a>
+                            </div><!-- END .entry-post -->
+                        </div><!-- END .post -->
+                        <div class="post">
+                            <a href="{$basedomain}articles/detail" class="thumb">
+                                <img src="{$basedomain}assets/content/article/thumb_280x130.jpg" />
+                            </a>
+                            <div class="entry-post">
+                                <span class="date">12 March 2014</span>
+                                <p>Nulla facilisi. Aliquam luctus tellus 
+        nec eros congue consectetur.</p>
+                                <a href="{$basedomain}articles/detail" class="more">more &raquo;</a>
+                            </div><!-- END .entry-post -->
+                        </div><!-- END .post -->
+						{/*}
+                    </div><!-- END .row-post -->
+                </div><!-- END #sidebar -->
+            </div><!-- END .post-content -->
+        </div><!-- END .post-container -->
+    </div><!-- END .entry-container -->
+</div><!-- END .container -->
+{include file="application/web/widgets/popup-eventphoto-detail.html"}

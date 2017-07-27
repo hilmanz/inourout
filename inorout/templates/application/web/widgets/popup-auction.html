@@ -1,0 +1,87 @@
+<div class="popup" id="popup-auction">
+    <div class="popupContainer">
+		<a class="closePopup" href="#">[CLOSE X]</a>
+    	<div class="popup-head">
+        	<h2><img  src="{$basedomain}assets/images/content/placing_bid.png" /></h2>
+        </div>
+    	<div class="popup-entry">
+                <form id="tradeFormBid" method="POST" action="{$basedomain}badges/bidding"  >
+                    <div class="badgesListAll">
+                    	<h3>Poin untuk bid ditentukan oleh jumlah poin dari <br />keseluruhan badge kamu & harus lebih besar dari poin bid awal.</h3>
+						{foreach $currentbadges as $key => $val}
+                        <div class="boxBadges">
+                            <a class="badges badges-m  {if $val.total!=0}{else}grayscale{/if}" href="#">
+                                <img src="{$basedomain}assets/images/badges/badges-{$val.id}.png" />
+                            </a>
+                            <h4 class="badgesCount"><span class="counterBadges_{$val.id} {if $val.total!=0}black{else}red{/if}">[{$val.total}]</span> BADGES LEFT</h4>
+                            <input type="text" class="badgesvaluetemps spinnerbid" value="0"  badgesnames="{$val.name}" badgesid="{$val.id}" amountpoint="0" currentpoint="0" max="{$val.total}" badgesvalues="{$val.point}" readonly="readonly" name="badges_{$val.id}" />
+                        </div><!-- END .boxBadges -->
+                         {/foreach}
+                    </div><!-- END .badgesListAll -->
+                    <div id="biddingInfo">
+                    	<div id="prizeBox">
+           					 <a href="#" class="thumbPrizes"><img  class="auctionimagesbid" src="" /></a>
+                             <h3><span class="auctiondescbid" > </span></h3>
+                        </div>
+                        <div id="currentBid" class="bidsideBox">
+                        	<h3>bid saat ini:</h3>
+                            <h2 class="bidValue auctioncurrentbid" > 0 </h2>
+                        </div><!-- END #currentBid -->
+                        <div id="yourBid" class="bidsideBox">
+                        	<h3>bid kamu:</h3>
+                            <h2 class="bidValue myofferingpoint"   >0</h2>
+                            <p class="f12">Tambahkan poin lagi menggunakan nilai badge kamu</p>
+                            {*}<p>Tambahkan <span>( <span class="myofferingpointsubbed" currentbidder="0" >0</span> )</span> poin lagi menggunakan nilai badge kamu.</p>{/*}
+                        </div><!-- END #yourBid -->
+						<input type="hidden" name="auctionid" class="aidtoform" value="0" /> 
+						<input type="hidden" name="badgelist"  class="badgestoform" value="0" /> 
+						<input type="hidden" name="amountlist"  class="amounttoform" value="0" /> 
+						<input type="hidden" name="opponentid" class="oppponenttoform"  value="0" /> 
+							<a href="#popup-auction-success" class="orangebtn showPopup messageshipping" style="display:none" ></a> 
+                        <input type="submit" value="tambah BID &raquo;" class="orangebtn fr" id="placeBidBtn" />
+                        <span class="alert-auction"></span>   
+						
+              
+			    
+                    </div><!-- END #biddingInfo -->
+                </form>
+        </div>
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->
+{literal}
+<script>
+	var updateoptions = {
+	dataType:  'json', 	
+	beforeSubmit: function(data) { 
+			 $(".msgbidding").html('');
+			 console.log('wait...........');
+			 
+	},
+	success : function(data) {		
+			
+			if(data.result==true){				
+					$("#placeBidBtn").attr('disabled','disabled');
+                    $("#placeBidBtn").addClass('grayscale');
+					$("#placeBidBtn").val('2 TURNS LEFT');
+                    $("#placeBidBtn").next().text('Maaf, kamu baru dapat melakukan bidding kembali setelah 2 pengguna lain. ');
+					$(".auctionmessages").html(data.message);
+
+                    $("#popup-auction-success a.closePopup").on('click',function(){
+                        window.location.href=basedomain+"badges/auction";
+                    });
+					 
+			}else{
+				$(".auctionmessages").html(data.message);
+			}
+			//$(".msgbidding").html(data.message);
+				$(".messageshipping").trigger('click');
+                $("#popup-auction-success a.closePopup").on('click',function(){
+                    $('#popup-auction').fadeIn();
+                    $("#bg-popup").fadeIn();
+                });
+	}
+	};					
+
+	$("#tradeFormBid").ajaxForm(updateoptions);
+</script>
+{/literal}

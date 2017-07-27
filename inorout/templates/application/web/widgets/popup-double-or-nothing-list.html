@@ -1,0 +1,57 @@
+
+{literal}
+<style>
+.aspopup{
+	background: url("../images/bg_popup.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 20px #000000;
+    display: none;
+    left: 50%;
+    margin: 0 auto;
+    min-height: 100px;
+    padding: 20px;
+    top: 100px;
+    width: 600px;
+    z-index: 10001;
+}
+</style>
+{/literal}
+<div class="aspopup   popup-double-or-nothing" id="popup-double-or-nothing-list" style="display: block; margin-top: 25px;">
+    <div class="popupContainer center">
+    	<div class="popup-head">
+        	<h2 class="bigTItle"><img src="{$basedomain}assets/images/content/doubleOrNothing.png" /></h2>
+            <h3>Ikuti tantangan ini untuk mendapatkan DOUBLE BADGE!</h3>
+        </div><!-- END .popup-head -->
+    	<div class="popup-entry">
+        	<div class="challengeList">
+            	{if $listsuser.data}
+				<table style="margin-bottom:20px;" width="100%" border="0" cellspacing="0" cellpadding="0">				
+					{foreach $listsuser.data as $key => $val}
+					  <tr>
+						<td width="50"><a href="#" class="small-thumb"><img src="{$val.profile.image_full_path}" /></a></td>
+						<td><h4>{$val.names} menantangmu!</h4> {if $val.takechallanges} Berani mengambil tantangannya ? {/if} </td>
+						<td >
+						{if $val.takechallanges}
+                        <a href="{$basedomain}games/daredoubles/?token={$val.encryptednotchallanges}" class="challengeBtn" style="margin:5px">Pass!</a>&nbsp;
+							<a href="{$basedomain}games/daredoubles/?token={$val.encryptedchallanges}" class="challengeBtn" style="margin:5px" >Challenge!</a>
+							
+							
+						{else}
+							<a href="{$basedomain}games/daredoubles/?token={$val.encrypted}" class="challengeBtn" style="margin:5px">Challenge!</a>
+						{/if}
+						</td>
+					  </tr>
+					 {/foreach}
+                </table>
+				{else}
+				<table style="margin-bottom:20px;" width="100%" border="0" cellspacing="0" cellpadding="0">		
+					<tr>
+						<td style="text-align:center">{$listsuser.message} </td>
+					</tr>
+				</table>
+        		{/if}
+                <a style="float:none;" class="challengeBtn" href="{$basedomain}games" >return to games</a>
+            </div>
+        </div><!-- END .popup-entry -->
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup --> 
+ 

@@ -1,0 +1,48 @@
+{if $registerconfirm}
+<script>
+	var registerconfirm = "{$registerconfirm}";
+	{literal}
+	
+	
+	$(document).ready(function(){
+	
+			$("#footer").attr('style','display:none');
+			$("#main-menu-wrapper").attr('style','display:none');
+				$(".rowBtn").attr('style','display:none');
+				$("#hw").attr('style','display:none');
+
+				
+				$(".trigun").trigger("click");
+		
+				$(".msgpopupglobal").html(registerconfirm);		
+	});
+	
+	$(document).on('click','#fancybox-overlay, #fancybox-close',function(){
+		window.location.href = basedomain+'login';
+	});			
+	{/literal}
+</script>
+{else}
+
+<script>
+	
+	{literal}
+	
+	
+	$(document).ready(function(){
+		
+				$("#footer").attr('style','display:none');
+				$(".rowBtn").attr('style','display:none');
+				$("#hw").attr('style','display:none');
+				$("#main-menu-wrapper").attr('style','display:none');
+	});
+	
+	
+	{/literal}
+</script>
+{/if}
+<div style="min-height:680px;">
+<div>
+<img src="{$basedomain}assets/images/loader.gif" class="load-gif">
+</div>
+</div>

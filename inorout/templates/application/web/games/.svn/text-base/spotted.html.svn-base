@@ -1,0 +1,22 @@
+
+<div id="gamesPage" class="container">
+	<div class="entry-container center">
+			<div class="gameContainer" id="gameContainer"></div>
+			<a class="closePopup3" href="#"  onclick="javascript:history.go(-1);return false;">[CLOSE X]</a>
+            <script type="text/javascript">
+                  var serverurl = basedomain+"service/games/";
+                  var gameassetspath = basedomain+'games_src/spotted/assets/';
+                  var backbutton = basedomain+'games';
+            </script>
+            <script src="{$basedomain}games_src/spotted/lib/phaser.min.js"></script>
+            <script src="{$basedomain}games_src/spotted/lib/phaser-state-transition.min.js"></script>
+            <script src="{$basedomain}games_src/spotted/lib/utility.js"></script>
+            <script src="{$basedomain}games_src/spotted/lib/sha1.js"></script>
+            <script src="{$basedomain}games_src/spotted/spotted.min.js"></script> 
+            <a href="#popup-game-don" class="showPopup " id="onbtnDiSiniExt" style="display:none">klik disini</a>
+            {include file="application/web/games/popup-game.html"}
+    </div>
+</div><!-- END .container -->
+<div id="bg-popup3" style="display:block"></div>
+
+     

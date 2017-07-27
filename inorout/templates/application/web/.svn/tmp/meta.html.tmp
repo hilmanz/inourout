@@ -1,0 +1,65 @@
+<<<<<<< .mine
+<!--Meta Tags-->
+<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--Title-->
+<title>MARLBORO.PH</title>
+<!--Stylesheets-->
+<link rel="stylesheet" href="{$basedomain}assets/css/superfish.css" type="text/css"  media="all" />
+<link rel="stylesheet" href="{$basedomain}assets/css/carousel.css" type="text/css"  media="all" />
+<link type="text/css" href="{$basedomain}assets/css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+<link rel="stylesheet" href="{$basedomain}assets/css/inorout.css" type="text/css"  media="all" />
+<!--Favicon-->
+<link rel="shortcut icon" href="{$basedomain}assets/images/favicon.png" type="image/x-icon" />
+<!--JavaScript-->
+<script type="text/javascript" src="{$basedomain}assets/js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="{$basedomain}assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="{$basedomain}assets/js/hoverIntent.js"></script>
+<script type="text/javascript" src="{$basedomain}assets/js/superfish.js"></script>
+<script type="text/javascript" src="{$basedomain}assets/js/jquery.watermark.js"></script>
+<script type="text/javascript" src="{$basedomain}assets/js/customform.js"></script>
+<script type="text/javascript" src="{$basedomain}assets/js/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="{$basedomain}assets/js/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" src="{$basedomain}assets/js/detectbrowser.js"></script>
+<script type="text/javascript" src="{$basedomain}assets/js/inourout.js"></script>
+<script>
+	var basedomain = "{$basedomain}" ;
+	var pages = "{$pages}" ;
+	var locale = {$locale|@json_encode} ;
+	var lifetime = "{$lifetime}";
+	var isLogin = "{$isLogin}";	
+
+</script>=======
+<!--Meta Tags-->
+<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--Title-->
+<title>MARLBORO.PH</title>
+<!--Stylesheets-->
+<link rel="stylesheet" href="{$basedomain}assets/css/superfish.css" type="text/css"  media="all" />
+<link rel="stylesheet" href="{$basedomain}assets/css/carousel.css" type="text/css"  media="all" />
+<link type="text/css" href="{$basedomain}assets/css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+<link rel="stylesheet" href="{$basedomain}assets/css/inorout.css" type="text/css"  media="all" />
+<link rel="stylesheet" href="{$basedomain}assets/css/inorout-ie.css" type="text/css"  media="all" />
+<!--Favicon-->
+<link rel="shortcut icon" href="{$basedomain}assets/images/favicon.png" type="image/x-icon" />
+<!--JavaScript-->
+<script type="text/javascript" src="{$basedomain}assets/js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="{$basedomain}assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="{$basedomain}assets/js/hoverIntent.js"></script>
+<script type="text/javascript" src="{$basedomain}assets/js/superfish.js"></script>
+<script type="text/javascript" src="{$basedomain}assets/js/jquery.watermark.js"></script>
+<script type="text/javascript" src="{$basedomain}assets/js/customform.js"></script>
+<script type="text/javascript" src="{$basedomain}assets/js/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="{$basedomain}assets/js/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" src="{$basedomain}assets/js/detectbrowser.js"></script>
+<script type="text/javascript" src="{$basedomain}assets/js/inourout.js"></script>
+<script>
+	var basedomain = "{$basedomain}" ;
+	var pages = "{$pages}" ;
+	var locale = {$locale|@json_encode} ;
+	var lifetime = "{$lifetime}";
+	var isLogin = "{$isLogin}";	
+
+</script>
+>>>>>>> .r25

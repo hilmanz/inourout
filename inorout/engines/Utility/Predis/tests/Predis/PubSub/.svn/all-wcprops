@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/Predis/tests/Predis/PubSub
+END
+DispatcherLoopTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/Predis/tests/Predis/PubSub/DispatcherLoopTest.php
+END
+PubSubContextTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/Predis/tests/Predis/PubSub/PubSubContextTest.php
+END

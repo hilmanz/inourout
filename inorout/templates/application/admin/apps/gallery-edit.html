@@ -1,0 +1,87 @@
+<div id="theContainer" class="inboxPage">
+    <div class="theContainer">
+        <div class="head-title">
+            <h1 class="fl">Input Event</h1>
+        </div> <!-- /.head-title -->
+        <div>
+            <form method="POST" action="{$basedomain}gallery/editData" enctype="multipart/form-data">
+			<table border=1>
+				
+				<tr>
+					<td>image</td>
+					<td>:</td>
+					<td>
+						{if $list.img}
+							<img src="{$basedomainpath}public_assets/event/{$list.img}" width="100px" height="100px"/>
+						{/if}
+						<input type="file" name="images" value="" />
+					</td>
+				</tr>								
+				{if $isEventorclues==3}
+				<tr class="city">
+					<td>City</td>
+					<td>:</td>
+					<td>
+						<select name="city">
+						{section name=i loop=$cityreference}
+							<option value="{$cityreference[i].id}" {if $cityreference[i].id == $list.cityid}selected="selected"{/if}>{$cityreference[i].city}</option>
+						{/section}
+						</select>
+					</td>
+				</tr>
+				{/if}
+				<tr>
+					<td>Posted Date</td>
+					<td>:</td>
+					<td><input type="text" class="half-width" id="datepicker" name="posteddate" value="{$list.posted_date}" style="width:100px" /></td>
+				</tr>
+				<tr>
+					<td>Status</td>
+					<td>:</td>
+					<td>
+						<select name="n_status">
+							<option value="2" {if $list.n_status==2}selected="selected"{/if}>unpublished</option>
+							<option value="1" {if $list.n_status==1}selected="selected"{/if}>publish</option>
+							<option value="3" {if $list.n_status==2}selected="selected"{/if}>deleted</option>
+						</select>
+					</td>
+				</tr>		
+				<tr>
+					<td colspan="3" >
+						<input type="hidden" name="eventid" value="{$eventid}" />
+						<input type="hidden" name="eid" value="{$eventid}" />
+						<input type="submit" name="submit" value="submit" />
+					</td>
+				</tr>
+			</table>
+            </form>
+		</div>
+	</div>
+</div>
+
+<script>
+{literal}
+	$(document).on('change','.eventType', function(){
+		var type = $(this).val();
+		if (type==3){
+			$('.city').css('display','');
+		}else{
+			$('.city').css('display','none');
+		}
+		
+		
+		$.post(basedomain+'gallery/getListAlbum', {type:type}, function(data){
+		
+			var html = "";
+			if (data.status==true){
+				$.each(data.res, function(i,e){
+					html += "<option value='"+e.id+"'>"+e.title+"</option>";
+				})
+				
+				$('.albumType').html(html);
+			}
+			
+		},"JSON")
+	})
+{/literal}
+</script>

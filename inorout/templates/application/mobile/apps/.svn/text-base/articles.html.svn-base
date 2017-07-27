@@ -1,0 +1,148 @@
+<div id="updatePage" class="container">
+	<div class="entry-container">
+    	<div id="navClues" class="center">
+        	<a href="{$basedomain}articles" class="current">UPDATES</a>
+        	<a href="{$basedomain}clues">CLUES</a>  
+        </div>
+        <div class="post-container">
+			{if $currentEvent}
+        	<div class="box-prof">
+			<div class="post-header">
+				<img src="{$basedomain}assets/images/mobile/content/upcomingEvent.png" />
+            </div><!-- END .post-header -->
+            <div class="post-content">
+            	<div class="hot-content">
+                	<a href="{$basedomain}articles/detail" class="bigthumb">
+                        <img src="{$currentEvent.news_images.image_full_path}" />
+                    </a>
+                    <div class="hot-post">
+                    	<div class="post-l">
+                    	<h3 class="big-title">{$currentEvent.title}</h3>
+                        <p>{$currentEvent.brief}</p>
+						</div><!-- END .post-l -->
+                        <div class="post-venue">
+                        	<div class="fl">
+                				<span class="iconArrowGrey">&nbsp;</span>
+                            	<h4><span class="red">when:</span><br />
+									<span class="date-event">{$currentEvent.changeDate}</span></h4>
+                            </div><!-- END .fl -->
+                        	<div class="fl">
+                				<span class="iconArrowGrey">&nbsp;</span>
+                            	<h4><span class="red">where:</span><br />
+									<span class="date-event">{$currentEvent.city}</span></h4>
+                            </div><!-- END .fl -->
+                            <a class="orangebtn" href="{$basedomain}articles/detail/{$currentEvent.id}">VIEW EVENT &raquo;</a>
+                        </div><!-- END .post-venue -->
+                    </div><!-- END .hot-post -->
+                </div><!-- END .hot-content -->
+            </div><!-- END .post-content -->
+            </div><!-- END .box-prof -->
+            {/if}
+			<div class="box-prof">
+        	<div class="post-header">
+				<img src="{$basedomain}assets/images/mobile/content/pastEvent.png" />
+            </div><!-- END .post-header -->
+            <div class="post-content" >
+            	{*}{foreach $pastEvent as $keys => $value}{/*}
+				<div class="row-post" startpage="0" total="{$total}" id="lastEventPaging" lastrow="0">
+                    {foreach $pastEvent as $key => $val}
+					<div class="post">
+                        <a href="{$basedomain}articles/detail/{$val.id}" class="thumbpPost">
+                            <img src="{$basedomainpath}public_assets/news/{$val.img}" />
+                        </a>
+                        <div class="entry-post">
+                            <span class="date">{$val.changeDate}</span>
+                            <p>{$val.title}</p>
+                            <a href="{$basedomain}articles/detail/{$val.id}" class="more">more &raquo;</a>
+                        </div><!-- END .entry-post -->
+                    </div><!-- END .post -->
+					{/foreach}
+					{*}
+                    <div class="post">
+                        <a href="{$basedomain}articles/detail" class="thumbpPost">
+                            <img src="{$basedomain}assets/content/article/thumb_280x130.jpg" />
+                        </a>
+                        <div class="entry-post">
+                            <span class="date">12 March 2014</span>
+                            <p>Nulla facilisi. Aliquam luctus tellus 
+    nec eros congue consectetur.</p>
+                            <a href="{$basedomain}articles/detail" class="more">more &raquo;</a>
+                        </div><!-- END .entry-post -->
+                    </div><!-- END .post -->
+                    <div class="post">
+                        <a href="{$basedomain}articles/detail" class="thumbpPost">
+                            <img src="{$basedomain}assets/content/article/thumb_280x130.jpg" />
+                        </a>
+                        <div class="entry-post">
+                            <span class="date">12 March 2014</span>
+                            <p>Nulla facilisi. Aliquam luctus tellus 
+    nec eros congue consectetur.</p>
+                            <a href="{$basedomain}articles/detail" class="more">more &raquo;</a>
+                        </div><!-- END .entry-post -->
+                    </div><!-- END .post -->
+					{/*}
+                </div><!-- END .row-post -->
+				
+				<div id="loadmoreajaxloader" style="display:none;"><center><img src="{$basedomainpath}assets/images/loader.gif"></center></div>
+				
+				{*}{/foreach}{/*}
+            	{*}
+				<div class="row-post">
+                    <div class="post">
+                        <a href="{$basedomain}articles/detail" class="thumbpPost">
+                            <img src="{$basedomain}assets/content/article/thumb_280x130.jpg" />
+                        </a>
+                        <div class="entry-post">
+                            <span class="date">12 March 2014</span>
+                            <p>Nulla facilisi. Aliquam luctus tellus 
+    nec eros congue consectetur.</p>
+                            <a href="{$basedomain}articles/detail" class="more">more &raquo;</a>
+                        </div><!-- END .entry-post -->
+                    </div><!-- END .post -->
+                    <div class="post">
+                        <a href="{$basedomain}articles/detail" class="thumbpPost">
+                            <img src="{$basedomain}assets/content/article/thumb_280x130.jpg" />
+                        </a>
+                        <div class="entry-post">
+                            <span class="date">12 March 2014</span>
+                            <p>Nulla facilisi. Aliquam luctus tellus 
+    nec eros congue consectetur.</p>
+                            <a href="{$basedomain}articles/detail" class="more">more &raquo;</a>
+                        </div><!-- END .entry-post -->
+                    </div><!-- END .post -->
+                    <div class="post">
+                        <a href="{$basedomain}articles/detail" class="thumbpPost">
+                            <img src="{$basedomain}assets/content/article/thumb_280x130.jpg" />
+                        </a>
+                        <div class="entry-post">
+                            <span class="date">12 March 2014</span>
+                            <p>Nulla facilisi. Aliquam luctus tellus 
+    nec eros congue consectetur.</p>
+                            <a href="{$basedomain}articles/detail" class="more">more &raquo;</a>
+                        </div><!-- END .entry-post -->
+                    </div><!-- END .post -->
+                </div><!-- END .row-post -->
+				{/*}
+            </div><!-- END .post-content -->
+            {*}
+			<div class="pagingbox">
+                <a href="#" class="prev">&laquo; PREV</a>
+                <a href="#">1</a>
+                <a href="#" class="current">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#" class="next">NEXT &raquo;</a>
+            </div><!-- END .pagingbox -->
+			{/*}
+            </div><!-- END .box-prof -->
+        </div><!-- END .post-container -->
+    </div><!-- END .entry-container -->
+</div><!-- END .container -->
+
+<script>
+{literal}
+	
+	pagescroll('lastEventPaging','articles/getPastEvent',1,'mobileLastEventPaging');
+{/literal}
+</script>

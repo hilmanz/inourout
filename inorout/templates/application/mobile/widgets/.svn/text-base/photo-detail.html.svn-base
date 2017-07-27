@@ -1,0 +1,72 @@
+<div id="photo-detail" class="container">
+	<div class="entry-container center relative">
+    	<div id="box-content" class="relative">
+        	<a class="closing" href="{$basedomain}challenge/finalist/{$contentid}">[CLOSE X]</a>
+            <div id="entry-content">
+            	  <div class="box-prof photo-detail">
+                  	<div class="photoDetail">
+                        {foreach $gallery as $key => $val}
+						<img src="{$val.gallery.image_full_path}">
+						{/foreach}
+                    </div><!-- end #editPhotoBox -->
+                    <div class="photoDesc">
+                        <a href="#" class="small-thumb">
+						{if $gallery}	
+						{foreach $gallery as $key => $val}
+						<img src="{$basedomainpath}public_assets/profile/{$val.author.img}" />
+						
+						</a>
+                       {if $val.is_voted eq '1'}
+							 {if $val.id eq $val.photo_id_voted} <a class="greenbtn fr disabled-voted2" href="javascript:void(0)">&nbsp;</a>{/if}
+						{else}
+						<a class="orangebtn fr vote_photo" href="javascript:void(0)" data-vote="{$val.eventid}" data-title = "{$val.event_title}" data-photoid="{$val.id}">VOTE</a>
+						{/if}
+                        <div class="photo-author">
+                            <h4>PHOTO BY</h4>
+                            <h3>{$val.author.name}</h3>
+                        </div>
+					
+						{/foreach}
+						{/if}
+                    </div><!-- END .photoDesc -->
+                  </div>     	
+            </div><!-- END .entry-content -->         
+        </div><!-- END .box-content -->
+        <div class="direction-nav">
+            <a {if $prev}href="{$basedomain}challenge/photodetails/{$contentid}?pid={$prev}" {else}href="javascript:void(0)"{/if} class="prevPhoto">&nbsp;</a>
+            <a {if $next} href="{$basedomain}challenge/photodetails/{$contentid}?pid={$next}" {else}href="javascript:void(0)"{/if} class="nextPhoto">&nbsp;</a>
+        </div>
+    </div></div><!-- END ."entry-container -->
+
+
+
+<script>
+{literal}
+    
+    $(document).on('click','.vote_photo',function(){
+        //var div = $(this);
+        var div = $('.vote_photo');
+        // var div_check = parseInt(div.data('popup'));
+        div.removeClass('vote_photo');
+        var vote_id = parseInt($(this).data("vote"));
+        var photoid = parseInt($(this).data("photoid"));
+        var title = $(this).data("title");
+        var data = {};
+        data.url=basedomain+'challenge/vote';
+        data.params={ajax:1,content_id:vote_id,theme:title,photo_id:photoid};
+        data.type="json";
+        post_json(data).done(function(response){
+            var str='';
+            try{
+                if(response.result==1){
+					//log('masuk');
+					//$('.vote_photo').addClass('disabled');
+					//$('.vote_photo').html('VOTED');
+                    //$(this).removeClass('vote_photo');
+					location.reload();
+                }
+            }catch(e){}
+        });
+    });
+{/literal}
+</script>

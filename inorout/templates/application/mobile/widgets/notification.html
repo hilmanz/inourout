@@ -1,0 +1,42 @@
+<div id="notification" class="container">
+	<div class="entry-container center">
+    	<div id="box-content" class="relative">
+        	<a class="closing" href="{$basedomain}profile">[CLOSE X]</a>
+            <div id="entry-content">
+            	<div class="box-prof">
+                	<div class="aspiration-body">
+                   		<div class="headerNotfication">
+                        	<h3>NOTIFICATIONS</h3>
+                    	</div>
+                    	 <div id="notifList" startpage="10" total="{$total}" lastrow="0">   	 
+                            {foreach $notif as $key => $val}
+							<div class="row {if $val.unread==1}unread{else}read{/if}">
+                                <a href="{$basedomain}notifications/detail/{$val.id}">{$val.subject}</a>
+                                <span class="notifdate">{$val.formatted_date}</span>
+                            </div><!-- end .row -->
+                            {/foreach}
+                            <div class="row load-notif loadMore">
+				<a class="loadmorenotif" href="javascript:void(0)">Load More</a>
+			</div>
+							
+                         </div><!-- END #notifList -->
+                         
+                    </div>
+            	</div><!-- END .box-prof -->
+                
+            </div><!-- END .entry-content -->
+			{literal}
+            <a style="font-size:14px;font-family: 'maybebold'; display:none;" id="back_top" onclick="jQuery('html, body').animate({scrollTop:0}, 'slow');" href="javascript:void(0);">BACK TO TOP </a>{/literal}
+        </div><!-- END .box-content -->
+    </div><!-- END .entry-container -->
+</div><!-- END .popup -->
+
+<script>
+{literal}
+	$('.loadmorenotif').click(function(){
+		pagesClick('notifList','notifications/ajax',10,'mobileNotifPaging',false,'loadMore');
+		$("#back_top").show('slow');
+	})
+	
+{/literal}
+</script>

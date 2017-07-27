@@ -1,0 +1,11 @@
+<div id="header">
+    <a class="logo fl" href="{$basedomain}#/"><img src="{$assets_domain}images/logo.png"/></a>
+    <h3 class="fl">
+    <span class="icon-house"></span><span class="mls"> DASHBOARD</span></h3>
+    <div class="download-all fr">
+    <a class="icon-lock" href="#" title="Logout"></a>
+    </div>
+    <div class="download-all fr">
+    <a class="icon-download" href="#"></a>
+    </div>
+</div>

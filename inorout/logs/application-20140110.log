@@ -1,0 +1,67 @@
+2014-01-10 11:10:39 SELECT * FROM social_member WHERE username='' LIMIT 1
+2014-01-10 11:10:39 cannot login, password or username not exists 
+2014-01-10 11:52:56 SELECT * FROM social_member WHERE username='acit' LIMIT 1
+2014-01-10 11:52:56 can login
+2014-01-10 11:52:58 
+			SELECT sm.*,cityref.city as cityname ,YEAR(
+				CURRENT_TIMESTAMP ) - YEAR( sm.birthday ) - ( RIGHT(
+				CURRENT_TIMESTAMP , 5 ) < RIGHT( sm.birthday, 5 ) ) AS age
+			FROM social_member sm
+			LEFT JOIN  city_references cityref ON sm.city = cityref.id
+			WHERE sm.id = 7084 LIMIT 1
+2014-01-10 14:01:38 
+			SELECT sm.*,cityref.city as cityname ,YEAR(
+				CURRENT_TIMESTAMP ) - YEAR( sm.birthday ) - ( RIGHT(
+				CURRENT_TIMESTAMP , 5 ) < RIGHT( sm.birthday, 5 ) ) AS age
+			FROM social_member sm
+			LEFT JOIN  city_references cityref ON sm.city = cityref.id
+			WHERE sm.id = 7084 LIMIT 1
+2014-01-10 14:01:42 
+			SELECT sm.*,cityref.city as cityname ,YEAR(
+				CURRENT_TIMESTAMP ) - YEAR( sm.birthday ) - ( RIGHT(
+				CURRENT_TIMESTAMP , 5 ) < RIGHT( sm.birthday, 5 ) ) AS age
+			FROM social_member sm
+			LEFT JOIN  city_references cityref ON sm.city = cityref.id
+			WHERE sm.id = 7084 LIMIT 1
+2014-01-10 14:13:11 
+			SELECT sm.*,cityref.city as cityname ,YEAR(
+				CURRENT_TIMESTAMP ) - YEAR( sm.birthday ) - ( RIGHT(
+				CURRENT_TIMESTAMP , 5 ) < RIGHT( sm.birthday, 5 ) ) AS age
+			FROM social_member sm
+			LEFT JOIN  city_references cityref ON sm.city = cityref.id
+			WHERE sm.id = 7084 LIMIT 1
+2014-01-10 14:20:13 
+			SELECT sm.*,cityref.city as cityname ,YEAR(
+				CURRENT_TIMESTAMP ) - YEAR( sm.birthday ) - ( RIGHT(
+				CURRENT_TIMESTAMP , 5 ) < RIGHT( sm.birthday, 5 ) ) AS age
+			FROM social_member sm
+			LEFT JOIN  city_references cityref ON sm.city = cityref.id
+			WHERE sm.id = 7084 LIMIT 1
+2014-01-10 14:20:28 
+			SELECT sm.*,cityref.city as cityname ,YEAR(
+				CURRENT_TIMESTAMP ) - YEAR( sm.birthday ) - ( RIGHT(
+				CURRENT_TIMESTAMP , 5 ) < RIGHT( sm.birthday, 5 ) ) AS age
+			FROM social_member sm
+			LEFT JOIN  city_references cityref ON sm.city = cityref.id
+			WHERE sm.id = 7084 LIMIT 1
+2014-01-10 14:20:30 
+			SELECT sm.*,cityref.city as cityname ,YEAR(
+				CURRENT_TIMESTAMP ) - YEAR( sm.birthday ) - ( RIGHT(
+				CURRENT_TIMESTAMP , 5 ) < RIGHT( sm.birthday, 5 ) ) AS age
+			FROM social_member sm
+			LEFT JOIN  city_references cityref ON sm.city = cityref.id
+			WHERE sm.id = 7084 LIMIT 1
+2014-01-10 14:20:32 
+			SELECT sm.*,cityref.city as cityname ,YEAR(
+				CURRENT_TIMESTAMP ) - YEAR( sm.birthday ) - ( RIGHT(
+				CURRENT_TIMESTAMP , 5 ) < RIGHT( sm.birthday, 5 ) ) AS age
+			FROM social_member sm
+			LEFT JOIN  city_references cityref ON sm.city = cityref.id
+			WHERE sm.id = 7084 LIMIT 1
+2014-01-10 14:20:34 
+			SELECT sm.*,cityref.city as cityname ,YEAR(
+				CURRENT_TIMESTAMP ) - YEAR( sm.birthday ) - ( RIGHT(
+				CURRENT_TIMESTAMP , 5 ) < RIGHT( sm.birthday, 5 ) ) AS age
+			FROM social_member sm
+			LEFT JOIN  city_references cityref ON sm.city = cityref.id
+			WHERE sm.id = 7084 LIMIT 1

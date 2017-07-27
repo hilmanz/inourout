@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+         <title>Marlboro InOrOut - Badge Breaker</title>
+        <script src="lib/jquery-2.1.0.min.js"></script>
+        <script src="lib/phaser.min.js"></script>
+        <script src="lib/phaser-state-transition.min.js"></script>
+        <script src="lib/utility.js"></script>
+        <script src="lib/sha1.js"></script>
+        <script src="debug.js"></script>
+        <script src="api.js"></script>
+        <script src="load.js"></script>
+        <script src="title.js"></script>
+        <script src="howtoplay.js"></script>
+        <script src="startplay.js"></script>
+        <script src="win.js"></script>
+        <script src="lose.js"></script>
+        <script src="popup.js"></script>
+        <script src="info.js"></script>
+        <script src="play.js"></script>
+        <script src="game.js"></script>
+
+
+
+    </head>
+    <body>
+        <div class="gameContainer" id="gameContainer" align="center"></div>     
+
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<div id="gamesPage" class="container">
+	<div class="entry-container center">
+    	<div class="col">
+        	<div class="line-game"></div>
+        	<div class="col3">
+            	<div class="thumb-game">
+                	<a href="{$basedomain}games/spotted"><img src="{$basedomain}assets/images/content/thumb-spotted.png" /></a>
+                </div>
+                <div class="game-desc">
+                	<a href="{$basedomain}games/spotted"><h1 class="tittle-game oranges number1">SPOTTED</h1></a>
+                    <h4 class="descGame">Jalan-jalan sesampainya di kota tujuan adalah sebuah keharusan. 
+Nikmati pemandangan khas dari 3 kota ini & temukan tantangan seru di dalamnya!</h4>
+                </div>
+            </div>
+            <div class="col3">
+            	<div class="thumb-game">
+                	<a href="{$basedomain}games/badgesbreaker"><img src="{$basedomain}assets/images/content/thumb-carnav.png" /></a>
+                </div>
+                <div class="game-desc">
+                	<a href="{$basedomain}games/badgesbreaker"><h1 class="tittle-game reds number2">Badge Breaker</h1></a>
+                    <h4 class="descGame">Tentukan langkah pastimu saat menikmati pemandangan 3 kota yang penuh ciri khas unik ini. Taklukkan waktu perjalanan yang singkat dengan menentukan LANGKAH yang paling tepat!</h4>
+                </div>
+            </div>
+            <div class="col3">
+            	<div class="thumb-game">
+                	<a href="{$basedomain}games/doublechecker"><img src="{$basedomain}assets/images/content/thumb-double.png" /></a>
+                </div>
+                <div class="game-desc">
+                	<a href="{$basedomain}games/doublechecker"><h1 class="tittle-game blues number3">double checker</h1></a>
+                    <h4 class="descGame">Pastikan kamu berbagi kenangan tak terlupakan di 3 kota ini dengan teman-teman di tanah kelahiran. Yang kamu perlukan: ketelitian! </h4>
+                </div>
+            </div>
+        </div><!-- END .col -->
+    </div>
+</div><!-- END .container -->

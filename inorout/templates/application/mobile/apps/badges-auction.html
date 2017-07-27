@@ -1,0 +1,136 @@
+<div id="auctionPage" class="container">
+	<div class="entry-container center">
+    	<div id="box-content">
+        	<div class="box-prof">
+                <div id="head-content" class="bg-head-trading">
+                    <h1><span class="reds">Badges Auction</span> <span class="black">Hall</span></h1>
+                    <h3>bid or fold.Decide now. Dapatkan hadiah lainnya untuk koleksimu<br />
+                    <span><a class="fl" href="{$basedomain}badges/auctionRules">[mekanisme]</a></span></h3>
+                </div><!-- END #head-content -->
+            </div>
+			<form name="tabActive" method="post" action="tab">
+			<input type="hidden" name="currentTab" value="1"/> 
+			</form>
+			<div id="entry-content">
+                <div id="tabs">
+				
+                <div class="box-prof">
+                      <div id="tabNavigation">
+                          <ul id="tabNav">
+                            <li><a href="#PastAuction" class="tabValue" value="1">Past Auction</a></li>
+                            <li><a href="#TodayAuction" class="tabValue" value="2">Today's Auction</a></li>
+                            <li><a href="#AuctionWon" class="tabValue" value="3">Auction I Won</a></li>
+                          </ul>
+                      </div><!-- END #tabNavigation -->
+                  </div>
+                  <div id="PastAuction">
+					{include file="application/mobile/widgets/auction-past.html"}
+                  </div><!-- END #PastAuction -->
+                  <div id="TodayAuction" >
+					{include file="application/mobile/widgets/auction-today.html"}
+                  </div><!-- END #TodayAuction -->
+                  <div id="AuctionWon" >
+					{include file="application/mobile/widgets/auction-win.html"}
+                  </div><!-- END #AuctionWon -->
+                </div><!-- END #tabs -->
+            </div><!-- END #entry-content -->
+			
+        </div><!-- END #box-content -->
+    </div><!-- END .entry-container -->
+</div><!-- END .container -->
+{include file="application/web/widgets/popup-auction.html"}
+{literal}
+<script type="text/javascript">
+	/*
+	$(document).ready(function() { 
+	$('#countdown_auction1').countDown({
+		targetDate: {
+			'day': 		10,
+			'month': 	1,
+			'year': 	2014,
+			'hour': 	11,
+			'min': 		0,
+			'sec': 		0
+		}
+	});
+	$('#countdown_auction2').countDown({
+		targetDate: {
+			'day': 		4,
+			'month': 	2,
+			'year': 	2014,
+			'hour': 	10,
+			'min': 		12,
+			'sec': 		2
+		}
+	});
+	});
+	*/
+	
+	$(document).on('click', '.tabValue', function(){
+		
+		var html = "";
+		var value = $(this).attr('value');
+		if (value==1){
+			
+			//$('#TodayAuction').html(html);
+			//$('#AuctionWon').html(html);
+			
+		}
+		
+		if (value==2){
+			
+			//$('#PastAuction').html(html);
+			//$('#AuctionWon').html(html);
+			
+		}
+		
+		if (value==3){
+			//$('#TodayAuction').html(html);
+			//$('#PastAuction').html(html);
+			
+		}
+	})
+	
+	function getstartauction(){
+	{/literal}
+			{if $todayauction}
+				{foreach $todayauction as $k => $v}
+				var days = {$v.auctiondate.days};
+				var month = {$v.auctiondate.month};
+				var year = {$v.auctiondate.year};
+				var hour = {$v.auctiondate.hour};
+				var minute = {$v.auctiondate.minute};
+				var sec = {$v.auctiondate.sec};
+				var theindex = {$v.id};
+		{literal}
+			$('#countdown_auction_'+theindex).countDown({
+				targetDate: {
+					'day': 		days,
+					'month': 	month,
+					'year': 	year,
+					'hour': 	hour,
+					'min': 		minute,
+					'sec': 		sec
+				},omitWeeks:true
+			});
+			
+			{/literal}
+				{/foreach}
+			{/if}			  
+		{literal}
+}
+	$(document).ready(function() { 
+		getstartauction();
+		
+		$("#tabs").tabs({active: document.tabActive.currentTab.value});
+
+            $('#tabs a').click(function(e) {
+                var curTab = $('.ui-tabs-active');
+                curTabIndex = curTab.index();
+                document.tabActive.currentTab.value = curTabIndex;
+            });
+	});
+	
+	
+</script>
+{/literal}

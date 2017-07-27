@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html dir="ltr" lang="en-US" class="ie6"> <![endif]-->
+<!--[if IE 7]>    <html dir="ltr" lang="en-US" class="ie7"> <![endif]-->
+<!--[if IE 8]>    <html dir="ltr" lang="en-US" class="ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html dir="ltr" lang="en-US" > 
+<!--<![endif]--><head>
+
+{$meta}
+</head>
+ {if $pages != 'games'}  
+<body class="the-{$pages} the-{$acts}" id="marlboro-{$pages}{$acts}">
+    <div id="mainBody">
+        <div id="body"  {if $pages != 'howto'}class="universal"{/if}>
+                {if $pages != 'howto'}  
+                    {$header}
+                {/if}
+				{$mainContent}
+        
+        </div><!-- END .wrapper -->
+        {$footer}
+    </div><!-- END #mainBody -->
+    <div id="bg-popup"></div>
+	{include file="application/web/widgets/popup-global.html"}
+  <script>
+    {literal}
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-867847-60', 'neversaymaybe.co.id');
+      ga('send', 'pageview');
+    {/literal}
+    </script> 
+</body>
+{else}
+ 	{if $pages == 'games' &&  $acts != '' }  
+		<body class="gameContainerFull">
+		{$mainContent}
+		</body>
+        {else}
+        	<body class="the-{$pages} the-{$acts}" id="marlboro-{$pages}{$acts}">
+    <div id="mainBody">
+        <div id="body"  {if $pages != 'howto'}class="universal"{/if}>
+                {if $pages != 'howto'}  
+                    {$header}
+                {/if}
+				{$mainContent}
+        
+        </div><!-- END .wrapper -->
+        {$footer}
+    </div><!-- END #mainBody -->
+    <div id="bg-popup"></div>
+	{include file="application/web/widgets/popup-global.html"}
+	
+	<script>
+    {literal}
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-867847-60', 'neversaymaybe.co.id');
+      ga('send', 'pageview');
+    {/literal}
+    </script> 
+	
+</body>
+	{/if}
+{/if}
+</html>

@@ -1,0 +1,35 @@
+<div id="challengePage" class="container">
+	<div class="entry-container">
+        <div class="post-container">
+        	<div class="post-header">
+				<img src="{$basedomain}assets/images/content/challenge-oftheweek.png" />
+            </div><!-- END .post-header -->
+            <div class="whitebox">
+            	<h3>Tunjukkan foto seru kamu sesuai tema bulan ini & MENANGKAN BADGE UNIK UNTUK KOLEKSIMU!</h3>
+				<h2>MEKANISME CHALLENGE OF THE WEEK</h2>
+            </div>
+            <div class="post-content">
+            	<div class="post-entry">
+                    <div class="popup-entry popup-global">
+                        <ul class="usefont">
+                            <li>Upload minimal 1 foto setiap harinya </li>
+                            <li>Setiap bulan akan ada 1 tema baru sesuai dengan kota tujuan IN or OUT</li>
+                            <li>Foto harus asli hasil karya sendiri</li>
+                            <li>10 finalist terpilih akan dipublikasikan di website ini</li>
+                            <li>Foto dengan vote terbanyak akan memenangkan kompetisi, hanya ada 1 pemenang tiap bulannya</li>
+                            <li>Setiap pemenang kompetisi akan mendapatkan 1 badge tambahan senilai 100 poin</li>
+                            <li>Setiap peserta hanya diperbolehkan vote 1 kali saja untuk satu tema</li>
+                            <li>Foto yang kamu upload akan melalui proses moderasi terlebih dahulu</li>
+                            <li>Foto yang diikutsertakan harus karya orisinilmu dan juga menunjukan dirimu di dalamnya</li>
+                            <li>Tidak ada gambar anak kecil, ibu hamil, maupun rokok (baik batang maupun paknya)</li>
+                            <li>Tidak ada gambar merk dagang barang maupun tempat yang terpampang secara eksplisit</li>
+                            <li>User bertanggung jawab penuh atas seluruh isi dari foto yang di-upload, termasuk bilamana terdapat orang lain dalam foto tersebut yang di mana orang tersebut harus memberikan izin atas pemaparan dirinya</li>
+                        </ul>
+                    </div><!-- END .popup-entry -->
+				</div>
+            </div><!-- END .post-content -->
+                
+				<a class="orangebtn" href="{$basedomain}challenge" >&laquo; BACK</a>
+        </div><!-- END .post-container -->
+    </div>
+</div><!-- END .container -->

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/marlboro-in-or-out/!svn/ver/2/trunk/web/service
+END
+.htaccess
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/marlboro-in-or-out/!svn/ver/2/trunk/web/service/.htaccess
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/marlboro-in-or-out/!svn/ver/2/trunk/web/service/index.php
+END
+common.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/marlboro-in-or-out/!svn/ver/2/trunk/web/service/common.php
+END

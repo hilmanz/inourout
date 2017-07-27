@@ -1,0 +1,84 @@
+<div id="reddemPrize" class="container">
+	<div class="entry-container center">
+    	<div id="box-content" class="relative">
+        	<a class="closing" href="{$basedomain}badges/collectibles">[CLOSE X]</a>
+            <div class="placingBid-head headredeemForm">
+                <h2><img src="{$basedomain}assets/images/mobile/redeem-logo.png" /></h2>
+           	</div>
+            <div id="entry-content">
+                <div class="row badgesForRedeem">
+                    <div class="prizeAuction">
+                        <a href="#" class="thumbPrizes"><img src="{$merchimage}" /></a>
+                    </div>
+                    
+					<div class="prizeDesc">
+                        <h3>Kamu mendapatkan item {$merchandise.name} dengan menukar <span class="reds points">{$mypoint}</span> total poin.</h3>
+                        <h4>Sebuah keputusan membuatmu mendapatkan {$merchandise.name} ini</h4>
+                    </div><!-- END .prizeDesc -->
+                </div><!-- END .badgesForRedeem -->
+                <div class="row formShipping">
+                	<h3><span class="bigFont">SHIPPING</span> <br />Isi data untuk pengiriman hadiah.</h3>
+                    <form id="shippingForm" method="post" action="{$basedomain}badges/redeem">
+                            <input type="text" value="{$user->name}" placeholder="Nama" name="fullname" class="fullname"/>
+                            <textarea name="address" class="address" placeholder=""></textarea>
+
+                            <input type="text" value="{$userCity}" placeholder="" name="city" class="city"/>
+                            <input id="postCode" type="text" value="{$user->zipcode}" placeholder="" name="postalcode" class="postalcode"/>
+                            <input id="phoneNumber" type="text" value="{$user->phone_number}" placeholder="" name="phonenumber" class="phonenumber"/>
+							
+							<input class="midtoform" type="hidden" value="{$merchandise.id}" name="merchandiseid">
+							<input class="badgestoform" type="hidden" value="{$badgeid}" name="badgeid">
+							<input class="amounttoform" type="hidden" value="{$badgeamount}" name="badgeamount">
+							<input  type="hidden" value="{$merchimage}" name="merchimage">
+							<input  type="hidden" value="{$merchandise.name}" name="merchandisename">
+
+                            <div style="text-align:center; width:80%;">
+                        		{*}<a href="{$basedomain}badges/redeemSucces" class="orangebtn">SUBMIT &raquo;</a>{/*}
+								<input type="submit" value="SUBMIT &raquo;" class="orangebtn" />
+							</div>
+                    </form>
+                </div>
+            </div><!-- END .entry-content -->
+         </div><!-- END .box-content -->
+    </div><!-- END .entry-container -->
+</div><!-- END .placingBid -->
+<script>
+$(document).ready(function () {
+  //called when key is pressed in textbox
+  $("#postCode,#phoneNumber").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+               return false;
+    }
+   });
+});
+</script>
+
+
+<script>
+	var username = "{$user->name}";
+	var userCity = "{$userCity}";
+	var userpostal = "{$user->zipcode}";
+	var usermobile = "{$user->phone_number}";
+{literal}
+	$(document).on('submit','#shippingForm', function(){
+		
+		var fullname = $('.fullname').val();
+		var address = $('.address').val();
+		var city = $('.city').val();
+		var postalcode = $('.postalcode').val();
+		var phonenumber = $('.phonenumber').val();
+		
+		if ((fullname == '') || (address == '' )||(city == '' )||(postalcode == '' )||(phonenumber == '' ))return false;
+	})
+	
+	$('.fullname').click(function(){$(this).val('');})
+	$('.fullname').blur(function(){ if ($(this).val()=='')$(this).val(username);})
+	$('.city').click(function(){$(this).val('');})
+	$('.city').blur(function(){ if ($(this).val()=='')$(this).val(userCity);})
+	$('.postalcode').click(function(){$(this).val('');})
+	$('.postalcode').blur(function(){ if ($(this).val()=='')$(this).val(userpostal);})
+	$('.phonenumber').click(function(){$(this).val('');})
+	$('.phonenumber').blur(function(){ if ($(this).val()=='')$(this).val(usermobile);})
+{/literal}
+</script>

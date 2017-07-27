@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/marlboro-in-or-out/!svn/ver/2/trunk/web/templates/application/admin/article
+END
+article_new.html
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/marlboro-in-or-out/!svn/ver/2/trunk/web/templates/application/admin/article/article_new.html
+END
+article_list.html
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/marlboro-in-or-out/!svn/ver/2/trunk/web/templates/application/admin/article/article_list.html
+END
+article_comment.html
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/marlboro-in-or-out/!svn/ver/2/trunk/web/templates/application/admin/article/article_comment.html
+END
+article_edit.html
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/marlboro-in-or-out/!svn/ver/2/trunk/web/templates/application/admin/article/article_edit.html
+END

@@ -1,0 +1,124 @@
+<div id="header">
+          {if $user}
+        <div class="menuMobile">
+            <div id="logoBox">
+             <a id="logo" href="{$basedomain}profile"><img src="{$basedomain}assets/images/mobile/logo.png"/></a>
+            </div>
+            <a id="menuButton" href="#"></a>
+            <ul class="slideMobile">
+            	<div id="aboutProgram">
+                    <li><a class="theProgram" href="#">About <span class="orange">The Program</span></a></li>
+                	<div id="SubMenuProgram" class="allbuttons">
+                		<li><a href="{$basedomain}about/whatis">&gt; <span class="reds">What</span> Is it</a></li>
+                		<li><a href="{$basedomain}about/howto">&gt; How <span class="orange">To</span></a></li>
+                		<li><a href="{$basedomain}about/prizes">&gt; Prizes</a></li>
+                        <li><a href="{$basedomain}about/rules">&gt; Rules</a></li>
+                    </div>	
+                </div>
+                <div id="updateClues">
+                <li><a class="updateClues" href="#"><span class="reds">Updates</span> & clues</a></li>
+                	<div id="SubMenuUpdateClues"  class="allbuttons">
+                		<li><a href="{$basedomain}articles">&gt; <span class="reds">Updates</span></a></li>
+                		<li><a href="{$basedomain}clues">&gt; clues</a></li>
+                    </div>
+                </div>
+                <div id="badgesMenu">
+                <li><a {if $unverified} href="{$basedomain}unverified" class="showPopup" {else} href="javascript:void(0)" class="theBadges"{/if}>Badges</a></li>
+                	<div id="SubMenuBadges"  class="allbuttons">
+                		<li><a href="{$basedomain}badges/auction">&gt; <span class="grey">Auction</span></a></li>
+                		<li><a {if $unverified} href="{$basedomain}unverified" class="showPopup" {else} href="{$basedomain}badges/trading" {/if}>&gt; Trading</a></li>
+                		<li><a {if $unverified} href="{$basedomain}unverified" class="showPopup" {else} href="{$basedomain}badges/collectibles" {/if}>&gt; <span class="orange">Collectibles</span></a></li>
+                    </div>	
+                </div>
+                 <div id="gamesMenu">	
+                <li><a {if $unverified} href="{$basedomain}unverified" class="showPopup" {else} href="javascript:void(0)" {/if} class="theGames"><span class="blues">Games</span></a></li>
+                	<div id="SubMenuGames"  class="allbuttons">
+                		<li><a {if $unverified} href="{$basedomain}unverified" class="showPopup" {else} href="{$basedomain}games"{/if}>&gt; Games</a></li>
+                		<li><a {if $unverified} href="{$basedomain}unverified" class="showPopup" {else} href="{$basedomain}challenge" {/if}>&gt; Challenge Of <span class="reds">The Week</span></a></li>
+                    </div>
+                 </div>
+                <li class="lastDropdown"><a {if $unverified} href="{$basedomain}unverified" class="showPopup" {else} onclick="mmConversionTag(461579, this, '_self', '{$basedomain}entercode'); return false;" href="{$basedomain}entercode"{/if}>Submit <span class="purple">Code</span></a></li>
+           </ul>
+        </div>
+</div>
+<div class="profile-header">
+	<div id="profileBox">
+        <a href="{$basedomain}profile" class="small-thumb"><img src="{$thisuser.profile.image_full_path}" /></a>
+        <a class="username" href="{$basedomain}profile">Hi, {$thisuser.name}</a>
+        <div class="notifInfo fl"><a href="{$basedomain}notifications" class="notif"></a>{if $unread.total>0}<span class="notif-value">{$unread.total}</span>{/if}</div>
+        <a class="logout" href="{$basedomain}logout.php">Log Out</a>
+       {*} <a class="viewporifle" href="{$basedomain}profile">View Profile</a>{/*}
+        
+        
+    </div>
+</div>
+{else}
+        
+        {/if}<!-- END #header -->
+<script>
+$(document).ready(function() {
+	$('#menuButton').click(function() {
+									
+			$('.slideMobile').slideToggle("fast");
+	});
+
+    $('a').click(function(){
+        var open =  true;
+        if($(this).hasClass('openedMenu')){
+            open = false;
+            $(this).removeClass('openedMenu');
+        }else{
+            $('.allbuttons').hide('fast');
+            $('a').removeClass('openedMenu');
+            $(this).addClass('openedMenu');
+        }
+        if($(this).hasClass('theProgram')){
+            if(open==true){
+                $('#SubMenuProgram').slideToggle("fast");
+            }else{
+                $('#SubMenuProgram').slideUp('fast');
+            }
+        }else if($(this).hasClass('updateClues')){
+            if(open==true){
+                $('#SubMenuUpdateClues').slideToggle("fast");
+            }else{
+                $('#SubMenuUpdateClues').slideUp('fast');
+            }
+        }else if($(this).hasClass('theBadges')){
+            if(open==true){
+                $('#SubMenuBadges').slideToggle("fast");
+            }else{
+                $('#SubMenuBadges').slideUp('fast');
+            }
+        }else if($(this).hasClass('theGames')){
+            if(open==true){
+                $('#SubMenuGames').slideToggle("fast");
+            }else{
+                $('#SubMenuBadges').slideUp('fast');
+            }
+        }
+    });
+});
+
+$(body).on('click',function(){
+    var div = $('.slideMobile');
+    var check = div.attr('style');
+    
+    div.click(function(){
+        $('a').click(function(){
+            var href = $(this).attr('href');
+            if(href=='#'||href=='javascript:void(0)'){
+                return false;
+            }else{
+                location.href=href;
+            }
+            return false;
+        });
+        return false;
+    });
+    if(check=='display: block;'){
+        div.hide();
+    }
+});
+
+</script>

@@ -1,0 +1,25 @@
+
+  <div id="gamesPage" class="container">
+	<div class="entry-container center">
+    	<div class="col">
+        	<div class="line-game"></div>
+ 
+			<div class="gameContainer" id="gameContainer"></div>		 
+ 				<script type="text/javascript">
+					var serverurl = basedomain+"service/games/";
+					var gameassetspath = basedomain+'games_src/spotted/assets/';
+					var backbutton = basedomain+'games';
+	            </script> 
+				<script src="{$basedomain}games_src/spotted/lib/phaser.min.js"></script>
+				<script src="{$basedomain}games_src/spotted/lib/phaser-state-transition.min.js"></script>
+				<script src="{$basedomain}games_src/spotted/lib/utility.js"></script>
+				<script src="{$basedomain}games_src/spotted/lib/sha1.js"></script>
+				<script src="{$basedomain}games_src/spotted/spotted.min.js"></script>
+				
+				<a href="#popup-game-don" class="showPopup " id="onbtnDiSiniExt" style="display:none">klik disini</a>
+				{include file="application/web/games/popup-game.html"}
+        </div><!-- END .col -->
+    </div>
+</div><!-- END .container -->
+
+     

@@ -1,0 +1,139 @@
+<script src="jquery-1.8.2.js" ></script>
+<script src="jquery.form.js" ></script>
+
+<h1>PUSH SANDBOX</h1>
+ <div>
+username <input type="text" value="" name="usernamelogin" class="usernamelogin" /><br />
+				password	<input type="text" value="" name="passwordlogin" class="passwordlogin" />
+				<button class="tombolaja" >LOGIN </button>
+			
+<button class="realeaselock" >REALEASE LOCK </button>
+</div>
+
+<form method="POST" enctype="multipart/form-data" id = "poster" action="https://beat-stg.ba-space.com/service/my/cover">
+ 
+	<h2>PLOAD PHOTO </h2>
+	<input type="file" name="image" >
+	DESC ; <input type="text" name="description" >
+
+	 <div>
+					<input type="text" value="set" name="action" >
+				</div>
+				<div style="width:50%;height:100%;overflow:auto;float:right;position:fixed;top:0;right:0;padding:10px;border-collapse:collapse;border:1px solid"> 
+					<span >OUTPUT</span>
+					<p id="kluardisini" ></p>
+				</div> 
+
+	
+<div>
+		<input type="submit" value="postit" />
+		</div>
+			
+</form>
+
+<script>
+
+//var basedomain = "http://localhost/beat_2013/trunk/beat/service/";
+//var basedomain = "http://localhost/beatphi2013/trunk/beat/service/";
+var basedomain = "https://beat-stg.ba-space.com/service/";
+
+	var updateoptions = {
+						dataType:"html",
+						beforeSubmit: function(data) { 
+									$('#kluardisini').html("<blink>loading please wait</blink>");
+							},
+						success : function(data) {									
+								 $('#kluardisini').html("<p>"+data+"</p>");
+						}
+					};					
+					
+
+$("#poster").ajaxForm(updateoptions);
+
+$(document).on('change','.pushtype',function(){
+
+$("#poster").attr('action',basedomain+"push/"+$(this).val());
+
+});
+
+$(document).on('click','.tombolaja',function(){
+		var username = $('.usernamelogin').val();
+		var password = $('.passwordlogin').val();
+			$('#kluardisini').html("<blink>loading please wait</blink>");
+		$.get(basedomain+'login/account',{username:username,password:password},function(data){
+			
+			 $('#kluardisini').html("<p>"+data+"</p>");
+
+		},"html");
+		
+
+		/*
+		$.post('http://preview.kanadigital.com/beat2013/service/post/upload',{upload:'video',url:'http://www.youtube.com/watch?v=q68s6JMXD88',type:3,title:'ini coba dari api',desc:'ini description nya',brief:'ini bref nya'}, function(data){
+			
+			if(data) $('.initargetdivnya').append('success');
+			else $('.initargetdivnya').append('gagl');
+		},"JSON");
+		*/
+		
+		
+
+})
+
+$(document).on('click','.realeaselock',function(){
+		var username = $('.usernamelogin').val();
+	
+			$('#kluardisini').html("<blink>loading please wait</blink>");
+		$.post(basedomain+'login/realeaselock',{username:username},function(data){
+			
+			 $('#kluardisini').html("<p>"+data+"</p>");
+
+		},"html");		
+})
+$(document).on('change','#searchfriend',function(){
+
+	var addedfriends = $(this).val();
+	 
+	// get last friend list  strings
+	
+	var fidstr = $('.fid').val();
+	var ftypestr = $('.ftype').val();
+	
+	var arrfid = [];
+	var arrftype = [];
+	if(fidstr!=''){
+		arrfid = fidstr.split(',');	
+	}
+	
+	if(ftypestr!=''){
+		arrftype = ftypestr.split(',');	
+	}
+	
+	if(addedfriends!=''){
+		
+		var newaddedfriends = addedfriends.split('_');
+		
+		arrfid.push(newaddedfriends[0]);
+		arrftype.push(newaddedfriends[1]);	
+		
+		
+		
+	}
+	
+	$('.fid').val(arrfid);
+	$('.ftype').val(arrftype);
+	
+	$('#kluardisini').html("<p> fid "+$('.fid').val()+"</p><p> ftype "+$('.ftype').val()+"</p>");
+	
+});
+
+
+
+	function getfriends(data){
+		var html = "";
+		$.each(data,function(i,e){
+			html+="<option value='"+e.id+"_"+e.ftype+"' >"+e.name+" "+e.last_name+"</option>";
+		});
+
+		return html;
+	}
+</script>

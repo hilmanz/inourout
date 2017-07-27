@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0043)https://staging-neversaymaybe-id.es-dm.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Never Say Maybe
+</title>
+			  <link rel="stylesheet" href="inorout-registration.css" media="screen,screen" type="text/css" title="default">
+
+
+		    
+            
+			<script language="javascript">
+			
+            
+			function validateCheck()
+			{		 
+				var name	= '';
+				var siteID	= '291';		
+				var UserName   = document.getElementById('txtUserName');
+				var Password   = document.getElementById('txtPassword');
+				var errchk	   = document.getElementById("hdnErrorMsgs");
+				var error	   = document.getElementById('lblError');
+				error.innerHTML ='';
+				if(UserName.value == '')
+				{
+					name =  '::Error_Message::Not_all_mandatory_fields_are_completed'; 				
+					pageTracker._trackEvent('Error','Submit',name);	
+					error.innerHTML = errchk.value;
+					UserName.focus();
+					return false;
+				}
+				error.innerHTML ='';
+				if(Password.value == '')
+				{
+					name =  '::Error_Message::Not_all_mandatory_fields_are_completed'; 			
+					pageTracker._trackEvent('Error','Submit',name);	
+					error.innerHTML = errchk.value;
+					Password.focus();
+					return false;
+				}
+				return true;
+			}
+			function CheckKey(e)
+			{
+				var key;
+		        if(window.event)
+					key = window.event.keyCode;     //IE
+				else
+					key = e.which;     //firefox
+				if (key == 13)
+				{
+					if(validateCheck())
+					{
+						if (window.navigator.appName.toLowerCase().indexOf("microsoft") > -1) 
+						{
+							var frm = document.Form2;
+						}
+						else 
+						{
+							var frm = document.forms["Form2"];
+						}
+						__doPostBack('lnkBtnSubmit','');
+						return false;
+					}
+					else
+						return false;
+				}
+			}
+			</script>
+           
+			<link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/js/page_context.js"></script></head><body class="landingPage" onkeydown="CheckKey(event);" onload="function SetFocus(){document.Form2[&#39;txtUserName&#39;].focus();}" screen_capture_injected="true">
+	
+	
+		<form name="Form2" method="post" action="https://staging-neversaymaybe-id.es-dm.com/Templates/LandingPage.aspx" id="Form2">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="lnkBtnRegister">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNDQwMzEwNzU3D2QWCmYPZBYCZg8WAh4EVGV4dAUPTmV2ZXIgU2F5IE1heWJlZAIBD2QWAmYPFgIfAAWIATxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iaHR0cHM6Ly93d3cuYW1pbGQuY29tL2Ftbi9odG1sL2Nzcy9hbWlsZF9tb3AuY3NzIiBtZWRpYT0ic2NyZWVuLHNjcmVlbiIgdHlwZT0idGV4dC9jc3MiIHRpdGxlPSJkZWZhdWx0Ii8+DQpkAgIPFgIfAAU3PGJvZHkgY2xhc3M9ImxhbmRpbmdQYWdlIiBvbmtleWRvd249IkNoZWNrS2V5KGV2ZW50KTsiPmQCAw9kFg4CAw8WAh8ABSM8UD48Rk9OVCBjb2xvcj0jZjVmNWRjPjwvRk9OVD4gPC9QPmQCBQ9kFhACAQ8WAh8ABQg8UD4gPC9QPmQCAw8WAh8ABQdVc2VyIElEZAIFDw8WAh4JTWF4TGVuZ3RoAjxkZAIHDxYCHwAFCFBhc3N3b3JkZAIJDw8WAh8BAgxkZAILDw8WAh8ABQVFbnRlchYCHgdPbkNsaWNrBRdyZXR1cm4gdmFsaWRhdGVDaGVjaygpO2QCDg8PFgIfAGVkZAIQDw8WAh8ABRpGb3Jnb3QgUGFzc3dvcmQvIFVzZXJuYW1lP2RkAgcPZBYEAgEPFgIfAAUIPFA+IDwvUD5kAgMPDxYCHwAFCFJlZ2lzdGVyFgIfAgUscGFnZVRyYWNrZXIuX3RyYWNrRXZlbnQoJ1JlZ2lzdGVyJywgJ0NsaWNrJylkAgkPFgIfAAVxSmlrYSBBbmRhIHN1ZGFoIHRlcmRhZnRhciBkYW4gZGl2ZXJpZmlrYXNpIHVudHVrIG1lcmVrIGxhaW4gZGkgYmF3YWggUFQgSC5NLlNhbXBvZXJuYSBkYW4gUGhpbGlwIE1vcnJpcyBJbmRvbmVzaWFkAgsPFgIfAAVDQW5kYSBkYXBhdCBtZW5nZ3VuYWthbiBkZXRhaWwgbG9naW4gQW5kYSB1bnR1ayBtZW5nYWtzZXMgc2l0dXMgaW5pLmQCDQ8WAh8ABYkBVW50dWsgcGVydGFueWFhbiBkYW4gbWVuZ2h1YnVuZ2kga2FtaSwgQW5kYSBkYXBhdCBtZW5naXJpbWthbiBlbWFpbCBrZSA8QSBocmVmPSJtYWlsdG86aW5mb0BuZXZlcnNheW1heWJlLmNvbSI+aW5mb0BuZXZlcnNheW1heWJlLmNvbTwvQT5kAg8PZBYCZg8WAh8ABckGPERJViBjbGFzcz1mb290ZXI+DQo8RElWIGNsYXNzPSJ0ZXh0IHN0eWxlMSI+SW5mb3JtYXNpIGRhbGFtIHdlYnNpdGUgaW5pIGRpdHVqdWthbiB1bnR1ayBwZXJva29rIGJlcnVzaWEgMTggdGFodW4gYXRhdSBsZWJpaCBkYW4gdGluZ2dhbCBkaSB3aWxheWFoIEluZG9uZXNpYTwvRElWPg0KPERJViBjbGFzcz1uYXZpZ2F0aW9uPg0KPFVMPg0KPExJID48QSBocmVmPSIvVGVtcGxhdGVzL0xhbmRpbmdQYWdlLmFzcHgiPkhhbGFtYW4gVXRhbWE8L0E+IA0KPExJID48QSBocmVmPSIvVGVtcGxhdGVzL1Rlcm1zYW5kY29uZGl0aW9ucy5hc3B4IiB0YXJnZXQ9X0JsYW5rPlN5YXJhdCBkYW4ga2V0ZW50dWFuPC9BPiANCjxMSSA+PEEgaHJlZj0iL1RlbXBsYXRlcy9SZW1vdmVNZS5hc3B4Ij5IYXB1cyBBY2NvdW50IFNheWE8L0E+DQo8TEkgc3R5bGU9ImRpc3BsYXk6bm9uZSI+PEEgaHJlZj0iL2RlbW9QYWdlcy9QTUlTaXRlLmh0bSIgdGFyZ2V0PV9CbGFuaz5QTUkgQ29ycG9yYXRlPC9BPg0KPExJID48QSBocmVmPSIvVGVtcGxhdGVzL0ZBUS5hc3B4IiB0YXJnZXQ9X0JsYW5rPkRhZnRhciBQZXJ0YW55YWFuPC9BPiANCjxMSSA+PEEgaHJlZj0iL1RlbXBsYXRlcy9Db250YWN0dXMuYXNweCIgdGFyZ2V0PV9CbGFuaz5IdWJ1bmdpIEthbWk8L0E+IA0KPExJIGNsYXNzPWxhc3QgaWQ9aGVhbHRoID48QSBocmVmPSJodHRwOi8vd3d3LnNhbXBvZXJuYS5jb20vaWRfaWQvdG9iYWNjb19yZWd1bGF0aW9uL3Ntb2tpbmdfYW5kX2hlYWx0aC9wYWdlcy9zbW9raW5nX2FuZF9oZWFsdGguYXNweCIgdGFyZ2V0PV9CbGFuaz5QZXJpaGFsIE1lcm9rb2s8L0E+PC9MST48L1VMPjwvRElWPjwvRElWPmQCBA9kFgJmDxYCHgdWaXNpYmxlZ2RkZxjsRvgCO0HE69+1P9siBdDmDkU=">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form2'];
+if (!theForm) {
+    theForm = document.Form2;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+
+<script language="JavaScript">
+<!--
+function SetFocus()
+{
+	document.Form2['txtUserName'].focus();
+}
+window.onload = SetFocus;
+// -->
+</script>
+			<div class="mainPage">
+				<div class="headerLandingPage"></div> <!-- close header -->
+				<input name="hdnErrorMsgs" type="hidden" id="hdnErrorMsgs" value="Please fill the mandatory field">
+				<div class="content">
+					<div id="mainPanel"><p><font color="#f5f5dc"></font> </p><!-- Placeholder in CMS to add any content required --></div>
+					<div class="formLanding">
+						<div id="divLoginBox" class="loginBox">
+							<div class="loginBoxTitle"><p> </p>
+							</div>
+							<div class="row">
+								<label for="txtUserName">
+									User ID
+								</label>
+								<input name="txtUserName" type="text" maxlength="60" id="txtUserName" class="lpInput"></div>
+							<div class="row">
+								<label for="txtPassword">
+									Password
+								</label><input name="txtPassword" type="password" maxlength="12" id="txtPassword" class="lpInput"></div>
+							<div class="smSubmit"><a onclick="return validateCheck();" id="lnkBtnSubmit" href="javascript:__doPostBack('lnkBtnSubmit','')">Enter</a></div>
+							<p class="error"><span id="lblError">User ID and Password is not recognized.</span></p>
+							<div class="forgottenpassword"><a id="lnkBtnForgotPwd" href="javascript:__doPostBack('lnkBtnForgotPwd','')">Forgot Password/ Username?</a></div>
+							<div class="loginBoxClose"></div>
+						</div>
+						<div id="divRegisterBox" class="registerBox">
+							<div class="registerBoxTitle"><p> </p></div>
+							<div class="smSubmit"><a onclick="pageTracker._trackEvent(&#39;Register&#39;, &#39;Click&#39;);" id="lnkBtnRegister" href="javascript:__doPostBack('lnkBtnRegister','')">Register</a></div>
+							<div class="registerBoxClose"></div>
+						</div>
+						<div class="formLandingClose"></div>
+					</div>
+					<div class="clear"></div>
+				</div>
+                <div class="text style1">
+                Jika Anda sudah terdaftar dan diverifikasi untuk merek lain di bawah PT H.M.Sampoerna dan Philip Morris Indonesia</div>
+                <div class="text style1">
+                Anda dapat menggunakan detail login Anda untuk mengakses situs ini.</div>
+                <div class="text style1">
+                Untuk pertanyaan dan menghubungi kami, Anda dapat mengirimkan email ke <a href="mailto:info@neversaymaybe.com">info@neversaymaybe.com</a></div>
+                
+				<div class="footer">
+<div class="text style1">Informasi dalam website ini ditujukan untuk perokok berusia 18 tahun atau lebih dan tinggal di wilayah Indonesia</div>
+<div class="navigation">
+<ul>
+<li><a href="https://staging-neversaymaybe-id.es-dm.com/Templates/LandingPage.aspx">Halaman Utama</a> 
+</li><li><a href="https://staging-neversaymaybe-id.es-dm.com/Templates/Termsandconditions.aspx" target="_Blank">Syarat dan ketentuan</a> 
+</li><li><a href="https://staging-neversaymaybe-id.es-dm.com/Templates/RemoveMe.aspx">Hapus Account Saya</a>
+</li><li style="display:none"><a href="https://staging-neversaymaybe-id.es-dm.com/demoPages/PMISite.htm" target="_Blank">PMI Corporate</a>
+</li><li><a href="https://staging-neversaymaybe-id.es-dm.com/Templates/FAQ.aspx" target="_Blank">Daftar Pertanyaan</a> 
+</li><li><a href="https://staging-neversaymaybe-id.es-dm.com/Templates/Contactus.aspx" target="_Blank">Hubungi Kami</a> 
+</li><li class="last" id="health"><a href="http://www.sampoerna.com/id_id/tobacco_regulation/smoking_and_health/pages/smoking_and_health.aspx" target="_Blank">Perihal Merokok</a></li></ul></div></div>
+
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</form>	
+		
+<script type="text/javascript">
+    var trackercode = '';
+</script>
+
+
+	<script type="text/javascript">
+
+
+	var gaJsHost = (("https:" == document.location.protocol) ? "http_ga.js" : "ssl_ga.js");
+
+	document.write(unescape("%3Cscript src='/GoogleAnalytics/"+gaJsHost +"'  type='text/javascript'%3E%3C/script%3E"));	
+
+
+</script><script src="./login_files/http_ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+try {
+var pageTracker = _gat._getTracker(trackercode);
+
+pageTracker._trackPageview();
+
+} catch(err) {}</script>
+<script src="./login_files/gaAddons.js" type="text/javascript"></script>
+
+
+	
+
+</body></html>

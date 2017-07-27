@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+         <title>Marlboro InOrOut - Badge Breaker</title>
+        <script src="lib/jquery-2.1.0.min.js"></script>
+        <script src="lib/phaser.min.js"></script>
+        <script src="lib/phaser-state-transition.min.js"></script>
+        <script src="lib/utility.js"></script>
+        <script src="lib/sha1.js"></script>
+        <script src="badge_breaker.js"></script>
+
+    <style>
+                
+        #gameContainer{
+            width: 700px;
+            position: absolute;
+            z-index: 10001;
+            height: 525px;
+            top:50px;
+            left: 50%;
+            margin: 0 0 0 -350px;
+            box-shadow:0 0 100px rgba(0,0,0,0.5);
+            background:#000;
+        } 
+       #gameContainer canvas{
+            width:100% !important;
+            height:auto !important;
+        }
+
+
+    </style>
+
+    </head>
+    <body>
+        <div class="gameContainer" id="gameContainer" style="width:805px;height:600px"></div>   
+           sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+        sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+        sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+        sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+        sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+        sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+        sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+        sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+        sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+        sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+        sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+        sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+        sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+        sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+            sdsfd<br>
+    </body>
+</html>

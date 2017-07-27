@@ -1,0 +1,126 @@
+<div id="challengePage" class="container">
+	<div class="entry-container">
+        <div class="post-container">
+        	<div class="post-header">
+				<div class="header-challange">
+				<img src="{$basedomain}assets/images/mobile/content/challangeOftheWeek.png" />
+                </div>
+            </div><!-- END .post-header -->
+            <div class="post-content">
+                <div class="box-prof whitebox">
+                    <h3>Tunjukan foto seru kamu sesuai tema bulan ini,</h3>
+                    <h2>& MENANGKAN BADGE UNTUK KOLEKSIMU</h2>
+                    <a href="{$basedomain}challenge/rules" class="greybtn">Baca Aturan Main</a>
+            	{if  $challenge}
+				{foreach $challenge as $key => $val }
+					
+					{if $val.n_status==1}
+						<div class="hot-content">
+							<a {*}href="{$basedomain}challenge/categories/{$val.id}"{/*} class="bigthumb">
+								<img src="{$val.event.image_full_path}" />
+							</a>
+							
+							{if $val.n_status==1}               
+								{if $val.total_finalist eq '10'}
+								{else}
+								<div class="bt-cotw tokyo"><a href="{$basedomain}challenge/categories/{$val.id}" class="showwinner">Upload Photo</a></div>
+								{/if}
+							{/if}
+							
+						</div><!-- END .hot-content -->
+					
+					{/if}
+					
+				{/foreach}
+			{/if}	
+             <div class="post-header">
+                    <img src="{$basedomain}assets/images/bg_message-cotw.png" style="width:100%;" />
+                </div><!-- END .post-header -->
+            </div><!-- END .whitebox -->
+            </div><!-- END .post-content -->
+            {*}
+            <div class="box-prof whitebox">
+            <div class="post-content">
+                <div class="post-header">
+                    <div class="header-challange">
+					<img src="{$basedomain}assets/images/mobile/content/the10finalist.png" />
+                	</div>
+                    <h4>Segera vote & dapatkan satu badge ekstra.<br />Satu orang hanya boleh melakukan sekali vote!</h4>
+                </div><!-- END .post-header -->
+            	<div class="the-content">
+                	<div class="box-title">
+                        <span class="line"></span>
+                    	<h3>CLICK THE TUMBNAIL TO ENLARGE THE PICTURE</h3>
+                    </div>
+                    <div class="section galleries center">
+                        {if $gallery}	
+						{foreach $gallery as $key => $val}
+						<div class="photoThumb">
+                            <div class="qitem"  style="overflow:hidden;height:100%">
+                                <a href="{$basedomain}challenge/photodetails/{$val.eventid}?pid={$val.id}"><img src="{$val.gallery.image_full_path}"></a>
+                            </div><!-- END .qitem -->
+                         	
+                         	{if $val.is_voted eq '1'}
+								  {if $val.id eq $val.photo_id_voted} <a class="greenbtn disabled-voted"style="background:none repeat scroll 0 0 #FF9900;" href="javascript:void(0)">&nbsp;</a>{/if}
+								{else} 
+									<a class="orangebtn vote_photo votephotoid_{$val.id}" href="javascript:void(0)" data-vote="{$val.eventid}" data-title = "{$val.event_title}" data-photoid="{$val.id}">VOTE</a>
+								{/if}
+                        </div><!-- END .photoThumb -->
+						{/foreach}
+						{/if}
+						 
+                	</div><!-- END .section -->
+                    <div class="whitebox">
+                        <h2 class="blues">belum menang?</h2>
+                        <h3>masih ada kesempatan lain bulan depan</h3>
+                    </div>
+					{if  $nextchallenge}
+						{foreach $nextchallenge as $key => $val }
+							{if $key==0}
+                    <div class="hot-content">
+                        <a href="{$basedomain}challenge/finalist" class="bigthumb">
+                            <img src="{$val.event.image_full_path}" />
+                        </a>
+                    </div><!-- END .hot-content -->
+					{/if}
+						{/foreach}
+					{/if}	
+                </div><!-- END .the-content -->
+            </div><!-- END .post-content -->
+            </div><!-- END .box-prof -->
+            {/*}
+        </div><!-- END .post-container -->
+    </div>
+</div><!-- END .container -->
+
+
+<script>
+{literal}
+    
+    $(document).on('click','.vote_photo',function(){
+        //var div = $(this);
+        var div = $('.vote_photo');
+        // var div_check = parseInt(div.data('popup'));
+        div.removeClass('vote_photo');
+        var vote_id = parseInt($(this).data("vote"));
+        var photoid = parseInt($(this).data("photoid"));
+        var title = $(this).data("title");
+        var data = {};
+        data.url=basedomain+'challenge/vote';
+        data.params={ajax:1,content_id:vote_id,theme:title,photo_id:photoid};
+        data.type="json";
+        post_json(data).done(function(response){
+            var str='';
+            try{
+                if(response.result==1){
+					//log('masuk');
+					//$('.vote_photo').addClass('disabled');
+					//$('.vote_photo').html('VOTED');
+                    //$(this).removeClass('vote_photo');
+					location.reload();
+                }
+            }catch(e){}
+        });
+    });
+{/literal}
+</script>

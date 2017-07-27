@@ -1,0 +1,73 @@
+<div class="popup" id="popup-upload-photo">
+    <div class="popupContainer">
+		<a class="closePopup" href="#">[CLOSE X]</a>
+    	<div class="popup-head">
+        	<h2 class="bigTItle">UPLOAD PHOTO</h2>
+        </div><!-- END .popup-head -->
+    	<div class="popup-entry">
+            <div id="editPhotoBox">
+                <form id="challengeuploadform" class="uploadForm" action="{$basedomain}challenge/ajax/upload" method="post" enctype="multipart/form-data" >                    
+                        <div class="fakeUpload">
+                            <input type="text" class="uploadpath" />
+                            <label class="orangebtn fakebtn">
+                                browse
+                                <span>
+                                    {*}
+                                    <input type="file" class="uploadfile"  name="images" />
+                                    {/*}
+                                    <input id="uploadChallenge" type="file" class="uploadfile" accept="image/jpeg" name="images" />
+                                </span>
+                            </label>
+                             <small>Max size: 2MB, Type File: jpg, png</small>
+                  	 		 <small class="msgChallenge"></small>
+                        </div><!-- END .fakeUpload -->
+                        <div class="previewBox">
+                        	<img id="defaultIMGChallenge" src="{$basedomain}assets/images/blank_image.png" />
+                            <img id="uploadChallengePreview" style="display:none;" width="600" />
+                          {*}  <div class="loader"><img src="{$basedomain}assets/images/loader.gif" /></div> {/*}
+                        </div><!-- END .previewBox -->
+                    <input type="hidden" name="challenge_id" value="{$challenge_id}">
+                    <input type="submit" name="submit" value="SAVE" class="orangebtn savebtn">
+                     <small class="uploading"></small>
+                </form>
+            </div><!-- end #editPhotoBox -->
+        </div><!-- END .popup-entry -->
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->
+
+
+<script>
+    var challenge_id = {$challenge_id};
+    {literal}
+	var updateoptions = {
+	dataType:  'json', 	
+	beforeSubmit: function(data) { 
+			 $(".msgChallenge").html('');
+			 console.log('wait...........');
+             $('input[type="submit"]').hide();
+			 $('.uploading').html('uploading...');
+	},
+	success : function(data) {		
+			
+			if(data.result==true){				
+					console.log(' okeh lah ');
+				if(data.type='popup'){
+                    $('#popup-upload-photo').hide();
+                    $('html, body').animate({scrollTop: '0px'});
+                    $('#popup-global').fadeIn();
+                    $('#popup-global .popup-entry').html(data.message);
+                }
+					 
+                setTimeout(function () {
+                   window.location.href = basedomain+"challenge/categories/"+challenge_id;
+                }, 5000);    
+			}else{
+				
+			}
+			$(".msgChallenge").html(data.message);
+	}
+	};					
+
+	$("#challengeuploadform").ajaxForm(updateoptions);
+</script>
+{/literal}

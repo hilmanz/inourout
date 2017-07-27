@@ -1,0 +1,2 @@
+2013-12-18 14:48:06 SELECT * FROM social_member WHERE username='' LIMIT 1
+2013-12-18 14:48:06 cannot login, password or username not exists 

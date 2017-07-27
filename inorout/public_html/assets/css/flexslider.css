@@ -1,0 +1,390 @@
+/*
+ * jQuery FlexSlider v2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+
+ 
+/* Browser Resets */
+.flex-container a:active, .slider a:active, .flex-container a:focus, .slider a:focus {
+	outline: none;
+}
+.slides, .flex-control-nav, .flex-direction-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+/* FlexSlider Necessary Styles
+*********************************/ 
+.slider, .slider-single {
+	padding: 0;
+}
+.slider .slides > li, .slider-single .slides > li {
+	display: none;
+	-webkit-backface-visibility: hidden;
+} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.slider .slides img, .slider-single .slides img {
+	width: 100%;
+	display: block;
+}
+.flex-pauseplay span {
+	text-transform: capitalize;
+}
+/* Clearfix for the .slides element */
+.slides:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+html[xmlns] .slides {
+	display: block;
+}
+* html .slides {
+	height: 1%;
+}
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {
+	display: block;
+}
+/* FlexSlider Default Theme
+*********************************/
+.slider {
+	position: relative;
+	zoom: 1;
+}
+.flex-viewport {
+	max-height: 2000px;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+}
+.loading .flex-viewport {
+	max-height: 300px;
+}
+.slider .slides {
+	zoom: 1;
+}
+.carousel li {
+	margin-right: 5px
+}
+/* Direction Nav */
+.flex-direction-nav {
+*height: 0;
+}
+.flex-direction-nav .flex-disabled {
+	opacity: .3!important;
+	filter:alpha(opacity=30);
+	cursor: default;
+	display:none !important;
+}
+/* Control Nav */
+.flex-control-nav {
+	width: 100%;
+	position: absolute;
+	bottom: -40px;
+	text-align: center;
+}
+.flex-control-nav li {
+	margin: 0 6px;
+	display: inline-block;
+	zoom: 1;
+*display: inline;
+}
+.flex-control-paging li a {
+	width: 11px;
+	height: 11px;
+	display: block;
+	background: #666;
+	background: rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	text-indent: -9999px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	border-radius: 20px;
+	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
+.flex-control-paging li a:hover {
+	background: #333;
+	background: rgba(0, 0, 0, 0.7);
+}
+.flex-control-paging li a.flex-active {
+	background: #000;
+	background: rgba(0, 0, 0, 0.9);
+	cursor: default;
+}
+.flex-control-thumbs {
+	margin: 5px 0 0;
+	position: static;
+	overflow: hidden;
+}
+.flex-control-thumbs li {
+	width: 25%;
+	float: left;
+	margin: 0;
+}
+.flex-control-thumbs img {
+	width: 100%;
+	display: block;
+	opacity: .7;
+	cursor: pointer;
+}
+.flex-control-thumbs img:hover {
+	opacity: 1;
+}
+.flex-control-thumbs .flex-active {
+	opacity: 1;
+	cursor: default;
+}
+/* 4.0 - Slideshow */
+.flex-direction-nav .flex-prev, .flex-direction-nav .flex-next {
+	top: 40%;
+	display: block;
+	width: 105px;
+	height: 47px;
+	position: absolute;
+	text-indent: -9999px;
+	z-index: 1001;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.flex-direction-nav .flex-prev {
+	background: url(../images/s_prev.png) no-repeat;
+	left: 50px;
+}
+.flex-direction-nav .flex-next {
+	background: url(../images/s_next.png) no-repeat;
+	right: 50px;
+}
+.flex-direction-nav .flex-prev:hover {
+	background-position: 0 -47px;
+}
+.flex-direction-nav .flex-next:hover {
+	background-position: 0 -47px;
+}
+.flex-caption {
+	position: absolute;
+	top: 40%;
+}
+.flex-caption p {
+	font-family: 'Cardo', serif;
+	color: #fff;
+	float: left;
+	font-size: 30px;
+	font-style: italic;
+	padding: 10px 10px 10px 30px;
+}
+.flex-control-paging {
+	position: absolute;
+	bottom: 0px !important;
+	right: 30%;
+}
+.flex-control-paging li a.flex-active {
+	box-shadow: none !important;
+}
+.flex-control-paging li a {
+	background: #fff !important;
+	box-shadow: none !important;
+	margin: 0 5px 0 0;
+	width: 8px !important;
+	height: 8px !important;
+	border: #fff 3px solid;
+}
+.slider {
+	margin: 0 0 30px 0;
+}
+.slide-loader {
+	background: url(../images/loader.gif) #f5f5f5 no-repeat center center !important;
+	min-height: 416px;
+}
+/* 4.1 - Slideshow Single */
+.slide-loader-single {
+	background: url(../images/loader.gif) #f5f5f5 no-repeat center center !important;
+	min-height: 245px;
+}
+.slider-single {
+	position: relative;
+	margin: 0 0 1px 0;
+}
+.product-single-content {
+	padding: 0 0 30px 0;
+}
+.slider-single ul {
+	margin: 0 !important;
+}
+.slider-single li {
+	list-style-image: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	border-bottom: none !important;
+}
+.startTour{
+	display: block;
+	position: absolute;
+	width: 280px;
+	margin:60px 0 0 -140px;
+	top: 50%;
+	left: 50%;
+}
+.howtoBox{
+	position:relative;
+}
+.howtoBox img.anime{
+	position:absolute;
+	top:0;
+	left:0;
+	opacity:0;
+}
+.flex-active-slide .anime1{
+	-webkit-animation: fromleft 0.5s 1 ease;
+	-moz-animation:  fromleft 0.5s 1 ease;
+	-o-animation: fromleft 0.5s 1 ease;
+	-ms-animation: fromleft 0.5s 1 ease;
+	opacity:0;
+	-webkit-animation-delay:1s;
+	-moz-animation-delay:1s;
+	-o-animation-delay:1s;
+	-ms-animation-delay:1s;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+}
+.flex-active-slide .anime2 {
+	-webkit-animation: fromright 0.5s 1 ease;
+	-moz-animation:  fromright 0.5s 1 ease;
+	-o-animation: fromright 0.5s 1 ease;
+	-ms-animation: fromright 0.5s 1 ease;
+	-webkit-animation-delay:1.5s;
+	-moz-animation-delay:1.5s;
+	-o-animation-delay:1.5s;
+	-ms-animation-delay:1.5s;
+	opacity:0;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+}
+.flex-active-slide .anime3 {
+	-webkit-animation: fromleft 0.5s 1 ease;
+	-moz-animation:  fromleft 0.5s 1 ease;
+	-o-animation: fromleft 0.5s 1 ease;
+	-ms-animation: fromleft 0.5s 1 ease;
+	-webkit-animation-delay:2s;
+	-moz-animation-delay:2s;
+	-o-animation-delay:2s;
+	-ms-animation-delay:2s;
+	opacity:0;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+}
+.flex-active-slide .anime4 {
+	-webkit-animation: fromtop 0.5s 1 ease;
+	-moz-animation:  fromtop 0.5s 1 ease;
+	-o-animation: fromtop 0.5s 1 ease;
+	-ms-animation: fromtop 0.5s 1 ease;
+	-webkit-animation-delay:1s;
+	-moz-animation-delay:1s;
+	-o-animation-delay:1s;
+	-ms-animation-delay:1s;
+	opacity:0;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+}
+.flex-active-slide .anime5 {
+	-webkit-animation: fadein 0.5s 1 ease;
+	-moz-animation:  fadein 0.5s 1 ease;
+	-o-animation: fadein 0.5s 1 ease;
+	-ms-animation: fadein 0.5s 1 ease;
+	-webkit-animation-delay:1s;
+	-moz-animation-delay:1s;
+	-o-animation-delay:1s;
+	-ms-animation-delay:1s;
+	opacity:0;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+}
+@-webkit-keyframes fromright {
+from {opacity:0; left:600px; }
+to { opacity:1; left:0; }
+}
+@-moz-keyframes fromright {
+from {opacity:0; left:600px; }
+to { opacity:1; left:0; }
+}
+@-o-keyframes fromright {
+from {opacity:0; left:600px; }
+to { opacity:1; left:0; }
+}
+@-ms-keyframes fromright {
+from {opacity:0; left:600px; }
+to { opacity:1; left:0; }
+}
+@-webkit-keyframes fromleft {
+from {opacity:0; left:-600px; }
+to { opacity:1; left:0; }
+}
+@-moz-keyframes fromleft {
+from {opacity:0; left:-600px; }
+to { opacity:1; left:0; }
+}
+@-o-keyframes fromleft {
+from {opacity:0; left:-600px; }
+to { opacity:1; left:0; }
+}
+@-ms-keyframes fromleft {
+from {opacity:0; left:-600px; }
+to { opacity:1; left:0; }
+}
+@-webkit-keyframes fromtop {
+from {opacity:0; top:-600px; }
+to { opacity:1; top:0; }
+}
+@-moz-keyframes fromtop {
+from {opacity:0; top:-600px; }
+to { opacity:1; top:0; }
+}
+@-o-keyframes fromtop {
+from {opacity:0; top:-600px; }
+to { opacity:1; top:0; }
+}
+@-ms-keyframes fromtop {
+from {opacity:0; top:-600px; }
+to { opacity:1; top:0; }
+}
+@-webkit-keyframes fadein {
+from {opacity:0; }
+to { opacity:1; }
+}
+@-moz-keyframes fadein {
+from {opacity:0; }
+to { opacity:1;  }
+}
+@-o-keyframes fadein {
+from {opacity:0; }
+to { opacity:1; }
+}
+@-ms-keyframes fadein {
+from {opacity:0; }
+to { opacity:1; }
+}

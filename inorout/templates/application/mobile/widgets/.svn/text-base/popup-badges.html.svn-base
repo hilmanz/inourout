@@ -1,0 +1,16 @@
+<div class="popup" id="popup-get-badges">
+    <div class="popupContainer">
+		<a class="closePopup" href="#">[CLOSE X]</a>
+    	<div class="popup-head">
+        	<h2 class="red badgesName">THE DOUBLE DECKER</h2>
+        </div>
+    	<div class="popup-entry">
+        	<div class="badges-get fl">
+        	 	<img src="{$basedomain}assets/images/badges/badges-2.png" />
+            </div>
+        	<div class="badges-desc fl">
+            	<h4>Explore every nook and cranny of London and make multiple stops at unforgettable new place</h4>
+            </div>
+        </div>
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->

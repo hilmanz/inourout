@@ -1,0 +1,62 @@
+<div class="popup" id="popup-trade-confirm">
+    <div class="popupContainer center">
+		<a class="closePopup" href="#">[CLOSE X]</a>
+    	<div class="popup-head">
+        	<h2><img src="{$basedomain}assets/images/content/placing_trade.png" /></h2>
+        </div>
+    	<div class="popup-entry">
+                <form id="tradeFormConfirm">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr class="even">
+                    <td>
+                        <div class="badgesListConfirm">
+                            <a class="badges badges-m" href="#">
+                                <img src="{$basedomain}assets/images/badges/badges-9.png" />
+                          	  	<span class="badges-value">1</span>
+                            </a>
+                            <a class="badges badges-m" href="#">
+                                <img src="{$basedomain}assets/images/badges/badges-10.png" />
+                          	  	<span class="badges-value">1</span>
+                            </a>
+                            <a class="badges badges-m" href="#">
+                                <img src="{$basedomain}assets/images/badges/badges-11.png" />
+                          	  	<span class="badges-value">1</span>
+                            </a>
+                            <a class="badges badges-m" href="#">
+                                <img src="{$basedomain}assets/images/badges/badges-12.png" />
+                          	  	<span class="badges-value">1</span>
+                            </a>
+                        </div><!-- END .badgesListConfirm -->
+                    </td>
+                  </tr>
+                  <tr class="odd">
+                    <td>
+                        <h3>Trade With</h3>
+                        <div class="badgesListConfirm">
+                            <a class="badges badges-m" href="#">
+                                <img src="{$basedomain}assets/images/badges/badges-1.png" />
+                          	  	<span class="badges-value">1</span>
+                            </a>
+                            <a class="badges badges-m" href="#">
+                                <img src="{$basedomain}assets/images/badges/badges-2.png" />
+                          	  	<span class="badges-value">1</span>
+                            </a>
+                            <a class="badges badges-m" href="#">
+                                <img src="{$basedomain}assets/images/badges/badges-3.png" />
+                          	  	<span class="badges-value">1</span>
+                            </a>
+                            <a class="badges badges-m" href="#">
+                                <img src="{$basedomain}assets/images/badges/badges-4.png" />
+                          	  	<span class="badges-value">1</span>
+                            </a>
+                        </div><!-- END .badgesListConfirm -->
+                    </td>
+                  </tr>
+                </table>
+                <div class="row">
+      				  <a href="#popup-trade-success" class="orangebtn showPopup bigBtn">CONFIRM TRADE</a>
+                </div><!-- END .row -->
+                </form>
+        </div>
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->

@@ -1,0 +1,100 @@
+<div class="tabEntry">
+	{if $todayauction}
+	
+	<div startpage="0" total="{$todayauctiontotal}" id="todayAuction" lastrow="0" lastqueue="even" >
+	
+	{foreach $todayauction as $k => $v}
+		<div class="box-prof">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr class="{$v.queue}">
+					<td valign="top">
+                    <div class="Tauctionprize">
+						<div class="prizeAuction">
+						<a class="thumbPrizes "><img src="{$v.auctions.image_full_path}" /></a>
+						</div>
+						<div class="prizeDesc">
+							<h3>{$v.title}</h3>
+							<p>{$v.content}</p>
+						</div><!-- END .prizeDesc -->
+						<div class="timeLeft">
+							<h3>Sisa waktu auction:</h3>
+							<div id="countdown_auction_{$v.id}" class="countdown">
+								<div class="dash hours_dash">
+									
+									<div class="digit">0</div>
+									<div class="digit">0</div>
+									<span class="dash_title">HR</span>
+								</div>
+								<div class="dash minutes_dash">
+									<div class="digit">0</div>
+									<div class="digit">0</div>
+									<span class="dash_title">M</span>
+								</div>
+								<div class="dash seconds_dash">
+									
+									<div class="digit">0</div>
+									<div class="digit">0</div>
+									<span class="dash_title">S</span>
+								</div>
+							</div><!-- END .countdown -->
+						</div><!-- END .prizeDesc -->
+                       </div><!-- END .Tauctionprize -->
+						<div class="currentBid">
+                        	<div class="half-side border-rg">
+                                <div class="bidStart">
+                                    <span class="iconArrowGrey">&nbsp;</span>
+                                    <h3>bid awal: </h3>
+                                    <h2 class="points">{$v.minimalBid|number_format}<span>points</span></h2>
+                                </div>
+                            </div><!-- END .half-side -->
+                            <div class="half-side">
+                                <div class="currretHigh">
+                                    <span class="iconArrowGrey">&nbsp;</span>
+                                    <h3>Bid saat ini:</h3>
+                                    <h2 class="points">{$v.currentBid|number_format}<span>points</span></h2>
+                                </div>
+                            </div><!-- END .half-side -->
+						</div><!-- END .currentBid -->
+						<form method="post" action="{$basedomain}badges/placingBid">
+						<input type="hidden" name="aid" value="{$v.id}"/>
+						<input type="hidden" name="desc" value="{$v.title}"/>
+						<input type="hidden" name="currentbid" value="{if $v.currentBid==0}{$v.minimalBid}{else}{$v.currentBid}{/if}"/>
+						<input type="hidden" name="img" value="{$v.auctions.image_full_path}"/>
+						<input type="hidden" name="token" value="1"/>
+						
+						 <div style="text-align:center; clear:both;">
+						{*}
+						<a href="{$basedomain}badges/placingBid" class="btnIncrease sendauctionitem" aid="{$v.id}" img="{$v.auctions.image_full_path}" desc="{$v.title}" currentbid="{if $v.currentBid==0}{$v.minimalBid}{else}{$v.currentBid}{/if}" >Tambah Bid</a>
+						{/*}
+						<input type="submit" name="increasebid" value="Tambah Bid" class="btnIncrease sendauctionitem"/>
+						 </div>
+						</form>
+
+					</td>        
+				</tr>
+			</table>
+		</div>
+		
+		<script>
+		
+			//jqscroll('todayAuction','badges/todayAuctionAjax',1,'todayAuctionList');
+		
+		</script>
+		
+		
+	{/foreach}
+	</div>
+	{/if}
+
+	{if $todayauction==""}
+
+    <div class="nowin">
+    			<div class="nowin-image">
+                <img src="{$basedomain}assets/images/auction.png" />
+                </div>
+                <h3>Belum ada Auction yang kamu menangkan.<br />
+        Tapi masih besar kesempatanmu untuk mendapatkan hadiah keren,<br />
+      	cek Today's Auction untuk update terbaru!</h3>
+    		</div>
+	{/if}
+</div><!-- END .tabEntry -->

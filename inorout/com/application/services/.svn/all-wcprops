@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/marlboro-in-or-out/!svn/ver/816/trunk/inorout/com/application/services
+END
+example_service.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/com/application/services/example_service.php
+END
+mop.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/marlboro-in-or-out/!svn/ver/229/trunk/inorout/com/application/services/mop.php
+END
+games.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/marlboro-in-or-out/!svn/ver/796/trunk/inorout/com/application/services/games.php
+END
+recoverpass.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/com/application/services/recoverpass.php
+END
+submitcode.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/com/application/services/submitcode.php
+END
+task.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/com/application/services/task.php
+END
+synch.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/marlboro-in-or-out/!svn/ver/816/trunk/inorout/com/application/services/synch.php
+END
+notification.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/com/application/services/notification.php
+END
+home.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/com/application/services/home.php
+END
+login.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/marlboro-in-or-out/!svn/ver/203/trunk/inorout/com/application/services/login.php
+END

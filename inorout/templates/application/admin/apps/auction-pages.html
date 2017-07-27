@@ -1,0 +1,106 @@
+<div id="theContainer" class="inboxPage">
+    <div class="theContainer">
+        <div class="head-title">
+            <h1 class="fl">Auction List</h1>
+        </div> <!-- /.head-title -->
+        <div class="short2">
+            <form method="POST" action="{$basedomain}auction" id="shorter" class="formsubmitmanualmoderation" >
+                <div class="date-range fl">
+					Timespan&nbsp;&nbsp;
+					<input type="text" class="half-width" id="datepicker" name="startdate" value="{$startdate}" style="width:100px" />
+					<span>to</span>
+					<input type="text" class="half-width" id="datepicker2" name="enddate" value="{$enddate}" style="width:100px"  />
+                </div>
+                <div class="input-append fr">
+                    <input type="text" size="16" id="search" name="search" class="span2" onfocus="if(this.value=='Search...')this.value='';" onblur="if(this.value=='')this.value='Search...';" value="{if $search}{$search}{else}Search...{/if}"/>
+					<input type="hidden" name="filter" value="searchform"/>
+					<button type="submit" class="btn">Go!</button>
+                </div>
+            </form>
+        </div><!-- /.short -->
+        <div class="theContent">
+			<table cellpadding="0" cellspacing="0" border="0" id="table1" class="stdtable">
+			<colgroup>
+				<col class="con0" style="width: 4%" />
+				<col class="con1" />
+				<col class="con0" />
+				<col class="con1" />
+				<col class="con0" />
+				<col class="con1" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th class="head0">No</th>
+					<th class="head0">Title</th> 
+					<th class="head0">Content</th>
+					<th class="head0">Images</th>
+					<th class="head1">Published Date</th>
+					<th class="head0">Status</th>
+					<th class="head1">Action</th>
+				</tr>
+			</thead>
+			<tbody class="auctionlistpaging">
+				{if $list}
+					{section name=i loop=$list}
+					<tr>
+						<td width="10">{$list[i].no}&nbsp;</td>
+						<td>{$list[i].title|capitalize}</td> 
+						<td>{$list[i].content|html_entity_decode}</td>
+						<td><a href="javascript:void(0)" class="arkPopupImages" call="{$basedomainpath}public_assets/auctions/{$list[i].img}"><img height="70px" width="70px" src="{$basedomainpath}public_assets/auctions/{$list[i].img}" ></a></td>
+						<td align="center"><nobr>{$list[i].created_date}</nobr></td> 
+						<td align="center">
+							{if $list[i].n_status==1} <span class="green">Publish</span>
+							{elseif $list[i].n_status==2} <span class="orange">Unpublish</span>
+							{else}
+							{/if}
+						</td>
+						<td align="center">
+							<nobr> 
+							<a href="{$basedomain}auctionGallery/seegallery?id={$list[i].id}" class="red">Galley</a>
+							|<a href="{$basedomain}auction/auctionedit?id={$list[i].id}" class="red">Update</a>
+							| <a href="{$basedomain}auction/hapus?id={$list[i].id}" class="red" onclick="return confirm('Are you sure you want to delete this?')">delete</a>
+							</nobr>
+						</td>
+					</tr>
+					{/section}
+				{/if}
+			</tbody>
+			<a href="{$basedomain}auction/newDataInput" class="fr addNewContent">add new</a>
+			</table>
+             <div class="pagingbox" id="pagingauction" ></div><!-- END .pagingbox -->
+        </div> <!-- /.theContent -->
+		<script>
+		
+		getpaging(0,{$total},"pagingauction","paging_ajax_auction",10);
+				var startdate = "{$startdate}";
+				var enddate = "{$enddate}";
+				var search = "{$search}";
+				var publishedtype = "{$publishedtype}";
+				{literal}
+					$(document).on('change','#publishedtype',function(){
+						$(".formsubmitmanualmoderation").submit();
+					})
+		</script> 
+				{/literal}
+		
+    </div> <!-- /.theContainer -->
+</div> <!-- /#theContainer -->
+ 
+
+
+	<script>
+		var searchType = '{$searchType}';
+	{literal}
+		$(document).on("change","#moderationtype",function(){
+			var modetype = $(this).val();
+			window.location = basedomain+"moderation/"+modetype;
+		
+		});
+
+		$(document).ready(function(){
+			$('input.searchType').on('change',function(){
+				searchType = $(this).val();
+			});
+		});
+	{/literal}
+	</script>

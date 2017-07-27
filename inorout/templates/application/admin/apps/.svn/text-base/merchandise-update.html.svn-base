@@ -1,0 +1,68 @@
+<div id="theContainer" class="inboxPage">
+    <div class="theContainer">
+        <div class="head-title">
+            <h1 class="fl">update merchandise</h1>
+        </div> <!-- /.head-title -->
+         <div class="formContent">
+            <form method="POST" action="" enctype="multipart/form-data" >
+			<table border=1>
+				<tr>
+					<td>Name</td>
+					<td>:</td>
+					<td><input type="text" name="name" id="name" value="{$selectupdatedata.name}" /></td>
+				</tr> 
+				<tr>
+					<td>Detail</td>
+					<td>:</td>
+					<td><textarea name="detail" id="detail" >{$selectupdatedata.detail}</textarea></td>
+				</tr>
+				<tr>
+					<td>image</td>
+					<td>:</td>
+					<td>
+						<input type="file" name="image" value="" />
+						<img src="{$basedomainpath}public_assets/merchandise/{$selectupdatedata.image}">
+					</td>
+				</tr>
+				<tr>
+					<td>Stock</td>
+					<td>:</td>
+					<td><input type="text" name="stock" id="stock" onkeypress="return numbersonly(event);" value="{$selectupdatedata.stock}" /></td>
+				</tr>
+				<tr>
+					<td>Points</td>
+					<td>:</td>
+					<td><input type="text" name="point" id="point" onkeypress="return numbersonly(event);" value="{$selectupdatedata.point}" /></td>
+				</tr>
+				<tr>
+					<td>published date</td>
+					<td>:</td>
+					<td><input type="text" class="half-width" id="datepicker" name="published_date" value="{$selectupdatedata.postdate}" style="width:100px" /></td>							
+				</tr>
+				<tr>
+					<td>end date</td>
+					<td>:</td>
+					<td><input type="text" class="half-width" id="datepicker2" name="end_date" value="{$selectupdatedata.enddates}" style="width:100px" /></td>							
+				</tr>
+				<tr>
+					<td>Status</td>
+					<td>:</td>
+					<td>
+						<select name="n_status">
+							<option value="0" {if $selectupdatedata.n_status == 0} selected {/if}>UnPublished</option>
+							<option value="1" {if $selectupdatedata.n_status == 1} selected {/if}>Published</option>
+						</select>
+					</td>
+				</tr> 
+				<tr>
+					<td colspan="3" >
+						<input type="submit" name="submit" value="submit" />
+						<input type="button" class="btn" value="Cancel" onclick="javascript: window.location.href='{$basedomain}merchandise';" />
+						<input type="hidden" name="editit" value="ok" />
+					</td>
+				</tr>
+			</table>
+            </form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,115 @@
+<div id="placingBid" class="container">
+	<div class="entry-container center">
+    	<div id="box-content" class="relative">
+        	<a class="closing" href="{$basedomain}badges/auction">[CLOSE X]</a>
+            <div class="placingBid-head">
+                <h2><img src="{$basedomain}assets/images/mobile/bids-logo.png" /></h2>
+                <h3>Poin untuk bid ditentukan oleh jumlah poin dari keseluruhan badge kamu & harus lebih besar dari poin bid awal.</h3>
+           	</div>
+            <div id="entry-content">
+            	<form id="tradeFormBid" method="POST" action="{$basedomain}badges/bidding">
+				{if $todayauction}
+					{foreach $todayauction.result as $k => $v}
+					<div class="box-prof">
+						<div class="row info-bidding">
+							<div class="image-bids">
+								<div id="prizeBox">
+									<a href="#" class="thumbPrizes"><img  src="{$v.auctions.image_full_path}" /></a>
+									<h3>{$v.title} </span></h3>
+									
+								</div>
+							</div>
+							<div class="currentPlacing">
+								<div id="currentBid" class="bidsideBox">
+									<h3>BID SAAT INI:</h3>
+									<h2 class="bidValue auctioncurrentbid">{if $v.currentBid==0}{$v.minimalBid|number_format}{else}{$v.currentBid|number_format}{/if}</h2>
+								</div><!-- END #currentBid -->
+								<div id="yourBid" class="bidsideBox">
+										<h3>bid kamu:</h3>
+										<h2 class="bidValue myofferingpoint" point="0">0</h2>
+								</div><!-- END #yourBid -->
+								 <p class="infoyourBid">Tambahkan {*}<span>(<span class="myofferingpointsubbed" currentbidder="{if $v.currentBid==0}{$v.minimalBid}{else}{$v.currentBid}{/if}" >{if $v.currentBid==0}{$v.minimalBid}{else}{$v.currentBid}{/if}</span>)</span>{/*} point lagi menggunakan nilai badges kamu.</p>
+								<div class="row btnPlacebid">
+
+								{*}<a href="{$basedomain}badges/auction" class="orangebtn fl" id="redeemBtn">Tambah Bid &gt;</a>{/*}
+								{if $v.nextturn>0}
+									<input type="submit" value="{$v.nextturn} {if $v.nextturn>1}turns left{else}turn left{/if}" class="orangebtn fl grayscale" id="placeBidBtn" disabled="disabled"/>
+									
+								{else}
+								<input type="submit" value="Tambah Bid" class="orangebtn fl" id="placeBidBtn" />
+
+								{/if}
+								<input type="hidden" name="auctionid" class="aidtoform" value="{$v.id}" /> 
+								<input type="hidden" name="badgelist"  class="badgestoform" value="0" /> 
+								<input type="hidden" name="amountlist"  class="amounttoform" value="0" /> 
+								<input type="hidden" name="opponentid" class="oppponenttoform"  value="{$v.opponentid}" /> 
+								</div>
+								<div><span class="msgbidding" > 
+								{if $v.nextturn>0}
+									Maaf, kamu baru dapat melakukan bidding kembali setelah   {$v.nextturn} pengguna lain. 
+								{/if} 
+								</span></div>
+							</div>
+						</div><!-- END .info-bidding -->
+					</div>
+					{/foreach}
+				{/if}
+					<div class="box-prof">
+						<div class="badgesListAll">
+							{foreach $currentbadges as $key => $val}
+							<div class="boxBadges">
+								{if $val.id != 11 && $val.id != 8}
+								<a class="badges badges-m {if $val.total!=0}{else}grayscale{/if}" href="#">
+									<img src="{$basedomain}assets/images/badges/badges-{$val.id}.png" />
+								</a>
+								{else}
+								<a class="badges badges-m grayscale" href="javascript:void(0)">
+									<img src="{$basedomain}assets/images/badges/{$val.image}" />
+								</a>
+								{/if}
+								<h4 class="badgesCount"><span class="counterBadges_{$val.id} counterBadges {if $val.total!=0}black{else}red{/if}">[{$val.total}]</span> BADGES LEFT</h4>
+								<input type="text" class="badgesvaluetemps spinnerbid" value="0" badgesnames="{$val.name}" badgesid="{$val.id}" amountpoint="0" currentpoint="0" max="{$val.total}" badgesvalues="{$val.point}" readonly="readonly" name="badges_{$val.id}"/>
+							</div><!-- END .boxBadges -->
+							{/foreach}
+							
+						</div><!-- END .badgesListAll -->
+					</div>
+					
+					
+					
+				</form>
+            </div><!-- END .entry-conten -->
+         </div><!-- END .box-content -->
+    </div><!-- END .entry-container -->
+</div><!-- END .placingBid -->
+
+{literal}
+<script>
+
+	var updateoptions = {
+	dataType:  'json', 	
+	beforeSubmit: function(data) { 
+			var bid = $('.myofferingpoint').attr('point');
+			//if (bid<1) return false;
+			$(".msgbidding").html('Please Wait'); 
+			 
+	},
+	success : function(data) {		
+			
+			if(data.result==true){				
+					// console.log(' okeh lah ');
+					$("#placeBidBtn").attr('disabled','disabled');
+					$("#placeBidBtn").val('2 turns left');
+					$("#placeBidBtn").addClass('grayscale');
+			}else{
+				
+			}
+			$(".msgbidding").html(data.message);
+	}
+	};					
+	
+	
+	$("#tradeFormBid").ajaxForm(updateoptions);
+	
+</script>
+{/literal}

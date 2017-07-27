@@ -1,0 +1,34 @@
+<div id="auctionPage" class="container">
+	<div class="entry-container center">
+    	<div id="box-content">
+        	<div id="head-content" class="bg-head-auction">
+                <h3>bid or fold. Decide now.<br />
+Dapatkan hadiah lainnya untuk koleksimu <a href="#popup-mekanisme-auction" class="showPopup">[Mekanisme]</a></h3>
+            </div><!-- END #head-content -->
+            <div id="entry-content">
+                <div id="tabs">
+                  <div id="tabNavigation">
+                      <ul id="tabNav">
+                        <li><a href="#PastAuction">Past Auction</a></li>
+                        <li><a href="#TodayAuction">Today's Auction</a></li>
+                        <li><a href="#AuctionWon">Auction I Won</a></li>
+                      </ul>
+                  </div><!-- END #tabNavigation -->
+                  <div id="PastAuction">
+					{include file="application/web/widgets/auction-past.html"}
+                  </div><!-- END #PastAuction -->
+                  <div id="TodayAuction">
+					{include file="application/web/widgets/auction-today.html"}
+                  </div><!-- END #TodayAuction -->
+                  <div id="AuctionWon">
+					{include file="application/web/widgets/auction-win.html"}
+                  </div><!-- END #AuctionWon -->
+                </div><!-- END #tabs -->
+            </div><!-- END #entry-content -->
+        </div><!-- END #box-content -->
+    </div><!-- END .entry-container -->
+</div><!-- END .container -->
+{include file="application/web/widgets/popup-auction.html"}
+{include file="application/web/widgets/popup-mekanisme-auction.html"}
+{include file="application/web/widgets/popup-auction-success.html"}
+ 

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/Predis/tests/PHPUnit
+END
+CommandTestCase.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/Predis/tests/PHPUnit/CommandTestCase.php
+END
+ConnectionTestCase.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/Predis/tests/PHPUnit/ConnectionTestCase.php
+END
+DistributionStrategyTestCase.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/Predis/tests/PHPUnit/DistributionStrategyTestCase.php
+END
+ArrayHasSameValuesConstraint.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/Predis/tests/PHPUnit/ArrayHasSameValuesConstraint.php
+END
+ServerVersionTestCase.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/Predis/tests/PHPUnit/ServerVersionTestCase.php
+END

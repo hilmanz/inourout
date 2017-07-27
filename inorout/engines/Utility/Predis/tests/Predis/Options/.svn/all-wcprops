@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/Predis/tests/Predis/Options
+END
+ClientOptionsTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/Predis/tests/Predis/Options/ClientOptionsTest.php
+END
+ClientPrefixTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/Predis/tests/Predis/Options/ClientPrefixTest.php
+END
+ClientProfileTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/Predis/tests/Predis/Options/ClientProfileTest.php
+END
+ClientClusterTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/Predis/tests/Predis/Options/ClientClusterTest.php
+END
+CustomOptionTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/Predis/tests/Predis/Options/CustomOptionTest.php
+END
+ClientConnectionFactoryTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/Predis/tests/Predis/Options/ClientConnectionFactoryTest.php
+END
+OptionTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/engines/Utility/Predis/tests/Predis/Options/OptionTest.php
+END

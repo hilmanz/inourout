@@ -1,0 +1,69 @@
+<div id="theContainer" class="inboxPage">
+    <div class="theContainer">
+        <div class="head-title">
+            <h1 class="fl">Input Badges</h1>
+        </div> <!-- /.head-title -->
+        <div>
+            <form method="POST" action="" enctype="multipart/form-data">
+			<table border=1> 
+				<tr>
+					<td>Name</td>
+					<td>:</td>
+					<td><input type="text" name="name" id="name" value="{$selectupdatedata.name}" /></td>
+				</tr>
+				<tr>
+					<td>Description</td>
+					<td>:</td>
+					<td><input type="text" name="description" id="description" value="{$selectupdatedata.desc}" /></td>
+				</tr>
+				<tr>
+					<td>image</td>
+					<td>:</td>
+					<td><input type="file" name="images" value="" /> 
+					<img width="70" height="70" src="{$basedomainpath}public_assets/badges/{$selectupdatedata.image}" /></td>
+				</tr>
+				<tr>
+					<td>Type</td>
+					<td>:</td>
+					<td>
+						<select name="type">
+							<option value="" selected >-</option>
+							<option value="0" {if $selectupdatedata.type==0}selected{/if}>Regular</option>
+							<option value="1" {if $selectupdatedata.type==1}selected{/if}>Special</option>
+							<option value="2" {if $selectupdatedata.type==2}selected{/if}>Rare</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Point<label>range 1-100</label></td>
+					<td>:</td>
+					<td><input type="text" name="point" id="point" value="{$selectupdatedata.point}" onkeypress="return numbersonly(event);"/></td>
+				</tr>
+				<tr>
+					<td>Prob<label>range 1-100 in %</label></td>
+					<td>:</td>
+					<td><input type="text" name="probability" id="probability" value="{$selectupdatedata.prob}" /></td>
+				</tr>
+				<tr>
+					<td>Status</td>
+					<td>:</td>
+					<td>
+						<select name="n_status">
+							<option value="" {if $selectupdatedata.n_status==""}selected{/if}>-</option>
+							<option value="0" {if $selectupdatedata.n_status==0}selected{/if}>UnPublished</option>
+							<option value="1" {if $selectupdatedata.n_status==1}selected{/if}>Published</option>
+						</select>
+					</td>
+				</tr> 				
+				<tr>
+					<td colspan="3" >
+						<input type="submit" name="submit" value="submit" />
+						<input type="button" class="btn" value="Cancel" onclick="javascript: window.location.href='{$basedomain}badges';" />
+						<input type="hidden" name="editit" value="ok" />
+					</td>
+				</tr>
+			</table>
+            </form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,179 @@
+<div id="challengePage" class="container">
+	<div class="entry-container">
+        <div class="post-container">
+        	<div class="post-header">
+				<img src="{$basedomain}assets/images/content/challenge-oftheweek.png" />
+            </div><!-- END .post-header -->
+            <div class="post-content">
+                <div class="whitebox">
+                    <h3>Tunjukkan foto seru kamu sesuai tema bulan ini </h3>
+                    <h2>& MENANGKAN BADGE UNIK UNTUK KOLEKSIMU!</h2>
+                    <a href="{$basedomain}challenge/rules" class="greybtn">baca aturan main</a>
+                </div>
+				{if  $challenge}
+					{foreach $challenge as $key => $val }
+						{if $key==0}
+						<div class="hot-content">
+							<a href="{$basedomain}challenge" class="bigthumb">
+								<img src="{$val.event.image_full_path}" />
+							</a>
+						 <a href="{$basedomain}challenge" class="showwinner">VIEW PREVIOUS THEME</a> 
+						</div><!-- END .hot-content -->
+						{/if}
+					{/foreach}
+				{/if}	
+            </div><!-- END .post-content -->
+            <div class="post-content">
+                <div class="post-header">
+                    <img src="{$basedomain}assets/images/content/winner-oftheweek.png" />
+                    <h4>Setiap pemenang mendapatkan <span class="red">1 badge spesial</span></h4>
+                </div><!-- END .post-header -->
+                <div id="winnerBox">
+					{if $gallerywinner}	
+						{foreach $gallerywinner as $key => $val}
+						<div class="thumbWinner"><img src="{$val.gallery.image_full_path}"  width="100%"></div>
+						<div class="photoDesc">
+							<a href="{$basedomain}profile/{$val.author.authorid}" class="small-thumb"><img src="{$val.author.profiles.image_full_path}" /></a>
+							<div class="photo-author">
+								<h4>PHOTO BY</h4>
+								<h3>{$val.author.name} {$val.author.last_name}</h3>
+							</div><!-- END .photo-author -->
+						</div><!-- END .photoDesc -->
+					     {/foreach}
+					{/if}     
+                </div><!-- END #winnerBox -->
+            	<div class="the-content">
+                	<div class="box-title">
+                        <span class="line"></span>
+                    	<h3>All 10 finalist</h3>
+                    </div>
+                    <div class="section galleries center">
+					{if $gallery}	
+						{foreach $gallery as $key => $val}
+							<div class="photoThumb photo{$val['eventid']}">
+								<div class=" " style="overflow:hidden;height:100%" >
+									<a href="#popup-photo-detail" class="showPopup clickBig" data-img="{$val.gallery.image_full_path}" data-author="{$val.author.name}" data-pp="{$val.author.img}" data-vote="{$val.eventid}" data-photoid="{$val.id}" data-photovoted="{$val.photo_id_voted}" data-title="{$val.event_title}" data-isvote="{$val.is_voted}"><img src="{$val.gallery.image_full_path}"  width="100%" ></a>
+	
+									<span class="caption">
+										<span class="desk-img">PHOTO BY</span>
+										<span class="post-by">{$val.author.name}</span>
+									</span>
+			
+								</div><!-- END .qitem -->
+								 
+							</div><!-- END .photoThumb -->
+                        {/foreach}
+					{/if}                          
+                	</div><!-- END .section -->
+                    <div class="whitebox">
+                        <h2 class="blue">belum menang?</h2>
+                        <h3>masih ada kesempatan lain bulan depan</h3>
+                    </div>
+                    {if  $nextchallenge}
+						{foreach $nextchallenge as $key => $val }
+							{if $key==0}
+							<div class="hot-content">
+								<a href="javascript:void(0)" class="bigthumb">
+									<img src="{$val.event.image_full_path}" width="100%" />
+								</a>
+							</div><!-- END .hot-content -->
+							{/if}
+						{/foreach}
+					{/if}	
+                </div><!-- END .the-content -->
+            </div><!-- END .post-content -->
+        </div><!-- END .post-container -->
+    </div>
+</div><!-- END .container -->
+
+{include file="application/web/widgets/popup-upload-photo.html"}
+{include file="application/web/widgets/popup-photo-detail.html"}
+
+<script>
+{literal}
+    $(document).on('click','.clickBig',function(){
+        var img,author,pp,vote,title,photoid ="";
+        var isVote = 0;
+        img = $(this).data('img');
+        author = $(this).data('author');
+        vote = $(this).data('vote');
+        title = $(this).data('title');
+        isvote = $(this).data('isvote');
+        photoid = $(this).data('photoid');
+        photovoted = $(this).data('photovoted');
+        // console.log(isvote);
+        var profilePic = $(this).data('pp');
+        if(profilePic=='') profilePic = 'default.jpg';
+        pp = basedomain+"public_assets/profile/"+profilePic;
+        $('#popup-photo-detail .photoDetail img').attr('src',img);
+        $('#popup-photo-detail .small-thumb img').attr('src',pp);
+        $('#popup-photo-detail .data-author').html(author);
+   
+				$('#popup-photo-detail .greenbtn').hide();
+               // $('#popup-photo-detail .greenbtn').removeClass('vote_photo').html('VOTED').addClass('disabled').attr('style','');
+         
+    });
+
+    $(document).on('click','.isVoted',function(){
+         $('#popup-global .popup-entry').html("<h3>Ups, kamu sudah memberikan vote untuk foto ini.</h3>");
+    });
+    $(document).on('click','.vote_photo',function(){
+        var div = $(this);
+        //var div = $('.vote_photo'); 
+        // var div_check = parseInt(div.data('popup'));
+        div.removeClass('vote_photo');
+        var vote_id = parseInt($(this).data("vote"));
+        var photoid = parseInt($(this).data("photoid"));
+        var title = $(this).data("title");
+		 var divphotoid = $('.votephotoid_'+photoid);
+        var data = {};
+        data.url=basedomain+'challenge/vote';
+        data.params={ajax:1,content_id:vote_id,theme:title,photo_id:photoid};
+        data.type="json";
+        post_json(data).done(function(response){
+            var str='';
+            //try{
+                if(response.result==1){
+                    // if(div_check>0){
+                    //     $('.photo'+vote_id).find('.greenbtn').removeClass('vote_photo').addClass('disabled').html('VOTED');
+                    //     div.html('VOTED').addClass('disabled');
+                    // }else{
+                        divphotoid.closest('.photoThumb').find('.showPopup').data('isvote',1);
+                        divphotoid.html('VOTED').addClass('disabled isVoted').attr('href','#popup-global');
+                    // }
+                        $("html, body").animate({ scrollTop: 0 }, 600);
+                        $("#bg-popup,#popup-global").fadeIn();
+                        $('#popup-global .popup-entry').html("<h3>Terima kasih atas vote-nya! Dukung terus foto karya teman-temanmu di Challenge of The Week!</h3>");
+
+                         setTimeout(function () {
+                              location.reload();
+                            }, 2000);
+                         
+                    
+                }else if(response.result==0){
+                    // if(div_check>0){
+                    //     $('.photo'+vote_id).find('.greenbtn').removeClass('vote_photo').addClass('disabled').html('VOTED');
+                    //     div.html('VOTED').addClass('disabled');
+                    // }else{
+                        divphotoid.closest('.photoThumb').find('.showPopup').data('isvote',1);
+                        divphotoid.html('VOTED').addClass('disabled isVoted').attr('href','#popup-global');
+                    // }
+                    
+                }else{
+                    // if(div_check>0){
+
+                    // }else{
+                        divphotoid.addClass('vote_photo');
+                    // }
+                    
+                }
+                $(document).on('click','.isVoted',function(){
+                    $("html, body").animate({ scrollTop: 0 }, 600);
+                    $("#bg-popup,#popup-global").fadeIn();
+                    $('#popup-global .popup-entry').html("<h3>Ups, kamu sudah memberikan vote untuk foto ini.</h3>");
+                });
+            //}catch(e){}
+        });
+    });
+{/literal}
+</script>

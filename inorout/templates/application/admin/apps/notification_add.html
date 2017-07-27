@@ -1,0 +1,61 @@
+<div id="theContainer2" class="galleryPage">
+    <div class="theContainer2">
+        <div class="theContent2">
+        	<div class="col-content">
+                <div class="theBox">
+                    <div class="theBox-title">
+                        <h2 class="fl">Add Notification</h2>                       
+                    </div><!-- /.theBox-title -->
+                    <div class="theBox-content">
+                        <div class="forms">
+                            <form id="create-challenge" method="POST" action="{$basedomain}{$pages}/add" enctype="multipart/form-data" >
+                                <div class="rows2">
+                                    <label>To</label>
+                                    <input type="text" name="to" class="full-width" value="{$to}"/>
+                                </div><!-- /.rows2 -->
+                                <div class="rows2">
+                                    <label>From</label>
+                                    <input type="text" name="Fromname" class="full-width" value="Admin" readonly />
+                                    <input type="hidden" name="from" class="full-width" value="0"/>
+                                </div><!-- /.rows2 -->
+								<div class="rows2">
+									<label>Notif Type</label>
+									<select name="notiftype">
+										<option value="">- Select -</option>
+										<option value="1" {if $notiftype==1}selected{/if}>Mendapat extra badges dari invite friends</option>
+										<option value="2" {if $notiftype==2}selected{/if}>Menang Auction</option>
+										<option value="3" {if $notiftype==3}selected{/if}>Kalah Bidding</option>
+										<option value="4" {if $notiftype==4}selected{/if}>User lain tertarik trading dengan kamu</option>
+										<option value="5" {if $notiftype==5}selected{/if}>Membuat Trade Baru</option>
+										<option value="6" {if $notiftype==6}selected{/if}>Berhasil Redeem</option>
+										<option value="7" {if $notiftype==7}selected{/if}>Finalis Challenge of the Week</option>
+										<option value="8" {if $notiftype==8}selected{/if}>Pemenang Challenge of the Week</option>
+										<option value="9" {if $notiftype==9}selected{/if}>Tidak Menang Challenge of the Week</option>
+										<option value="10" {if $notiftype==10}selected{/if}>1st Badges</option>
+										<option value="11" {if $notiftype==11}selected{/if}>challange double or nothing</option>
+									</select>
+                                </div><!-- /.rows2 -->
+                                <div class="rows2">
+                                    <label>Static Messages</label>
+									<textarea name="static_message" class="full-width">{$static_message}</textarea>
+                                </div><!-- /.rows2 -->
+								<div class="rows2">
+                                    <label>Status</label>
+									<select name="n_status">
+										<option value="" {if $n_status==0}selected{/if}>- Select -</option>
+										<option value="1" {if $n_status==1}selected{/if}>Publish</option>
+										<option value="2" {if $n_status==2}selected{/if}>Unpublish</option>
+									</select>
+                                </div><!-- /.rows2 -->
+                                <div class="rows2">
+									<input type="hidden" name="input" value="1"/>
+									<input type="submit" value="Save" class="button fr"/>
+                                </div><!-- /.rows2 -->
+                            </form>
+                        </div> <!-- /.forms -->
+                    </div> <!-- /.theBox-content -->
+                </div> <!-- /.theBox -->
+            </div><!-- /.col-content -->
+        </div> <!-- /.theContent2 -->
+    </div> <!-- /.theContainer -->
+</div> <!-- /#theContainer -->

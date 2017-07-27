@@ -1,0 +1,25 @@
+<div id="bagdesMessage" class="container">
+	<div class="entry-container center">
+    	<div id="box-content" class="relative">
+        	<a class="closing" href="{$basedomain}profile">[CLOSE X]</a>
+            <div id="entry-content">
+            	<div class="box-prof">
+                	<div class="aspiration-body">
+                    	<div class="wonBagdes fl">
+                        	<div class="badges badges-m">
+                                <img src="{$basedomain}assets/images/badges/badges-5.png" />
+                            </div>
+                        </div><!-- end .wonBagdes -->
+                        <div class="descDecker fr">
+                        	<h2>Selamat! Satu Badge ekstra sudah ditambahkan ke koleksimu</h1>
+                            <span class="time">1 Jam yang lalu</span>
+                        </div>
+                        <div class="messageBagdes">
+                        	<p>Halo <span class="user">RAMBO</span><br />Selamat, kamu mendapat satu <b>tambahan badge</b> karena 5 teman perokok dewasamu telah bergabung di IN or OUT. Semakin banyak badge yang kamu dapat, semakin besar kesempatanmu menang. <b>Good luck!</b></p>
+                        </div>
+                    </div><!-- END .aspiration-body -->
+            	</div><!-- END .box-prof -->
+            </div><!-- END .entry-content -->
+        </div><!-- END .box-content -->
+    </div><!-- END .entry-container -->
+</div><!-- END .popup -->

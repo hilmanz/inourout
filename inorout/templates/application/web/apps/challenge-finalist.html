@@ -1,0 +1,188 @@
+<div id="challengePage" class="container">
+	<div class="entry-container">
+        <div class="post-container">
+        	<div class="post-header">
+				<img src="{$basedomain}assets/images/content/challenge-oftheweek.png" />
+            </div><!-- END .post-header -->
+            <div class="post-content">
+                <div class="whitebox">
+                    <h3>Tunjukkan foto seru kamu sesuai tema bulan ini </h3>
+                    <h2>& MENANGKAN BADGE UNIK UNTUK KOLEKSIMU!</h2>
+                    <a href="{$basedomain}challenge/rules" class="greybtn">baca aturan main</a>
+                </div>
+			{if  $challenge}
+				{foreach $challenge as $key => $val }
+					{if $val.n_status==1}
+					<div class="hot-content">
+						<a {*}href="{$basedomain}challenge/categories/{$val.id}"{/*} class="bigthumb">
+							<img src="{$val.event.image_full_path}" />
+						</a>
+                        {if $val.n_status==1}               
+                            {if $val.total_finalist eq '10'}
+                            {else}
+                            <a href="{$basedomain}challenge/categories/{$val.id}" class="showwinner">UPLOAD PHOTO</a> 
+                            {/if}
+                        {/if}
+                     
+					</div><!-- END .hot-content -->
+					{/if}
+				{/foreach}
+               
+			{/if}	
+             <div class="post-header">
+                    <img src="{$basedomain}assets/images/content/bg_message-cotw.png" />
+                </div><!-- END .post-header -->
+            </div><!-- END .post-content -->
+            {*}
+            <div class="post-content">
+                <div class="post-header">
+                    <img class="fl" src="{$basedomain}assets/images/content/10-Finalist.png" />
+                    <h4 class="fl">Segera vote & dapatkan satu badge ekstra. <br />Satu orang hanya boleh melakukan sekali vote!</h4>
+                </div><!-- END .post-header -->
+            	<div class="the-content">
+                	<div class="box-title">
+                        <span class="line"></span>
+                    	<h3>CLICK THE TUMBNAIL TO ENLARGE THE PICTURE</h3>
+                    </div>
+                    <div class="section galleries center">
+					{if $gallery}	
+						{foreach $gallery as $key => $val}
+							<div class="photoThumb photo{$val['eventid']}">
+								<div class="qitem" style="overflow:hidden;height:100%" >
+									<a href="#popup-photo-detail" class="showPopup clickBig" data-img="{$val.gallery.image_full_path}" data-author="{$val.author.name}" data-pp="{$val.author.img}" data-vote="{$val.eventid}" data-photoid="{$val.id}" data-photovoted="{$val.photo_id_voted}" data-title="{$val.event_title}" data-isvote="{$val.is_voted}"><img src="{$val.gallery.image_full_path}"></a>
+	
+									<span class="caption">
+										<span class="desk-img">PHOTO BY</span>
+										<span class="post-by">{$val.author.name}</span>
+									</span>
+			
+								</div><!-- END .qitem -->
+								{if $val.is_voted eq '1'}
+								  {if $val.id eq $val.photo_id_voted}
+								  <a href="#popup-global" class="greenbtn disabled-voted showPopup isVoted" style="background:none repeat scroll 0 0 #CCCCCC;" >&nbsp;</a>
+								  {/if}
+								{else}
+									<a class="greenbtn vote_photo votephotoid_{$val.id}" href="javascript:void(0)" data-vote="{$val.eventid}" data-title = "{$val.event_title}" data-photoid="{$val.id}">VOTE</a>
+								{/if}
+							</div><!-- END .photoThumb -->
+                        {/foreach}
+                    {/if}
+                	</div><!-- END .section -->
+                    <div class="whitebox">
+                        <h2 class="blue">belum menang?</h2>
+                        <h3>masih ada kesempatan lain bulan depan</h3>
+                    </div>
+					{if  $nextchallenge}
+						{foreach $nextchallenge as $key => $val }
+							{if $key==0}
+							<div class="hot-content">
+								<a href="javascript:void(0)" class="bigthumb">
+									<img src="{$val.event.image_full_path}" />
+								</a>
+							</div><!-- END .hot-content -->
+							{/if}
+						{/foreach}
+					{/if}	
+                </div><!-- END .the-content -->
+            </div><!-- END .post-content -->
+            {/*}
+        </div><!-- END .post-container -->
+    </div>
+</div><!-- END .container -->
+{include file="application/web/widgets/popup-upload-photo.html"}
+{include file="application/web/widgets/popup-photo-detail.html"}
+
+<script>
+{literal}
+    $(document).on('click','.clickBig',function(){
+        var img,author,pp,vote,title,photoid ="";
+        var isVote = 0;
+        img = $(this).data('img');
+        author = $(this).data('author');
+        vote = $(this).data('vote');
+        title = $(this).data('title');
+        isvote = $(this).data('isvote');
+        photoid = $(this).data('photoid');
+        photovoted = $(this).data('photovoted');
+        // console.log(isvote);
+        var profilePic = $(this).data('pp');
+        if(profilePic=='') profilePic = 'default.jpg';
+        pp = basedomain+"public_assets/profile/"+profilePic;
+        $('#popup-photo-detail .photoDetail img').attr('src',img);
+        $('#popup-photo-detail .small-thumb img').attr('src',pp);
+        $('#popup-photo-detail .data-author').html(author);
+        if(isvote==0){
+            $('#popup-photo-detail .greenbtn').attr('data-vote',vote).attr('data-title',title).attr('data-photoid',photoid).addClass('vote_photo').removeClass('disabled').html('VOTE').attr('style','');
+        }else{
+            if(photoid==photovoted){
+                $('#popup-photo-detail .greenbtn').removeClass('vote_photo').html('&nbsp;').addClass('disabled-voted showPopup isVoted').attr({'style':'background:none repeat scroll 0 0 #CCCCCC','href':'#popup-global'});
+            }else{
+				$('#popup-photo-detail .greenbtn').hide();
+               // $('#popup-photo-detail .greenbtn').removeClass('vote_photo').html('VOTED').addClass('disabled').attr('style','');
+            }
+        }
+    });
+
+    $(document).on('click','.isVoted',function(){
+         $('#popup-global .popup-entry').html("<h3>Ups, kamu sudah memberikan vote untuk foto ini.</h3>");
+    });
+    $(document).on('click','.vote_photo',function(){
+        var div = $(this);
+        //var div = $('.vote_photo'); 
+        // var div_check = parseInt(div.data('popup'));
+        div.removeClass('vote_photo');
+        var vote_id = parseInt($(this).data("vote"));
+        var photoid = parseInt($(this).data("photoid"));
+        var title = $(this).data("title");
+		 var divphotoid = $('.votephotoid_'+photoid);
+        var data = {};
+        data.url=basedomain+'challenge/vote';
+        data.params={ajax:1,content_id:vote_id,theme:title,photo_id:photoid};
+        data.type="json";
+        post_json(data).done(function(response){
+            var str='';
+            //try{
+                if(response.result==1){
+                    // if(div_check>0){
+                    //     $('.photo'+vote_id).find('.greenbtn').removeClass('vote_photo').addClass('disabled').html('VOTED');
+                    //     div.html('VOTED').addClass('disabled');
+                    // }else{
+                        divphotoid.closest('.photoThumb').find('.showPopup').data('isvote',1);
+                        divphotoid.html('VOTED').addClass('disabled isVoted').attr('href','#popup-global');
+                    // }
+                        $("html, body").animate({ scrollTop: 0 }, 600);
+                        $("#bg-popup,#popup-global").fadeIn();
+                        $('#popup-global .popup-entry').html("<h3>Terima kasih atas vote-nya! Dukung terus foto karya teman-temanmu di Challenge of The Week!</h3>");
+
+                         setTimeout(function () {
+                              location.reload();
+                            }, 2000);
+                         
+                    
+                }else if(response.result==0){
+                    // if(div_check>0){
+                    //     $('.photo'+vote_id).find('.greenbtn').removeClass('vote_photo').addClass('disabled').html('VOTED');
+                    //     div.html('VOTED').addClass('disabled');
+                    // }else{
+                        divphotoid.closest('.photoThumb').find('.showPopup').data('isvote',1);
+                        divphotoid.html('VOTED').addClass('disabled isVoted').attr('href','#popup-global');
+                    // }
+                    
+                }else{
+                    // if(div_check>0){
+
+                    // }else{
+                        divphotoid.addClass('vote_photo');
+                    // }
+                    
+                }
+                $(document).on('click','.isVoted',function(){
+                    $("html, body").animate({ scrollTop: 0 }, 600);
+                    $("#bg-popup,#popup-global").fadeIn();
+                    $('#popup-global .popup-entry').html("<h3>Ups, kamu sudah memberikan vote untuk foto ini.</h3>");
+                });
+            //}catch(e){}
+        });
+    });
+{/literal}
+</script>

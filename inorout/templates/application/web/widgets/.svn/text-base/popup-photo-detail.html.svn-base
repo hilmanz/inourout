@@ -1,0 +1,25 @@
+<div class="popup" id="popup-photo-detail">
+    <div class="popupContainer">
+		<a class="closePopup" href="#">[CLOSE X]</a>
+    	<div class="popup-entry">
+            <div class="photoDetail">
+                <img src="">
+            </div><!-- end #editPhotoBox -->
+            <div class="photoDesc">
+        		<a href="#" class="small-thumb"><img src="" /></a>
+                <div class="photo-author">
+                	<h4>PHOTO BY</h4>
+					<h3 class="data-author"></h3>
+                </div>
+                <a class="greenbtn fr vote_photo" data-popup="1" href="javascript:void(0)" data-vote="" data-title="" data-photoid="">VOTE</a>
+            </div>
+
+        </div><!-- END .popup-entry -->
+        {*}
+        <div class="direction-nav">
+            <a href="#" class="prevPhoto">&nbsp;</a>
+            <a href="#" class="nextPhoto">&nbsp;</a>
+        </div>
+        {/*}
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->

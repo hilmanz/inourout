@@ -1,0 +1,23 @@
+<div id="wildCard" class="container">
+	<div class="entry-container center">
+    	<div id="box-content" class="relative">
+        {*}<a class="closing" href="{$basedomain}profile">[CLOSE X]</a>{/*}
+        	<div id="head-content">
+            </div><!-- END #head-content -->
+            <div id="entry-content">
+            	<h3>collect all stamps by logging in for 9 consecutive days and earn one common badge</h3>
+                <div id="badges-list">
+                    {foreach from=$stamps key=s item=i}
+					<div class="badges badges-m ">
+                    	 <img src="{$basedomain}assets/images/mobile/content/stamp-{if $i.id eq '0'}lock{else}open{/if}.png" />
+					</div>
+                    {/foreach}    
+                <div class="row">
+                      <a href="{$basedomain}profile" class="orangebtn bigBtn">Continue</a>
+                </div><!-- END .row -->
+                </form>
+            </div><!-- END .entry-content -->
+                
+         </div><!-- END .box-content -->
+    </div><!-- END .entry-container -->
+</div><!-- END .placingBid -->

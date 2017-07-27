@@ -1,0 +1,462 @@
+/*
+Theme Name:  Marlboro In Or Out
+Version: 1.0
+Author: Acit Jazz 2013
+*/
+@font-face {
+    font-family: 'maybebold';
+    src: url('../font/maybe-bold-webfont.eot');
+    src: url('../font/maybe-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/maybe-bold-webfont.woff') format('woff'),
+         url('../font/maybe-bold-webfont.ttf') format('truetype'),
+         url('../font/maybe-bold-webfont.svg#maybebold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+*{
+	outline:none;
+}
+body{
+    font-family: 'maybebold';
+	margin:0;
+	padding:0;
+}
+a {
+	text-decoration: none;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	color:#bf1323;
+}
+a:hover{
+	color:#F00;
+}
+#step1 { 
+	background: url(../images/landing/bg_1.jpg) 50% 0 no-repeat fixed; 
+	height: 1000px;  
+	margin: 0 auto; 
+    width: 100%; 
+    max-width: 1920px; 
+    position: relative; 
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	overflow:hidden;
+}
+#step2 { 
+	background: url(../images/landing/bg_2.jpg) repeat fixed; 
+	height: 1000px;
+	margin: 0 auto; 
+    width: 100%; 
+    max-width: 1920px; 
+    position: relative; 
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	overflow:hidden;
+}
+#step3 { 
+	background: url(../images/landing/bg_3.jpg) 50% 0 no-repeat fixed; 
+	height: 1000px;  
+	margin: 0 auto; 
+    width: 100%; 
+    max-width: 1920px; 
+    position: relative; 
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	overflow:hidden;
+}
+#step4 { 
+	background: url(../images/landing/bg_4.jpg) 50% 0 no-repeat fixed; 
+	height: 1000px;
+	margin: 0 auto; 
+    width: 100%; 
+    max-width: 1920px; 
+    position: relative; 
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	overflow:hidden;
+}
+#step4a { 
+	background: url(../images/landing/bg_4a.jpg) 50% 0 no-repeat fixed; 
+	height: 1000px;
+	margin: 0 auto; 
+    width: 100%; 
+    max-width: 1920px; 
+    position: relative; 
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	overflow:hidden;
+}
+#step5 { 
+	background: url(../images/landing/bg_5.jpg) 50% 0 repeat fixed; 
+	height: 1000px;
+	margin: 0 auto; 
+    width: 100%; 
+    max-width: 1920px; 
+    position: relative; 
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	overflow:hidden;
+}
+
+/* ======================== STEP1  ========================  */
+
+#tallent1{
+	position:fixed;
+	bottom:-20px;
+	left:50%;
+	margin:0 0 0 -20%;
+	width:40%;
+	text-align:center;
+}
+#tallent1 img{
+	width:100%;
+	max-width:637px;
+}
+#text1{
+	width:100%; height:249px;
+	position:absolute;
+	bottom:400px;
+}
+#text1 img{
+	width:100%;
+}
+#buttonDown{
+	background:url(../images/landing/scrollbtn.png) no-repeat;
+	width:106px; height:71px;
+	position:absolute;
+	top:550px;
+	left:50%;
+	margin:100px 0 0 -54px;
+	display:block;
+	text-decoration:none;
+}
+#buttonDown:hover{
+	background:url(../images/landing/scrollbtn_hover.png) no-repeat;
+}
+#btnLogin{
+	background:url(../images/landing/login_btn.png) no-repeat;
+	width:86px; height:31px;
+	display:block;
+	position:absolute;
+	z-index:10000;
+	top:30px;
+	right:30px;
+}
+#btnLogin:hover{
+	background:url(../images/landing/login_btn.png) no-repeat 0 -31px;
+}
+/* ======================== STEP2  ========================  */
+
+#tallent2{
+	position:absolute;
+	top:100px;
+	left:50%;
+	margin:-500px 0 0 -3%;
+	width:40%;
+	text-align:center;
+}
+#tallent2 img{
+	width:100%;
+	max-width:410px;
+}
+#tallent3{
+	position:absolute;
+	top:350px;
+	left:50%;
+	margin:500px 0 0 -35%;
+	width:40%;
+	text-align:center;
+}
+#tallent3 img{
+	width:100%;
+	max-width:509px;
+}
+#tokyo{
+	position:absolute;
+	top:200px;
+	left:50%;
+	margin:-300px 0 0 -20%;
+	width:40%;
+	text-align:center;
+}
+#tokyo img{
+	width:100%;
+	max-width:541px;
+}
+#headphone{
+	position:absolute;
+	top:550px;
+	left:50%;
+	margin:-500px 0 0 -10%;
+	width:40%;
+	text-align:center;
+}
+#headphone img{
+	width:100%;
+	max-width:268px;
+}
+#cube1{
+	position:absolute;
+	top:500px;
+	left:50%;
+	margin:-500px 0 0 -34%;
+	width:10%;
+	text-align:center;
+}
+#cube1 img{
+	width:100%;
+	max-width:77px;
+}
+#cube2{
+	position:absolute;
+	top:450px;
+	left:50%;
+	margin:500px 0 0 20%;
+	width:10%;
+	text-align:center;
+}
+#cube2 img{
+	width:100%;
+	max-width:88px;
+}
+#cube3{
+	position:absolute;
+	top:600px;
+	left:50%;
+	margin:500px 0 0 15%;
+	width:10%;
+	text-align:center;
+}
+#cube3 img{
+	width:100%;
+	max-width:57px;
+}
+#text2{
+	font-size:40px;
+	position:absolute;
+	top:150px;
+	left:50%;
+	margin:-350px 0 0 -30%;
+	text-transform:uppercase;
+	font-weight:normal;
+    font-family: 'maybebold';
+}
+/* ======================== STEP3  ========================  */
+#tallent4{
+	position:absolute;
+	top:100px;
+	left:50%;
+	margin:800px 0 0 -3%;
+	width:40%;
+	text-align:center;
+}
+#tallent4 img{
+	width:100%;
+	max-width:377px;
+}
+#text3{
+	font-size:40px;
+	position:absolute;
+	top:150px;
+	left:50%;
+	margin:-750px 0 0 -30%;
+	text-transform:uppercase;
+	font-weight:normal;
+    font-family: 'maybebold';
+}
+/* ======================== STEP4  ========================  */
+#tallent5{
+	position:absolute;
+	top:100px;
+	left:50%;
+	margin:1800px 0 0 -25%;
+	width:50%;
+	text-align:center;
+}
+#tallent5 img{
+	width:100%;
+	max-width:842px;
+}
+#text4{
+	font-size:40px;
+	position:absolute;
+	top:150px;
+	left:50%;
+	margin:-1280px 0 0 -30%;
+	text-transform:uppercase;
+	font-weight:normal;
+    font-family: 'maybebold';
+}
+#cube4{
+	position:absolute;
+	top:500px;
+	left:50%;
+	margin:-1500px 0 0 10%;
+	width:10%;
+	text-align:center;
+}
+#cube4 img{
+	width:100%;
+	max-width:77px;
+}
+#cube5{
+	position:absolute;
+	top:450px;
+	left:50%;
+	margin:1220px 0 0 -33%;
+	width:10%;
+	text-align:center;
+}
+#cube5 img{
+	width:100%;
+	max-width:88px;
+}
+#cube6{
+	position:absolute;
+	top:600px;
+	left:50%;
+	margin:1500px 0 0 -30%;
+	width:10%;
+	text-align:center;
+}
+#cube6 img{
+	width:100%;
+	max-width:57px;
+}
+/* ======================== STEP4 A  ========================  */
+#text6{
+	position:absolute;
+	top:150px;
+	left:50%;
+	margin:1800px 0 0 -30%;
+}
+#text6 img{
+	width:100%;
+	max-width:438px;
+}
+#prize{
+	font-size:40px;
+	position:absolute;
+	top:150px;
+	left:50%;
+	margin:-2250px 0 0 -15%;
+}
+#prize img{
+	width:100%;
+	max-width:800px;
+}
+#cube8{
+	position:absolute;
+	top:450px;
+	left:50%;
+	margin:-2080px 0 0 -33%;
+	width:10%;
+	text-align:center;
+}
+#cube8 img{
+	width:100%;
+	max-width:77px;
+}
+#cube9{
+	position:absolute;
+	top:600px;
+	left:50%;
+	margin:1500px 0 0 -30%;
+	width:10%;
+	text-align:center;
+}
+#cube9 img{
+	width:100%;
+	max-width:88px;
+}
+#cube10{
+	position:absolute;
+	top:600px;
+	left:50%;
+	margin:1800px 0 0 -5%;
+	width:10%;
+	text-align:center;
+}
+#cube10 img{
+	width:100%;
+	max-width:57px;
+}
+/* ======================== STEP5  ========================  */
+#tallent6{
+	position:absolute;
+	top:100px;
+	left:50%;
+	margin:1860px 0 0 -20%;
+	width:40%;
+	text-align:center;
+}
+#tallent6 img{
+	width:140%;
+	max-width:958px;
+}
+#text5{
+	font-size:40px;
+	position:absolute;
+	top:150px;
+	left:50%;
+	margin:-1975px 0 0 -30%;
+}
+#text5 img{
+	width:125%;
+	max-width:515px;
+}
+#cube7{
+	position:absolute;
+	top:500px;
+	left:50%;
+	margin:1950px 0 0 -15%;
+	width:10%;
+	text-align:center;
+}
+#cube7 img{
+	width:100%;
+	max-width:143px;
+}
+#actionlogin{
+    left: 50%;
+    position: absolute;
+    margin:25px 0 0 -485px;
+    bottom:400px;
+}
+#textSign{
+	font-family: 'maybebold';
+    font-size: 36px;
+	margin:0 0 30px 10px;
+}
+#videoBox{
+	width:320px; height:180px;
+	position:absolute;
+	margin:-2112px 0 0 7%;
+	background:#000;
+	left:50%;
+	border:solid 2px #000;
+	font-family:'maybebold';
+	text-align:center;
+}
+#videoBox h3{
+	font-size:18px;
+	margin-top:5px;
+}
+#videoBox h2{
+	font-size:28px;
+	margin:10px 0 0 0;
+}
+#btnLoginMop,#btnRegisterMop{
+	background:url(../images/landing/btn_reg.png) no-repeat;
+	display:block;
+	width:124px;
+	height:36px;
+	float:left;
+	margin:0 10px;
+}
+#btnRegisterMop{
+	background:url(../images/landing/btn_reg.png) no-repeat -124px 0;
+}
+#btnLoginMop:hover{
+	background:url(../images/landing/btn_reg.png) no-repeat 0 -36px;
+}
+#btnRegisterMop:hover{
+	background:url(../images/landing/btn_reg.png) no-repeat -124px -36px;
+}

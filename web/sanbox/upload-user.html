@@ -1,0 +1,187 @@
+<script src="jquery-1.8.2.js" ></script>
+<script src="jquery.form.js" ></script>
+
+<h1>REGISTER USER SANDBOX</h1>
+<div style="padding:10px;border-collapse:collapse;">
+<button class="tombolaja" >LOGIN </button>
+
+</div>
+
+REGISTER
+<form class="former" id="registerent" action="http://localhost/beatapps2013/trunk/beat/service/registeruserwebsite/register"  method="POST" >
+				<div style="padding:10px;border-collapse:collapse;">  	ROLE 
+						<select name="role" >
+								<option value="SBA_1" > SBA </option>
+								<option value="PL_2" > PL </option>
+								<option value="AREA_5" > AREA </option>
+								<option value="BRAND_3" > BRAND </option>
+								<option value="IS_6" > IS </option>
+								<option value="121_4" > 121 </option>
+								<option value="AGENCY_100" > AGENCY </option>
+						</select>
+				</div>
+				<div style="padding:10px;border-collapse:collapse;">   	USERNAME <input type="text" name="username" /></div>
+				<div style="padding:10px;border-collapse:collapse;">   	PASSWORD <input type="text" name="password" /></div>
+				<div style="padding:10px;border-collapse:collapse;">   	NAME <input type="text" name="name" /></div>
+				<div style="padding:10px;border-collapse:collapse;">   	LASTNAME <input type="text" name="lastname" /></div>
+				<div style="padding:10px;border-collapse:collapse;">  	NICKNAME <input type="text" name="nickname" /></div>
+				<div style="padding:10px;border-collapse:collapse;">   	EMAIL <input type="text" name="email" /></div>
+				<div style="padding:10px;border-collapse:collapse;">  	IMAGE <input type="file" name="img" /></div>
+				<div style="padding:10px;border-collapse:collapse;">  	ASAL KOTA 
+						<select name="city" >
+								<option value="JAKARTA" > JAKARTA </option>
+								<option value="SURABAYA" > SURABAYA </option>
+								<option value="BANDUNG" > BANDUNG </option>
+								<option value="LAMPUNG" > LAMPUNG </option>
+								<option value="KALIMANTAN" > KALIMANTAN </option>
+						</select>
+				</div>
+				<div style="padding:10px;border-collapse:collapse;">  	AREAS 
+						<select name="area" >
+								<option value="" > NOT USED </option>
+								<option value="JAKARTA" > JAKARTA </option>
+								<option value="SURABAYA" > SURABAYA </option>
+								<option value="BANDUNG" > BANDUNG </option>
+								<option value="LAMPUNG" > LAMPUNG </option>
+								<option value="KALIMANTAN" > KALIMANTAN </option>
+						</select>
+				</div>
+				<div style="padding:10px;border-collapse:collapse;">  PL 
+						<select name="otherid" class="otherid" >
+								<option value="0" > NOT HAVE </option>
+								
+						</select>
+				</div>
+				<div style="padding:10px;border-collapse:collapse;">  BRAND 
+						<select name="brandid"  class="brandid">
+								<option value="0" > NOT HAVE </option>
+								
+						</select>
+				</div>
+				<div style="padding:10px;border-collapse:collapse;"> OTHER BRAND 
+						<select name="brandsubid"  class="brandsubid">
+								<option value="0" > NOT HAVE </option>
+								
+						</select>
+				</div>
+				<div style="padding:10px;border-collapse:collapse;"> AREA LEADER 
+						<select name="areaid"  class="areaid">
+								<option value="0" > NOT HAVE </option>
+								
+						</select>
+				</div>
+				<div style="padding:10px;border-collapse:collapse;">   GENDER 
+							<input type="radio" name="sex" value="M" checked /> MALE 
+							<input type="radio" name="sex" value="F" /> FEMALE</div>
+				<div style="padding:10px;border-collapse:collapse;">    BIRTHDAY <input type="text" name="birthday" /> dd/mm/yyyy</div>
+				<div style="padding:10px;border-collapse:collapse;">  PHONE NUMBER <input type="text" name="phone_number" /></div>
+				<div style="padding:10px;border-collapse:collapse;">   <input type="hidden" value="1" name="register"></div>
+				<div style="width:50%;height:100%;overflow:auto;float:right;position:fixed;top:0;right:0;padding:10px;border-collapse:collapse;border:1px solid"> 
+					<span >OUTPUT</span>
+					<p id="kluardisini" ></p>
+				</div> 
+				  <input type="submit" value="register">
+			</form>
+<div class="initargetdivnya" ></div>
+
+
+<script>
+var basedomain = "http://localhost/beatapps2013/trunk/beat/service/";
+
+	var updateoptions = {
+						dataType : "html",
+						beforeSubmit: function(data) { 
+										$('#kluardisini').html("<blink>loading please wait</blink>");
+							},
+						success : function(data) {									
+									 $('#kluardisini').html("<p>"+data+"</p>");
+						}
+					};					
+					
+
+$("#registerent").ajaxForm(updateoptions );
+
+$
+
+$(document).on('click','.tombolaja',function(){
+	
+		$('#kluardisini').html("<blink>loading please wait</blink>");
+		$.post(basedomain+'login/account/aruka/darkmatter',function(data){
+			getstart();
+			 $('#kluardisini').html("<p>"+data+"</p>");
+
+		} ,"html");
+		
+		});
+
+
+$(document).ready(function(){
+		$('#kluardisini').html("<blink>loading please wait</blink>");
+	$.post(basedomain+'login/account/aruka/darkmatter',function(data){
+	
+			
+			$.post(basedomain+'registeruserwebsite/getleader',{leadertype:2},function(data){
+				var html ="<option value='0' > NOT HAVE </option>";
+				$.each(data,function(i,e){
+					html+="<option value='"+e.id+"' >"+e.name+" "+e.last_name+" "+e.pagename+"</option>";
+				})
+				$(".otherid").html(html);
+			},"JSON")
+			
+			$.post(basedomain+'registeruserwebsite/getleader',{leadertype:3},function(data){
+				var html ="<option value='0' > NOT HAVE </option>";
+				$.each(data,function(i,e){
+					html+="<option value='"+e.id+"' >"+e.name+" "+e.last_name+" "+e.pagename+"</option>";
+				})
+				$(".brandid").html(html);
+				$(".brandsubid").html(html);
+			},"JSON")
+			
+			$.post(basedomain+'registeruserwebsite/getleader',{leadertype:5},function(data){
+				var html ="<option value='0' > NOT HAVE </option>";
+				$.each(data,function(i,e){
+					html+="<option value='"+e.id+"' >"+e.name+" "+e.last_name+" "+e.pagename+"</option>";
+				})
+				$(".areaid").html(html);
+			},"JSON")
+			
+			 $('#kluardisini').html("<p>"+data+"</p>");
+	} ,"html");
+	
+});
+
+
+function getstart(){
+	
+	$.post(basedomain+'login/account/aruka/darkmatter',function(data){
+	
+			
+			$.post(basedomain+'registeruserwebsite/getleader',{leadertype:2},function(data){
+				var html ="<option value='0' > NOT HAVE </option>";
+				$.each(data,function(i,e){
+					html+="<option value='"+e.id+"' >"+e.name+" "+e.last_name+" "+e.pagename+"</option>";
+				})
+				$(".otherid").html(html);
+			},"JSON")
+			
+			$.post(basedomain+'registeruserwebsite/getleader',{leadertype:3},function(data){
+				var html ="<option value='0' > NOT HAVE </option>";
+				$.each(data,function(i,e){
+					html+="<option value='"+e.id+"' >"+e.name+" "+e.last_name+" "+e.pagename+"</option>";
+				})
+				$(".brandid").html(html);
+				$(".brandsubid").html(html);
+			},"JSON")
+			
+			$.post(basedomain+'registeruserwebsite/getleader',{leadertype:5},function(data){
+				var html ="<option value='0' > NOT HAVE </option>";
+				$.each(data,function(i,e){
+					html+="<option value='"+e.id+"' >"+e.name+" "+e.last_name+" "+e.pagename+"</option>";
+				})
+				$(".areaid").html(html);
+			},"JSON")
+	} ,"html");
+};
+
+
+</script>

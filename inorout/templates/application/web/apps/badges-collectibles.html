@@ -1,0 +1,104 @@
+<div id="badgesPage" class="container">
+	<div class="entry-container center">
+    	<div id="box-content">
+        	<div id="head-content" class="bg-head-reedem">
+                <h3>Collect or Pass. Decide now.<br />
+Gunakan badge untuk mendapatkan hadiah limited edition. <a href="#popup-mekanisme-redeem" class="showPopup">[Mekanisme]</a></h3>
+            </div><!-- END #head-content -->
+            <div id="entry-content">
+                  <div id="badgesRedeem">
+                    <div class="tabEntry">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+						{foreach $merchandise as $key => $val}
+                          <tr class="{$val.queue}">
+                            <td valign="top">
+                                <a href="#" class="thumbPrizes"><img src="{$val.collectibles.image_full_path}" /></a>
+                            </td>
+                            <td valign="top">
+                                <div class="prizeDesc">
+                                    <h3>{$val.name}</h3>
+                                    <p>{$val.detail}</p>
+                                </div><!-- END .prizeDesc -->
+                            </td>
+                            <td valign="top">
+                                <div class="BadgesRequired">
+                                    <h3>Points required*:</h3>
+                                    <div class="badgesForRedeem">
+                                        <h2 class="points">{$val.point|number_format} <span>Points</span></h2>
+                                    </div><!-- END .badgesForRedeem -->
+                                </div><!-- END .BadgesRequired -->
+                            </td>
+                            <td valign="top">
+                            	<div class="action-btn">
+                                    <h3>Redemption period:</h3>
+                                    <p class="information">{$val.postdate|date_format:"%e %B"} - {$val.enddates|date_format:"%e %B %Y"}</p>
+                                	{if !$hasredeem.result}
+									{*}
+                                    <a class="orangebtn" href="javascript:void(0)"   >ITEM ALREADY REDEEMED</a>
+                                    {/*}
+									{else}
+									<a class="orangebtn showPopup sendmerchandiseitem" href="#popup-redeem" merchid="{$val.id}" merchimage="{$val.collectibles.image_full_path}"   merchname="{$val.name}"  merchpoint="{$val.point}"   >REDEEM &raquo;</a>
+									{/if}
+                                </div><!-- END .action-btn -->
+                            </td>
+                          </tr>
+                           {/foreach}
+                        </table>
+                        <h3 class="fr info">*Poin ditentukan dari jumlah nilai keseluruhan badge.</h3> 
+                    </div><!-- END .tabEntry -->
+                </div><!-- END #badgesRedeem -->
+            </div><!-- END #entry-content -->
+        </div><!-- END #box-content -->
+    </div><!-- END .entry-container -->
+</div><!-- END .container -->
+
+{include file="application/web/widgets/popup-mekanisme-redeem.html"}
+{include file="application/web/widgets/popup-redeem.html"}
+{include file="application/web/widgets/popup-redeem-form.html"}
+{include file="application/web/widgets/popup-redeem-success.html"}
+
+{literal}
+<script>
+
+$(document).on('click','.sendmerchandiseitem',function(){
+ 
+	$.post(basedomain+'badges/ajax',{needs:'checkcollection'},function(data){
+	
+		if(!data.result){
+			
+			return false;
+		
+		}
+		
+	},"JSON");
+	
+	var merchid=  $(this).attr('merchid');
+	var merchimage= $(this).attr('merchimage');
+	var merchname= $(this).attr('merchname');
+	var merchpoint= $(this).attr('merchpoint');
+
+	//add preload..
+		console.log('wait...........');
+	if(merchid==0){
+		console.log(' not found');
+	}else{
+		console.log(' OKeh merhcn');
+		$('.midtoform').val(merchid);
+		$('.badgestoform').val(0);
+		$('.amounttoform').val(0);
+	 
+	 
+		$('.merchimagesbid').attr('src',merchimage);
+		$('.merchdescbid').html(merchname);
+		$('.prizeName').html(merchname);
+		
+		$('.merchcurrentbid').html(merchpoint);
+		$('.myofferingpointsubbed').html(merchpoint);
+		
+		$('.myofferingpointsubbed').attr('currentbidder',merchpoint);
+ 
+	}
+	
+});	
+</script>
+{/literal}

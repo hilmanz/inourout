@@ -1,0 +1,22 @@
+<div class="popup" id="popup-notification-detail">
+    <div class="popupContainer">
+		<a class="closePopup" href="#">[CLOSE X]</a>
+    	<div class="popup-head">
+        	<h2 class="bigTItle">NOTIFICATION</h2>
+        </div><!-- END .popup-head -->
+    	<div class="popup-entry">
+            <div id="notifBox">
+            	<div class="messageDetail">
+                	<h3></h3>
+                    <span class="notifdate"></span>
+                </div><!-- end .row -->
+            	<div class="messageDesc">
+                    <h4 class="user">Hi <a id="notifuser" href="#"></a>,</h4>
+                	<h4 class="desc"></h4>
+					<a href="#" class="orangebtn"></a>
+                    <a href="#popup-notification" class="backInbox showPopup">&nbsp;</a>
+                </div><!-- end .row -->
+            </div><!-- end #notifBox -->
+        </div><!-- END .popup-entry -->
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->

@@ -1,0 +1,91 @@
+<div id="theContainer" class="galleryPage">
+    <div class="theContainer">
+			
+        <div class="theContent">
+        	<div class="section">
+           	<div class="col3" style="width:100%;">
+						<form method="POST" action="{$basedomain}yellowCode/doit" id="generatecodeform" >
+							<table style="width:100%;">
+								<tr><td>How Many: </td><td><input type="text" name="iteration" /></td></tr>
+								<tr><td>Channel :</td><td><input type="text" name="channel" value="games" readonly /></td></tr>
+								<tr><td>Sub Channel: </td><td><input type="text" name="subchannel" value="gamesellusive" readonly /></td></tr>
+								<tr>
+									<td>Created Date :</td> 
+									<td><input type="text" class="half-width" id="datetimepicker" name="created_date" value="{$created_date}" style="width:115px" /></td>
+								</tr>
+								<tr><td> <input type="submit" class="btnSubmit"  value="generates"  /> </td></tr>
+								
+								 <span class="messageinputcode" ></span>
+								 
+							</table>
+						</form><br />
+						<table style="width:100%;" id="yellowcabcode">
+							<!-- <a href="{$basedomain}yellowCode/downloadit" class="btn btn_document"><span>Download XLS</span></a> -->
+							<tr>
+								<th>id</th>
+								<th>code</th>
+								<th>channel</th>
+								<th>sub channel</th>
+								<th>Created Date</th>
+							</tr>
+							<tbody>
+							{foreach from=$codelist key=k item=v}
+								<tr>
+									<td>{$v.id}</td>
+									<td>{$v.code}</td>
+									<td>{$v.code_channel}</td>
+									<td>{$v.code_sub_channel}</td>
+									<td>{$v.created_date}</td>
+								</tr>
+							{/foreach}
+							</tbody>
+						</table>
+                         <div class="pagingbox" id="paginggamescode"></div><!-- END .pagingbox -->
+						
+            </div> <!-- /.col3 -->
+	        </div> <!-- /.section -->
+        </div> <!-- /.theContent -->
+		<div class="paging" id="pagingbadge"></div> <!-- END .paging -->
+				 
+    </div> <!-- /.theContainer -->
+</div> <!-- /#theContainer -->  
+
+{literal}
+<script>
+	
+	var updateoptions = {
+	dataType:  'json', 	
+	beforeSubmit: function(data) { 
+			 
+			/* $(".global-popup-inorout").trigger("click");	*/
+			$(".messageinputcode").html("please wait");
+			$(".thecodes").val("");
+			 
+	},
+	success : function(data) {		
+			
+			if(data){
+						
+						var html ="";
+						html = "<p class='postSucces'>"+data.message+"</p>";
+						/* $(".global-popup-inorout").trigger("click"); */		
+						$(".messageinputcode").html(html);				  
+					 
+			}
+				 
+	}
+	};					
+
+	$("#generatecodeform").ajaxForm(updateoptions);
+	
+	load_games_code(false,0);
+
+</script>
+{/literal}
+<script>
+	{literal}
+		$('#datetimepicker').datetimepicker({
+			format:'Y-m-d H:i'
+		});
+	{/literal}
+</script>

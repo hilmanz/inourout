@@ -1,0 +1,81 @@
+<div class="popup" id="popup-redeem-form">
+    <div class="popupContainer">
+		<a class="closePopup" href="#">[CLOSE X]</a>
+    	<div class="popup-head">
+        	<h2><img src="{$basedomain}assets/images/content/prize-redemption.png" /></h2>
+            <h3>You are about to redeem: <span class="prizeName"> </span></h3>
+            <h3>the following amount will be taken out in exchange of the prize:</h3>
+        </div>
+    	<div class="popup-entry">
+                <div class="badgesForRedeem">
+                <table border="0" cellspacing="0" cellpadding="0">
+                  <tr class="badgeoffered" >
+				  
+                  
+                    
+                  </tr>
+                </table>
+                </div><!-- END .badgesForRedeem -->
+                <h3><span class="bigFont">SHIPPING</span> please add shipping address information.</h3>
+                <form id="shippingForm" method="POST" action="{$basedomain}badges/redeem" >
+                	<div class="col2">
+                    	<input type="text" name="fullname" onBlur="if(this.value=='')this.value='{if $getUser.name =='' } FULL NAME {else } {$getUser.name} {$getUser.last_name}{/if}';" onFocus="if(this.value=='{if $getUser.name =='' } FULL NAME {else } {$getUser.name} {$getUser.last_name}{/if}')this.value='';" value="{if $getUser.name =='' } FULL NAME {else } {$getUser.name} {$getUser.last_name}{/if}"  />
+                        <textarea name="address" onBlur="if(this.value=='')this.value='{if $getUser.StreetName =='' } ADDRESS{else } {$getUser.StreetName} {$getUser.cityname}{/if}';" onFocus="if(this.value=='{if $getUser.StreetName =='' } ADDRESS{else } {$getUser.StreetName} {$getUser.cityname}{/if}')this.value='';">{if $getUser.StreetName =='' } ADDRESS{else } {$getUser.StreetName} {$getUser.cityname}{/if}</textarea>
+                    </div>
+                	<div class="col2">
+                    	<input type="text"  name="city" onBlur="if(this.value=='')this.value='{if $getUser.cityname =='' } CITY {else } {$getUser.cityname} {/if}';" onFocus="if(this.value=='{if $getUser.cityname =='' } CITY {else } {$getUser.cityname} {/if}')this.value='';" value="{if $getUser.cityname =='' } CITY {else } {$getUser.cityname} {/if}" />
+                    	<input type="text" onkeypress='validate(event)'  name="postalcode"  onBlur="if(this.value=='')this.value='{if $getUser.zipcode =='0' } POSTAL CODE {else } {$getUser.zipcode} {/if}';" onFocus="if(this.value=='{if $getUser.zipcode =='0' } POSTAL CODE {else } {$getUser.zipcode} {/if}')this.value='';" value="{if $getUser.zipcode =='0' } POSTAL CODE {else } {$getUser.zipcode} {/if}" />
+                    	<input type="text" onkeypress='validate(event)' name="phonenumber" onBlur="if(this.value=='')this.value='{if $getUser.phone_number =='0' || $getUser.phone_number =='' } PHONE NUMBER {else } {$getUser.phone_number} {/if}';" onFocus="if(this.value=='{if $getUser.phone_number =='0' || $getUser.phone_number =='' } PHONE NUMBER {else } {$getUser.phone_number} {/if}')this.value='';" value="{if $getUser.phone_number =='0' || $getUser.phone_number =='' } PHONE NUMBER {else } {$getUser.phone_number} {/if}"/>
+                    </div>
+					
+					<input type="hidden" name="merchandiseid" class="midtoform" value="0" /> 
+					<input type="hidden" name="badgeid"  class="badgestoform" value="0" /> 
+					<input type="hidden" name="badgeamount"  class="amounttoform" value="0" /> 
+						
+					<a href="#popup-redeem-success" class="orangebtn showPopup messageshipping" style="display:none" ></a> 
+                     <input type="submit" value="SUBMIT &raquo;" class="orangebtn" /> 
+                </form>
+        </div>
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->
+{literal}
+<script>
+	var updateoptions = {
+	dataType:  'JSON', 	
+	beforeSubmit: function(data) { 
+			
+			 console.log('wait...........');
+			 
+	},
+	success : function(data) {		
+			
+			if(data.result==true){				
+					 $("#prizeBox").show();
+					$(".headermessages").html(locale.redeem.success);
+					$(".redeemmessages").html(data.message);
+					$(".footermessages").html(locale.redeem.success);
+					$(".sendmerchandiseitem").hide();
+					// $(".sendmerchandiseitem").html("ALREADY REDEEM ITEM ");
+					// $(".sendmerchandiseitem").attr('href',"javascript:void(0)");
+
+					setTimeout(function () {
+				       window.location.href = basedomain+"badges/collectibles";
+				    }, 5000); 
+					 
+			}else{
+					
+					$(".headermessages").html(locale.redeem.failed.head);
+					$(".redeemmessages").html(data.message);
+					$("#prizeBox").hide();
+					  
+					$(".footermessages").html(locale.redeem.failed.footer); 
+					 console.log('aaaaa');
+			}
+			$(".messageshipping").trigger('click');
+			 
+	}
+	};					
+
+	$("#shippingForm").ajaxForm(updateoptions);
+</script>
+{/literal}

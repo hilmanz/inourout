@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/marlboro-in-or-out/!svn/ver/295/trunk/inorout/templates/application/admin/widgets
+END
+administrator-user-permission-lists.html
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/marlboro-in-or-out/!svn/ver/256/trunk/inorout/templates/application/admin/widgets/administrator-user-permission-lists.html
+END
+create-user.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/marlboro-in-or-out/!svn/ver/257/trunk/inorout/templates/application/admin/widgets/create-user.html
+END
+administrator-user-permission.html
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/marlboro-in-or-out/!svn/ver/257/trunk/inorout/templates/application/admin/widgets/administrator-user-permission.html
+END
+module-permission-list.html
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/marlboro-in-or-out/!svn/ver/257/trunk/inorout/templates/application/admin/widgets/module-permission-list.html
+END
+administrator-user-lists.html
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/marlboro-in-or-out/!svn/ver/256/trunk/inorout/templates/application/admin/widgets/administrator-user-lists.html
+END
+add-permission-user.html
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/marlboro-in-or-out/!svn/ver/257/trunk/inorout/templates/application/admin/widgets/add-permission-user.html
+END
+add-modules.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/marlboro-in-or-out/!svn/ver/257/trunk/inorout/templates/application/admin/widgets/add-modules.html
+END
+administrator-roles-lists.html
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/marlboro-in-or-out/!svn/ver/257/trunk/inorout/templates/application/admin/widgets/administrator-roles-lists.html
+END
+navigation.html
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/marlboro-in-or-out/!svn/ver/295/trunk/inorout/templates/application/admin/widgets/navigation.html
+END
+profile-detail.html
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/marlboro-in-or-out/!svn/ver/29/trunk/inorout/templates/application/admin/widgets/profile-detail.html
+END
+edit-user.html
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/marlboro-in-or-out/!svn/ver/256/trunk/inorout/templates/application/admin/widgets/edit-user.html
+END
+popup-global.html
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/marlboro-in-or-out/!svn/ver/242/trunk/inorout/templates/application/admin/widgets/popup-global.html
+END
+create-user-roles.html
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/marlboro-in-or-out/!svn/ver/257/trunk/inorout/templates/application/admin/widgets/create-user-roles.html
+END
+popup-images.html
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/marlboro-in-or-out/!svn/ver/242/trunk/inorout/templates/application/admin/widgets/popup-images.html
+END
+administrator-user-hirarkies.html
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/marlboro-in-or-out/!svn/ver/256/trunk/inorout/templates/application/admin/widgets/administrator-user-hirarkies.html
+END

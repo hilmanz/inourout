@@ -1,0 +1,234 @@
+<div id="profilePage" class="container">
+    <div class="entry-container">
+                <div id="profile-box">
+                	<div class="box-prof">
+                        <div class="profile-head">
+                            <h3><img src="{$basedomain}assets/images/mobile/logo-profile.png" /></h3>
+                            <div class="profilenav">
+                                <a href="{$basedomain}profile/editPhoto" class="editphoto">Edit Photo</a>
+                                <a href="{$basedomain}updateaccount" class="editprofile">Edit Account</a>
+                               {*} <a href="{$basedomain}logout.php" class="logoutprofile">Logout</a>{/*}
+                            </div><!-- END .profilenav -->
+    
+                            {if $edit eq 'photo'}
+                            <form action="{$basedomain}profile/editPhoto" method="post" enctype="multipart/form-data" >
+                                <input type="file" name="profile_photo" />
+                                <input type="hidden" name="editPhoto" value="1">
+                                <input type="submit" name="submit" value="Upload">
+                            </form>
+                            {/if}
+                           
+                        </div><!-- END .profile-head -->
+                        <div class="row-black">
+                            <a href="{$basedomain}profile/editPhoto" class="big-thumb"><img src="{$thisuser.profile.image_full_path}" /></a>
+                            <div class="pl200">
+                                <h3 class="accountname">{$thisuser.name} </h3>
+                                <h4 class="age">{$thisuser.age} years old, from {$thisuser.cityname}</h4>
+                            </div><!-- END .pl200 -->
+                        </div><!-- END .row-black -->
+                        <div class="row-orange">
+                           
+                        </div><!-- END .row-orange -->
+                         <div class="pl200">
+                                {if $unread}
+                                <a class="notification" href="{$basedomain}notifications">{if $unread.total>0}You have {$unread.total} new notifications{else}No new notifications{/if}<span class="arrow-white">&nbsp;</span></a>
+                                {/if}
+                            </div><!-- END .pl200 -->
+                        <div class="row-tr3">
+                            <div class="ps50">
+                                <h4 class="m0 black">Why I love traveling:</h4>
+                                {if $change eq 'aspiration'}
+                                    <form action="{$basedomain}profile/change" method="post">
+                                        <input type="text" name="aspiration" />
+                                        <input type="hidden" name="change_aspiration" value="1">
+                                        <input type="submit" name="submit" value="Save">
+                                    </form>
+                                {else}
+                                    <h2 class="m0">"{$thisuser.aspiration}"</h2><h2 class="m0 editStatus"><a class="black" href="{$basedomain}profile/change">Edit</a></h2>
+                                {/if}
+                            </div><!-- END .ps50 -->
+                        </div><!-- END .row-tr3 -->
+                    </div><!-- END .box-prof -->
+                    
+                    <div class="box-prof">
+                        {if $myactivetrade['data']}
+						<div class="row-tr4">
+                            <div class="ps50 boxTrading">
+                                <h4 class="m0 black">Active Trades:</h4>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td colspan="2" class=""><h2 class="m0">BADGES I HAVE</h2></td>
+										<td colspan="3" class=""><h2 class="m0">BADGES I WANT</h2></td>
+									</tr>
+									{foreach from=$myactivetrade['data'] key=mytrade item=i}
+									<tr>
+										{foreach from=$i.offer_badges key=offer item=j}
+										<td class="center">
+											<div class="badges badges-s">
+												<img src="{$webdomain}assets/images/badges/{$j.image}" />
+											</div>
+										</td>
+										{/foreach}
+										<td  class="center"><img src="{$basedomain}assets/images/icon/icon_trade.png" /></td>
+										<td class="center">
+											<div class="badges badges-s">
+												<img src="{$webdomain}assets/images/badges/{$i.request_badges[0].image}" />
+											</div>
+										</td>
+										<td class="center"><a href="javascript:void(0)" class="cancelTrade" data-tradeid="{$i.id}">CANCEL</a></td>
+									</tr>
+									{/foreach} 
+									
+                                </table>
+                            </div><!-- END .ps50 -->
+                        </div><!-- END .row-tr4 -->
+                         {else}
+                    	<div class="row-tr4">
+                        <div class="ps50 no-tradeProfile">
+                        	
+                            <h4 class="m0 black info-notrade">
+                            <div class="image-notrade">
+                            <img src="{$basedomain}assets/images/trading.png" />
+                            </div>
+                            <span class="notrade-bt">Kamu belum ada aktivitas trading untuk saat ini.</span>
+                            <a {if $unverified} href="#popup-unverified" class="showPopup orangebtn fr" {else}  class="orangebtn" href="{$basedomain}badges/trading#CreateTrade" {/if}>KLIK DI SINI untuk memulai atau mencari trade baru</a>
+                            </h4>
+                        </div><!-- END .ps50 -->
+                    </div><!-- END .row-tr4 -->
+						{/if}
+                        {*}
+                        <div class="row-orange inviteOrange">
+                            <div class="pl200 inviteButton">
+                                <a class="inviteFriends" href="{$basedomain}referfriends">invite friends<span class="arrow-white">&nbsp;</span></a>
+                            </div><!-- END .pl200 -->
+                        </div><!-- END .row-orange -->{/*}
+                    </div><!-- END .box-prof -->
+                    <div class="box-prof">
+                        <div id="badges-box">
+                        <div class="badges-head">
+                            <h3 class="m0 fl"><img src="{$basedomain}assets/images/mobile/logo-MyBadges.png" /></h3>
+                            <div class="badgesValue fr">
+                                <p class="m0">total badge value</p>
+                                <h3 class="red m0">{$mybadgepoint.total|number_format}<a class="help" href="{$basedomain}about/howto"></a></h3>
+                            </div><!-- END .profilenav -->
+                        </div><!-- END .badges-head -->
+                        <div id="badges-list">
+                            {foreach from=$mybadge key=myId item=i}
+                            <div class="badges badges-m {if $i.total eq '0'}grayscale{/if}">
+                                <img src="{$webdomain}assets/images/badges/{$i.image}"  class="tip" title="<h5>{$i.name}</h5><p>{$i.desc}</p> <h3>{$i.point} Points</h3>" />
+                                <span class="badges-value">{$i.total}</span>
+                            </div>
+                            {/foreach}
+                        </div><!-- END #badges-list -->
+                    </div><!-- END #badges-box -->
+                </div><!-- END .box-prof -->
+                <div class="action-btn" style="text-align:center;">
+                    <a class="orangebtn" {if $unverified} href="{$basedomain}unverified" {else}  href="{$basedomain}badges/collectibles"{/if}>Redeem &raquo;</a>
+                    <a class="orangebtn" {if $unverified} href="{$basedomain}unverified" {else} href="{$basedomain}badges/trading"{/if}>Trade &raquo;</a>
+                    <a class="orangebtn" href="{$basedomain}badges/auction">Auction &raquo;</a>
+                </div><!-- END .action-btn -->
+                
+                 <div class="box-prof">
+                        <div id="newsFeed-box">
+                        <div class="newsFeed-head">
+                            <h3 class="m0 fl"><img src="{$basedomain}assets/images/mobile/logo-NewsFeed.png" /></h3>
+                        </div><!-- END .newsFeed-head -->
+                        <div id="newsFeed-list">
+
+                             <ul id="newsFeedPaging" class="newsfeedScroll" startpage="0" total="10" lastrow="0">
+
+                                {foreach $newsFeed as $key => $val}
+                                {if $val.type==1}
+    								<li>
+                                    	<span class="date">{$val.changeDate}</span>
+                                       <p>{$val.title|html_entity_decode}</p>
+                                    
+    								   <p> {$val.brief|html_entity_decode} <a href="{$basedomain}articles/detail/{$val.id}" class="more">more &raquo;</a></p>
+    								   
+                                       
+                                    </li>
+                                {else}
+                                    <li>
+                                    <span class="date">{$val.changeDate}</span>
+                                       <p>{$val.title|html_entity_decode}</p>
+                                    
+                                       <p> {$val.brief|html_entity_decode}</p>
+                                       
+                                       
+                                    </li>
+                                {/if}
+                                {/foreach}
+                            </ul>{*}
+                             <div id="newsFeedPaging" class="pagingbox">
+                            	<a id="p5" class="cPaging prev" >&laquo; prev</a>
+                            	<a id="p5" class="cPaging" >1</a>
+                                <a id="p5" class="cPaging" >2</a>
+                                <a id="p5" class="cPaging" >3</a>
+                                <a id="p5" class="cPaging" >4</a>
+                                <a id="p5" class="cPaging next" >next &raquo;</a>
+        
+    						</div><!-- END .pagingbox -->
+                            {/*}
+							{*}
+                             <div id="newsFeedPaging" class="pagingbox">
+                            	<a id="p5" class="cPaging prev" >&laquo; prev</a>
+                            	<a id="p5" class="cPaging" >1</a>
+                                <a id="p5" class="cPaging" >2</a>
+                                <a id="p5" class="cPaging" >3</a>
+                                <a id="p5" class="cPaging" >4</a>
+                                <a id="p5" class="cPaging next" >next &raquo;</a>
+        
+    						</div><!-- END .pagingbox -->
+							{/*}
+                        </div><!-- END #newsFeed-list -->
+                    </div><!-- END #badges-box -->
+                </div><!-- END .box-prof -->
+                
+                </div><!-- END #profile-box -->
+    </div><!-- END .entry-container -->
+</div><!-- END .container -->
+<script type="text/javascript">
+	var first_badges ='{$showPopup_1stBadges}';
+	
+    {literal}
+	$( document ).ready(function() {
+		mmConversionTag('461576', this, '_self', null);
+		
+		if(first_badges=='1'){
+            window.location.href=basedomain+'notifications/firstBadges';
+        }
+		
+	});
+        $('.cancelTrade').click(function(){
+            var trade_id = $(this).data("tradeid");
+            var data = {};
+            data.url='badges/cancelMyTrade';
+            data.params={ajax:1,tradeID:trade_id};
+            data.type="json";
+            post_json(data).done(function(response){
+                var str='';
+                try{
+                    if(response.status==1){
+                        str+='<h1>'+response.msg.title+'</h1>';
+                        str+='<h3>'+response.msg.desc+'</h3>';
+                        $('#popup-global .popup-entry').html(str);
+                    }else{
+                        str+='<h1>'+response.msg.title+'</h1>';
+                        str+='<h3>'+response.msg.desc+'</h3>';
+                        $('#popup-global .popup-entry').html(str);
+                    }
+                    
+                    setTimeout(function () {
+                       window.location.href = basedomain+"profile";
+                    }, 2000);
+                }catch(e){}
+            });
+        });
+		
+	jqscroll('newsFeedPaging','profile/getNewsFeed',3,'mobileNewsFeedPaging');
+
+    //$('#largeP').paged_scroll(settingsP);
+   
+
+    {/literal}
+</script>

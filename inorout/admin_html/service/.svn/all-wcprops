@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/marlboro-in-or-out/!svn/ver/29/trunk/inorout/admin_html/service
+END
+crossdomain.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/marlboro-in-or-out/!svn/ver/29/trunk/inorout/admin_html/service/crossdomain.xml
+END
+.htaccess
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/marlboro-in-or-out/!svn/ver/29/trunk/inorout/admin_html/service/.htaccess
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/marlboro-in-or-out/!svn/ver/29/trunk/inorout/admin_html/service/index.php
+END
+common.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/marlboro-in-or-out/!svn/ver/29/trunk/inorout/admin_html/service/common.php
+END

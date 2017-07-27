@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Never Say Maybe</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Never Say Maybe">
+<meta name="author" content="Kana Digital">
+<link href="css/comingsoon.css" rel="stylesheet" type="text/css" />
+<!-- // IE  // -->
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<!-- // PLUGIN  // -->
+<script type="text/javascript" src="js/modernizr.custom.js"></script>
+<script type="text/javascript" src="js/jquery.lwtCountdown-1.0.js"></script>
+<script type="text/javascript">
+
+/* Custom Scripts */
+$(document).ready(function() { 
+	$('#countdown_dashboard').countDown({
+		targetDate: {
+			'day': 		27,
+			'month': 	9,
+			'year': 	2014,
+			'hour': 	0,
+			'min': 		0,
+			'sec': 		0
+		},
+        omitWeeks: true,
+		onComplete: function() { window.location.assign("countdown.html") }
+
+	});
+});
+
+</script>
+</head>
+
+<body>
+	<div id="countdown-landing" href="countdown.html">
+		<div id="countdown_dashboard">
+			<div class="dash days_dash">
+				<div class="digit">0</div>
+				<div class="digit">0</div>
+			</div>
+		</div>
+    </div><!-- END #countdown -->
+    <div id="footer">
+        <div class="hw">
+            <div class="boxfooter">
+                <div class="universal">
+                    <p>Informasi dalam website ini di tujukan untuk perokok berusia 18 tahun atau lebih dan tinggal di wilayah Indonesia</p>
+                </div><!-- END .universal -->
+            </div>
+            <div class="boxfooter">
+                <div class="universal">
+                    <a href="/index.php">Halaman Utama</a>|
+                    <a href="{$mopurl}Templates/Termsandconditions.aspx" target="_blank">Syarat dan Ketentuan</a>|
+                    <a href="{$mopurl}Templates/RemoveMe.aspx" target="_blank">Hapus Saya</a>|
+                    <a href="{$mopurl}Templates/FAQ.aspx" target="_blank">Daftar Pertanyaan</a>|
+                    <a href="{$mopurl}Templates/Contactus.aspx" target="_blank">Kontak Kami</a>|
+                    <a href="https://www.pmi.com/id/smokingandhealth" target="_blank">Perihal Merokok</a>
+                </div><!-- END .universal -->
+            </div><!-- END .boxfooter -->
+        </div><!-- END .hw -->
+    </div><!-- END #footer -->
+</body>
+</html>

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/marlboro-in-or-out/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol
+END
+IProtocolProcessor.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/marlboro-in-or-out/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/IProtocolProcessor.php
+END
+IResponseReader.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/marlboro-in-or-out/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/IResponseReader.php
+END
+IComposableProtocolProcessor.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/marlboro-in-or-out/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/IComposableProtocolProcessor.php
+END
+ProtocolException.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/marlboro-in-or-out/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/ProtocolException.php
+END
+ICommandSerializer.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/marlboro-in-or-out/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/ICommandSerializer.php
+END
+IResponseHandler.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/marlboro-in-or-out/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/IResponseHandler.php
+END

@@ -1,0 +1,35 @@
+<div id="challengePage" class="container">
+	<div class="entry-container">
+        <div class="post-container">
+        	<div class="post-header">
+				<img src="{$basedomain}assets/images/content/challenge-oftheweek.png" />
+            </div><!-- END .post-header -->
+            <div class="whitebox">
+            	<h3>Tunjukkan foto seru kamu sesuai tema bulan ini </h3>
+				<h2>& MENANGKAN BADGE UNIK UNTUK KOLEKSIMU!</h2>
+                <a href="{$basedomain}challenge/rules" class="greybtn">baca aturan main</a>
+            </div>
+			{foreach $challenge as $key => $val}
+				<div class="post-content">
+					<div class="hot-content">
+						<a {*}href="{if $val.n_status==1}{$basedomain}challenge/categories/{$val.id}{else if $val.n_status==2}{$basedomain}challenge/winner/{$val.id}{else}#{/if}"{/*} {if $val.n_status==1}class="bigthumb"{else}class="bigthumb"{/if}>
+							<img src="{$val.event.image_full_path}" />
+						</a>
+						{if $val.n_status==1}				
+							{if $val.total_finalist eq '10'}
+								{*}<a href="{$basedomain}challenge/categories/{$val.id}" class="showwinner" style="right:30px;bottom:15px;">UPLOAD PHOTO</a>{/*}
+								<a href="{$basedomain}challenge/finalist/{$val.id}" class="showwinner" style="right:30px;bottom:15px;">SHOW FINALISTS</a>
+							{else}
+								<a href="{$basedomain}challenge/categories/{$val.id}" class="showwinner" style="right:30px;bottom:15px;">UPLOAD PHOTO</a>
+							{/if}
+						{else if $val.n_status==2}
+						<a href="{$basedomain}challenge/winner/{$val.id}" class="showwinner" style="bottom:15px;right:30px;">SHOW WINNER</a>
+						{else}
+						<span class="comingsoonText">COMING SOON</span>
+						{/if}
+					</div><!-- END .hot-content -->
+				</div><!-- END .post-content -->
+            {/foreach}
+        </div><!-- END .post-container -->
+    </div>
+</div><!-- END .container -->

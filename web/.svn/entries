@@ -1,0 +1,64 @@
+10
+
+dir
+466
+https://acit@kana.svn.beanstalkapp.com/marlboro-in-or-out/trunk/web
+https://acit@kana.svn.beanstalkapp.com/marlboro-in-or-out
+
+
+
+2013-10-18T07:31:54.536630Z
+16
+bummi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1b5f899b-12c8-4c2a-9b48-b3df6b665078
+
+authentication
+dir
+
+service
+dir
+
+tools
+dir
+
+public_html
+dir
+
+config
+dir
+
+db
+dir
+
+engines
+dir
+
+sanbox
+dir
+
+mop
+dir
+
+static_html
+dir
+
+com
+dir
+
+templates
+dir
+

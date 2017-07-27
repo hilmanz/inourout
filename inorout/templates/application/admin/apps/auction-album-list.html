@@ -1,0 +1,136 @@
+<div id="theContainer" class="inboxPage">
+    <div class="theContainer">
+        <div class="head-title">
+            <h1 class="fl">Auction Queue Images</h1>
+        </div> <!-- /.head-title -->
+        <div class="short2">
+            <form method="POST" action="{$basedomain}auctionGallery" id="shorter" class="formsubmitmanualmoderation" >
+                <div class="date-range fl">
+					{*}
+					<select class="styled" id='publishedtype222' name="publishedtype"   >
+						<option value=''>- status -</option>
+						<option value='1' {if $publishedtype=='1'}selected{/if} >Published</option>
+						<option value='2' {if $publishedtype=='2'}selected{/if} >Unpublished</option>
+					</select>&nbsp;&nbsp;
+					<select class="styled" name="notiftype"   >
+						<option value=''>- Pilih Notif -</option>
+						<option value='1' {if $notiftype=='1'}selected{/if} >Badges</option>
+						<option value='2' {if $notiftype=='2'}selected{/if} >Trade</option>
+						<option value='3' {if $notiftype=='3'}selected{/if} >Admin</option>
+					</select>&nbsp;&nbsp;
+					{/*}
+					Timespan&nbsp;&nbsp;
+					<input type="text" class="half-width" id="datepicker" name="startdate" value="{$startdate}" style="width:100px" />
+					<span>to</span>
+					<input type="text" class="half-width" id="datepicker2" name="enddate" value="{$enddate}" style="width:100px"  />
+                </div>
+                <div class="input-append fr">
+                    <input type="text" size="16" id="search" name="search" class="span2" onfocus="if(this.value=='Search...')this.value='';" onblur="if(this.value=='')this.value='Search...';" value="{if $search}{$search}{else}Search...{/if}"/>
+					<input type="hidden" name="filter" value="searchform"/>
+					<button type="submit" class="btn">Go!</button>
+                </div>
+            </form>
+        </div><!-- /.short -->
+        <div class="theContent">
+			<table cellpadding="0" cellspacing="0" border="0" id="table1" class="stdtable">
+			<colgroup>
+				<col class="con0" style="width: 4%" />
+				<col class="con1" />
+				<col class="con0" />
+				<col class="con1" />
+				<col class="con0" />
+				<col class="con1" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th class="head0">No</th>
+					
+					<th class="head0">Image</th>
+					
+					<th class="head1">Queue Date</th>
+					<th class="head0">Status</th>
+					<th class="head0">City</th>
+					<th class="head1">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				{if $list}
+					{section name=i loop=$list}
+					<tr>
+						<td width="10">{$list[i].no}&nbsp;</td>
+						
+						<td><img src="{$basedomainpath}public_assets/auctions/{$list[i].images}" width="100px" height="100px"/></td>
+						
+						<td align="center"><nobr>{$list[i].start_date} - {$list[i].end_date}</nobr></td> 
+						<td align="center">
+							{if $list[i].n_status==1} <span class="green">Publish</span>
+							{elseif $list[i].n_status==2} <span class="orange">Unpublish</span>
+							{else}
+							{/if}
+						</td>
+						<td align="center">{if $list[i].clues == ""}-{else}{$list[i].clues}{/if}</td>
+						<td align="center">
+							<nobr> 
+							{if $list[i].id==0}	<a href="{$basedomain}auctionGallery/newDataInput?id={$id}&start_date={$list[i].start_date}&end_date={$list[i].end_date}">Create New Items</a> 
+							{else}<a href="{$basedomain}auctionGallery/editData?id={$list[i].id}&start_date={$list[i].start_date}&end_date={$list[i].end_date}" class="red" >Update current Images</a>
+							{/if}
+							{*}| <a href="{$basedomain}auctionGallery/removeGallery?id={$list[i].id}&gid={$list[i].auctionid}" class="red" onclick="return confirm('Are you sure you want to delete this?')">Delete</a>{/*}
+							</nobr>
+						</td>
+					</tr>
+					{/section}
+				{/if}
+			</tbody> 
+			<div class="nav">
+								<ul class="menu"> 
+									<li><a href="{$basedomain}auction">back to Auction Items</a></li> 
+								</ul>
+						</div> 
+			</table>
+        </div> <!-- /.theContent -->
+		<script>
+				var startdate = "{$startdate}";
+				var enddate = "{$enddate}";
+				var search = "{$search}";
+				var publishedtype = "{$publishedtype}";
+				{literal}
+					$(document).on('change','#publishedtype',function(){
+						$(".formsubmitmanualmoderation").submit();
+					})
+				{/literal}
+		</script>
+		{if $timeline}
+			{if $act !='galleryList'}
+				<div class="paging" id="pagingpostmoderation"></div> <!-- END .paging -->			
+				<script>				 
+					getpaging(0,{$total},"pagingpostmoderation","paging_ajax_postmoderation",10);
+				</script>
+		 
+			{else}
+				<div class="paging" id="pagingpostmoderation"></div> <!-- END .paging -->			
+				<script>
+					getpaging(0,{$total},"pagingpostmoderation","paging_ajax_gallerymoderation",10);
+				</script>
+			{/if}
+		{/if}
+    </div> <!-- /.theContainer -->
+</div> <!-- /#theContainer -->
+ 
+
+
+	<script>
+		var searchType = '{$searchType}';
+	{literal}
+		$(document).on("change","#moderationtype",function(){
+			var modetype = $(this).val();
+			window.location = basedomain+"moderation/"+modetype;
+		
+		});
+
+		$(document).ready(function(){
+			$('input.searchType').on('change',function(){
+				searchType = $(this).val();
+			});
+		});
+	{/literal}
+	</script>

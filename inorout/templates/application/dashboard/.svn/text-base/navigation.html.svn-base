@@ -1,0 +1,8 @@
+<div id="SideNavigation">
+    <div class="tr-navigation"></div>
+    <ul class="nav navbar-nav side-nav">
+    {foreach from=$main_nav key=k item=v}
+        <li class="{$v.btn_label}">{literal}{{#link-to '{/literal}{$v.nav_hash}{literal}'}}{/literal}{$v.name}{literal}{{/link-to}}{/literal}</li>
+    {/foreach}   
+    </ul>
+</div>

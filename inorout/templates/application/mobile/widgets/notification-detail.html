@@ -1,0 +1,33 @@
+<div id="notificationDetail" class="container">
+	<div class="entry-container center">
+    	<div id="box-content" class="relative">
+        	<a class="closing" href="{$basedomain}notifications">[CLOSE X]</a>
+            <div id="entry-content">
+            	<div class="box-prof">
+                	<div class="aspiration-body">
+                    	<div class="headerNotfication">
+                        	<h3>NOTIFICATION</h3>
+                    	</div>
+                         <div id="notifBox">
+                            <div class="messageDetail">
+                                <h3>{$detail.subject}</h3>
+                                <span class="notifdate">{$detail.formatted_date}</span>
+                            </div><!-- end .row -->
+                            <div class="messageDesc">
+								<h4 class="user">Halo <a id="notifuser" href="#">{$user->name}</a>,</h4>
+                                <h4>{$detail.detail}</h4>
+								{if $detail.type==5}
+                                <a href="{$basedomain}badges/trading#MyTrade" class="orangebtn">view the trade &raquo;</a>
+								{/if}
+								{if $detail.type==16}
+                                <a href="{$basedomain}{$detail.static_message}" class="orangebtn">Play Game</a>
+								
+								{/if}
+                            </div><!-- end .row -->
+                        </div><!-- end #notifBox -->
+                    </div>
+            	</div><!-- END .box-prof -->
+            </div><!-- END .entry-content -->
+        </div><!-- END .box-content -->
+    </div><!-- END .entry-container -->
+</div><!-- END .popup -->

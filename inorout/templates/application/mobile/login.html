@@ -1,0 +1,66 @@
+
+<div id="landing-paralax">
+    <!-- Section #1 -->
+    <div id="bg-landing">
+    	<img src="{$basedomain}assets/images/mobile/bg-landing1.jpg"/>
+    </div>
+    <!-- Section #2 -->
+    <div id="bg-landing">
+    	<img src="{$basedomain}assets/images/mobile/bg-landing2.jpg"/>
+    </div>
+ <div id="bg-landing">
+    	<img src="{$basedomain}assets/images/mobile/bg-landing3.jpg"/>
+    </div>
+   
+   <div id="bg-landing">
+    	<img src="{$basedomain}assets/images/mobile/bg-landing4.jpg"/>
+         <div id="videoBox">
+              <video id="landingVideo" class="video-js vjs-default-skin" controls preload="none" width="100%" height="100%"
+                  poster="{$basedomain}assets/video/landing.png"
+                  data-setup="">
+                <source src="{$basedomain}assets/video/landing.mp4" type='video/mp4' />
+                <source src="{$basedomain}assets/video/landing.webm" type='video/webm' />
+                <source src="{$basedomain}assets/video/landing.ogv" type='video/ogg' />
+              </video>
+              <h3>A Peek Inside  From Last Year's Excitement.</h3>
+              <h2>Are You Ready For The Next</h2>
+        </div>
+        <div class="login-field">
+        	<h2 id="textSign">Sign Up Now !</h2>
+            <form class="loginBox theForms" action="{$basedomain}login/local"  method="POST" onSubmit="return validate()">
+				<div class="row">	
+					<div class="the-field">
+						<input type="text" class=" full-width required checkthis" name="username" id="theUsername"/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="the-field">
+						<input  type="password" class="password full-width required checkthis" name="password" id="thePassword"/>
+					</div>
+				</div>
+				
+				<div class="moreInfo">
+                    <div class="row">
+                        <a href="{$basedomain}forgotpassword" class="forgotPassword">Forgot Your Password?</a>
+                    </div>
+                    <div class="row rowCheck">
+                        <div class="clear required">
+                            <input type="checkbox" class="styled" name="colors[]" />
+                            <label>I am an adult smoker 18 years or older</label>
+                        </div>
+                        <div class="clear">
+                            <input type="checkbox" name="colors[]" class="styled" />
+                            <label>I have read and understood the Terms and Conditions</label>
+                        </div>
+                    </div>
+                    <div class="row rowSubmit">
+                        <input type="hidden" value="1" name="login"/>
+                        <input type="submit" value="submit" name="submit"/>
+						<a href="{$basemopurl}" id="btnLoginMop">&nbsp;</a>
+						<a href="{$basemopurl}" id="btnRegisterMop">&nbsp;</a>
+                    </div>
+                </div>
+				
+			</form>
+        </div>
+    </div>

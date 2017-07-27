@@ -1,0 +1,7 @@
+<div id="homePage" class="container">
+	<div class="entry-container center">
+    	<h1>WELCOME TO MARLBORO.</h1>
+        <h3>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.<br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui</h3>
+        <h3>Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue.</h3>
+    </div>
+</div><!-- END .container -->

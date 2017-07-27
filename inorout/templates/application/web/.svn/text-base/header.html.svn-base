@@ -1,0 +1,66 @@
+<div id="header">
+	<div class="universal">
+          {if $user}
+        <div id="logoBox">
+       	 <a id="logo" href="{$basedomain}profile">&nbsp;</a>
+        </div>
+        <div id="main-menu-wrapper" class="clearfix active-{$pages}">
+            <ul id="main-menu" class="mainmenu">
+                <li class="navabout">
+                	<a href="{$basedomain}about/whatis">About In Or Out</a>
+                    <ul style="top:78px;">
+                    	{*}
+                        <li><a href="{$basedomain}howto">How To Landing</a></li>
+                    	{/*}
+                        <li><a href="{$basedomain}about/whatis">What is it?</a></li>
+                    	<li><a href="{$basedomain}about/howto">How To</a></li>
+                    	<li><a href="{$basedomain}about/prizes">Prizes</a></li>
+                    	<li><a href="{$basedomain}about/rules">Rules</a></li>
+                    </ul>
+                </li>
+                <li class="navuandc"><a href="{$basedomain}clues">Update And Clues</a>
+                    <ul>
+                    	<li><a href="{$basedomain}articles" >Updates</a></li>
+                    	<li><a href="{$basedomain}clues" >Clues</a></li>
+                    </ul>
+                </li>
+                <li class="navbadge">
+                    <a {if $unverified} href="#popup-unverified" class="showPopup" {else}  href="{$basedomain}badges/trading" {/if}>The Badges</a>
+                    <ul>
+                        
+                    	<li><a {if $unverified} href="#popup-unverified" class="showPopup" {else}  href="{$basedomain}badges/auction#TodayAuction" {/if}>Auction</a></li>
+                    	
+                        <li><a {if $unverified} href="#popup-unverified" class="showPopup" {else}  href="{$basedomain}badges/trading" {/if}>Trading</a></li>
+                    	<li><a {if $unverified} href="#popup-unverified" class="showPopup" {else}  href="{$basedomain}badges/collectibles" {/if}>Collectibles</a></li>
+                    </ul>
+                </li>
+                <li class="navgame">
+                    <a  {if $unverified} href="#popup-unverified" class="showPopup" {else} href="{$basedomain}games" {/if}>The Game</a>
+                    <ul>
+                    	<li><a {if $unverified} href="#popup-unverified" class="showPopup" {else} href="{$basedomain}games" {/if}>Games</a></li>
+                    	<li><a {if $unverified} href="#popup-unverified" class="showPopup" {else} href="{$basedomain}challenge" {/if}>CHALLENGE OF THE WEEK</a></li>
+                    </ul>
+                </li>  
+                <li class="naventercode"><a {if $unverified} href="#popup-unverified" class="showPopup" {else}  onclick="mmConversionTag(461579, this, '_self', '{$basedomain}entercode'); return false;"  href="{$basedomain}entercode" {/if}>Enter Codes</a></li>    
+            </ul>
+        </div><!-- END .main-menu-wrapper -->
+        <div id="profileBox">
+        	<!--<a onclick="mmConversionTag(461576, this, '_blank', '{$basedomain}profile); return false;"   href="{$basedomain}profile" class="small-thumb"><img src="{$thisuser.profile.image_full_path}" /></a>
+            <a onclick="mmConversionTag(461576, this, '_blank', '{$basedomain}profile); return false;" class="username" href="{$basedomain}profile">Hi, {$thisuser.name}</a>
+         	<a onclick="mmConversionTag(461576, this, '_blank', '{$basedomain}profile); return false;" class="viewporifle" href="{$basedomain}profile">View Profile</a> -->
+			<a  href="{$basedomain}profile" class="small-thumb"><img src="{$thisuser.profile.image_full_path}" /></a>
+            <a  class="username" href="{$basedomain}profile">Hi, {$thisuser.name}</a>
+         	<a  class="viewporifle" href="{$basedomain}profile">View Profile</a>
+            {if $unread}
+            <a href="#popup-notification" onclick="load_notification_list();" class="notif showPopup notif_count">{if  $unread.total>0}You have {$unread.total} new notification{if $unread.total>1}s{/if}{else} no new notifications {/if} </a>
+            {/if}
+         	<a class="logout" href="{$basedomain}logout.php">Log Out</a>
+        </div>
+        {else}
+        
+        {/if}<!-- END #header -->
+    </div>
+</div>
+<script>
+ var notif_count = '{$unread.total}';
+</script>

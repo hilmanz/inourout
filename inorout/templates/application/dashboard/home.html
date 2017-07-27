@@ -1,0 +1,23 @@
+<div class="section">
+	<form id="dateForm">
+		<div class="panel-dashboard">
+	        <div class="group-date fr">
+	            <div class="input-daterange input-group mainInputDate" id="datepicker">
+	               
+	                <div class="datefrom">
+	                    <input id="from" type="text" class="input-sm form-control" name="startdate" /><span class="cal-icon icon-calendar"></span>
+	                </div>
+	                <span class="input-group-addon">to</span>
+	                <div class="datefrom">
+	                    <input id="to" type="text" class="input-sm form-control" name="enddate" /><span class="cal-icon icon-calendar"></span>
+	                </div>
+	                <input type="hidden" value="1" name="ajax"> 
+	                 <span class="input-group-addon">
+	                 	<input type="submit" value="GO">
+	                 </span>          
+	            </div><!-- /.mainInputDate -->
+	       </div><!-- /.group-date -->
+	    </div><!-- /.panel-dashboard -->
+    </form>
+	{literal}{{outlet}}{/literal}
+</div><!--end.section-->

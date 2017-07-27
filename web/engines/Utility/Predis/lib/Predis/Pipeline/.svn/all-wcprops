@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/marlboro-in-or-out/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Pipeline
+END
+PipelineContext.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/marlboro-in-or-out/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Pipeline/PipelineContext.php
+END
+IPipelineExecutor.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/marlboro-in-or-out/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Pipeline/IPipelineExecutor.php
+END
+SafeExecutor.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/marlboro-in-or-out/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Pipeline/SafeExecutor.php
+END
+FireAndForgetExecutor.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/marlboro-in-or-out/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Pipeline/FireAndForgetExecutor.php
+END
+SafeClusterExecutor.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/marlboro-in-or-out/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Pipeline/SafeClusterExecutor.php
+END
+StandardExecutor.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/marlboro-in-or-out/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Pipeline/StandardExecutor.php
+END

@@ -1,0 +1,236 @@
+<div id="profilePage" class="container">
+	<div class="entry-container">
+    	<div class="col">
+        	<div class="col2">
+            	<div id="profile-box">
+                	<div class="profile-head">
+                    	<h3><img src="{$basedomain}assets/images/t_myprofile.png" /></h3>
+                        <div class="profilenav">
+                        	<a href="#" class="editphoto">Edit Photo</a>
+                        	<a href="#" class="editprofile">Edit Profile</a>
+                        	<a href="#" class="logoutprofile">Logout</a>
+                        </div><!-- END .profilenav -->
+                    </div><!-- END .profile-head -->
+                    <div class="row-black">
+        				<a href="{$basedomain}profile" class="big-thumb"><img src="{$basedomain}assets/content/intanh.jpg" /></a>
+                        <div class="pl200">
+                        	<h3 class="accountname">{$thisuser.name} {$thisuser.last_name}</h3>
+                            <h4 class="age">{$thisuser.age} years old, from {$thisuser.cityname}</h4>
+                        </div><!-- END .pl200 -->
+                    </div><!-- END .row-black -->
+                    <div class="row-orange">
+                        <div class="pl200">
+                    		<a class="notification" href="#">You have 2 new notification<span class="arrow-white">&nbsp;</span></a>
+                        </div><!-- END .pl200 -->
+                    </div><!-- END .row-orange -->
+                    <div class="row-tr3">
+                    	<div class="ps50">
+                            <h4 class="m0 black">Why I love traveling:</h4>
+                            <h2 class="m0">"{$thisuser.description}"</h2>
+                        </div><!-- END .ps50 -->
+                    </div><!-- END .row-tr3 -->
+                    <div class="row-tr4">
+                    	<div class="ps50">
+                            <h4 class="m0 black">Active Trading:</h4>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td class="center"><h2 class="m0">BADGES I HAVE</h2></td>
+                                <td class="center">&nbsp;</td>
+                                <td class="center"><h2 class="m0">BADGES I WANT</h2></td>
+                                <td class="center">&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td class="center">
+                                	<div class="badges badges-s">
+                                    	<img src="{$basedomain}assets/images/badges/badges-1.png" />
+                                    </div>
+                                </td>
+                                <td  class="center"><img src="{$basedomain}assets/images/icon/icon_trade.png" /></td>
+                                <td class="center">
+                                	<div class="badges badges-s">
+                                    	<img src="{$basedomain}assets/images/badges/badges-2.png" />
+                                    </div>
+                                </td>
+                                <td class="center"><a href="#" class="cancelTrade">CANCEL</a></td>
+                              </tr>
+                              <tr>
+                                <td class="center">
+                                	<div class="badges badges-s">
+                                    	<img src="{$basedomain}assets/images/badges/badges-3.png" />
+                                    </div>
+                                </td>
+                                <td  class="center"><img src="{$basedomain}assets/images/icon/icon_trade.png" /></td>
+                                <td class="center">
+                                	<div class="badges badges-s">
+                                    	<img src="{$basedomain}assets/images/badges/badges-4.png" />
+                                    </div>
+                                </td>
+                                <td class="center"><a href="#" class="cancelTrade">CANCEL</a></td>
+                              </tr>
+                              <tr>
+                                <td class="center">
+                                	<div class="badges badges-s">
+                                    	<img src="{$basedomain}assets/images/badges/badges-5.png" />
+                                    </div>
+                                </td>
+                                <td  class="center"><img src="{$basedomain}assets/images/icon/icon_trade.png" /></td>
+                                <td class="center">
+                                	<div class="badges badges-s">
+                                    	<img src="{$basedomain}assets/images/badges/badges-6.png" />
+                                    </div>
+                                </td>
+                                <td class="center"><a href="#" class="cancelTrade">CANCEL</a></td>
+                              </tr>
+                            </table>
+                        </div><!-- END .ps50 -->
+                    </div><!-- END .row-tr4 -->
+                    <div class="row-orange">
+                        <div class="pl200">
+                    		<a class="inviteFriends" href="#">invite friends<span class="arrow-white">&nbsp;</span></a>
+                        </div><!-- END .pl200 -->
+                    </div><!-- END .row-orange -->
+                </div><!-- END #profile-box -->
+            </div><!-- END .col2 -->
+        	<div class="col2">
+            	<div id="badges-box">
+                	<div class="badges-head">
+                    	<h3 class="m0 fl"><img src="{$basedomain}assets/images/t_mybadges.png" /></h3>
+                        <div class="badgesValue fr">
+                        	<p class="m0">total badge value</p>
+                            <h3 class="red m0">4.850<a class="help" href="#"></a></h3>
+                        </div><!-- END .profilenav -->
+                    </div><!-- END .badges-head -->
+                    <div id="badges-list">
+                        <div class="badges badges-m">
+                            <img src="{$basedomain}assets/images/badges/badges-1.png" class="tip" title="<h5>TEMPLE GATE</h5><p>Go back in time and immerse yourself in the historical sights of the city. 
+Pay close attention to every architectural detail and ornament of each building you walk by.</p> <h3>500 Points</h3>" />
+                            <span class="badges-value">5</span>
+                        </div>
+                        <div class="badges badges-m">
+                            <img src="{$basedomain}assets/images/badges/badges-2.png" class="tip" title="
+                            <h5>DJ TURNTABLE </h5>
+                            <p>Since its introduction in the 1930s, this device further on symbolizes the modern clubbing scene all over the world. 
+Talking about clubbing, London is the home for world’s best clubs and DJs. You really haven't visited London if you haven’t gone to one of its clubs.</p>
+							<h3>300 Points</h3>" />
+                            <span class="badges-value">15</span>
+                        </div>
+                        <div class="badges badges-m">
+                            <img src="{$basedomain}assets/images/badges/badges-3.png" class="tip" title="
+                            <h5>THE CAMERA</h5>
+                            <p>Nothing beats off the feeling of capturing unforgettable moments and relive them later once you've returned home. Pick an angle and strike a pose!</p> 
+							<h3>900 Points</h3>" />
+                            <span class="badges-value">4</span>
+                        </div>
+                        <div class="badges badges-m ">
+                            <img src="{$basedomain}assets/images/badges/badges-4.png" class="tip" title="
+                            <h5>THE BIG APPLE</h5>
+                            <p>Dream big and become the citizen of the world. We'll make it happen for you!</p> <h3>4500 Points</h3>" />
+                            <span class="badges-value">7</span>
+                        </div>
+                        <div class="badges badges-m">
+                            <img src="{$basedomain}assets/images/badges/badges-5.png" class="tip" title="
+                            <h5>THE DOUBLE-DECKER</h5>
+                            <p>Explore every nook and cranny of London and make multiple stops at unforgettable new places. </p> 
+                            <h3>600 Points</h3>" />
+                            <span class="badges-value">0</span>
+                        </div>
+                        <div class="badges badges-m">
+                            <img src="{$basedomain}assets/images/badges/badges-6.png" class="tip" title="
+                            <h5>BOWLER / DERBY</h5>
+                            <p>This particular item poses as an important fashion statement among Londoners.
+Discover the stylish side of the city as you journey down to meet with one of the acclaimed designers. </p> 
+							<h3>200 Points</h3>" />
+                            <span class="badges-value">2</span>
+                        </div>
+                        <div class="badges badges-m grayscale">
+                            <img src="{$basedomain}assets/images/badges/badges-7.png" class="tip" title="
+                            <h5>MAKE A RECORD</h5>
+                            <p>Take your karaoke skill to a new level and render a famous song your own way. Get a VIP tour to a famous recording studio in NYC and chat with an international artist in person!</p> 
+                            <h3>750 Points</h3>" />
+                        </div>
+                        <div class="badges badges-m grayscale">
+                            <img src="{$basedomain}assets/images/badges/badges-8.png" class="tip" title="
+                            <h5>RED TELEPHONE BOX</h5>
+                            <p>This iconic landmark welcomes you into the city and is a reminder to share every bit of your exciting experience with your friends.</p> 
+                            <h3>500 Points</h3>" />
+                        </div>
+                        <div class="badges badges-m grayscale">
+                            <img src="{$basedomain}assets/images/badges/badges-9.png" class="tip" title="<h5>THE EXPRESS LANE</h5><p>Enjoy this world's fastest and smoothest ride ever.
+The fastest shinkansen can move up to 320km/h and is projected to have increased its speed by 40km/h by 2020.</p> <h3>800 Points</h3>" />
+                        </div>
+                        <div class="badges badges-m grayscale">
+                            <img src="{$basedomain}assets/images/badges/badges-10.png" class="tip" title="<h5>SUSHI</h5><p>Go authentic and raw. Because some said that the best way to enjoy a culture is through its delicacies.
+</p> <h3>700 Points</h3>" />
+                        </div>
+                        <div class="badges badges-m grayscale">
+                            <img src="{$basedomain}assets/images/badges/badges-11.png" class="tip" title="<h5>YELLOW CAB</h5>
+                            <p>Sometimes the best way to enjoy the view is when you sit on the back seat. This ride will take you anywhere you want to be.</p> 
+                            <h3>2500 Points</h3>" />
+                        </div>
+                        <div class="badges badges-m grayscale">
+                            <img src="{$basedomain}assets/images/badges/badges-12.png" class="tip" title="<h5>JAPANESE PAPER LANTERN</h5>
+                            <p>Revel in the breathtaking views of the city in the evening as you stroll down the streets and alleys filled with hundreds of dim-lit lights across every corner. The writing in it is called chochin moji in Japanese, used specifically for advertising purpose since the 16th – 18th century.</p> 
+                            <h3>1500 Points</h3>" />
+                        </div>
+                    </div><!-- END #badges-list -->
+                    <div class="action-btn">
+                    	<a class="orangebtn fr" href="#">Redeem &raquo;</a>
+                    	<a class="orangebtn fr" href="#">Trade &raquo;</a>
+                    	<a class="orangebtn fr" href="#">Auction &raquo;</a>
+                    </div><!-- END .action-btn -->
+                </div><!-- END #badges-box -->
+            	<div id="photo-box">
+                	<div class="photo-head">
+                    	<h3 class="m0"><img src="{$basedomain}assets/images/t_myphotos.png" /></h3>
+                    </div><!-- END .photo-head -->
+                    <div id="photo-list">
+                    	 <div class="jcarousel-wrapper">
+                            <div class="jcarousel">
+                                <ul>
+                                    <li>
+                                    	<div class="photo-box">
+                                       	 <a class="img-thumb"><img src="{$basedomain}assets/content/photos/img1.jpg"></a>
+                                         <h3 class="caption">lorem ipsum</h3>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="photo-box">
+                                       	 <a class="img-thumb"><img src="{$basedomain}assets/content/photos/img2.jpg"></a>
+                                         <h3 class="caption">lorem ipsum</h3>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="photo-box">
+                                       	 <a class="img-thumb"><img src="{$basedomain}assets/content/photos/img3.jpg"></a>
+                                         <h3 class="caption">lorem ipsum</h3>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="photo-box">
+                                       	 <a class="img-thumb"><img src="{$basedomain}assets/content/photos/img4.jpg"></a>
+                                         <h3 class="caption">lorem ipsum</h3>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="photo-box">
+                                       	 <a class="img-thumb"><img src="{$basedomain}assets/content/photos/img5.jpg"></a>
+                                         <h3 class="caption">lorem ipsum</h3>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="photo-box">
+                                       	 <a class="img-thumb"><img src="{$basedomain}assets/content/photos/img6.jpg"></a>
+                                         <h3 class="caption">lorem ipsum</h3>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                            <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                        </div>
+                    </div><!-- END #photo-list -->
+                </div><!-- END #photo-box -->
+            </div><!-- END .col2 -->
+        </div><!-- END .col -->
+    </div><!-- END .entry-container -->
+</div><!-- END .container -->

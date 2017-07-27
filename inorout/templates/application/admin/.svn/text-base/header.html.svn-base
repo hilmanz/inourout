@@ -1,0 +1,11 @@
+<div id="header">
+	<div class="line-map"><img src="{$basedomain}assets/images/line-map.png" /></div>
+	<div class="line-box"><img src="{$basedomain}assets/images/line-box.png" /></div>
+	<div class="container">
+    	<div class="entry1">
+        	<div class="logo"></div>			
+            <h1 class="fr"><a href="{$basedomain}home" class="">ADMINISTRATOR</a></h1>			
+            
+		</div> <!-- /.entry -->
+	</div> <!-- /.container -->
+</div> <!-- /#header -->

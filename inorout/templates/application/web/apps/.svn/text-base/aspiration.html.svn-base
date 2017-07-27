@@ -1,0 +1,49 @@
+<div class="popup" id="popup-aspiration" style="display:block;">
+    <div class="popupContainer">
+    	<div class="popup-head">
+        	<h2 class="red dig">Welcome,<br />
+            <span>before we get started</span></h2>
+        </div>
+    	<div class="popup-entry">
+            <form id="aspirationForm">
+                <textarea name="aspiration" class="aspiration-message" placeholder="Why do you love traveling"  maxlength="140"></textarea>
+                <input type="hidden" name="asp_post" value="1" />
+                <input type="submit" name="submit" value="SUBMIT &raquo;" class="orangebtn fr" />
+                <a class="orangebtn fr" style="display:none;"><a/>
+            </form>
+        </div>
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->
+<div id="bg-popup3" style="display:block;"></div>
+<script type="text/javascript">
+    {literal}
+        $( "#aspirationForm" ).submit(function( event ) {
+            var div = $(this);
+            div.find('input[name="submit"]').hide();
+            div.find('input[name="submit"]').next().text('Saving...').show();
+            
+            event.preventDefault();
+            $.ajax({
+                type: "POST",
+                url: basedomain+"aspiration",
+                data: $(this).serialize(),
+                dataType: "json",
+                success: function(response) {
+                    if(response.status == '0'){
+                        $('html, body').animate({scrollTop: '0px'});
+                        $('#popup-aspiration').hide();
+                        $('#popup-global').fadeIn();
+                        $('#popup-global .popup-entry').html('<h3>'+response.msg+'</h3>');
+                        setTimeout(function () {
+                           window.location.href = basedomain+"aspiration";
+                        }, 2000);  
+                    }else{
+                        setTimeout(function () {
+                           window.location.href = basedomain+"profile";
+                        }, 5000);  
+                    }  
+                }
+            })
+        });
+    {/literal}
+</script>

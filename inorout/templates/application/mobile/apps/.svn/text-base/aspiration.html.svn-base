@@ -1,0 +1,24 @@
+<div id="aspiration" class="container">
+	<div class="entry-container center">
+    	<div id="box-content" class="relative">
+        	<a class="closing" href="{$basedomain}home">[CLOSE X]</a>
+            <div id="entry-content">
+            	<div class="box-prof">
+                	<div class="aspiration-body">
+                        <div class="headerAspiration">
+                        <h3>Welcome</h3>
+                        <h2>before we get started</h2>
+                        </div>
+                        <div class="aspiration-entry">
+                            <form action="{$basedomain}aspiration" method="post">
+                                <textarea name="aspiration" class="aspiration-message" placeholder="Why do you love traveling"></textarea>
+                                <input type="hidden" name="asp_post" value="1" />
+                                <input type="submit" name="submit" value="SUBMIT &raquo;" class="orangebtn" />
+                            </form>
+                        </div>
+                    </div>
+            	</div><!-- END .box-prof -->
+            </div><!-- END .entry-content -->
+        </div><!-- END .box-content -->
+    </div><!-- END .entry-container -->
+</div><!-- END .popup -->

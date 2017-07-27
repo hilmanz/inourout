@@ -1,0 +1,119 @@
+<div id="theContainer" class="inboxPage">
+    <div class="theContainer">
+        <div class="head-title">
+            <h1 class="fl">COTW Pages</h1>
+        </div> <!-- /.head-title -->
+        <div class="short2">
+            <form method="POST" action="{$basedomain}event" id="shorter" class="formsubmitmanualmoderation" >
+                <div class="date-range fl">
+					{*}
+					<select class="styled" id='publishedtype222' name="publishedtype"   >
+						<option value=''>- status -</option>
+						<option value='1' {if $publishedtype=='1'}selected{/if} >Published</option>
+						<option value='2' {if $publishedtype=='2'}selected{/if} >Unpublished</option>
+					</select>&nbsp;&nbsp;
+					<select class="styled" name="notiftype"   >
+						<option value=''>- Pilih Notif -</option>
+						<option value='1' {if $notiftype=='1'}selected{/if} >Badges</option>
+						<option value='2' {if $notiftype=='2'}selected{/if} >Trade</option>
+						<option value='3' {if $notiftype=='3'}selected{/if} >Admin</option>
+					</select>&nbsp;&nbsp;
+					{/*}
+					Date Range&nbsp;&nbsp;
+					<input type="text" class="half-width" id="datepicker" name="startdate" value="{$startdate}" style="width:100px" />
+					<span>to</span>
+					<input type="text" class="half-width" id="datepicker2" name="enddate" value="{$enddate}" style="width:100px"  />
+                </div>
+                <div class="input-append fr">
+                    <input type="text" size="16" id="search" name="search" class="span2" onfocus="if(this.value=='Search...')this.value='';" onblur="if(this.value=='')this.value='Search...';" value="{if $search}{$search}{else}Search...{/if}"/>
+					<input type="hidden" name="filter" value="searchform"/>
+					<button type="submit" class="btn">Go!</button>
+                </div>
+            </form>
+        </div><!-- /.short -->
+        <div class="theContent">
+			<table cellpadding="0" cellspacing="0" border="0" id="table1" class="stdtable">
+			<colgroup>
+				<col class="con0" style="width: 4%" />
+				<col class="con1" />
+				<col class="con0" />
+				<col class="con1" />
+				<col class="con0" />
+				<col class="con1" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th class="head0">No</th>
+					<th class="head0">Title</th> 
+					<th class="head0">Image</th>
+					<th class="head1">Event Date</th> 
+					<th class="head0">Status</th>
+					<th class="head1">Action</th>
+				</tr>
+			</thead>
+			<tbody class="eventpaginglist">
+				{if $list}
+					{section name=i loop=$list}
+					<tr>
+						<td width="10">{$list[i].no}&nbsp;</td>
+						<td>{$list[i].title|capitalize}</td>						 
+						<td><a href="javascript:void(0)" class="arkPopupImages" call="{$basedomainpath}public_assets/event/{$list[i].img}"><img height="70px" width="70px" src="{$basedomainpath}public_assets/event/{$list[i].img}"></a></td>
+						<td align="center"><nobr>{$list[i].event_date}</nobr></td> 						
+						<td align="center">
+							{if $list[i].n_status==1} <span class="green">Upload Phase ( Show Finalist Until finalist choosen ) </span>
+							{elseif $list[i].n_status==2} <span class="orange">Winner Phase</span>
+							{elseif $list[i].n_status==3} <span class="orange">Unpulish</span>						 
+							{else}<span class="orange">Deleted</span>
+							{/if}
+						</td>
+						<td align="center">
+							<nobr> 
+							 
+							<a href="{$basedomain}shareandbrag/saveData?id={$list[i].id}" class="red" >update</a>
+							 
+							</nobr>
+						</td>
+					</tr>
+					{/section}
+				{/if}
+			</tbody>
+		 
+			</table>
+             <div class="pagingbox" id="pagingevent">
+            </div><!-- END .pagingbox -->
+        </div> <!-- /.theContent -->
+		<script>
+		
+		getpaging(0,{$total},"pagingevent","paging_ajax_event",10);
+				var startdate = "{$startdate}";
+				var enddate = "{$enddate}";
+				var search = "{$search}";
+				var publishedtype = "{$publishedtype}";
+				{literal}
+					$(document).on('change','#publishedtype',function(){
+						$(".formsubmitmanualmoderation").submit();
+					})
+				{/literal}
+		</script>
+    </div> <!-- /.theContainer -->
+</div> <!-- /#theContainer -->
+ 
+
+
+	<script>
+		var searchType = '{$searchType}';
+	{literal}
+		$(document).on("change","#moderationtype",function(){
+			var modetype = $(this).val();
+			window.location = basedomain+"moderation/"+modetype;
+		
+		});
+
+		$(document).ready(function(){
+			$('input.searchType').on('change',function(){
+				searchType = $(this).val();
+			});
+		});
+		
+	{/literal}
+	</script>

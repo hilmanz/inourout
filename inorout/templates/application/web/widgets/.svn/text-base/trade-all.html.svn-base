@@ -1,0 +1,27 @@
+
+<div class="tabEntry" >
+	<div class="head-tab">
+    	<div class="fl">
+            <a class="findTrade showPopup" href="#popup-findtrade">FIND A TRADE</a>
+            <a class="refreshTrade" href="#" onclick="load_all_trade({},0);">REFRESH</a>
+        </div>
+    </div>
+    <table id="tradeAll" width="100%" border="0" cellspacing="0" cellpadding="0">
+      <thead>
+      <tr class="head even">
+	   <td align="left"><h3><a href="#" class="arrow-right sort_active" data-sort="published_date">publish date</a></h3></td>
+	    <td align="left"><h3><a href="#" class="arrow-right sort_active" data-sort="name">trader's name</a></h3></td>
+        <td class="center"><h3>badge wanted</h3></td>
+        <td align="left"><h3>badge(s) Offered</h3></td>
+        <td><h3><a href="#" class="arrow-right sort_active" data-sort="status">trading status</a></h3></td>
+       
+       
+      </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <div id="tradeAllPaging" class="pagingbox">  
+    	
+    </div><!-- END .pagingbox -->
+</div><!-- END .tabEntry -->

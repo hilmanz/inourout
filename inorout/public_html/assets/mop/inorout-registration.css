@@ -1,0 +1,996 @@
+/*
+Theme Name:  Marlboro In Or Out
+Version: 1.0
+Author: Acit Jazz 2013
+*/
+@import url(https://fonts.googleapis.com/css?family=Coda);
+@font-face {
+    font-family: 'Coda',serif;
+    src: url('font/maybe-bold-webfont.eot');
+    src: url('font/maybe-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/maybe-bold-webfont.woff') format('woff'),
+         url('font/maybe-bold-webfont.ttf') format('truetype'),
+         url('font/maybe-bold-webfont.svg#maybebold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'HelveticaNeueLTStd45Light';
+    src: url('font/helveticaneueltstd-lt-webfont.eot');
+    src: url('font/helveticaneueltstd-lt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/helveticaneueltstd-lt-webfont.woff') format('woff'),
+         url('font/helveticaneueltstd-lt-webfont.ttf') format('truetype'),
+         url('font/helveticaneueltstd-lt-webfont.svg#HelveticaNeueLTStd45Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*  Reset  */
+html, body, applet, object, iframe, blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 14px;
+	font: inherit;
+	outline:none;
+	vertical-align: baseline;
+	font-family:'Coda', serif;
+}
+*{
+	outline:none;
+}
+input{
+	outline:none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-spacing: 0;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.clearfix {
+	zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearboth {
+	clear: both;
+}
+a {
+	text-decoration: none;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	color:#bf1323;
+	text-decoration:underline;
+}
+a:hover{
+	color:#F00;
+}
+.red{
+	color:#cc0000;
+}
+.black{
+	color:#333;
+}
+.blue{
+	color:#53a9ff;
+}
+/*=====================================Typography=====================================*/
+h1, h2, h3, h4, h5, h6 {
+	font-weight:normal;
+	font-family:'Coda', serif;
+}
+h1 {
+	font-size: 30px;
+	margin: 0 0 15px 0;
+}
+h2 {
+	font-size: 24px;
+	margin: 0 0 15px 0;
+}
+h3 {
+	font-size: 20px;
+	margin: 0 0 15px 0;
+}
+h4 {
+	font-size: 16px;
+	margin: 0 0 15px 0;
+}
+h5 {
+	font-size: 16px;
+	margin: 0 0 15px 0;
+}
+h6 {
+	font-size: 14px;
+	margin: 0 0 15px 0;
+}
+p{
+	margin:0 0 15px 0;
+}
+blockquote {
+	border-left: 7px solid;
+	padding: 0 0 0 20px;
+}
+i,em{
+	font-style:italic;
+}
+strong,b{
+	font-family:'Coda', serif;
+}
+/*=====================================LAYOUT===================================== */
+body{
+	background:url(images/bg.jpg) repeat;
+	font-size:14px;
+	padding:0;
+}
+.mainPage{
+	width:1000px;
+	margin:0 auto;
+	padding:40px 0 0 0;
+}
+#reg1 .mainPage{
+	width:75%;
+}
+.header h1{
+	display:inline-block;
+	zoom: 1;
+	*display: inline;
+	background:#cc3401;
+	padding:0 20px;
+	line-height:40px;
+	color:#fff;
+}
+.landingPage .mainPage{
+	width:auto;
+}
+.landingPage .mainPage .content{
+	background:url(images/bg_login.png) no-repeat;
+	width:70%;
+	min-height:912px;
+	margin:0 auto;
+}
+.ie8 .landingPage .mainPage .content,
+.ie7 .landingPage .mainPage .content{
+	width:74%;
+}
+.formLanding{
+	position:relative;
+	min-height:600px;
+}
+fieldset .row,
+.row{
+	margin:0;
+	clear:both;
+	display:table;
+	width:100%;
+}
+.regSection2 h2{
+	display:none;
+}
+.contentIntro h2,
+#checkDetails h2{
+    margin: 0;
+}
+p.error {
+    color: #CA0A0A;
+    font-size: 10px;
+	line-height:20px;
+}
+#CompleteTempUser .intro h1{
+	font-size:36px;
+}
+#lblError{
+	margin:0 0 0 20px;
+}
+fieldset .row label, p.col_left,.row label
+{
+	font-family:'Coda', serif;
+	font-size:16px;
+	float:left;
+	width:200px;
+	display:block;
+	line-height:30px;
+}
+input[type=text],#txtPassword,#txtConfirmPassword{
+	width:300px;
+	padding:5px;
+	font-family:'Coda', serif;
+	font-size:14px;
+	height:20px;
+	border:solid 1px #ccc;
+	margin:0 0 20px;
+	float:left;
+}
+input[type=text].dob{
+	width:40px;
+}
+#reg1 input[type=checkbox]{
+	 float: left;
+    left: -36px;
+    position: absolute;
+    top: -21px;
+}
+#forgottenPassword input[type=checkbox]{
+	float:left;
+	position:relative;
+}
+#forgottenPassword input[type="text"]{
+	margin:0;
+}
+
+#forgottenPassword .error {
+    display: block;
+    float: left;
+    left: 528px;
+    line-height: 35px;
+    margin: 0;
+    position: absolute;
+    text-transform: uppercase;
+}
+.confirmations .row label{
+	width:auto;
+	font-size:14px;
+	line-height:18px;
+	padding:20px 0;
+}
+.loginBox{
+	position:absolute;
+	top:415px;
+	left:43px;
+}
+.loginBox .row{
+	clear:both;
+	padding:0 0 10px 0;
+	overflow:hidden;
+}
+.loginBox .row label{
+	display:block;
+	width:80px;
+	float:left;
+	font-family:'Coda', serif;
+	font-size:16px;
+	line-height:30px;
+}
+.loginBox .row input{
+	width:65% !important;
+	border:solid 1px #ccc;
+	padding:5px;
+	height:20px;
+	font-family:'Coda', serif;
+	font-size:20px;
+	margin:0;
+}
+.error,.checkboxError{
+	color:#c00;
+	font-family:'Coda', serif;
+}
+#forgottenPassword .checkboxError{
+   	display: block;
+    float: left;
+    font-size: 8px;
+    left: 260px;
+    line-height: 20px;
+    margin: 0;
+    position: absolute;
+	text-transform:uppercase;
+}
+.checkboxError{
+	margin-top:0px;
+}
+#reg1 .error{
+	float:left;
+	margin:0 0 0 0;
+	line-height:35px;
+	display:block;
+	position:absolute;
+	left:528px;
+}
+#lblErrorConfirmAbove18{
+	left: -275px;
+    position: absolute;
+    top: -30px;
+    width: auto;
+}
+.confirmations{
+	position:relative;
+	padding:0 0 0 34px;
+}
+#lblErrorGender{
+	margin-top:-20px;
+}
+.loginBox .error{
+	position:absolute;
+	top:-10px;
+	margin:0;
+	font-size:12px;
+}
+#lnkBtnForgotPwd{
+	position:absolute;
+	font-family:'Coda', serif;
+	text-decoration:none;
+	top:515px;
+	left:123px;
+	font-size:12px;
+}
+#lnkBtnSubmit,#lnkBtnRegister{
+	background:url(images/btn_reg.png) no-repeat;
+	display:block;
+	width:124px;
+	height:36px;
+	left:50%;
+	float:left;
+	text-indent:-8000px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	position:absolute;
+	top:130px;
+	left:0;
+}
+#lnkBtnRegister{
+	background:url(images/btn_reg.png) no-repeat -124px 0;
+}
+#lnkBtnSubmit:hover{
+	background:url(images/btn_reg.png) no-repeat 0 -36px;
+}
+#lnkBtnRegister:hover{
+	background:url(images/btn_reg.png) no-repeat -124px -36px;
+}
+#divRegisterBox{
+	position:absolute;
+	top:415px;
+	left:190px;
+	width:200px;
+}
+#divLoginBox #lblError{
+	margin:0;
+}
+.text{
+	text-align:center;
+	padding:10px 0;
+	font-size:12px;
+	display:none;
+}
+.footer{
+	position:absolute;
+	width:100%;
+	background:url(images/18+.png) right no-repeat #FFF;
+	left:0;
+	padding:10px 0;
+	text-align:center;
+	font-size:12px;
+	margin-top:70px;
+}
+#ReferFriend .footer{
+	position:fixed;
+	bottom:0;
+	left:0;
+}
+.footer .text{
+	display:block;
+}
+.footer .navigation li{
+	display:inline;
+	border-right:solid 1px #000;
+	padding:0 20px;
+}
+.footer .navigation li:last-child{
+	border:none;
+}
+.footer .navigation li a{
+	text-transform:uppercase;
+	color:#000;
+	text-decoration:none;
+}
+.footer .navigation li a:hover{
+	color:#c00;
+}
+.submit{
+	float:left;
+	margin:20px 20px 0 0;
+	clear:both;
+}
+.submit p{
+	margin:0;
+}
+.edit,.next{
+	float:left;
+	margin:0 20px 20px 0;
+}
+.submit a,.edit a,.next a{
+    font-family:'Coda',serif;
+	font-size:20px;
+	text-decoration:none;
+	display:inline-block;
+	zoom: 1;
+	*display: inline;
+	background:#cc3401;
+	padding:0 20px;
+	line-height:40px;
+	color:#fff;
+}
+.submit a:hover,.edit a:hover,.next a:hover{
+	background:#666;
+}
+#divPopUpOpacity{
+	background:url(images/tr.png) repeat;
+	width:100%; height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+}
+#LightBox{
+	position: fixed !important;
+	width: 740px;
+	top: 10% !important;
+	margin: 0 0 0 -370px !important;
+	left: 50% !important;
+	background: #fff;
+	box-shadow: 0 0 140px rgba(0,0,0,0.3),0 0 140px rgba(0,0,0,0.3);
+	display: none;
+	height: auto !important;
+	padding: 20px;
+}
+.r3WebcamSection .submit{
+	clear:none;
+	
+}
+.contentIntro{
+	margin-bottom:10px;
+}
+.edit #lnkNext p{
+	margin:0;
+}
+#lbClose{
+}
+#lbClose a{
+	background:#c00 !important;
+	width:30px !important; height:30px !important;
+	color:#fff;
+	text-align:center !important;
+	line-height:30px;
+	top:-10px; right:-10px;
+	position:absolute;
+	border-radius:100px;
+	cursor:pointer;
+	text-decoration:none !important;
+	padding:0 !important;
+}
+#lbClose a:hover{
+	background:#666 !important;
+}
+fieldset .row label.radio {
+    width: 82px;
+}
+input.radio{
+	float:left;
+	margin-top:8px;
+}
+#rbGender_0{
+	margin-right:50px;
+	margin-left:-15px;
+}
+#ConfirmAbove18{
+	float:left;
+	width:100%;
+	padding:0 0 20px 10px;
+}
+.confirmations .row{
+	clear:both;
+
+}
+.r3UploadSection .submit{
+	clear:both;
+}
+#forgottenPassword .content h2{
+	display:none;
+}
+#forgottenPassword .row label{
+    display: block;
+    float: left;
+    font-family: 'Coda',serif;
+    font-size: 16px;
+    line-height: 30px;
+    width: 200px;
+}
+.checkboxLabel{
+    line-height: 18px !important;
+    margin-left: 10px;
+}
+#forgottenPassword .row {
+    clear: both;
+    margin: 0 0 10px;
+    padding: 5px;
+	overflow:hidden;
+	position:relative;
+}
+#forgottenPassword #ddDOBDay, #forgottenPassword #ddDOBMonth, #forgottenPassword #ddDOBYear{
+	margin:0 20px 0 0;
+}
+#forgottenPassword .example{
+	margin:0;
+}
+#forgottenPassword .content p{
+	clear:both;
+}
+.content{
+	overflow:hidden;
+	min-height:530px;
+}
+#forgottenPassword #lnkBtnSubmit{
+	background:#CC3401;
+	display:block;
+	width:48px;
+	height:42px;
+	left:50%;
+	float:left;
+	text-indent:0;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	position:inherit;
+	top:130px;
+	left:0;
+}
+
+#forgottenPassword #lnkBtnSubmit:hover{
+	background:#666666;
+}
+#forgottenPassword .header{
+	margin-bottom:30px;
+}
+.intellisense{
+	background:#fff;
+}
+.intellisense li{
+	padding:5px 5px !important;
+	border:solid 1px #ccc !important;
+	cursor:pointer;
+}
+#forgottenPassword .submit{
+	margin:0 0 40px;
+}
+#forgottenPassword .row label.checkboxLabel{
+	width:90%;
+	font-size:14px;
+}
+input[type=text].dob{
+	margin:0 10px 0 0;
+}
+
+.registerBoxTitle{
+	text-indent:-100000px;
+}
+.regdetails .row{
+	clear:both;
+	padding:10px 0;
+	border-bottom:solid 1px #ccc;
+	overflow:hidden;
+}
+.regdetails .row:last-child{
+	border:none;
+}
+.brandPreferences input[type=button],
+.regSection1 .address input[type=button],
+#UpdateProfileChange input[type=button]{
+	background:url(images/arrow_bottom.png) no-repeat #c00;
+	color:#fff;
+	width:35px; height:31px;
+	border:none;
+	text-shadow:-100000;
+	cursor:pointer;
+	position:absolute;
+	left:476px;
+	text-indent:-4000px;
+}
+.confirmations a{
+	background: url("images/arrow_bottom-red.png") no-repeat right 6px;
+	padding: 10px 26px 0 0;
+	width: 220px;
+	display: block;
+	cursor:pointer;
+}
+.confirmations .row{
+	padding:10px 0
+}
+.confirmations #ConfirmAbove18{
+	padding:10px 0 0 0px;
+	margin:0 0 20px 0;
+	font-size:10px;	
+}
+.footer .navigation{
+	padding:0;
+}
+.footer .navigation ul{
+	padding:0 70px 0 0;
+}
+.submit a, .edit a, .next a{
+	padding:0 15px;
+}
+fieldset .row{
+	position:relative;
+}
+
+#imgStatusSmokingPrefSubBrand1,
+#imgStatusState,
+#imgStatusCity,
+#imgStatusSmokingPrefSubBrand2{
+	left: 180px;
+    position: absolute;
+    top: 15px;
+}
+.r3WebcamSection ol, 
+.r3WebcamSection ul,
+.r3UploadSection ol,
+.r3UploadSection ul{
+	list-style:decimal;
+}
+#txtStreetName{
+	width:300px;
+	margin:0 0 20px;
+	font-family:'Coda', serif;
+	font-size:14px;
+}
+#checkDetails .error {
+    display: block;
+    float: left;
+    left: 528px;
+    line-height: 35px;
+    margin: 0;
+    position: absolute;
+}
+input[type="text"]#txtSpareText2{
+	width:284px;
+	float:none;
+}
+#ddDOBDay,#ddDOBMonth,#ddDOBYear{
+	height:25px;
+	margin:0 20px 20px 0;
+	float:left;
+}
+.regdetails .left{
+	float:left;
+	width:160px;
+}
+.regdetails .right{
+	float:left;
+}
+#UpdateProfileChange p.col_left{
+	width:410px;
+}
+#UpdateProfileChange #rbGender_0,
+#UpdateProfileChange #rbGender_1{
+	margin-left: 0;
+    margin-right: 10px;
+}
+#UpdateProfileChange .personalInfo .row p{
+	float:none;
+}
+#CompleteTempUser .cautionBox p{
+	font-size:22px;
+}
+#UpdateProfileChange .col_left label.radio{
+	float:right;
+}
+#UpdateProfileChange .col_left input.radio{
+	float:right;
+}
+/*refer friend-----*/
+
+#ReferFriend .row span{
+   display: block;
+    float: left;
+    font-family: 'Coda',serif;
+    font-size: 16px;
+    line-height: 30px;
+    width: 200px;
+}
+#ReferFriend .row .button{
+	background: none repeat scroll 0 0 #CC3401;
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: 'Coda',serif;
+    font-size: 16px;
+    line-height: 30px;
+	margin-left:10px;
+    padding: 0 10px;
+    text-decoration: none;
+	border:none;
+	cursor:pointer;
+}
+#ReferFriend .row .button:hover{
+	background:#666;
+}
+#lst_EmailList{
+	width:310px;
+	float:left;
+	min-height:100px;
+}
+#ReferFriend #lblErrMsg{
+	font-size:12px;
+	clear:both;
+	display:block;
+}
+
+#chkConfirm{
+	float:left;
+}
+.row label.checkboxLabel{
+	width:auto;
+}
+#UpdateProfileChange #chkConfirmAbove18{
+	position:absolute;
+	top:-20px;
+	left:-30px;
+}
+#lblErrorPassword{
+	line-height:30px;
+	margin:0 0 0 10px;
+}
+#CheckTermsandConditions{
+	float:left;
+}
+/*-----------responsive--------*/
+@media only screen and (max-width: 1280px) {
+	.landingPage .mainPage .content{
+		width:75%;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+.footer .navigation li{
+	padding:0 10px;
+}	
+.landingPage .mainPage .content{
+	width:95%;
+}
+#ConfirmAbove18{
+	width:93%;
+}
+#LightBox{
+	left: 3% !important;
+	margin: 0 auto !important;
+	top: 20% !important;
+	width: 80% !important;
+	z-index: 3001;
+}
+.mainPage {
+    width: 850px;
+}
+}
+
+@media only screen and (max-width: 800px) {
+#ReferFriend .content{
+	min-height:690px;
+}
+#ReferFriend .row .button{
+	margin:0;
+}
+#LightBox{
+	position:absolute !important;
+}
+#ReferFriend .row #lblEmailId,
+#ReferFriend .row span{
+	width:300px;
+}
+#ReferFriend #btnAdd{
+	margin-bottom:10px;
+}
+#ReferFriend #txt_EmailID{
+	width:310px;
+}
+#lst_EmailList{
+	margin:10px 0;
+}
+.landingPage .mainPage {
+	max-width:502px;
+	margin:0 auto;
+}
+#reg1 .mainPage{
+	width:88%;
+}
+#UpdateProfileChange p.col_left{
+	width:375px;
+}
+.content{
+	height:auto;
+}
+.landingPage .mainPage .content{
+	background:url(images/bg_login2.png) no-repeat;
+}
+#forgottenPassword .mainPage{
+	width:425px;
+}
+.footer{
+	background:url("images/18+.png") no-repeat scroll right 20px #FFFFFF;	
+}
+.footer{
+	font-size:10px;
+}
+.footer .text {
+    padding: 10px 20px;
+}
+
+.footer .navigation {
+    padding: 0 15px 0 0;
+}
+fieldset .row label, p.col_left{
+	width:165px;
+}
+.mainPage{
+	width:88%;
+}
+#ConfirmAbove18 {
+    width: 90%;
+}
+#LightBox{
+	left: 3% !important;
+	margin: 0 auto !important;
+	top: 20% !important;
+	width: 80% !important;
+	z-index: 3001;
+}
+#LightBox #ContentID{
+	padding:0;
+}
+#imgStatusSmokingPrefSubBrand1, #imgStatusState, #imgStatusCity{
+	left: 85px;
+    position: absolute;
+    top: 10px;
+}
+.brandPreferences input[type="button"], .regSection1 .address input[type="button"], #UpdateProfileChange input[type="button"]{
+	left:361px;
+}
+#reg1 #imgStatusSmokingPrefSubBrand1{
+	left:145px;
+}
+#imgStatusSmokingPrefSubBrand2{
+	left: 140px;
+    position: absolute;
+    top: 10px;
+}
+input[type="text"], #txtPassword, #txtConfirmPassword,#txtStreetName{
+	width:220px;
+}
+input#txtSpareText2[type="text"]{
+	width:205px;
+}
+#reg1 imgStatusSmokingPrefSubBrand1{
+	left:145px;
+}
+}
+@media only screen and (max-width: 400px) {
+
+#lst_EmailList,
+#ReferFriend #txt_EmailID{
+	width:230px;
+}
+#ReferFriend .row .button{
+	margin-top:10px;
+	margin-left:0px;
+}
+#ReferFriend .row #btnAdd{
+	margin-top:0;
+	margin-bottom:30px;
+}
+#ReferFriend .row #lblEmailId{
+	width:200px;
+}
+.brandPreferences input[type="button"], .regSection1 .address input[type="button"], #UpdateProfileChange input[type="button"]{
+	left:200px;
+	top:31px;
+}
+	.landingPage .mainPage .content{
+		background-size:755px 720px;
+		background-position:0 80px;
+		min-height:675px;
+}
+fieldset .row label, p.col_left{
+	width:100%;
+}
+#ConfirmAbove18 {
+    width: 85%;
+}
+#forgottenPassword .mainPage{
+	width:300px;
+}
+#forgottenPassword .row label{
+	width:270px;
+}
+#forgottenPassword .row label.checkboxLabel{
+	width:85%;
+}
+#checkDetails fieldset.address .row{
+	width: 95%;
+}
+#reg1 #lnkSubmitBtn{
+	font-size:18px;
+}
+#UpdateProfileChange p.col_left {
+    width: 305px;
+}
+.row label.checkboxLabel{
+	width:85%;
+}
+#lblError{
+	margin:0 0 0 30px;
+}
+#forgottenPassword .error,#forgottenPassword .checkboxError,#reg1 .error,#checkDetails .error{
+	position:inherit;
+	top:auto;
+	left:auto;
+	clear:both;
+}
+input[type=text], #txtPassword, #txtConfirmPassword{
+	margin:0 0 10px 0;
+}
+}
+@media only screen and (max-width: 350px) {
+#ReferFriend .submit a{
+	font-size:14px;
+}
+	.landingPage .mainPage .content{
+		background-size:690px 658px;
+			margin:-90px auto;
+	min-height:675px;
+}
+#UpdateProfileChange p.col_left{
+	width:200px;
+	margin-bottom:20px;
+	overflow:hidden;
+}
+#lnkBtnForgotPwd {
+    left: 90px;
+    top: 510px;
+}
+.loginBox{
+	left:10px;
+}
+#lnkBtnSubmit, #lnkBtnRegister{
+	top:135px;
+}
+#lnkBtnRegister{
+	left:-20px;
+}
+.mainPage{
+	width:250px;
+}
+.footer{
+	background:url("images/18+.png") no-repeat scroll right 95px #FFFFFF;
+}
+.regdetails .left{
+	width:125px;
+}
+.edit, .next{
+	margin:0 15px 20px 0;
+}
+}

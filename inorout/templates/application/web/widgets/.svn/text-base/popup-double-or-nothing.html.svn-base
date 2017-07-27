@@ -1,0 +1,15 @@
+<div class="popup popup-double-or-nothing" id="popup-double-or-nothing">
+    <div class="popupContainer center">
+		<a class="closePopup" href="#">[CLOSE X]</a>
+    	<div class="popup-head">
+        	<h2 class="bigTItle"><img src="{$basedomain}assets/images/content/doubleOrNothing.png" /></h2>
+            <h3>Ikuti tantangan ini untuk mendapatkan DOBEL BADGE!</h3>
+        </div><!-- END .popup-head -->
+    	<div class="popup-entry">
+            <h1>ARE YOU</h1>
+            <a href="#" class="in-btn">&nbsp;</a>
+            <span class="or-txt">&nbsp;</span>
+            <a href="#" class="out-btn">&nbsp;</a>
+        </div><!-- END .popup-entry -->
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->

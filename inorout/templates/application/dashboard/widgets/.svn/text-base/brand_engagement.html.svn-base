@@ -1,0 +1,6 @@
+<script type="text/x-handlebars" data-template-name="index">
+    <div id="index">
+        <div class="content-chart">                     
+        </div>
+    </div>
+</script>

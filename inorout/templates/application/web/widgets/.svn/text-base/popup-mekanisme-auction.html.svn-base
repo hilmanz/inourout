@@ -1,0 +1,20 @@
+
+<div class="popup" id="popup-mekanisme-auction">
+    <div class="popupContainer">
+		<a class="closePopup" href="#">[CLOSE X]</a>
+    	<div class="popup-head">
+        	<h2 class="bigTItle">MEKANISME AUCTION</h2>
+        </div><!-- END .popup-head -->
+        <div class="popup-entry popup-global">
+            <ul class="usefont">
+            	<li>Pastikan jumlah poin badge kamu cukup untuk melakukan Auction</li>
+            	<li>Pilih item favorit dan pasang bid kamu dengan poin lebih besar dari jumlah poin minimum yang diperlukan</li>
+            	<li>Bid ulang diperbolehkan setelah 2 peserta lain memasang bid mereka</li>
+            	<li>Pemenang adalah peserta dengan nilai tertinggi pada saat penutupan waktu bid</li>
+            	<li>Badge yang sudah dikonversi menjadi poin tidak dapat digunakan untuk hal lain sampai proses Auction selesai</li>
+            	<li>Peserta yang tidak menang auction akan mendapatkan kembali badgenya</li>
+                <li>Peserta hanya dapat memenangkan auction maksimal 2 (dua) kali dengan hadiah yang berbeda</li>
+            </ul>
+        </div><!-- END .popup-entry -->
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->

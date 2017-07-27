@@ -1,0 +1,11 @@
+<div class="popup" id="popup-trade-success">
+    <div class="popupContainer center">
+		<a class="closePopup" href="#">[CLOSE X]</a>
+    	<div class="popup-head">
+        	<h2><img src="{$basedomain}assets/images/content/placing_trade.png" /></h2>
+            <div class="post postMessages">
+                    
+            </div><!-- end .post -->
+        </div>
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->

@@ -1,0 +1,73 @@
+<div id="reddemPrize" class="container">
+	<div class="entry-container center">
+    	<div id="box-content" class="relative">
+        <a class="closing" href="{$basedomain}badges/trading">[CLOSE X]</a>
+        	<div id="head-content">
+                <h1><span class="reds">Placing</span> <span class="black">Trade</span></h1>
+            </div><!-- END #head-content -->
+            <div id="entry-content">
+            	<form id="tradeFormConfirm" method="post" action="{$basedomain}badges/tradeProceed">
+				<input type="hidden" name="tradeID" value="{$tradeID}"/>
+				<input type="hidden" value="1" name="ajax"/>
+				<div class="post postMessages">
+                	<h2 style="text-align:center;">Apakah kamu yakin ingin tukar badges ini?</h2>
+                   
+					<div class="captchaTrad">
+                    	<img src="{$imgName}" class="loaderImg">
+                        <input class="captchaMath" type="text" name="captchaMath">
+                    </div><!-- END #head-content -->
+                    
+					
+						
+						<div style="width:140px;display:block;margin:20px auto 0;" class="butonAftercaptcha">
+							
+							{*}
+							<input type="submit" value="Yes" class="orangebtn fl" />
+							<input type="button" value="No" class="orangebtn closethis fr " />
+							{/*}
+						</div>
+					
+                </div>
+				</form>
+            </div><!-- END .entry-content -->
+                
+         </div><!-- END .box-content -->
+    </div><!-- END .entry-container -->
+</div><!-- END .placingBid -->
+
+{literal}
+	<script>
+		
+$(document).on('keyup','.captchaMath',function(){
+		
+		var capctha = $(this).val();
+		 var data = {};
+		 var str="";
+		 data.url=basedomain+'badges/checkcaptcha';
+		data.params={ajax:1,capctha:capctha};
+		data.type="json";
+		console.log(data.params);
+		 $("#popup-trade-success .postMessages .orangebtn").remove();
+		post_json(data).done(function(response){
+		
+			if(response.status==1)
+			{
+				var randInt = Math.floor((Math.random()*10)+1);
+				if(randInt%2==0){
+					str+='<input type="submit" value="Yes" class="orangebtn fl" />';
+					str+='<input type="button" value="No" class="orangebtn closethis fr cancelTrading" />';
+				}else{
+					str+='<input type="submit" value="Yes" class="orangebtn fl" />';
+					str+='<input type="button" value="No" class="orangebtn closethis fr cancelTrading" />';
+				}
+				 $(".butonAftercaptcha").html(str);
+				 console.log(response);
+			}
+		});
+	});
+	
+	$(document).on('click','.cancelTrading', function(){
+		window.location.href=basedomain+'badges/trading';
+	})
+	</script>
+{/literal}

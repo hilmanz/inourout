@@ -1,0 +1,21 @@
+<div id="reddemPrize" class="container">
+	<div class="entry-container center">
+    	<div id="box-content" class="relative">
+        <a class="closing" href="{$basedomain}badges/trading">[CLOSE X]</a>
+        	<div id="head-content">
+                <h1><span class="reds">Placing</span> <span class="black">Trade</span></h1>
+            </div><!-- END #head-content -->
+            <div id="entry-content">
+            	 <div class="post postMessages">
+					{if $success}
+                    <h1>{$success.title}</h1>
+                    <h2>{$success.desc}</h2>
+					{else}
+					<h2>{$failed}</h2>
+					{/if}
+            	</div><!-- end .post -->
+            </div><!-- END .entry-content -->
+                
+         </div><!-- END .box-content -->
+    </div><!-- END .entry-container -->
+</div><!-- END .placingBid -->

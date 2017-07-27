@@ -1,0 +1,56 @@
+<head>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+	<title>Dashboard Inorout</title>
+	<!--Stylesheets-->
+
+	<!-- Bootstrap core CSS -->
+	<link href="{$assets_domain}css/bootstrap.css" rel="stylesheet">
+
+	<!-- Add custom CSS here -->
+	<link href="{$assets_domain}css/inorout-dashboard.css" rel="stylesheet">
+	<link href="{$assets_domain}css/icomoon.css" rel="stylesheet">
+	<link rel="stylesheet" href="{$assets_domain}font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="{$assets_domain}css/datepicker.css" type="text/css"  media="all" />
+	<!-- Page Specific CSS -->
+	<link rel="stylesheet" href="https://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+	<!--Favicon-->
+
+    <script src="{$assets_domain}js/jquery-1.10.2.js"></script>
+    <script src="{$assets_domain}js/bootstrap.js"></script>
+    <script src="{$assets_domain}js/bootstrap-datepicker.js"></script>
+    
+	<script type="text/javascript" src="{$assets_domain}js/libs/handlebars-1.1.2.js"></script>
+	<script type="text/javascript" src="{$assets_domain}js/libs/ember-1.3.1.js"></script>
+	<script type="text/javascript" src="{$assets_domain}js/libs/ember-data.js"></script>
+	<script type="text/javascript" src="{$assets_domain}js/libs/highcharts.js"></script>
+	<script type="text/javascript" src="{$assets_domain}js/libs/exporting.js"></script>
+	<script type="text/javascript" src="{$assets_domain}js/kipagination.js"></script>
+         
+    
+    <!-- Page Specific Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="{$assets_domain}js/morris/morris-0.4.3.min.js"></script>
+    {*}<script src="{$assets_domain}js/morris/chart-data-morris.js"></script>{/*}
+    <script src="{$assets_domain}js/tablesorter/jquery.tablesorter.js"></script>
+    <script src="{$assets_domain}js/tablesorter/tables.js"></script>
+    <!--[if lte IE 8]><script src="js/excanvas.min.js"></script><![endif]-->
+	<script src="{$assets_domain}js/flot/jquery.flot.js"></script>
+	<script src="{$assets_domain}js/flot/jquery.flot.tooltip.min.js"></script>
+	<script src="{$assets_domain}js/flot/jquery.flot.resize.js"></script>
+	<script src="{$assets_domain}js/flot/jquery.flot.pie.js"></script>
+	<script type="text/javascript" src="{$assets_domain}js/php.js"></script>
+	<script type="text/javascript" src="{$assets_domain}js/app.js"></script>
+	<script type="text/javascript" src="{$assets_domain}js/kidashboard.js"></script>
+	<script type="text/javascript" src="{$assets_domain}js/charts.js"></script>
+	
+	{*}<script src="{$assets_domain}js/flot/chart-data-flot.js"></script>{/*}
+	<script type="text/javascript" src="{$assets_domain}js/scripts.js"></script>
+	
+</head>
+
+<script type="text/javascript">
+	var basedomain = "{$basedomain}";
+	var assets_domain = "{$assets_domain}";
+</script>

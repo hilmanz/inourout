@@ -1,0 +1,46 @@
+<div id="footer">
+	<div class="footer-marlboro">
+		<img src="{$basedomain}assets/images/mobile/footer-marlboro.png" />
+    </div>
+    <div class="hw">
+    	<div class="boxfooter">
+            <div class="universal infoWeb">
+                <p>Informasi dalam website ini di tujukan untuk perokok berusia 18 tahun atau lebih dan tinggal di wilayah Indonesia</p>
+            </div><!-- END .universal -->
+        </div>
+    	<div class="boxfooter menuFooter">
+            <div class="universal">
+                <a href="{$basedomain}profile">Halaman Utama</a>|
+                <a href="{$mopurl}Templates/Termsandconditions.aspx" target="_blank">Syarat dan Ketentuan</a>|
+                <a href="{$mopurl}Templates/RemoveMe.aspx" target="_blank">Hapus Saya</a>|
+                <a href="{$mopurl}Templates/FAQ.aspx" target="_blank">Daftar Pertanyaan</a>|
+                <a href="{$mopurl}Templates/Contactus.aspx" target="_blank">Kontak Kami</a>|
+                <a href="https://www.pmi.com/id/smokingandhealth" target="_blank">Perihal Merokok</a>
+            </div><!-- END .universal -->
+        </div><!-- END .boxfooter -->
+        {if $pages == 'profile'}
+        <div class="boxfooter hwFooter">
+        	 
+        	<div class="hwSkull"></div>
+            <div class="universal hw18">
+                <p >PERINGATAN: <br />MEROKOK MEMBUNUHMU</p>
+            </div><!-- END .universal -->
+            
+        </div>
+        {/if}
+    </div><!-- END .hw -->
+</div><!-- END #footer -->
+<!--div id="hw">
+    <div class="universal">
+  	 <img src="{$basedomain}assets/images/hw.png" />
+    </div><!-- END .universal -->
+<!--/div><!-- END #hw -->
+
+{if $pages == 'badges' && $acts == 'trading'}
+<script type="text/javascript" src="{$basedomain}assets/js/modules/trading.js"></script>
+{/if}
+
+{if $pages == 'badges' && $acts == 'tradingFind'}
+<script type="text/javascript" src="{$basedomain}assets/js/modules/trading.js"></script>
+{/if}
+

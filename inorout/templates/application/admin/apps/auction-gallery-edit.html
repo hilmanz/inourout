@@ -1,0 +1,88 @@
+<div id="theContainer" class="inboxPage">
+    <div class="theContainer">
+        <div class="head-title">
+            <h1 class="fl">Input  Auction Queue Images</h1>
+        </div> <!-- /.head-title -->
+        <div>
+            <form method="POST" action="{$basedomain}auctionGallery/editData" enctype="multipart/form-data">
+			<table border=1>
+				<tr>
+					<td>latest Queue Date</td>
+					<td>:</td>
+					<td>{$list.end_date}</td>
+				</tr>
+				<tr>
+					<td>image</td>
+					<td>:</td>
+					<td>
+						{if $list.images}
+							<img src="{$basedomainpath}public_assets/auctions/{$list.images}" width="100px" height="100px"/>
+						{/if}
+						<input type="file" name="images" value="" />
+					</td>
+				</tr>							 
+				<tr>
+					<td>Clues</td>
+					<td>:</td>
+					<td><textarea  class="half-width" id="clues" name="clues" value="" >{$list.clues}</textarea></td>
+				</tr> 
+				
+				 
+				<tr>
+					<td>Status</td>
+					<td>:</td>
+					<td>
+						<select name="n_status">
+							<option value="2" {if $list.n_status==2}selected="selected"{/if}>unpublished</option>
+							<option value="1" {if $list.n_status==1}selected="selected"{/if}>publish</option>
+							<option value="3" {if $list.n_status==2}selected="selected"{/if}>deleted</option>
+						</select>
+					</td>
+				</tr>		
+				<tr>
+					<td colspan="3" >
+						<input type="hidden" name="itemid" value="{$itemid}" />  
+						<input type="hidden" name="auctionid" value="{$list.auctionid}" />  
+						<input type="hidden" name="posteddate" value="{$posteddate}" /> 
+						<input type="hidden" name="enddate" value="{$enddate}" /> 
+						<input type="submit" name="submit" value="submit" />
+						<div class="nav">
+								<ul class="menu"> 
+									<li><a href="{$basedomain}auctionGallery/seegallery?id={$aid}">Back to Gallery</a></li> 
+								</ul>
+						</div>
+					</td>
+				</tr>
+			</table>
+            </form>
+				
+		</div>
+	</div>
+</div>
+
+<script>
+{literal}
+	$(document).on('change','.eventType', function(){
+		var type = $(this).val();
+		if (type==3){
+			$('.city').css('display','');
+		}else{
+			$('.city').css('display','none');
+		}
+		
+		
+		$.post(basedomain+'gallery/getListAlbum', {type:type}, function(data){
+		
+			var html = "";
+			if (data.status==true){
+				$.each(data.res, function(i,e){
+					html += "<option value='"+e.id+"'>"+e.title+"</option>";
+				})
+				
+				$('.albumType').html(html);
+			}
+			
+		},"JSON")
+	})
+{/literal}
+</script>

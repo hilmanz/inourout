@@ -1,0 +1,95 @@
+
+<div class="tabEntry">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="pastAuction">
+	{if $pastauction.result}
+	{foreach $pastauction.result as $k => $v} 
+      <tr class="{$v.queue}">
+        <td valign="top">
+            <a class="thumbPrizes"><img src="{$v.auctions.image_full_path}" /></a>
+        </td>
+        <td valign="top">
+            <div class="prizeDesc">
+            	<p class="date">{$v.start_date|date_format:"%e %B %Y"}</p>
+                <h3>{$v.title}</h3>
+                <p>{$v.content}</p>
+            </div> 
+        </td>
+        <td valign="top">
+            <div class="auctionWinner">
+                <h3>Auction winner:</h3>
+                <div class="userWinner">
+        			<a class="small-thumb"><img src="{$v.profile.image_full_path}" /></a>
+                    <div class="fl">
+                        <h2 class="account-name">{$v.name} {$v.last_name}</h2>
+                    </div> 
+                </div> 
+            </div> 
+        </td>
+      </tr>
+       {/foreach}
+       
+    {else}
+        	<div class="nowin">
+                <img src="{$basedomain}assets/images/auction.png" />
+                <h3>Belum ada kegiatan Auction.<br />
+				Cek Today's Auction untuk ikutan dan memasang bid kamu!</h3>
+    		</div>
+    {/if}
+    </table>
+    <div id="pastAuctionPaging" class="pagingbox"></div>
+</div> 
+<script type="text/javascript">
+    var total_pastauction = {$pastauction.total};
+    var start = 0;
+    {literal}
+        $(document).ready(function(){
+            if(total_pastauction>5){
+                if(start==0){
+                    start=1;
+                    kiPagination(total_pastauction, start, 'pastAuctionPaging', {}, 'load_past_auction', 5);
+                }
+            }
+        });
+    function load_past_auction (method,start) {
+        var data = {};
+        data.url='../badges/pastauction';
+        data.params={ajax:1,start:start};
+        data.type="json";
+        
+        post_json(data).done(function(response){ 
+            try{
+                var str = '';
+                $.each(response.result,function(k,v){
+
+                    str+='<tr class="'+v.queue+'">';
+                        str+='<td valign="top">';
+                            str+='<a href="#" class="thumbPrizes"><img src="'+v.auctions.image_full_path+'" /></a>';
+                        str+='</td>';
+                        str+='<td valign="top">';
+                            str+='<div class="prizeDesc">';
+                                str+='<p class="date">'+date('j F Y', v.start_date)+'</p>';
+                                str+='<h3>'+v.title+'</h3>';
+                                str+='<p>'+v.content+'</p>';
+                            str+='</div>'; 
+                        str+='</td>';
+                        str+='<td valign="top">';
+                            str+='<div class="auctionWinner">';
+                                str+='<h3>Auction winner:</h3>';
+                                str+='<div class="userWinner">';
+                                    str+='<a href="javascript:void(0)" class="small-thumb"><img src="'+v.profile.image_full_path+'" /></a>';
+                                    str+='<div class="fl">';
+                                        str+='<h2 class="account-name">'+v.name+' '+v.last_name+'</h2>';
+                                    str+='</div> ';
+                                str+='</div> ';
+                            str+='</div> ';
+                        str+='</td>';
+                    str+='</tr>';
+                });
+                $('#pastAuction').html(str);
+            }catch(e){}
+        });
+    }
+    {/literal}
+
+    
+</script>

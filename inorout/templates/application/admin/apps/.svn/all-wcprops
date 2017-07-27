@@ -1,0 +1,245 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/marlboro-in-or-out/!svn/ver/987/trunk/inorout/templates/application/admin/apps
+END
+auction-update.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/marlboro-in-or-out/!svn/ver/868/trunk/inorout/templates/application/admin/apps/auction-update.html
+END
+gallery-edit.html
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/marlboro-in-or-out/!svn/ver/372/trunk/inorout/templates/application/admin/apps/gallery-edit.html
+END
+badges-input.html
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/marlboro-in-or-out/!svn/ver/806/trunk/inorout/templates/application/admin/apps/badges-input.html
+END
+trade-monitoring.html
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/marlboro-in-or-out/!svn/ver/43/trunk/inorout/templates/application/admin/apps/trade-monitoring.html
+END
+auction-gallery-edit.html
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/marlboro-in-or-out/!svn/ver/870/trunk/inorout/templates/application/admin/apps/auction-gallery-edit.html
+END
+list-user.html
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/marlboro-in-or-out/!svn/ver/554/trunk/inorout/templates/application/admin/apps/list-user.html
+END
+yellowcab-code.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/marlboro-in-or-out/!svn/ver/316/trunk/inorout/templates/application/admin/apps/yellowcab-code.html
+END
+gallery-input.html
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/marlboro-in-or-out/!svn/ver/372/trunk/inorout/templates/application/admin/apps/gallery-input.html
+END
+auction-gallery-input.html
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/marlboro-in-or-out/!svn/ver/870/trunk/inorout/templates/application/admin/apps/auction-gallery-input.html
+END
+notification_add.html
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/marlboro-in-or-out/!svn/ver/372/trunk/inorout/templates/application/admin/apps/notification_add.html
+END
+auction-pages.html
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/marlboro-in-or-out/!svn/ver/915/trunk/inorout/templates/application/admin/apps/auction-pages.html
+END
+auction-input.html
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/marlboro-in-or-out/!svn/ver/868/trunk/inorout/templates/application/admin/apps/auction-input.html
+END
+badge-pages.html
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/marlboro-in-or-out/!svn/ver/700/trunk/inorout/templates/application/admin/apps/badge-pages.html
+END
+cotw-edit.html
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/marlboro-in-or-out/!svn/ver/987/trunk/inorout/templates/application/admin/apps/cotw-edit.html
+END
+merchandise-update.html
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/marlboro-in-or-out/!svn/ver/562/trunk/inorout/templates/application/admin/apps/merchandise-update.html
+END
+generate-code.html
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/marlboro-in-or-out/!svn/ver/915/trunk/inorout/templates/application/admin/apps/generate-code.html
+END
+event-edit.html
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/marlboro-in-or-out/!svn/ver/336/trunk/inorout/templates/application/admin/apps/event-edit.html
+END
+badges-update.html
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/marlboro-in-or-out/!svn/ver/806/trunk/inorout/templates/application/admin/apps/badges-update.html
+END
+changepassword.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/marlboro-in-or-out/!svn/ver/256/trunk/inorout/templates/application/admin/apps/changepassword.html
+END
+item-management.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/marlboro-in-or-out/!svn/ver/43/trunk/inorout/templates/application/admin/apps/item-management.html
+END
+auction-album-list.html
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/marlboro-in-or-out/!svn/ver/870/trunk/inorout/templates/application/admin/apps/auction-album-list.html
+END
+share-and-brag.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/marlboro-in-or-out/!svn/ver/987/trunk/inorout/templates/application/admin/apps/share-and-brag.html
+END
+event-pages.html
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/marlboro-in-or-out/!svn/ver/591/trunk/inorout/templates/application/admin/apps/event-pages.html
+END
+event-input.html
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/marlboro-in-or-out/!svn/ver/336/trunk/inorout/templates/application/admin/apps/event-input.html
+END
+merchandise-pages.html
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/marlboro-in-or-out/!svn/ver/886/trunk/inorout/templates/application/admin/apps/merchandise-pages.html
+END
+merchandise-input.html
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/marlboro-in-or-out/!svn/ver/562/trunk/inorout/templates/application/admin/apps/merchandise-input.html
+END
+aspiration-list.html
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/marlboro-in-or-out/!svn/ver/295/trunk/inorout/templates/application/admin/apps/aspiration-list.html
+END
+notification-pages.html
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/marlboro-in-or-out/!svn/ver/352/trunk/inorout/templates/application/admin/apps/notification-pages.html
+END
+notification_edit.html
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/marlboro-in-or-out/!svn/ver/372/trunk/inorout/templates/application/admin/apps/notification_edit.html
+END
+news-update.html
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/marlboro-in-or-out/!svn/ver/608/trunk/inorout/templates/application/admin/apps/news-update.html
+END
+auction-winner.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/marlboro-in-or-out/!svn/ver/966/trunk/inorout/templates/application/admin/apps/auction-winner.html
+END
+offline-badges.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/marlboro-in-or-out/!svn/ver/189/trunk/inorout/templates/application/admin/apps/offline-badges.html
+END
+gallery-album-list.html
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/marlboro-in-or-out/!svn/ver/162/trunk/inorout/templates/application/admin/apps/gallery-album-list.html
+END
+administrator-home.html
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/marlboro-in-or-out/!svn/ver/269/trunk/inorout/templates/application/admin/apps/administrator-home.html
+END
+gallery-list.html
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/marlboro-in-or-out/!svn/ver/162/trunk/inorout/templates/application/admin/apps/gallery-list.html
+END
+auction-gallery-list.html
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/marlboro-in-or-out/!svn/ver/851/trunk/inorout/templates/application/admin/apps/auction-gallery-list.html
+END
+news-pages.html
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/marlboro-in-or-out/!svn/ver/917/trunk/inorout/templates/application/admin/apps/news-pages.html
+END
+news-input.html
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/marlboro-in-or-out/!svn/ver/608/trunk/inorout/templates/application/admin/apps/news-input.html
+END
+cotw-pages.html
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/marlboro-in-or-out/!svn/ver/987/trunk/inorout/templates/application/admin/apps/cotw-pages.html
+END
+redeem-list.html
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/marlboro-in-or-out/!svn/ver/840/trunk/inorout/templates/application/admin/apps/redeem-list.html
+END

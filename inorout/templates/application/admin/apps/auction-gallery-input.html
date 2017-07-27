@@ -1,0 +1,99 @@
+<div id="theContainer" class="inboxPage">
+    <div class="theContainer">
+        <div class="head-title">
+            <h1 class="fl">Input Auction Queue Images</h1>
+        </div> <!-- /.head-title -->
+         <div class="formContent">
+            <form method="POST" action="{$basedomain}auctionGallery/newDataInput" enctype="multipart/form-data">
+			<table border=1>
+				<tr>
+					<td>New Queue Date</td>
+					<td>:</td>
+					<td>{$enddate}</td>
+				</tr>
+				<tr>
+					<td>image</td>
+					<td>:</td>
+					<td><input type="file" name="images" value="" /></td>
+				</tr>	
+				<tr>
+					<td>Clues</td>
+					<td>:</td>
+					<td><textarea  class="half-width" id="clues" name="clues" value="" ></textarea></td>
+				</tr> 
+				
+				 
+				<tr>
+					<td colspan="3" >
+						<input type="submit" name="submit" value="submit" /> 
+						
+						<input type="hidden" name="n_status" value="1" /> 
+						<input type="hidden" name="posteddate" value="{$posteddate}" /> 
+						<input type="hidden" name="enddate" value="{$enddate}" /> 
+						<input type="hidden" name="auctionid" value="{$auctionid}" />
+						<div class="nav">
+								<ul class="menu"> 
+									<li><a href="{$basedomain}auctionGallery/seegallery?id={$auctionid}">Back to Gallery</a></li> 
+								</ul>
+						</div>
+					</td>
+				</tr>
+			</table>
+            </form>
+			 
+		</div>
+	</div>
+</div>
+
+<script>
+{literal}
+	$(document).on('change','.eventType', function(){
+		var type = $(this).val();
+		var html = "";
+		if (type==3){
+		
+			$.post(basedomain+'gallery/ajaxCity', {type:true}, function(data){
+		
+				
+				if (data.status==true){
+					
+					html += "<td>City</td>";
+					html += "		<td>:</td>";
+					html += "		<td>";
+					html += "			<select name='city'>";
+					$.each(data.res, function(i,e){
+						html += "<option value='"+e.id+"'>"+e.city+"</option>";
+					})
+					
+					html += "			</select>";
+					html += "		</td>";
+			
+					
+				
+				}else{
+					html += "";
+				}
+			
+				$('.city').html(html);
+				
+			},"JSON")
+		
+		}else{
+			$('.city').html(html);
+		}
+		
+		$.post(basedomain+'auctionGallery/getListAlbum', {type:type}, function(data){
+		
+			var html = "";
+			if (data.status==true){
+				$.each(data.res, function(i,e){
+					html += "<option value='"+e.id+"'>"+e.title+"</option>";
+				})
+				
+				$('.albumType').html(html);
+			}
+			
+		},"JSON")
+	})
+{/literal}
+</script>

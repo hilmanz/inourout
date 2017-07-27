@@ -1,0 +1,154 @@
+<div id="theContainer" class="galleryPage">
+    <div class="theContainer">
+			
+        <div class="theContent">
+        	<div class="section">
+           	<div class="col3" style="width:100%;">
+						<form method="POST" action="{$basedomain}generateCode/doit" id="generatecodeform" >
+							<table style="width:100%;">
+								<tr><td>How Many: </td><td><input type="text" name="iteration" /></td></tr>
+								<tr>
+									<td>Channel :</td>
+									<td>
+										<select name="channel">
+											<option value="" selected >-</option>
+											{foreach $channellistdropdown as $key => $val}
+												<option value="{$val.id}">{$val.channel|upper}</option>
+											{/foreach} 
+										</select>
+									</td>
+									<!-- <td><input type="text" name="channel" /></td> -->
+								</tr>
+								<tr>
+									<td>Type :</td>
+									<td>
+										<select name="type">
+											<option value="" selected >-</option>
+											<option value="0">Common</option>
+											<option value="1">Special</option>
+											<option value="2">Rare</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>Reusable Type :</td>
+									<td>
+										<select name="reusedable">
+											<option value="" selected >-</option>
+											<option value="0">Single User</option>
+											<option value="1">Multi User</option> 
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>Sub Channel: </td>
+									<td>
+										<select name="subchannel">
+											<option value="" selected >-</option>
+											{foreach $subchannellistdropdown as $key => $val}
+												<option value="{$val.id}">{$val.sub_channel|upper}</option>
+											{/foreach} 
+										</select>
+									</td>
+									<!-- <td><input type="text" name="subchannel" /></td> -->
+								</tr>
+								<tr><td> <input type="submit" class="btnSubmit"  value="generates"  /> </td></tr>
+								
+								 <span class="messageinputcode" ></span>
+								 
+							</table>
+						</form>
+						<br />
+						<form method="POST" action="{$basedomain}generateCode" id="generatecodeformdownload" >
+								Sub Channel: &nbsp;&nbsp;
+								<select name="subchannel" class="submitter subchannel">
+											<option value="" selected >-</option>
+											{foreach $subchannellistdropdown as $key => $val}
+												<option value="{$val.sub_channel}">{$val.sub_channel|upper}</option>
+											{/foreach} 
+										</select>
+								Date Range&nbsp;&nbsp;
+								<input type="text" class="half-width" id="datepicker" name="startdate" value="{$startdate}" style="width:100px" />&nbsp;&nbsp;
+								<span>to</span>&nbsp;&nbsp;
+								<input type="text" class="half-width submitter" id="datepicker2" name="enddate" value="{$enddate}" style="width:100px"  />
+								{*}&nbsp;&nbsp;<input type='submit' class="btn btn_document" value='Download XLS' />{/*}
+								&nbsp;&nbsp;<a href="javascript:void(0)" class="btn btn_document downloadreport" target="_blank">Download XLS</a>
+							</form><br /><br/>
+						<table style="width:100%;" id="generatepages">
+							
+							<tr>
+								<th>id</th>
+								<th>code</th>
+								<th>channel</th>
+								<th>sub channel</th>
+								<th>use able</th>
+								<th>created date</th>
+							</tr>
+							<tbody class="generatecodepaging">
+							{foreach from=$codelist key=k item=v}
+								<tr><td>{$v.id}</td><td>{$v.code}</td><td>{$v.code_channel}</td><td>{$v.code_sub_channel}</td><td>{$v.code_reused}</td><td>{$v.created_date}</td></tr>
+							{/foreach}
+							</tbody>
+						</table>
+						 <div class="pagingbox" id="pagingbadge"></div><!-- END .pagingbox -->
+            </div> <!-- /.col3 -->
+	        </div> <!-- /.section -->
+        </div> <!-- /.theContent --> 
+				 
+    </div> <!-- /.theContainer -->
+</div> <!-- /#theContainer -->  
+
+<script>
+	
+	getpaging(0,{$total},"pagingbadge","load_generate_code",10);
+{literal}
+	var updateoptions = {
+	dataType:  'json', 	
+	beforeSubmit: function(data) { 
+			 
+			/* $(".global-popup-inorout").trigger("click");	*/
+			$(".messageinputcode").html("please wait");
+			$(".thecodes").val("");
+			 
+	},
+	success : function(data) {		
+			
+			if(data){
+						
+						var html ="";
+						html = "<p class='postSucces'>"+data.message+"</p>";
+						/* $(".global-popup-inorout").trigger("click"); */		
+						$(".messageinputcode").html(html);				  
+					 
+			}
+				 
+	}
+	};					
+
+	$("#generatecodeform").ajaxForm(updateoptions);
+	 
+	
+	$(document).on('change','.submitter', function(){
+		
+			$("#generatecodeformdownload").submit();
+		
+		})
+	//load_generate_code(false,0);
+	
+	$(document).on('click','.downloadreport', function(){
+		
+		var sortDataFrom = $('#datepicker').val();
+		var sortDataTo = $('#datepicker2').val();
+		var subchannel = $('.subchannel').val();
+		
+		console.log(sortDataFrom);
+		console.log(sortDataTo);
+		
+		//$(this).attr('href',basedomain);
+		window.open(basedomain+'generateCode/downloadit'+'?subchannel='+subchannel+'&startdate='+sortDataFrom+'&enddate='+sortDataTo, '_blank');
+		//win.focus();
+		//window.location.href=basedomain+'generateCode/downloadit';
+		return false;
+	});
+</script>
+{/literal}

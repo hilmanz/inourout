@@ -1,0 +1,298 @@
+<div id="profilePage" class="container">
+    <div class="entry-container">
+        <div class="col">
+            <div class="col2">
+                <div id="profile-box">
+                    <div class="profile-head">
+                        <h3><img src="{$basedomain}assets/images/t_myprofile.png" /></h3>
+                        <div class="profilenav">
+                            <a href="#popup-edit-photo" class="showPopup editphoto">Edit Photo</a>
+                            <a href="{$basedomain}updateaccount" class="editprofile">Edit Account</a>
+                            {*}<a href="{$basedomain}logout.php" class="logoutprofile">Logout</a>{/*}
+                        </div><!-- END .profilenav -->
+                       
+                    </div><!-- END .profile-head -->
+                    <div class="row-black">
+                    	<div class="mainprofilePhoto">
+                        	<a href="#popup-edit-photo" class="big-thumb showPopup"><img src="{$thisuser.profile.image_full_path}" /></a>
+                        </div>
+                        <div class="pl200">
+                            <h3 class="accountname">{$thisuser.name}</h3>
+                            <h4 class="age">{$thisuser.age} years old, from {$thisuser.cityname}</h4>
+                        </div><!-- END .pl200 -->
+                    </div><!-- END .row-black -->
+                    <div class="row-orange">
+                        <div class="pl200">
+                            {if $unread}
+                            <a class="notification showPopup notif_count" href="#popup-notification" onclick="load_notification_list();">{if  $unread.total>0}<span class="unreadnotif" attrunread="{$unread.total}">You have {$unread.total} new notification</span>{if $unread.total>1}s{/if}{else} <span class="unreadnotif" attrunread="0">no new notifications</span> {/if} <span class="arrow-white">&nbsp;</span></a>
+                            {/if}
+                        </div><!-- END .pl200 -->
+                    </div><!-- END .row-orange -->
+                    <div class="row-tr3">
+                        <div class="ps50 aspirationBox" style="min-height:47px;">
+                            <h4 class="m0 black">Why I love traveling:</h4>
+                            {if $change eq 'aspiration'}
+                                <form id="aspirationForm">
+                                    <textarea class="aspiration-message" name="aspiration"  maxlength="140"></textarea>
+                                    <input type="hidden" name="change_aspiration" value="1">
+
+                                    <input type="submit" name="submit" value="Save" class="orangebtn fr">
+                                    <a style="display:none;" class="orangebtn fr"></a>
+                                    <a href="{$basedomain}profile"class="orangebtn fr">CANCEL</a>
+                                </form>
+                                <script type="text/javascript">
+                                    {literal}
+                                        $( "#aspirationForm" ).submit(function( event ) {
+                                            var div = $(this);
+                                            div.find('input[name="submit"]').hide();
+                                            div.find('input[name="submit"]').next().text('Saving...').show();
+                                            
+                                            event.preventDefault();
+                                            $.ajax({
+                                                type: "POST",
+                                                url: basedomain+"profile/change",
+                                                data: $(this).serialize(),
+                                                dataType: "json",
+                                                success: function(response) {
+                                                    $('html, body').animate({scrollTop: '0px'});
+                                                    $('#popup-global, #bg-popup').fadeIn();
+                                                    $('#popup-global .popup-entry').html('<h3>'+response.msg+'</h3>');
+                                                    setTimeout(function () {
+                                                       window.location.href = basedomain+"profile";
+                                                    }, 5000);  
+                                                }
+                                            })
+                                        });
+                                    {/literal}
+                                </script>
+                            {else}
+                               {if $thisuser.aspiration} <h2 class="m0">"{$thisuser.aspiration|replace:'\\':'   '}"</h2> {/if}<a class="editAspiration" href="{$basedomain}profile/change">EDIT</a>
+                            {/if}
+                        </div><!-- END .ps50 -->
+                    </div><!-- END .row-tr3 -->
+					{if $myactivetrade['data']}
+                    <div class="row-tr4">
+                        <div class="ps50" style="min-height:255px;">
+                            <h4 class="m0 black">Active Trades:</h4>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ActiveTrading">
+                              <tr>
+                                <td class="center"><h2 class="m0">BADGES I HAVE</h2></td>
+                                <td class="center">&nbsp;</td>
+                                <td class="center"><h2 class="m0">BADGES I WANT</h2></td>
+                                <td class="center">&nbsp;</td>
+                              </tr>
+                            {foreach from=$myactivetrade['data'] key=mytrade item=i}
+                              <tr>
+                                <td class="center">
+                                    {foreach from=$i.offer_badges key=offer item=j}
+                                        <div class="badges badges-s">
+                                            <img src="{$basedomain}assets/images/badges/{$j.image}" />
+                                        </div>
+                                    {/foreach}
+                                </td>
+                                <td  class="center"><img src="{$basedomain}assets/images/icon/icon_trade.png" /></td>
+                                <td class="center">
+                                    <div class="badges badges-s">
+                                        <img src="{$basedomain}assets/images/badges/{$i.request_badges[0].image}" />
+                                    </div>
+                                </td>
+                                <td class="center"><a href="#popup-global" class="cancelTrade showPopup" data-tradeid="{$i.id}">CANCEL</a></td>
+                              </tr>
+                            {/foreach} 
+                            </table>
+                        </div><!-- END .ps50 -->
+                    </div><!-- END .row-tr4 -->
+                    {else}
+                    <div class="row-tr4">
+                        <div class="ps50 no-tradeProfile" style="min-height:255px; padding:80px 50px;">
+                        	
+                            <h4 class="m0 black" style="font-size:20px; text-align:center;">
+                            <img src="{$basedomain}assets/images/trading.png" />
+                            <span style="display:block; margin:10px 0;">Kamu belum ada aktivitas trading untuk saat ini.</span>
+                            <a {if $unverified} href="#popup-unverified" class="showPopup orangebtn" {else}  class="orangebtn" href="{$basedomain}badges/trading#CreateTrade" {/if}>KLIK DI SINI untuk memulai atau mencari trade baru</a>
+                            </h4>
+                        </div><!-- END .ps50 -->
+                    </div><!-- END .row-tr4 -->
+					{/if}
+                    {*}
+                    <div class="row-orange">
+                        <div class="pl200">
+                            <a class="inviteFriends" href="{$basedomain}referfriends">invite friends<span class="arrow-white">&nbsp;</span></a>
+                        </div><!-- END .pl200 -->
+                    </div><!-- END .row-orange -->{/*}
+                </div><!-- END #profile-box -->
+            </div><!-- END .col2 -->
+            <div class="col2">
+                <div id="badges-box">
+                    <div class="badges-head">
+                        <h3 class="m0 fl"><img src="{$basedomain}assets/images/t_mybadges.png" /></h3>
+                        <div class="badgesValue fr">
+                            <p class="m0">total badges value</p>
+                            <h3 class="red m0">{$mybadgepoint.total|number_format}<a class="help" href="{$basedomain}about/howto"></a></h3>
+                        </div><!-- END .profilenav -->
+                    </div><!-- END .badges-head -->
+                    <div id="badges-list">
+                        {foreach from=$mybadge key=myId item=i}
+                        <div class="badges badges-m {if $i.total eq '0'}grayscale{/if}">
+                            <img src="{$basedomain}assets/images/badges/{$i.image}"  class="tip" title="<h5>{$i.name}</h5><p>{$i.desc}</p> <h3>{$i.point} Points</h3>" />
+                            <span class="badges-value">{$i.total}</span>
+                        </div>
+                        {/foreach}
+                    </div><!-- END #badges-list -->
+                    <div class="action-btn">
+                        <a {if $unverified} href="#popup-unverified" class="showPopup orangebtn fr" {else}  class="orangebtn fr" href="{$basedomain}badges/collectibles" {/if}>Redeem &raquo;</a>
+                        <a {if $unverified} href="#popup-unverified" class="showPopup orangebtn fr" {else}  class="orangebtn fr" href="{$basedomain}badges/trading" {/if}>Trade &raquo;</a>
+                     
+                       <a {if $unverified} href="#popup-unverified" class="showPopup orangebtn fr" {else}  class="orangebtn fr" href="{$basedomain}badges/auction" {/if}>Auction &raquo;</a>
+                     
+                    </div><!-- END .action-btn -->
+                </div><!-- END #badges-box -->
+                <div id="photo-box">
+                    <div class="photo-head">
+                        <h3 class="m0"><img src="{$basedomain}assets/images/content/newsfeed.png" /></h3>
+                    </div><!-- END .photo-head -->
+                    <div id="photo-list">
+                        <div id="newsfeedlist">
+                            <ul id="newsfeedlist_ul">
+								{foreach $newsFeed as $key => $val}
+								{if $val.type==1}
+                                <li>
+                                	<span class="date">{$val.changeDate}</span>
+                                   <a href="{$basedomain}articles/detail/{$val.id}" class="more"> 
+                                   <p>  {$val.title|html_entity_decode} </p>
+								   <p class="brief"> {$val.brief|html_entity_decode}</p>
+								   </a>
+                                   
+                                </li>
+								{else}
+								  <li>
+                                  	<span class="date">{$val.changeDate}</span>
+                                   <p>  {$val.title|html_entity_decode} </p>
+								   <p class="brief"> {$val.brief|html_entity_decode}</p>
+								  
+                                   
+                                </li>
+								{/if}
+                                 {/foreach}
+                            </ul>
+                            <div id="newsFeedPaging" class="pagingbox fl">
+                            	{*}
+                                <a id="p5" class="cPaging prev" >&laquo; prev</a>
+                            	<a id="p5" class="cPaging" >1</a>
+                                <a id="p5" class="cPaging" >2</a>
+                                <a id="p5" class="cPaging" >3</a>
+                                <a id="p5" class="cPaging" >4</a>
+                                <a id="p5" class="cPaging next" >next &raquo;</a>
+                                {/*}
+    						</div><!-- END .pagingbox -->
+                        </div>
+                    </div><!-- END #photo-list -->
+                </div><!-- END #photo-box -->
+            </div><!-- END .col2 -->
+        </div><!-- END .col -->
+    </div><!-- END .entry-container -->
+</div><!-- END .container -->
+
+{include file="application/web/widgets/popup-edit-photo.html"}
+
+{if $showPopup eq 'true'}
+{include file="application/web/widgets/popup-wildcard.html"}
+{/if}
+
+<script type="text/javascript">
+    var first_badges ='{$showPopup_1stBadges}';
+    {literal}
+	$( document ).ready(function() {
+        if(first_badges=='1'){
+            load_notification_list(10,1);
+        }
+
+        getUnreadNotif();
+        newsfeedOnProfile({},0);
+		mmConversionTag('461576', this, '_self', null);
+	});
+        $('.cancelTrade').click(function(){
+            var trade_id = $(this).data("tradeid");
+            var data = {};
+            data.url='badges/cancelMyTrade';
+            data.params={ajax:1,tradeID:trade_id};
+            data.type="json";
+            post_json(data).done(function(response){
+                var str='';
+                try{
+                     if(response.status==1){
+                        str+='<h3>'+response.msg+'</h3>';
+                        $('#popup-global .popup-entry').html(str);
+                    }else{
+                        str+='<h3>'+response.msg+'</h3>';
+                        $('#popup-global .popup-entry').html(str);
+                    }
+                    
+                    setTimeout(function () {
+                       window.location.href = basedomain+"profile";
+                    }, 2000);
+                }catch(e){}
+            });
+        });
+		function load_newsFeed(article_id){
+	
+            var articleid = article_id;
+			
+            var data = {};
+            data.url='profile/detailNewsFeed';
+            data.params={ajax:1,articleid:articleid};
+            data.type="json";
+			 post_json(data).done(function(response){
+                var str='';
+                try{
+					$('#popup-notification').attr('style','display: block;');
+                      str+='<h1>'+response.title+'</h1>';
+                       str+='<h3>'+response.content+'</h3>';
+					 
+						
+                     $('#notifList').html(str);
+                }catch(e){}
+            });
+        };
+
+        function newsfeedOnProfile(method,start){         
+            var data = {};
+            data.url=basedomain+'profile/loadNewsFeed';
+            data.params={ajax:1,start:start};
+            data.type="json";
+
+            post_json(data).done(function(response){
+                try{
+                    var nf = response.data; 
+                    var str='';
+                    $.each(nf, function(key,val){
+                        if (val.type==1){
+                            str+='<li>';
+							 str+='<span class="date">'+val.changeDate+'</span>';
+                               str+='<a href="'+basedomain+'articles/detail/'+val.id+'" class="more"> ';
+                               str+='<p>'+val.title+'</p>';
+                              str+=' <p class="brief">'+val.brief+'</p>';
+                               str+='</a>';
+                              
+                            str+='</li>';
+                        }else{
+                           str+='<li>';         
+						   str+='<span class="date">'+val.changeDate+'</span>';
+                               str+='<p>'+val.title+'</p>';
+                               str+='<p class="brief">'+val.brief+'</p>';                  
+                               
+                            str+='</li>'; 
+                        }
+                    });
+                    $('#newsfeedlist_ul').html(str);
+                    if(start==0){
+                        start=1;
+                        kiPagination(response.total, start, 'newsFeedPaging', data, 'newsfeedOnProfile', 3);
+                    }
+                }catch(e){}
+            },"JSON");
+        };
+	
+    {/literal}
+	
+</script>

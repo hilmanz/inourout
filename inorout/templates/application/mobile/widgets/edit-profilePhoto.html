@@ -1,0 +1,40 @@
+<div id="upload-photo" class="container">
+	<div class="entry-container center relative">
+    	<div id="box-content" class="relative">
+        	<a class="closing" href="{$basedomain}profile">[CLOSE X]</a>
+            <div id="head-content">
+                <h1><span class="reds">Upload</span> <span class="black">Photo</span></h1>
+            </div><!-- END #head-content -->
+            <div id="entry-content">
+            	  <div id="editPhotoBox">
+                <form class="uploadForm" action="{$basedomain}profile/editPhoto" method="post" enctype="multipart/form-data" >
+                    <input type="hidden" name="editPhoto" value="1">
+                        <div class="fakeUpload">
+                            <input type="text" class="uploadpath" />
+                            <label class="orangebtn fakebtn">
+                                Browse
+                                <span>
+                                    <input type="file" class="uploadfile"  name="profile_photo" id="profileImage"/>
+                                </span>
+                            </label>
+                        </div><!-- END .fakeUpload -->
+                        <div class="previewBox">
+                        	<img src="{$basedomain}assets/images/blank_image.png" id="preview"/>
+                            <!--<div class="loader"><img src="{$basedomain}assets/images/loader.gif" /></div>-->
+                        </div><!-- END .previewBox -->
+                    <input type="submit" name="submit" value="SAVE" class="orangebtn savebtn">
+                    <p style="font-size:12px;">Max size: 2MB, Type File: jpg, png</p>
+                </form>
+            </div><!-- end #editPhotoBox -->
+            </div><!-- END .entry-content -->         
+        </div><!-- END .box-content -->
+    </div></div><!-- END ."entry-container -->
+
+	<script>
+{literal}
+	
+    $("#profileImage").change(function(){
+        preview(this,'preview');
+    });
+{/literal}
+</script>

@@ -1,0 +1,62 @@
+<div id="theContainer" class="galleryPage">
+    <div class="theContainer">
+			
+        <div class="theContent">
+        	<div class="section">
+           	<div class="col3" style="width:100%;">
+						<form method="POST" action="{$basedomain}badgesOffline/doit" id="generatecodeform" enctype="multipart/form-data">
+							<table style="width:100%;">
+								<tr><td>Upload XLS: </td><td><input type="file" name="xls" value="" /></td></td></tr>
+								<tr><td>Email :</td><td><input type="text" name="email" /></td></tr>
+								<tr><td colspan="2"> <input type="submit" class="btnSubmit"  value="submit"  /> </td></tr>
+								
+								 <span class="messageinputcode" ></span>
+								 
+							</table>
+						</form>
+						{*}
+						<table style="width:100%;">
+							<tr><th>id</th><th>email</th><th>upload date</th><th>Event Name</th></tr>
+							{foreach from=$codelist key=k item=v}
+								<tr><td>{$v.id}</td><td>{$v.email}</td><td>{$v.uploaddate}</td><td>{$v.eventname}</td></tr>
+							{/foreach}
+						</table>
+						{/*}
+            </div> <!-- /.col3 -->
+	        </div> <!-- /.section -->
+        </div> <!-- /.theContent -->
+		<div class="paging" id="pagingbadge"></div> <!-- END .paging -->
+				 
+    </div> <!-- /.theContainer -->
+</div> <!-- /#theContainer -->  
+
+{literal}
+<script>
+	
+	var updateoptions = {
+	dataType:  'json', 	
+	beforeSubmit: function(data) { 
+			 
+			/* $(".global-popup-inorout").trigger("click");	*/
+			$(".messageinputcode").html("please wait");
+			$(".thecodes").val("");
+			 
+	},
+	success : function(data) {		
+			
+			if(data){
+						
+						var html ="";
+						html = "<p class='postSucces'>"+data.message+"</p>";
+						/* $(".global-popup-inorout").trigger("click"); */		
+						$(".messageinputcode").html(html);				  
+					 
+			}
+				 
+	}
+	};					
+
+	$("#generatecodeform").ajaxForm(updateoptions);
+
+</script>
+{/literal}

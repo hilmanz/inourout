@@ -1,0 +1,58 @@
+<div id="challengePage" class="container">
+	<div class="entry-container">
+        <div class="post-container">
+        	<div class="post-header">
+            	<div class="header-challange">
+				<img src="{$basedomain}assets/images/mobile/content/challangeOftheWeek.png" />
+                </div>
+            </div><!-- END .post-header -->
+                <div class="box-prof whitebox">
+                    <h3>Tunjukan foto seru kamu sesuai tema bulan ini,</h3>
+                    <h2>& MENANGKAN BADGE UNTUK KOLEKSIMU</h2>
+                    <a href="{$basedomain}challenge/rules" class="greybtn">Baca Aturan Main</a>
+                {foreach $challenge as $key => $val}
+				<div class="post-content">
+                    <div class="hot-content">
+                        
+						<a {*}href="{if $val.n_status==1}{$basedomain}challenge/categories/{$val.id}{else if $val.n_status==2}{$basedomain}challenge/winner/{$val.id}{else}#{/if}"{/*} class="bigthumb">
+                            <img src="{$val.event.image_full_path}" />
+                        </a>
+						
+						<div class="bt-cotw tokyo">
+						{if $val.n_status==1}
+							{if $val.total_finalist eq '10'}
+							<a href="{$basedomain}challenge/finalist/{$val.id}" class="showwinner">SHOW FINALISTS</a>
+							{else}
+							<a href="{$basedomain}challenge/categories/{$val.id}" class="showwinner CuploadPhoto">Upload Photo</a>
+							{/if}
+						{else if $val.n_status==2}
+							<a href="{$basedomain}challenge/winner/{$val.id}" class="showwinner">SHOW WINNER</a>
+							{else}<span class="text-comingSoon">COMING SOON</span>
+						{/if}
+						</div>
+						
+                    </div><!-- END .hot-content -->
+                </div><!-- END .post-content -->
+				{/foreach}
+                {*}
+				<div class="post-content">
+                    <div class="hot-content">
+                        <a href="{$basedomain}challenge/categories" class="bigthumb">
+                            <img src="{$basedomain}assets/images/mobile/content/london-banner.jpg" />
+                        </a>
+                        <a href="{$basedomain}challenge/finalist" class="showwinner">SHOW WINNER</a>
+                    </div><!-- END .hot-content -->
+                </div><!-- END .post-content -->
+                <div class="post-content">
+                    <div class="hot-content">
+                        <a href="{$basedomain}challenge/categories" class="bigthumb">
+                            <img src="{$basedomain}assets/images/mobile/content/newyork-banner.jpg" />
+                        </a>
+                        <a href="{$basedomain}challenge/finalist" class="showwinner">SHOW WINNER</a>
+                    </div><!-- END .hot-content -->
+                </div><!-- END .post-content -->
+				{/*}
+            </div><!-- END .box-prof -->
+        </div><!-- END .post-container -->
+    </div>
+</div><!-- END .container -->

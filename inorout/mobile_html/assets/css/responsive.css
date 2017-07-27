@@ -1,0 +1,664 @@
+/*
+Theme Name:  Mobile Marlboro In Or Out
+Version: 1.0
+Author: Febriansyah 2013
+*/
+
+@media only screen and (max-width: 400px) {
+#AuctionWon .userWinner h2{
+	font-size:18px;
+}
+.content-whatIsthis #videoBox{
+	top:-100px;
+}
+.load-notif a {
+    float: none !important;
+	text-align:center !important;
+}
+.disabled-voted2{
+	padding:0 15px !important;
+}
+#profile-box .big-thumb{
+	margin:10px 0 0 15px
+}
+#profile-box .pl200{
+	padding:0 0 0 130px;
+}
+#challengePage .whitebox h2{
+	font-size:18px;
+}
+#challengePage .whitebox h3{
+	font-size:14px;
+}
+#profile-box .boxTrading .badges-s{
+	  height: 50px;
+    width: 50px;
+}
+.notrade-bt{
+	font-size:16px;
+}
+.no-tradeProfile .orangebtn{
+	font-size:12px;
+}
+.inviteButton{
+	padding:0px !important
+}
+.line{
+	display:none;
+}
+#cluesPage .jcarousel-control-prev, #cluesPage .jcarousel-control-next{
+	top:60px;
+}
+.cancelTrade{
+	font-size:12px;
+}
+#reddemPrize .prizeDesc h3{
+	font-size:18px;
+	margin:0;
+	color:#666666;
+}
+#reddemPrize .prizeDesc h4{
+	font-size:18px;
+	margin:0;
+}
+
+#gamesPage .col{
+	padding:0 0 0 30px;
+}
+#bagdesMessage .descDecker {
+    padding: 25px 5px;
+}
+#bagdesMessage .descDecker span.time {
+    font-size: 12px;
+}
+.badgesName{
+	font-size:28px;
+}
+#bagdesNotif .wonBagdes,#bagdesMessage .wonBagdes{
+    padding: 8px;
+    width: 32%;
+}
+.tinyNotif {
+    font-size: 10px;
+    padding: 5px 0;
+}
+#bagdesNotif .wonBagdes .badges-m,#bagdesMessage .wonBagdes .badges-m{
+	height: 100px;
+    width: 100px;
+}
+.doText{
+	padding:10px;
+}
+#doorNothing .doText h2{
+	font-size:50px;
+}
+#doorNothing .doText h2 span.nothing{
+	font-size:42px;
+}
+span.cicleText {
+    font-size: 36px;
+    height: 45px;
+    line-height: 46px;
+    width: 45px;
+}
+#doorNothing .doText h4{
+	font-size:16px;
+}
+.doButton a.button-do {
+    font-size: 45px;
+    height: 51px;
+    width: 95px;
+}
+/*
+.notif-value{
+	right:0;
+}
+*/
+#badges-list{
+	padding-left:0;
+}
+#cluesPage .jcarousel-wrapper{
+	width:200px;
+}
+#cluesPage .jcarousel li{
+	width:200px;
+}
+#cluesPage .jcarousel {
+    width: 200px;
+}
+#videoBox{
+	width:312px; height:177px;
+	margin:-370px 0 0 -43%;
+}
+#videoBox h3{
+	font-size:12px;
+}
+#videoBox h2{
+	font-size:18px;
+}
+.login-field{
+	margin:-400px 0 0 -40%;
+}
+.login-field h2{
+	font-size:24px;
+}
+#btnLoginMop, #btnRegisterMop{
+	float:inherit;
+}
+#btnRegisterMop{
+	margin:10px 0 0 0;
+}
+.login-field input[type="text"], .login-field input[type="password"]{
+	font-size:12px;
+	width:188px;
+}
+.hw18 {
+	background: url("../images/mobile/18thn-small.png") no-repeat scroll right center rgba(0, 0, 0, 0);
+    margin-right: 10px;
+    padding: 10px 0 0 80px;
+}
+
+#footer a {
+    padding: 0 20px;
+}
+#footer p{
+	font-size:18px;
+}
+/*
+#profileBox .small-thumb{
+	margin:7px 0 7px 15px;
+}*/
+#profileBox{
+	font-size:12px;
+}
+/*
+.username{
+	font-size:20px;
+	margin:14px 0 0 5px;
+	width:80px;
+}*/
+.username{
+	font-size:16px;
+}
+.viewporifle{
+	font-size:12px;
+	margin:18px 0 0;
+}
+/*
+.notif{
+	margin:18px 10px 0px 0;
+}
+*/
+#navAbout a{
+	font-size:18px;
+	padding:0 22px;
+}
+.rowText h3{
+	font-size:18px;
+}
+#rowText1 h3.text1 {
+    left: 55px;
+    top: 40px;
+}
+#rowText2 h3.text1{
+	left:45px;
+	top:50px;
+}
+#rowText1 h3.text2 {
+    left: 32px;
+    top: 56px;
+}
+#rowText1 h3.text3 {
+    left: 80px;
+    top: 82px;
+}
+
+#rowText3 h3.text1 {
+    right: 50px;
+    top: 30px;
+}
+#rowText3 a.detailJadwal{
+	margin:-70px 35px 10px 0;
+}
+#rowText4 h3{
+	font-size:14px;
+}
+#rowText3 h3.text2 {
+    right: 70px;
+    top: 70px;
+}
+.logout{
+	margin:18px 15px 0 10px;
+}
+a.detailJadwal{
+	font-size:12px;
+}
+#tabNav li a{
+	font-size:18px;
+}
+#PastAuction .thumbPrizes img{
+	max-width:90px;
+}
+.prizeDesc{
+	padding:25px 0 0;
+}
+#auctionPage .tabEntry td:first-child{
+	padding:20px 20px 20px 10px;
+}
+#auctionPage .tabEntry td:last-child{
+	padding:20px 0 20px 0;
+} 
+.prizeDesc h3{
+	font-size:22px;
+}
+#PastAuction .prizeDesc p{
+	width:210px;
+}
+.prizeDesc p{
+	font-size:12px;
+}
+.userWinner{
+	clear:both;
+	margin:10px 0 0;
+}
+#head-content h1{
+	font-size:30px;
+}
+#head-content h3,
+#head-content a{
+	font-size:12px;
+}
+.thumbPrizes{
+	max-width:90px;
+}
+#TodayAuction .thumbPrizes img,#AuctionWon .thumbPrizes img,#badgesRedeem .thumbPrizes img,.image-bids .thumbPrizes img{
+	width:100%;
+}
+.prizeAuction{
+	margin:0 10px;
+	max-width:100px;
+}
+
+h2.points{
+	font-size:30px;
+}
+.timeLeft{
+	right:-105px;
+}
+#AuctionWon .noteBox{
+	padding:10px;
+}
+
+.profilenav{
+	padding:10px 0 0;
+}
+.accountname{
+	font-size:32px;
+}
+.notification, .inviteFriends{
+	font-size:12px;
+}
+h2{
+	font-size:20px;
+}
+tr.head td h3{
+	font-size:14px;
+}
+a.findTrade, a.refreshTrade, a.clearTrade{
+	font-size:16px;
+	height:32px;
+}
+.tradeName, .tradeDate{
+	font-size:14px;
+	margin-bottom:5px;
+}
+.tradeDate{
+	font-size:12px !important;
+}
+#tradeForm h3.info{
+	font-size:12px;
+}
+.currentPlacing{
+	width:55%;
+}
+.boxbadgesRedeem{
+	width:30%;
+}
+.postMessages{
+	width:55%;
+}
+#reddemPrize .postMessages{
+	width:90%;
+}
+#entercodePage input[type="text"]{
+	width:225px;
+}
+#cluesNavigation .badges{
+	width:70px;
+	height:70px;
+}
+#cluesNavigation #tabNav li a{
+	width:150px;
+}
+#cluesNavigation #tabNav{
+	width:100%;
+}
+#cluesNavigation #tabNav li{
+	margin:20px 50px 20px 0;
+}
+.arrow-up{
+	right:75%;
+}
+.post-venue h4{
+	font-size:16px;
+}
+.post-venue .fl{
+	margin:0 15px 0 0;
+}
+#galeryPhotos a{
+	width:55px;
+	height:55px;
+}
+#galeryPhotos a img{
+	width:55px;
+	height:55px;
+}
+#challengePage .jcarousel-wrapper{
+	width:245px;
+}
+#challengePage .jcarousel-control-prev{
+	left:-43px;
+}
+#challengePage .jcarousel-control-next{
+	right:-15px;
+}
+.photoThumb{
+	width:90px;
+	height:90px;
+}
+.photo-detail{
+	width:57%;
+}
+.post-header h4 {
+    font-size: 18px;
+    line-height: 20px;
+}
+.whitebox h2{
+	font-size:34px;
+}
+#notifList .row {
+    padding: 15px 15px 15px 45px;
+}
+#notifList a{
+	text-align:left;
+}
+.messageDetail{
+	padding:20px 0 0 105px;
+}
+.messageDetail h3{
+	font-size:16px;
+}
+.messageDesc h4{
+	font-size:12px;
+}
+.headerAspiration h3{
+	font-size:20px;
+	width:60px;
+}
+.headerAspiration h2,.aspiration-body textarea{
+	font-size:16px;
+}
+.wonBagdes h2{
+	font-size:20px;
+	width:85px;
+}
+.wonBagdes h1{
+	font-size:36px;
+}
+.wonBagdes h3{
+	font-size:16px;
+}
+.wonBagdes h4{
+	font-size:14px;
+	margin:0;
+}
+.message-wonBadges{
+	width:90%;
+}
+.select{
+	width:50%;
+}
+#profile-box .ps50{
+	padding:20px 15px;
+}
+}
+@media only screen and (max-width: 350px) {
+.content-whatIsthis #videoBox{
+	top:-85px;
+}
+.load-notif a {
+    float: none !important;
+	text-align:center !important;
+}
+.disabled-voted2{
+	padding:0 10px !important;
+}
+#footer a{
+	padding:0 15px;
+}
+.login-field{
+	margin:-355px 0 0 -40%;
+}
+#challengePage .jcarousel-control-prev{
+	left:-31px;
+}
+.jcarousel-control-prev, .jcarousel-control-next{
+}
+/*
+.username {
+    font-size: 16px;
+    margin: 21px 0 0 5px;
+    width: 58px;
+}*/
+#reddemPrize .prizeDesc h3{
+	font-size:14px;
+	margin:0;
+	color:#666666;
+}
+#reddemPrize .prizeDesc h4{
+	font-size:14px;
+	margin:0;
+}
+#gamesPage .col{
+	padding:0 0 0 10px;
+}
+#bagdesMessage .descDecker {
+    padding: 25px 0 0 5px;
+}
+#bagdesMessage h2{
+	font-size:16px;
+}
+.messageBagdes p{
+	font-size:14px;
+}
+.badgesName {
+    font-size: 26px;
+}
+#doorNothing .doText h2{
+	font-size:45px;
+}
+#doorNothing .doText h2 span.nothing{
+	font-size:37px;
+}
+span.cicleText {
+    font-size: 31px;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+}
+#doorNothing .doText h4{
+	font-size:14px;
+}
+
+.badges-head{
+	padding:10px;
+}
+#badges-list{
+	padding-left:35px;
+}
+.hw18 {
+    padding: 10px 0 0 75px;
+}
+
+#videoBox {
+    height: 151px;
+    margin: -333px 0 0 -43%;
+    width: 267px;
+}	
+#videoBox h3{
+	font-size:12px;
+}
+#videoBox h2{
+	font-size:18px;
+}
+#logoBox{
+	max-width:225px;
+}
+.notif{
+	float:left;
+	margin:12px 0 0;
+}
+.notif-value{
+	top:0;
+	right:0;
+}
+#navAbout a {
+    padding: 0 17px;
+}
+#rowText1 h3.text1 {
+    left: 35px;
+}
+#rowText1 h3.text2 {
+    left: 15px;
+    top: 50px;
+}
+#rowText1 h3.text3 {
+    left: 53px;
+    top: 71px;
+}
+#rowText2 h3.text1 {
+    left: 10px;
+    top: 40px;
+}
+#rowText2 h3.text2 {
+    left: 10px;
+    top: 30px;
+}
+#rowText3 h3.text1 {
+    right: 25px;
+    top: 25px;
+}
+#rowText3 a.detailJadwal{
+	margin:-55px 35px 10px 0;
+}
+#rowText3 h3.text2 {
+    right: 55px;
+    top: 55px;
+}
+#head-content h1{
+	font-size:24px;
+}
+#head-content h3,
+#head-content a{
+	font-size:12px;
+}
+#PastAuction .prizeDesc{
+	padding:10px 0 0;
+}
+#PastAuction .prizeDesc p{
+	width:180px;
+}
+
+.accountname{
+	font-size:28px;
+}
+.row-orange .pl200{
+	padding:0 0 0 130px;
+}
+h2{
+	font-size:18px;
+}
+a.findTrade, a.refreshTrade, a.clearTrade{
+	font-size: 14px;
+    height: 30px;
+}
+a.findTrade{
+background:url("../images/icon/icon_search.png") no-repeat scroll 10px 3px #FCAF1A;
+}
+a.findTrade:hover{
+background:url("../images/icon/icon_search.png") no-repeat scroll 10px 3px #FCAF1A;
+}
+a.refreshTrade{
+	background:url("../images/icon/icon_reload.png") no-repeat scroll 15px 3px #FFFFFF;
+}
+a.refreshTrade:hover{
+	background:url("../images/icon/icon_reload.png") no-repeat scroll 15px 3px #FFFFFF;
+}
+a.findTrade, a.refreshTrade{
+	line-height:28px;
+}
+tr.head td h3{
+	font-size:12px;
+}
+#tradeForm h3.info{
+	font-size:10px;
+}
+.infoyourBid {
+    font-size: 10px;
+}
+.post-venue a{
+	margin:10px 0;
+}
+.entry-post{
+	font-size:14px;
+}
+.showwinner{
+	font-size:14px;
+	bottom:8px;
+}
+.box-title h3{
+	font-size:14px;
+}
+.boxBadges{
+	margin:15px;
+}
+.jcarousel-control-prev, .jcarousel-control-next{
+	line-height:24px;
+}
+.winnerTxt{
+	width:35%;
+}
+.winnerInfo{
+	width:53%;
+}
+h4.badgesCount{
+	font-size:12px;
+}
+#placeBidBtn, #redeemBtn{
+	text-align:center;
+	padding:5px;
+}
+#AuctionWon .userWinner h2{
+	font-size:14px;
+}
+.auctionWinner .small-thumb{
+	margin:0 5px 0 0;
+}
+#AuctionWon .userWinner h2.totalPoint{
+	font-size:30px;
+}
+#AuctionWon .userWinner h2.totalPoint span{
+	 line-height: 35px;
+    margin-left: 5px;
+}
+}

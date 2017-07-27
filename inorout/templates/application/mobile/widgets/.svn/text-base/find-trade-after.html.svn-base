@@ -1,0 +1,92 @@
+
+<div class="tabEntry">
+	<div class="box-prof">
+        <div class="head-tab">
+            <p>you are looking <img src="{$basedomain}assets/images/mobile/japan.png" /> for in exchange of <img src="{$basedomain}assets/images/mobile/apple.png" /></p>
+            <div class="buttonFind">
+                <a class="findTrade showPopup" href="#popup-findtrade">FIND TRADE</a>
+            </div>
+            <div>
+                <a class="clearTrade" href="#">CLEAR</a>
+                <a class="refreshTrade" href="#">REFRESH</a>
+            </div>
+        </div>
+    </div>
+    <div class="box-prof">
+        <table border="0" cellspacing="0" cellpadding="0">
+          <tr class="head even">
+            <td class="center"><h3>badges wanted</h3></td>
+            <td align="left"><h3>badge to trade</h3></td>
+            <td><h3><a href="#" class="arrow-right">trading status</a></h3></td>
+            <td align="left"><h3><a href="#" class="arrow-right">trader's name</a></h3></td>
+          </tr>
+          <tr class="odd">
+            <td class="center">
+                <div class="badges badges-s">
+                    <img src="{$basedomain}assets/images/badges/badges-5.png" />
+                </div>
+            </td>
+            <td>
+                <div class="badgesToTrade">
+                    <div class="badges badges-s">
+                        <img src="{$basedomain}assets/images/badges/badges-3.png" />
+                    </div>
+                    <div class="badges badges-s">
+                        <img src="{$basedomain}assets/images/badges/badges-2.png" />
+                    </div>
+                </div><!-- END .badgesToTrade -->
+            </td>
+            <td><a class="tradeBtn" href="#">TRADE</a></td>
+            <td><h4 class="tradeName">jon snow</h4></td>
+    
+          </tr>
+          <tr class="odd">
+            <td class="center">
+                <div class="badges badges-s">
+                    <img src="{$basedomain}assets/images/badges/badges-5.png" />
+                </div>
+            </td>
+            <td>
+                <div class="badgesToTrade">
+                    <div class="badges badges-s">
+                        <img src="{$basedomain}assets/images/badges/badges-9.png" />
+                    </div>
+                    <div class="badges badges-s">
+                        <img src="{$basedomain}assets/images/badges/badges-10.png" />
+                    </div>
+                </div><!-- END .badgesToTrade -->
+            </td>
+            <td><a class="tradeBtn disableTrade" href="#">TRADE</a></td>
+            <td><h4 class="tradeName">jon snow</h4><h4 class="tradeDate">25 august 2013</h4></td>
+          </tr>
+          <tr class="odd">
+            <td class="center">
+                <div class="badges badges-s">
+                    <img src="{$basedomain}assets/images/badges/badges-5.png" />
+                </div>
+            </td>
+            <td>
+                <div class="badgesToTrade">
+                    <div class="badges badges-s">
+                        <img src="{$basedomain}assets/images/badges/badges-12.png" />
+                    </div>
+                    <div class="badges badges-s">
+                        <img src="{$basedomain}assets/images/badges/badges-4.png" />
+                    </div>
+                </div><!-- END .badgesToTrade -->
+            </td>
+            <td><a class="tradeBtn disableTrade" href="#">TRADE</a></td>
+            <td><h4 class="tradeName">jon snow</h4></td>
+          </tr>
+        </table>
+    </div>
+    <div class="pagingbox">
+    	<a href="#" class="prev">&laquo; PREV</a>
+    	<a href="#">1</a>
+    	<a href="#" class="current">2</a>
+    	<a href="#">3</a>
+    	<a href="#">4</a>
+    	<a href="#">5</a>
+    	<a href="#" class="next">NEXT &raquo;</a>
+    </div><!-- END .pagingbox -->
+</div><!-- END .tabEntry -->

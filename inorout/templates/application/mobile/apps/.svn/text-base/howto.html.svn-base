@@ -1,0 +1,25 @@
+<div id="howtoPage" class="container">
+	<div class="entry-container">
+    	<div class="universal">
+        	<h3 class="howto-title"><img src="{$basedomain}assets/images/howto.png" /></h3>
+            <a class="closing" href="{$basedomain}profile">[CLOSE X]</a>
+        </div>
+		<div class="clearfix">
+            <div class="howtoBox">
+            	<div class="content-howto">
+                	<img src="{$basedomain}assets/images/mobile/how-to1.png" />
+                    <h2>Temukan kode di majalah, website, digital banner, atau melalui SPG/ Direct Selling Team Marlboro dan datang ke Circle K atau 7eleven.</h2>  	
+                </div>
+                <div class="content-howto">
+                	<img src="{$basedomain}assets/images/mobile/how-to2.png" />
+                    <h2>Kumpulkan 12 badge berbeda. Menangkan berbagai hadiah serunya serta pengalaman yang tak tergantikan!</h2>  	
+                </div>
+                <div class="content-howto">
+                	<img src="{$basedomain}assets/images/mobile/how-to3.png" />  	
+                </div>
+            </div><!-- END .howtoBox -->
+            <div class="footHowto">
+            </div>
+		</div><!-- END .clearfix -->
+    </div><!-- END .entry-container -->
+</div><!-- END .container -->

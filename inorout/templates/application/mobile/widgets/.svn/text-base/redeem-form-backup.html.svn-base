@@ -1,0 +1,55 @@
+<div id="reddemPrize" class="container">
+	<div class="entry-container center">
+    	<div id="box-content" class="relative">
+        	<a class="closing" href="{$basedomain}badges/redeem">[CLOSE X]</a>
+            <div class="placingBid-head headredeemForm">
+                <h2><img src="{$basedomain}assets/images/mobile/redeem-logo.png" /></h2>
+                <h3>You are about to redeem: <span class="prizeName black">London Backpack</span></h3>
+                <h3>the following amount will be taken out in exchange of the prize:</h3>
+           	</div>
+            <div id="entry-content">
+                <div class="row badgesForRedeem">
+                    <div class="boxbadgesRedeem">
+                        <div class="badges badges-s">
+                            <img src="{$basedomain}assets/images/badges/badges-5.png" />
+                        </div>
+                        <h4 class="badges-name">London badge 1</h4>
+                    </div>
+                    <div class="boxbadgesRedeem">
+                        <div class="badges badges-s">
+                            <img src="{$basedomain}assets/images/badges/badges-6.png" />
+                        </div>
+                        <h4 class="badges-name">London badge 1</h4>
+                    </div>
+                    <div class="boxbadgesRedeem">
+                        <div class="badges badges-s">
+                            <img src="{$basedomain}assets/images/badges/badges-7.png" />
+                        </div>
+                        <h4 class="badges-name">London badge 1</h4>
+                    </div>
+                    <div class="boxbadgesRedeem">
+                        <div class="badges badges-s">
+                            <img src="{$basedomain}assets/images/badges/badges-8.png" />
+                        </div>
+                        <h4 class="badges-name">London badge 1</h4>
+                    </div>
+                </div><!-- END .badgesForRedeem -->
+                <div class="row formShipping">
+                	<h3><span class="bigFont">SHIPPING</span> <br />Isi data untuk pengiriman hadiah</h3>
+                    <form id="shippingForm">
+                            <input type="text" value="FULL NAME" />
+                            <textarea>ADDRESS</textarea>
+
+                            <input type="text" value="CITY" />
+                            <input type="text" value="POSTAL CODE" />
+                            <input type="text" value="PHONE NUMBER" />
+                            <div style="text-align:center; width:80%;">
+                        		<a href="{$basedomain}badges/redeemSucces" class="orangebtn">SUBMIT &raquo;</a>
+                        </div>
+                        {*}<input type="submit" value="SUBMIT &raquo;" class="orangebtn" />{/*}
+                    </form>
+                </div>
+            </div><!-- END .entry-content -->
+         </div><!-- END .box-content -->
+    </div><!-- END .entry-container -->
+</div><!-- END .placingBid -->

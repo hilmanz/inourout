@@ -1,0 +1,46 @@
+
+<div class="tabEntry">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+ {if $auctioniwon.result}
+	{foreach $auctioniwon.result as $k => $v}
+      <tr class="{$v.queue}">
+        <td valign="top">
+            <a class="thumbPrizes"><img src="{$v.auctions.image_full_path}" /></a>
+        </td>
+        <td valign="top">
+            <div class="prizeDesc">
+                <h3>{$v.title}</h3>
+                <p>{$v.content}</p>
+            </div><!-- END .prizeDesc -->
+        </td>
+        <td valign="top">
+            <div class="auctionWinner">
+                <h3>Auction winner:</h3>
+                <div class="userWinner">
+        			<a class="small-thumb"><img src="{$v.profile.image_full_path}" /></a>
+                    <div class="fl">
+                        <h2 class="account-name">{$v.name} {$v.last_name}</h2>
+                        <h2 class="totalPoint">{$v.points|number_format}<span>points</span></h2>
+                    </div><!-- END .fl -->
+                </div><!-- END .userWinner -->
+            </div><!-- END .auctionWinner -->
+        </td>
+        <td valign="top">
+            <div class="noteBox">
+                <h3>NOTE:</h3>
+                <p>Kamu baru saja dapat satu item spesial. sebagai gantinya, badge-badge ini telah diambil dari koleksimu</p>
+               {*} <h4 class="information">Please enter your shipping address for merchandise delivery</h4>{/*}
+            </div><!-- END .noteBox -->
+        </td>
+      </tr>
+      {/foreach}
+    {else}
+        	<div class="nowin">
+                <img src="{$basedomain}assets/images/auction.png" />
+                <h3>Belum ada Auction yang kamu menangkan.<br />
+        Tapi masih besar kesempatanmu untuk mendapatkan hadiah keren,<br />
+      	cek Today's Auction untuk update terbaru!</h3>
+    		</div>
+    {/if}
+    </table>
+</div><!-- END .tabEntry -->

@@ -1,0 +1,85 @@
+<div class="tabEntry">
+    <form id="tradeForm" method="post" action="{$basedomain}badges/tradingConfirm">
+    <div class="box-prof">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr class="even">
+            <td>
+            	<div class="tittleCreate color-Orange">
+                	<h3>Badge yang kamu cari:</h3>
+                </div>
+                <div class="badgesListTrade badgesFinding">
+					{foreach from=$mybadges key=bid item=i}
+                    {if $i.id != 11 && $i.id != 8}
+					<a class="badges badges-m badge_find" data-badge="find" data-badgeid="{$i.id}" href="#">
+                        <img src="{$basedomain}assets/images/badges/{$i.image}" />
+						
+                    </a>
+					{else}
+					<a class="badges badges-m grayscale" href="javascript:void(0)">
+                        <img src="{$basedomain}assets/images/badges/{$i.image}" />
+                    </a>
+                    {/if}
+                    {/foreach}
+					
+					<input type="hidden" class="badgesFindingValue" value="" name="badgesFindingValue"/>
+                </div><!-- END .badgesListTrade -->
+            </td>
+          </tr>
+          </table>
+      </div>
+      <div class="box-prof">
+          <table>
+          <tr class="odd">
+            <td>
+            	<div class="tittleCreate color-Grey">
+                     <h3>Badges yang akan kamu tukar:</h3>
+                     <h4>(maximum 4 badges)</h4>
+                </div>
+                <div class="badgesListTrade badgesOwn">
+					{foreach from=$mybadges key=bid item=i}
+					{if $i.id != 11 && $i.id != 8}
+                    <a class="badges badges-m {if $i.total eq '0'}grayscale{/if}" href="#badgesListTrade">
+                        <img src="{$basedomain}assets/images/badges/{$i.image}" />
+						{if $i.total != '0'}
+                        <input type="text" class="spinner_{$i.id}" name="give[]" value="0"  readonly="readonly"/>
+						{/if}
+                    </a>
+					{else}
+					<a class="badges badges-m grayscale" href="javascript:void(0)">
+                        <img src="{$basedomain}assets/images/badges/{$i.image}" />
+                    </a>
+                    {/if}
+                    {/foreach}
+					<input type="hidden" class="badgesGiveValue" value="" name="badgesGiveValue"/>
+					<input type="hidden" class="totalBadges" value="0" name="totalBadges"/>
+					<input type="hidden" value="1" name="ajax"/>
+                </div><!-- END .badgesListTrade -->
+            </td>
+          </tr>
+        </table>
+    </div>
+    <div class="box-prof">
+        <div class="row-white">
+            <input type="submit" value="+ create new trade" class="orangebtn"  />
+            {*}<a href="{$basedomain}badges/tradingConfirm" class="orangebtn" id="createTradeConfirm">+ create new trade</a>{/*}
+            <h3 class="info">you may only have maximum 3 active trades at a time</h3>
+        </div><!-- END .row-white -->
+    </div>
+    </form>
+</div><!-- END .tabEntry -->
+<script>
+    var badge_collections = {$mybadges_json};
+	{literal}
+		
+		$(document).on('submit','#tradeForm', function(){
+			var totalBadges = $('.totalBadges').val();
+			console.log(badgesFinding);
+			if (badgesFinding==0 || badgesGiveTotal>4) 
+			{
+				//console.log('masuk');
+				return false;
+			}
+			//return false;
+		})
+	{/literal}
+</script>

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/marlboro-in-or-out/!svn/ver/837/trunk/inorout/config
+END
+mail.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/config/mail.inc.php
+END
+config.inc.live.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/config/config.inc.live.php
+END
+config.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/config/config.inc.php
+END
+config.sample.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/marlboro-in-or-out/!svn/ver/87/trunk/inorout/config/config.sample.inc.php
+END
+config.inc.stage.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/config/config.inc.stage.php
+END
+routes.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/marlboro-in-or-out/!svn/ver/568/trunk/inorout/config/routes.php
+END
+config.dashboard.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/config/config.dashboard.inc.php
+END
+config.inc.local.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/config/config.inc.local.php
+END
+locale.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/marlboro-in-or-out/!svn/ver/837/trunk/inorout/config/locale.inc.php
+END

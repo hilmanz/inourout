@@ -1,0 +1,61 @@
+<div id="challengePage" class="container">
+	<div class="entry-container">
+        <div class="post-container">
+        	<div class="post-header">
+				<img src="{$basedomain}assets/images/content/challenge-oftheweek.png" />
+            </div><!-- END .post-header -->
+            <div class="post-content">
+                <div class="whitebox">
+                    <h3>Tunjukkan foto seru kamu sesuai tema bulan ini </h3>
+                    <h2>& MENANGKAN BADGE UNIK UNTUK KOLEKSIMU!</h2>
+                    <a href="{$basedomain}challenge/rules" class="greybtn">baca aturan main</a>
+                </div>
+				
+				{if  $challenge}
+					{foreach $challenge as $key => $val }
+						{if $key==0}
+						<div class="hot-content">
+							<a href="{$basedomain}challenge/finalist/{$val.id}" class="bigthumb">
+								<img src="{$val.event.image_full_path}" />
+							</a>
+							{if $val.total_finalist eq '10'}
+							  {*}<a href="{$basedomain}challenge/finalist/{$val.id}" class="showwinner">SHOW FINALIST</a>{/*}
+							{/if}
+						</div><!-- END .hot-content -->
+						{/if}
+					{/foreach}
+            	<a href="#popup-upload-photo" class="uploadphoto showPopup">&nbsp;</a>
+				{else}	
+                <div class="post-header">
+                    <img src="{$basedomain}assets/images/content/closing.png" />
+                </div><!-- END .post-header -->
+                {/if}
+				{if $gallery}	
+                <div id="galleryphoto">
+                	<h3>YOUR UPLOADED PHOTOS</h3>
+                    <div class="galleryphoto">
+                        <div id="photo-list">
+                             <div class="jcarousel-wrapper">
+                                <div class="jcarousel">
+                                    <ul>
+										{foreach $gallery as $key => $val}
+											<li>
+												<div class="photoThumb">
+												 <a class="img-thumb"><img src="{$val.gallery.image_full_path}"></a>
+												</div>
+											</li>
+										{/foreach}
+                                    </ul>
+                                </div>
+                                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                            </div>
+                        </div><!-- END #photo-list -->
+                    </div>
+                </div>
+				{/if}
+            </div><!-- END .post-content -->
+        </div><!-- END .post-container -->
+    </div>
+</div><!-- END .container -->
+{include file="application/web/widgets/popup-upload-challenge.html"}

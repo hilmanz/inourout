@@ -1,0 +1,21 @@
+<div id="reddemSucces" class="container">
+	<div class="entry-container center">
+    	<div id="box-content" class="relative">
+        	<a class="closing" href="{$basedomain}badges/collectibles">[CLOSE X]</a>
+            <div class="placingBid-head headredeemForm">
+                <h2><img src="{$basedomain}assets/images/mobile/redeem-logo.png" /></h2>
+           	</div>
+            <div id="entry-content">
+            	<div class="image-bids">
+                    <div id="prizeBox">
+                         <a href="#" class="thumbPrizes"><img src="{$merchimage}" /></a>
+                         <h3>{$merchandisename}</h3>
+                    </div>
+                </div>
+                <div class="post postMessages">
+                    {$message}
+            </div><!-- end .post -->
+            </div><!-- END .entry-content -->
+         </div><!-- END .box-content -->
+    </div><!-- END .entry-container -->
+</div><!-- END .placingBid -->

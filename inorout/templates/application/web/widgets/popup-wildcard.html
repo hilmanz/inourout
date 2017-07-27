@@ -1,0 +1,17 @@
+<div class="popup" id="popup-wildcard" style="display:block;">
+    <div class="popupContainer">
+		<a class="closePopup" href="#">[CLOSE X]</a>
+    	<div class="popup-head">
+        	<h2 class="bigTItle"><img src="{$basedomain}assets/images/content/wildcard.png" /></h2>
+        </div><!-- END .popup-head -->
+    	<div class="popup-entry">
+			<div class="messageWildcard"><p>{$messagewildcard}</p></div>
+            <div id="wildcardlist">
+                {foreach from=$stamps key=s item=i}
+                    <span class="stamp {if $i.id eq '0'}lockstamp{/if}">&nbsp;</span>
+                {/foreach}            
+            </div>
+        </div><!-- END .popup-entry -->
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->
+<div id="bg-popup" style="display:block;"></div>

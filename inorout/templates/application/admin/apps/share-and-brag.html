@@ -1,0 +1,230 @@
+<script>
+	{literal}
+	
+	$(document).on('click','.status',function(){
+		var id = $(this).attr('prop'); 
+		var vid = $(this).data('event'); 
+		var uid = $(this).data('user'); 
+		var n_status = parseInt($(this).val()); 
+		if(n_status==1){
+			n_status=2;
+		}else{
+			n_status=1
+		}
+		var div = $(this);
+		
+		$.post(basedomain+"shareandbrag/ajaxconfirmed" ,{n_status:n_status, id:id, vid:vid, uid:uid}, function(confirmedajax){			
+				
+			if (confirmedajax.status == '1'){
+				div.val(2);
+				if(confirmedajax.total_finalist=="10"){
+					var r=confirm("Send Notifications and Emails?");
+					if (r==true){
+					  $.post(basedomain+"shareandbrag/ajaxnotifNmail", {ajax:1,vid:vid}, function(response){
+
+					  },"JSON");
+					}else{
+					  
+					}
+				}else{
+					alert(confirmedajax.msg);
+				}		
+			}else if(confirmedajax.status == '3'){
+				
+				//$(this).attr("checked", false);
+				if(confirmedajax.total_finalist=="10"){
+					var r=confirm("Send Notifications and Email?");
+					if (r==true){
+					  
+					}else{
+					  
+					}
+				}else{
+
+					alert(confirmedajax.msg);
+					
+					div.prop("checked", false);
+				}
+			}else{
+				div.val(1);
+				alert('Canceled');
+			}
+		},"JSON");
+	});
+	
+	
+	$(document).on('click','.statuswinner',function(){
+		var id = $(this).attr('prop'); 
+		var vid = $(this).data('event'); 
+		var uid = $(this).data('user'); 
+		//var win = parseInt($(this).val()); 
+		var win = $(this).is(':checked');
+		
+		if(win==true){
+				win=1;
+			}else{
+				win=0
+			}
+		
+		var checkbox = $(this);
+		
+		$.post(basedomain+"shareandbrag/ajaxwinner" ,{win:win, id:id, vid:vid, uid:uid}, function(winnerChecked){		
+			
+			if (win==1){
+				if(winnerChecked.status==true){
+					alert("winner");
+				}else{
+					alert("Already have winner");
+					$(checkbox).removeAttr('checked');
+				}
+			}else{
+				alert("Canceled");
+			}
+			
+		},"JSON");
+	});
+	
+	
+	{/literal}
+</script>
+
+
+<div id="theContainer" class="inboxPage">
+    <div class="theContainer">
+        <div class="head-title">
+            <h1 class="fl">Challenge</h1>  <h1 class="fl">&nbsp; | &nbsp; <a href='{$basedomain}shareandbrag/cotw' >UPDATE COTW</a></h1>
+        </div> <!-- /.head-title -->
+        <div class="short2">
+            <form method="POST" action="{$basedomain}shareandbrag" id="shorter" class="formsubmitmanualmoderation" >
+                <div class="date-range fl">
+					<select class="styled sortby" name="sortby"   >
+						<option value=''>- Sort By -</option>
+						<option value='win' {if $sortby=='win'}selected{/if} >Winner</option>
+						<option value='finalist' {if $sortby=='finalist'}selected{/if} >finalist</option>
+						<option value='vote' {if $sortby=='vote'}selected{/if} >vote</option>
+					</select>&nbsp;&nbsp;
+					<select class="styled sortevent" name="sortevent"   >
+						<option value='' selected>- Sort By Event-</option>
+						{foreach $resEvent as $key=>$val}
+							<option value='{$val.title}' {if $sortevent==$val.title}selected{/if} >{$val.title}</option>
+						{/foreach}						
+					</select>&nbsp;&nbsp;
+					Date Range&nbsp;&nbsp;
+					<input type="text" class="half-width startdate" id="datepicker" name="startdate" value="{$startdate}" style="width:100px" />
+					<span>to</span>
+					<input type="text" class="half-width enddate" id="datepicker2" name="enddate" value="{$enddate}" style="width:100px"  />
+                </div>
+                <div class="input-append fr">
+					<a href="javascript:void(0)" class="btn btn_document downloadit">Download XLS</a>
+                    <input type="text" size="16" id="search" name="search" class="span2" onfocus="if(this.value=='Search...')this.value='';" onblur="if(this.value=='')this.value='Search...';" value="{if $search}{$search}{else}Search...{/if}"/>
+					<input type="hidden" name="filter" value="searchform"/>
+					<button type="submit" class="btn">Go!</button>
+                </div>
+            </form>
+        </div><!-- /.short -->
+        <div class="theContent">
+			<table cellpadding="0" cellspacing="0" border="0" id="table1" class="stdtable">
+			<colgroup>
+				<col class="con0" style="width: 4%" />
+				<col class="con1" />
+				<col class="con0" />
+				<col class="con1" />
+				<col class="con0" />
+				<col class="con1" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th class="head0">No</th>
+					<th class="head0">Name</th>
+					<th class="head0">Title</th>
+					<th class="head0">Images</th>
+					<th class="head0">Upload Date</th>
+					<th class="head0">Status</th>
+					<th class="head0">Total Vote</th>
+					<th class="head0">Checked Finalist</th>
+				</tr>
+			</thead>
+			<tbody class="sharebraglistpaging">
+				{section name=i loop=$list}
+					<tr>
+						<td width="10">{$list[i].no}&nbsp;</td>
+						<td>{$list[i].name|capitalize} {$list[i].last_name|capitalize}</td>
+						<td>{$list[i].title|capitalize}</td>
+						<td><a href="javascript:void(0)" class="arkPopupImages" call="{$basedomainpath}public_assets/sharebrags/{$list[i].img}"><img src="{$basedomainpath}public_assets/sharebrags/{$list[i].img}" height="70px" width="70px" /></a></td> 
+						<td align="center"><nobr>{$list[i].uploaddate}</nobr></td>
+						<td align="center">
+							{if $list[i].n_status==1} <span class="green">Publish</span>
+							{elseif $list[i].n_status==2} <span class="orange">Finalist</span>
+							{else}
+							{/if}
+						</td>
+						<td align="center"><nobr>{$list[i].totalvote}</nobr></td>
+						<td align="center">
+						
+							
+							{*}{if $list[i].win!=1}{/*}
+							<input type="checkbox" class="status" data-user="{$list[i].userid}" data-event="{$list[i].eventid}" prop="{$list[i].id}" value="{$list[i].n_status}" {if $list[i].n_status == 2} checked {/if}> Check Finalist<br>
+							
+							{if $list[i].winnercheckbox}
+								<input type="checkbox" class="statuswinner" data-user="{$list[i].userid}" data-event="{$list[i].eventid}" prop="{$list[i].id}" value="{$list[i].win}" {if $list[i].win == 1} checked {/if}> Check winner<br>
+								
+							{/if}
+							{*}
+							{else}
+								
+								{if $list[i].win==1}<span>Winner</span>
+								{else} <span>event close</span>{/if}
+							{/if}
+							{/*}
+						</td>						
+					</tr>
+				{/section}
+			</tbody>
+			</table>
+             <div class="pagingbox" id="pagingsharebrag"></div><!-- END .pagingbox -->
+        </div> <!-- /.theContent -->
+		<script>
+		
+		getpaging(0,{$total},"pagingsharebrag","paging_ajax_sharebrag",10);
+				var startdate = "{$startdate}";
+				var enddate = "{$enddate}";
+				var search = "{$search}";
+				var publishedtype = "{$publishedtype}";
+				{literal}
+					$(document).on('change','#publishedtype',function(){
+						$(".formsubmitmanualmoderation").submit();
+					})
+					
+		</script>
+				{/literal}
+		
+			<script>
+		var searchType = '{$searchType}';
+	{literal}
+		$(document).on("change","#moderationtype",function(){
+			var modetype = $(this).val();
+			window.location = basedomain+"moderation/"+modetype;
+		
+		});
+
+		$(document).ready(function(){
+			$('input.searchType').on('change',function(){
+				searchType = $(this).val();
+			});
+		});
+		
+	$('.downloadit').click(function(){
+		
+		var sortby = $('.sortby').val();
+		var sortevent = $('.sortevent').val();
+		var startdate = $('.startdate').val();
+		var enddate = $('.enddate').val();
+		
+		var url = basedomain+"shareandbrag/downloadit/?sortby="+sortby+"&sortevent="+sortevent+"&startdate="+startdate+"&enddate="+enddate;
+		var win=window.open(url, '_blank');
+		win.focus();
+	})	
+	</script>
+	{/literal}
+    </div> <!-- /.theContainer -->
+</div> <!-- /#theContainer -->

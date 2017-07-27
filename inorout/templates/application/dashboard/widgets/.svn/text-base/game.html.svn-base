@@ -1,0 +1,183 @@
+<script type="text/x-handlebars" data-template-name="game">
+  <div id="game">
+      <div class="content-chart">
+      </div>
+  </div>
+</script>
+
+
+{*}
+  <div class="row">
+        <div class="gameWeb col-lg-12 ">
+        <div class="table-info">
+          <table class="table table-bordered table-hover tablesorter">
+          <thead class="tittle-table">
+            <tr><td class="orange" colspan="11"><span class="icon-vcard"></span><span class="title-table">GAME: website + DST/SBA</span></td></tr>
+              <tr class="centerText">
+                    <td>Game Online 1</td>
+                    <td>Game Online 2</td>
+                    <td>Game Online 3</td>
+                    <td>Game Ipad DST</td>
+                    <td>Game Ipad SBA</td>
+                    <td>Game Ipad SBA</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="centerText">
+                <td><h1>7,543</h1></td>
+                <td><h1>3,543</h1></td>
+                <td><h1>6,543</h1></td>
+                <td><h1>1,543</h1></td>
+                <td><h1>2,543</h1></td>
+                <td><h1>9,243</h1></td>
+              </tr>
+
+            </tbody>
+          </table>
+      </div><!-- /.table-info -->
+      </div><!-- /.gameWeb --> 
+    </div><!-- /.row -->
+
+    <div class="row">
+        <div class="ChallengeGame col-lg-12 ">
+        <div class="table-info">
+          <table class="table table-bordered table-hover tablesorter">
+          <thead class="tittle-table">
+            <tr><td class="orange" colspan="11"><span class="icon-vcard"></span><span class="title-table">Challenge Of The Week</span></td></tr>
+              <tr class="centerText">
+                    <td>Total Participant COTW</td>
+                    <td>Total Uploaded Photos</td>
+                    <td>Total Approved Photos</td>
+                    <td>Total Vote</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="centerText">
+                <td><h1>17,543</h1></td>
+                <td><h1>3,543</h1></td>
+                <td><h1>6,543</h1></td>
+                <td><h1>1,543</h1></td>
+
+              </tr>
+
+            </tbody>
+          </table>
+      </div><!-- /.table-info -->
+      </div><!-- /.ChallengeGame --> 
+    </div><!-- /.row -->
+
+    <div class="row">
+        <div class="finalist col-lg-12 ">
+        <div class="table-info">
+          <table class="table table-bordered table-hover tablesorter">
+          <thead class="tittle-table">
+            <tr><td class="orange" colspan="10"><span class="icon-star"></span><span class="title-table">FINALIST</span><div class="fr actionField"><div class="fl sortbyTable form-group">
+                <select class="form-control">
+                  <option>Themes</option>
+                  <option>Themes 1</option>
+                  <option>Themes 2</option>
+                  <option>Themes 3</option>
+                  <option>Themes 4</option>
+                </select>
+              </div> &nbsp; &nbsp; <a class="icon-download dateDownload" href="#"></a></div></td></tr>
+            </thead>
+            <tbody>
+              <tr class="centerText">
+                <td>1.Bummi</td>
+                <td>2.Anto</td>
+                <td>3.Dafin</td>
+                <td>4.Bummi</td>
+                <td>5.Bummi</td>
+                <td>6.Bummi </td>
+                <td>7.Bummi</td>
+                <td>8.Bummi </td>
+                <td>9.Bummi </td>
+                <td>10.Bummi </td>
+              </tr>
+              <tr class="centerText">
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+              </tr>
+              <tr class="centerText">
+                <td>11.Bummi</td>
+                <td>12.Anto</td>
+                <td>13.Dafin</td>
+                <td>14.Bummi</td>
+                <td>15.Bummi</td>
+                <td>16.Bummi </td>
+                <td>17.Bummi</td>
+                <td>18.Bummi </td>
+                <td>19.Bummi </td>
+                <td>20.Bummi </td>
+              </tr>
+              <tr class="centerText">
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+              </tr>
+              
+            </tbody>
+          </table>
+      </div><!-- /.table-info -->
+      </div><!-- /.top-finalist -->
+        
+    </div><!-- /.row -->
+
+    <div class="row">
+        <div class="userparticipate col-lg-12 ">
+        <div class="table-info">
+          <table class="table table-bordered table-hover tablesorter">
+          <thead class="tittle-table">
+            <tr><td class="orange" colspan="11"><span class="icon-vcard"></span><span class="title-table">Number of User participate in double or nothing</span><div class="fr actionField"><a class="icon-download dateDownload" href="#"></a></div></td></tr>
+              <tr class="centerText">
+                    <td rowspan="2">Total</td>
+                    <td colspan="2">Number of User Participate In Double Or Nothing</td>
+                    <td rowspan="2">Expired</td>
+                    <td rowspan="2">Win</td>
+                    <td rowspan="2">Lose</td>
+              </tr>
+              <tr>
+                    <td>Name</td>
+                    <td class="border-right">Total</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="3" class="centerText"><h1>17,543</h1></td>
+                <td>1. Amin</td>
+                <td>5</td>
+                <td rowspan="3" class="centerText"><h1>3,543</h1></td>
+                <td rowspan="3" class="centerText"><h1>6,543</h1></td>
+                <td rowspan="3" class="centerText"><h1>1,543</h1></td>
+
+              </tr>
+              <tr>
+                <td>2. Bummi</td>
+                <td class="border-right">10</td>
+              </tr>
+              <tr>
+                <td>3. Anto</td>
+                <td class="border-right">15</td>
+              </tr>
+
+            </tbody>
+          </table>
+      </div><!-- /.table-info -->
+      </div><!-- /.userparticipate --> 
+    </div><!-- /.row -->
+{/*}

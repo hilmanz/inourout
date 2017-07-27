@@ -1,0 +1,80 @@
+<div id="reddemPrize" class="container">
+	<div class="entry-container center">
+    	<div id="box-content" class="relative">
+        <a class="closing" href="{$basedomain}badges/trading">[CLOSE X]</a>
+        	<div id="head-content">
+                <h1><span class="reds">Placing</span> <span class="black">Trade</span></h1>
+            </div><!-- END #head-content -->
+            <div id="entry-content">
+				{if $trade}
+                <form id="tradeFormConfirm" method="post" action="{$basedomain}badges/confirmTrade">
+				<input type="hidden" name="tradeID" value="{$tradeID}"/>
+				{else}
+				<form id="tradeFormConfirm" method="post" action="{$basedomain}badges/makeTradeProceed">
+                {/if}
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr class="even">
+                    <td>
+                        <div class="badgesListConfirm createBadgesListConfirm_offer">
+                            {foreach $find as $key=>$val}
+							<a class="badges badges-m" href="#">
+                                <img src="{$basedomain}assets/images/badges/{$val.image}" />
+                                {*}<span class="badges-value">{$val.prob}</span>{/*}
+                                <span class="badges-value">{if $val.total}{$val.total}{else}1{/if}</span>
+                            </a>
+							{/foreach}
+                            <!--
+							<a class="badges badges-m" href="#">
+                                <img src="{$basedomain}assets/images/badges/badges-10.png" />
+                                <span class="badges-value">1</span>
+                            </a>
+                            <a class="badges badges-m" href="#">
+                                <img src="{$basedomain}assets/images/badges/badges-11.png" />
+                                <span class="badges-value">1</span>
+                            </a>
+                            <a class="badges badges-m" href="#">
+                                <img src="{$basedomain}assets/images/badges/badges-12.png" />
+                                <span class="badges-value">1</span>
+                            </a>-->
+                        </div><!-- END .badgesListConfirm -->
+                    </td>
+                  </tr>
+                  <tr class="odd">
+                    <td>
+                        <h3>Trade With</h3>
+                        <div class="badgesListConfirm">
+                            {foreach $give as $key=>$val}
+							<a class="badges badges-m" href="#">
+                                <img src="{$basedomain}assets/images/badges/{$val.image}" />
+                                <span class="badges-value">{if $val.total}{$val.total}{else}1{/if}</span>
+                            </a>
+                            {/foreach}
+							<!--<a class="badges badges-m" href="#">
+                                <img src="{$basedomain}assets/images/badges/badges-2.png" />
+                                <span class="badges-value">1</span>
+                            </a>
+                            <a class="badges badges-m" href="#">
+                                <img src="{$basedomain}assets/images/badges/badges-3.png" />
+                                <span class="badges-value">1</span>
+                            </a>
+                            <a class="badges badges-m" href="#">
+                                <img src="{$basedomain}assets/images/badges/badges-4.png" />
+                                <span class="badges-value">1</span>
+                            </a>-->
+                        </div><!-- END .badgesListConfirm -->
+                    </td>
+                  </tr>
+                </table>
+                <div class="row">
+					<input type="hidden" value="{$givePost}" name="givePost"/>
+					<input type="hidden" value="{$findPost}" name="findPost"/>
+					<input type="hidden" value="1" name="ajax"/>
+                    <input type="submit" value="CONFIRM TRADE" class="orangebtn" />
+					<!--<a href="{$basedomain}badges/tradingSucces" class="orangebtn bigBtn">SUBMIT TRADE</a>-->
+                </div><!-- END .row -->
+                </form>
+            </div><!-- END .entry-content -->
+                
+         </div><!-- END .box-content -->
+    </div><!-- END .entry-container -->
+</div><!-- END .placingBid -->

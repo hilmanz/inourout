@@ -1,0 +1,18 @@
+<div id="header">
+	<div class="container">	
+    	<div class="entry1">		
+            <h1 style="color:#FFFFFF;">InOrOut</h1>			
+            <div id="info-user">
+                <div class="info-details">
+                    {if $user}
+					<h4>
+					<a href="#">Hi, {$user->name} {$user->last_name} </a>					
+					<a class="icon_flag" href="#"> {$user->leaderdetail->pagetypename}({$user->leaderdetail->description})</a>
+					<a href="{$basedomain}logout.php" style="padding-left:40px" >Log Out</a>
+					</h4>
+					{/if}
+                </div> <!-- /.info-details -->
+            </div> <!-- /#info-user -->
+		</div> <!-- /.entry -->
+	</div> <!-- /.container -->
+</div> <!-- /#header -->

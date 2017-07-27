@@ -1,0 +1,40 @@
+<?php
+
+$ROUTES = array(
+				/*web*/
+				"/articles/detail/:id",
+				"/home",
+				"/notification",
+				"/notification/edit/:id",
+				"/notification/hapus/:id",
+				"/notifications/detail/:req",
+				"/news",
+				"/news/:start",
+				"/news/detail/:id",
+				"/event",
+				"/event/past",
+				"/event/past/:id",
+				"/event/post/:id",
+				"/event/upcoming",
+				"/event/upcoming/:id",
+				"/event/:cid",			
+				"/forgotpassword",
+				"/forgotpassword/resetpassajax",
+				"/forgotpassword/verified_token/:token",
+				"/register/upload/token/:token",
+				"/login/:sessionid",
+				"/games/",
+				"/games/play/:gamesplay", 
+				"/games/hiddencode/:token", 
+				"/challenge/categories/:id",
+				"/challenge/uploadphoto/:id",
+				"/challenge/finalist/:id",
+				"/challenge/winner/:id",
+				"/challenge/ajax/:needs",
+				"/challenge/photodetails/:id",
+				"/administrator/edit/:uid",
+				"/administrator/seepermission/:uid",
+				"/logout",
+				"/landing"
+				);
+?>

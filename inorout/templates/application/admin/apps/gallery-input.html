@@ -1,0 +1,97 @@
+<div id="theContainer" class="inboxPage">
+    <div class="theContainer">
+        <div class="head-title">
+            <h1 class="fl">Input Event</h1>
+        </div> <!-- /.head-title -->
+         <div class="formContent">
+            <form method="POST" action="{$basedomain}gallery/newDataInput" enctype="multipart/form-data">
+			<table border=1>
+				<tr>
+					<td>image</td>
+					<td>:</td>
+					<td><input type="file" name="images" value="" /></td>
+				</tr>								
+				<tr class="city">
+					
+				</tr>
+				<tr>
+					<td>Posted Date</td>
+					<td>:</td>
+					<td><input type="text" class="half-width" id="datepicker" name="posteddate" value="{$posteddate}" style="width:100px" /></td>
+				</tr>
+				<tr>
+					<td>Status</td>
+					<td>:</td>
+					<td>
+						<select name="n_status">
+							<option value="2" selected>unpublished</option>
+							<option value="1">publish</option>
+							<option value="3">deleted</option>
+						</select>
+					</td>
+				</tr>		
+				<tr>
+					<td colspan="3" >
+						<input type="submit" name="submit" value="submit" />
+						<input type="hidden" name="eid" value="{$eventid}" />
+						<input type="hidden" name="eventid" value="{$eventid}" />
+					</td>
+				</tr>
+			</table>
+            </form>
+		</div>
+	</div>
+</div>
+
+<script>
+{literal}
+	$(document).on('change','.eventType', function(){
+		var type = $(this).val();
+		var html = "";
+		if (type==3){
+		
+			$.post(basedomain+'gallery/ajaxCity', {type:true}, function(data){
+		
+				
+				if (data.status==true){
+					
+					html += "<td>City</td>";
+					html += "		<td>:</td>";
+					html += "		<td>";
+					html += "			<select name='city'>";
+					$.each(data.res, function(i,e){
+						html += "<option value='"+e.id+"'>"+e.city+"</option>";
+					})
+					
+					html += "			</select>";
+					html += "		</td>";
+			
+					
+				
+				}else{
+					html += "";
+				}
+			
+				$('.city').html(html);
+				
+			},"JSON")
+		
+		}else{
+			$('.city').html(html);
+		}
+		
+		$.post(basedomain+'gallery/getListAlbum', {type:type}, function(data){
+		
+			var html = "";
+			if (data.status==true){
+				$.each(data.res, function(i,e){
+					html += "<option value='"+e.id+"'>"+e.title+"</option>";
+				})
+				
+				$('.albumType').html(html);
+			}
+			
+		},"JSON")
+	})
+{/literal}
+</script>

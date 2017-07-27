@@ -1,0 +1,538 @@
+<script type="text/x-handlebars" data-template-name="user"> 
+<div id="user"> 
+    <div class="content-chart">
+    </div><!---ENDcontent-chart-->
+</div><!-- /#BrandEngagement -->
+
+</script>
+
+
+{*}
+        <div class="row">
+          <div class="top-participant col-lg-12 ">
+            <div class="table-info">
+          <table class="table table-bordered table-hover tablesorter">
+          <thead class="tittle-table">
+            <tr><td class="orange" colspan="10"><span class="icon-star"></span><span class="title-table">TOP 10 PARTICIPANT</span></td></tr>
+            </thead>
+            <tbody>
+              <tr class="centerText">
+                <td>1.Bummi</td>
+                <td>2.Anto</td>
+                <td>3.Dafin</td>
+                <td>4.Bummi</td>
+                <td>5.Bummi</td>
+                <td>6.Bummi </td>
+                <td>7.Bummi</td>
+                <td>8.Bummi </td>
+                <td>9.Bummi </td>
+                <td>10.Bummi </td>
+              </tr>
+              <tr class="centerText">
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+                <td><img src="images/author.png"/></td>
+              </tr>
+            </tbody>
+          </table>
+      </div><!-- /.table-info -->
+      </div><!-- /.top-participant -->
+        
+    </div><!-- /.row -->
+    <div class="row">
+        <div class="demographic-data col-lg-12 ">
+            <div class="table-info">
+          <table class="table table-bordered table-hover tablesorter">
+          <thead class="tittle-table">
+            <tr><td class="orange" colspan="3"><span class="icon-pie"></span><span class="title-table">DEMOGRAPHIC DATA</span></td></tr>
+            <tr class="centerText">
+                <td>Age</td>
+                <td>Gender</td>
+                <td>Channel</td>
+            </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                    <div id="morris-chart-donut-age"></div>
+                </td>
+                <td>
+                    <div id="morris-chart-donut-gender"></div>
+                </td>
+                <td> <div id="morris-chart-bar-channel"></div></td>
+              </tr>
+            </tbody>
+          </table>
+      </div><!-- /.table-info -->
+      </div><!-- /.demographic-data -->
+        
+    </div><!-- /.row -->
+    <div class="row">
+        <div class="city-demo col-lg-12">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title orange"><span class="icon-pie"></span>  DEMOGRAPHIC DATA (City)</h3>
+              </div><!-- /.panel-heading -->
+              <div class="panel-body">
+                <div id="morris-chart-bar-city"></div>
+              </div><!-- /.panel-body -->
+            </div><!-- /.panel-primary -->
+          </div><!-- /.city-demo -->
+    </div><!-- /.row -->
+    <div class="row">
+        <div class="brandPreference-demo col-lg-12">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title orange"><span class="icon-pie"></span>  DEMOGRAPHIC DATA (Brand Preference)</h3>
+              </div><!-- /.panel-primary -->
+              <div class="panel-body">
+                <div id="morris-chart-bar-brandPref"></div>
+              </div><!-- /.panel-body -->
+            </div><!-- /.panel-primary -->
+          </div><!-- /.brandPreference-demo -->
+    </div><!-- /.row -->
+    
+    <div class="row">
+        <div class="LoginHistory col-lg-12 ">
+        <div class="table-info">
+          <table class="table table-bordered table-hover tablesorter">
+          <thead class="tittle-table">
+            <tr><td class="orange" colspan="11"><span class="icon-database"></span><span class="title-table">LOGIN HISTORY PER USER</span><div class="fr actionField"> 
+            <div id="ct-search" class="ct-search">
+            <div class="ct-search-input-wrap">
+          <input id="s" class="ct-search-input" type="text" name="s" value="" placeholder="Search...">
+        </div>
+            <input type="submit" value="" id="go" class="ct-search-submit">
+        <span class="ct-icon-search icon-search"></span>
+      </div><!--.ct-search---> &nbsp; &nbsp; <a class="dateDownload icon-download" href="#"></a>
+              </div><!-- /.actionField -->
+              </td></tr>
+              <tr>
+                <th>User Name <i class="fa fa-sort"></i></th>
+                <th>First Login <i class="fa fa-sort"></i></th>
+                <th>Last Login <i class="fa fa-sort"></i></th>
+                <th>Total Login <i class="fa fa-sort"></i></th>
+                <th>Unique Login per Days <i class="fa fa-sort"></i></th>
+                <th>Average Visit Duration <i class="fa fa-sort"></i></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>11:05PM 22/01/2013</td>
+                <td>4:05PM 27/01/2013</td>
+                <td>202</td>
+                <td>33</td>
+                <td>22</td>
+              </tr>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>11:05PM 22/01/2013</td>
+                <td>4:05PM 27/01/2013</td>
+                <td>202</td>
+                <td>33</td>
+                <td>22</td>
+              </tr>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>11:05PM 22/01/2013</td>
+                <td>4:05PM 27/01/2013</td>
+                <td>202</td>
+                <td>33</td>
+                <td>22</td>
+              </tr>
+            </tbody>
+          </table>
+      </div><!-- /.table-info --> 
+      </div><!-- /.LoginHistory -->     
+    </div><!-- /.row -->
+    <div class="row">
+        <div class="topLocation-demo col-lg-8">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title orange"><span class="icon-bars"></span>&nbsp; TOP 10 CITY LOCATION</h3>
+              </div><!-- /.panel-heading -->
+              <div class="panel-body">
+                <div id="morris-chart-bar-topCity"></div>
+              </div><!-- /.panel-body -->
+            </div><!-- /.panel-primary -->
+          </div><!-- /.topLocation-demo -->
+          <div class="totalAspiration col-lg-4">
+          <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title orange"><span class="icon-bars"></span>&nbsp; TOTAL SUBMITTED ASPIRATION</h3>
+              </div><!-- /.panel-heading -->
+              <div class="panel-body">
+                <h1>2,400,000</h1>
+              </div><!-- /.panel-body -->
+            </div><!-- /.panel-primary -->
+      </div><!-- /.totalAspiration -->     
+    </div><!-- /.row -->
+    <div class="row">
+        <div class="LoginHistory col-lg-12 ">
+        <div class="table-info">
+          <table class="table table-bordered table-hover tablesorter">
+          <thead class="tittle-table">
+            <tr><td class="orange" colspan="11"><span class="icon-bookmarks"></span><span class="title-table">TOP 20 USER ACTIVITIES</span><div class="fr actionField">
+            <div class="group-date fl">
+            <div class="input-daterange input-group innerInputDate" id="datepicker">
+                <div class="datefrom">
+                    <input id="from2" type="text" class="input-sm form-control" name="start" /><span class="cal-icon icon-calendar"></span>
+                </div>
+                <span class="input-group-addon" style="text-transform:lowercase;">to</span>
+                <div class="datefrom">
+                    <input id="to2" type="text" class="input-sm form-control" name="end" /><span class="cal-icon icon-calendar"></span>
+                </div>
+            </div><!-- /.innerInputDate-->
+       </div><!-- /.group-date -->
+            <a class="dateDownload icon-download" href="#"></a>
+            </div><!-- /.actionField -->
+            </td></tr>
+            <tr>
+                <td colspan="3">Badges Gain</td>
+                <td colspan="3">Badges Spent</td>
+            </tr>
+              <tr>
+                <th>Name <i class="fa fa-sort"></i></th>
+                <th>Online <i class="fa fa-sort"></i></th>
+                <th>Offline <i class="fa fa-sort"></i></th>
+                <th>Auction <i class="fa fa-sort"></i></th>
+                <th>Redeem <i class="fa fa-sort"></i></th>
+                <th>Trade <i class="fa fa-sort"></i></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>202</td>
+                <td>33</td>
+                <td>33</td>
+                <td>22</td>
+                <td>33</td>
+              </tr>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>202</td>
+                <td>33</td>
+                <td>33</td>
+                <td>22</td>
+                <td>33</td>
+              </tr>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>202</td>
+                <td>33</td>
+                <td>33</td>
+                <td>22</td>
+                <td>33</td>
+              </tr>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>202</td>
+                <td>33</td>
+                <td>33</td>
+                <td>22</td>
+                <td>33</td>
+              </tr>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>202</td>
+                <td>33</td>
+                <td>33</td>
+                <td>22</td>
+                <td>33</td>
+              </tr>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>202</td>
+                <td>33</td>
+                <td>33</td>
+                <td>22</td>
+                <td>33</td>
+              </tr>
+            </tbody>
+          </table>
+      </div><!-- /.table-info -->    
+      </div><!-- /.LoginHistory -->     
+    </div><!-- /.row -->
+    <div class="row">
+        <div class="topuserPoint col-lg-6 ">
+        <div class="table-info">
+          <table class="table table-bordered table-hover tablesorter">
+          <thead class="tittle-table">
+            <tr><td class="orange" colspan="11"><span class="icon-star"></span><span class="title-table">TOP 20 USER Based total point</span><div class="fr actionField"><a class="dateDownload icon-download" href="#"></a></div></td></tr>
+              <tr>
+                <th>Name <i class="fa fa-sort"></i></th>
+                <th>Total Point <i class="fa fa-sort"></i></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>202</td>
+              </tr>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>202</td>
+              </tr>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>202</td>
+              </tr>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>202</td>
+              </tr>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>202</td>
+              </tr>
+            </tbody>
+          </table>
+      </div><!-- /.table-info --> 
+      </div><!-- /.topuserPoint --> 
+      <div class="topuserTime col-lg-6 ">
+        <div class="table-info">
+          <table class="table table-bordered table-hover tablesorter">
+          <thead class="tittle-table">
+            <tr><td class="orange" colspan="11"><span class="icon-star"></span><span class="title-table">TOP 20 Active User Based On Timespent</span><div class="fr actionField"><a class="dateDownload icon-download" href="#"></a></div></td></tr>
+              <tr>
+                <th>Name <i class="fa fa-sort"></i></th>
+                <th>Total Point <i class="fa fa-sort"></i></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>202</td>
+              </tr>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>202</td>
+              </tr>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>202</td>
+              </tr>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>202</td>
+              </tr>
+            </tbody>
+          </table>
+      </div><!-- /.table-info --> 
+      </div><!-- /.topuserTime  -->      
+    </div><!-- /.row -->
+    <div class="row">
+        <div class="TrackUser col-lg-12 ">
+        <div class="table-info">
+          <table class="table table-bordered table-hover tablesorter">
+          <thead class="tittle-table">
+            <tr><td class="orange" colspan="11"><span class="icon-database"></span><span class="title-table">Track Users</span></td></tr>
+            <tr>
+                <th rowspan="2">BA Name<i class="fa fa-sort"></i></th>
+                 <td colspan="3">Online</td>
+                 <td colspan="5">Offline</td>
+            </tr>
+              <tr>
+                <th>Trading <i class="fa fa-sort"></i></th>
+                <th>Games <i class="fa fa-sort"></i></th>
+                <th>Input Code <i class="fa fa-sort"></i></th>
+                <th>Mspot & mvibe <i class="fa fa-sort"></i></th>
+                <th>LCD cash & trade <i class="fa fa-sort"></i></th>
+                <th>Magazine <i class="fa fa-sort"></i></th>
+                <th>Games <i class="fa fa-sort"></i></th>
+                <th>Flashmob <i class="fa fa-sort"></i></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>202</td>
+                <td>33</td>
+                <td>33</td>
+                <td>22</td>
+                <td>33</td>
+                <td>22</td>
+                <td>22</td>
+                <td>22</td>
+              </tr>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>202</td>
+                <td>33</td>
+                <td>33</td>
+                <td>22</td>
+                <td>33</td>
+                <td>22</td>
+                <td>22</td>
+                <td>22</td>
+              </tr>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>202</td>
+                <td>33</td>
+                <td>33</td>
+                <td>22</td>
+                <td>33</td>
+                <td>22</td>
+                <td>22</td>
+                <td>22</td>
+              </tr>
+              <tr>
+                <td>Bummi Candra</td>
+                <td>202</td>
+                <td>33</td>
+                <td>33</td>
+                <td>22</td>
+                <td>33</td>
+                <td>22</td>
+                <td>22</td>
+                <td>22</td>
+              </tr>
+             
+            </tbody>
+          </table>
+      </div><!-- /.table-info --> 
+      </div><!-- /.TrackUser -->     
+    </div><!-- /.row -->
+    <div class="row">
+        <div class="RareBadges col-lg-12 ">
+        <div class="table-info">
+          <table class="table table-bordered table-hover tablesorter">
+          <thead class="tittle-table">
+            <tr><td class="orange" colspan="11"><span class="icon-database"></span><span class="title-table">Rare badges Distribution</span></td></tr>
+            <tr>
+                 <td>Flashmob</td>
+                 <td>Jakarta</td>
+                 <td>Bandung</td>
+                 <td>Jogja</td>
+                 <td>Medan</td>
+                 <td>Surabaya</td>
+                 <td>Bali</td>
+                 <td>Makassar</td>
+            </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Yellow Cab</td>
+                <td>202</td>
+                <td>33</td>
+                <td>33</td>
+                <td>22</td>
+                <td>33</td>
+                <td>22</td>
+                <td>22</td>
+              </tr>
+              <tr>
+                <td>Phonebooth</td>
+                <td>202</td>
+                <td>33</td>
+                <td>33</td>
+                <td>22</td>
+                <td>33</td>
+                <td>22</td>
+                <td>22</td>
+              </tr>
+             
+            </tbody>
+          </table>
+      </div><!-- /.table-info --> 
+      </div><!-- /.RareBadges -->     
+    </div><!-- /.row -->
+    <div class="row">
+        <div class="totaluserlogin col-lg-12">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title orange fl"><span class="icon-bars"></span>&nbsp; TOTAL USER LOGIN</h3>
+                <div class="fr actionField">
+                    <div class="group-date fl">
+                        <div class="input-daterange input-group innerInputDate" id="datepicker">
+                            <div class="datefrom">
+                                <input id="from3" type="text" class="input-sm form-control" name="start" /><span class="cal-icon icon-calendar"></span>
+                            </div>
+                            <span class="input-group-addon">to</span>
+                            <div class="datefrom">
+                                <input id="to3" type="text" class="input-sm form-control" name="end" /><span class="cal-icon icon-calendar"></span>
+                            </div>
+                        </div><!-- /.innerInputDate --> 
+                   </div><!-- /.group-date --> 
+              </div><!-- /.actionField --> 
+              </div><!-- /.panel-body-heading --> 
+              <div class="panel-body">
+                <div id="morris-chart-bar-totaluserlogin"></div>
+              </div><!-- /.panel-body-demo --> 
+            </div><!-- /.panel-primary-demo --> 
+          </div><!-- /.totaluserlogin-demo -->     
+    </div><!-- /.row -->
+    
+    <div class="row">
+        <div class="number-registration col-lg-12 ">
+            <div class="table-info">
+          <table class="table table-bordered table-hover tablesorter">
+          <thead class="tittle-table">
+            <tr><td class="orange" colspan="3"><span class="icon-pie"></span><span class="title-table">DEMOGRAPHIC DATA</span></td></tr>
+            <tr class="centerText">
+                <td>Verified User</td>
+                <td>Not Verified User</td>
+                <td>Total</td>
+                <td>Age</td>
+            </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="centerText">
+                    <h1>6,123</h1>
+                </td>
+                <td class="centerText">
+                    <h1>3,789</h1>
+                </td>
+                <td>
+                     <div id="morris-chart-line-NumberRegistrtation"></div>
+                </td>
+                <td><div id="morris-chart-donut-registationAge"></td>
+              </tr>
+            </tbody>
+          </table>
+      </div><!-- /.table-info --> 
+      </div><!-- /.number-registration -->
+        
+    </div><!-- /.row -->
+    
+     <div class="row">
+        <div class="totalregistrantCity col-lg-12">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title orange fl"><span class="icon-bars"></span>&nbsp; TOP 10 REGISTRANT CITY</h3>
+                <div class="fr actionField">
+                    <div class="group-date fl">
+                        <div class="input-daterange input-group innerInputDate" id="datepicker">
+                            <div class="datefrom">
+                                <input id="from4" type="text" class="input-sm form-control" name="start" /><span class="cal-icon icon-calendar"></span>
+                            </div>
+                            <span class="input-group-addon">to</span>
+                            <div class="datefrom">
+                                <input id="to4" type="text" class="input-sm form-control" name="end" /><span class="cal-icon icon-calendar"></span>
+                            </div>
+                        </div><!-- /.innerInputDate --> 
+                   </div><!-- /.group-date --> 
+              </div><!-- /.actionField --> 
+              </div><!-- /.panel-heading --> 
+              <div class="panel-body">
+                <div id="morris-chart-bar-totalregistrantCity"></div>
+              </div><!-- /.panel-body --> 
+            </div><!-- /.panel-primary --> 
+          </div><!-- /.totalregistrantCity -->     
+    </div><!-- /.row -->
+    {/*}

@@ -1,0 +1,90 @@
+<div id="challengePage" class="container">
+	<div class="entry-container">
+        <div class="post-container">
+        	<div class="post-header">
+				<div class="header-challange">
+				<img src="{$basedomain}assets/images/mobile/content/challangeOftheWeek.png" />
+                </div>
+            </div><!-- END .post-header -->
+            <div class="post-content">
+                <div class="box-prof whitebox">
+                    <h3>Tunjukkan foto seru kamu sesuai tema bulan ini </h3>
+                    <h2>& MENANGKAN BADGE UNIK UNTUK KOLEKSIMU!</h2>
+                    <a href="{$basedomain}challenge/rules" class="greybtn">baca aturan main</a>
+                </div>
+				{if  $challenge}
+					{foreach $challenge as $key => $val }
+						{if $key==0}
+						<div class="hot-content">
+							<a href="{$basedomain}challenge" class="bigthumb">
+								<img src="{$val.event.image_full_path}" />
+							</a>
+						 <div class="bt-cotw tokyo"><a href="{$basedomain}challenge" class="showwinner">VIEW PREVIOUS THEME</a> </div>
+						</div><!-- END .hot-content -->
+						{/if}
+					{/foreach}
+				{/if}	
+            </div><!-- END .post-content -->
+            </div>
+            <div class="box-prof whitebox">
+            <div class="post-content">
+                <div class="post-header">
+                	<div class="header-challange">
+                    	<img src="{$basedomain}assets/images/mobile/content/winneroftheweek.png" />
+                    </div>
+                    <h4>Setiap pemenang mendapatkan <span class="red">1 badge spesial</span></h4>
+                </div><!-- END .post-header -->
+                <div id="winnerBox" style="text-align:center">
+					{if $gallerywinner}	
+						{foreach $gallerywinner as $key => $val}
+						<div class="thumbWinner"><img src="{$val.gallery.image_full_path}"></div>
+						<div class="photoDesc" style="padding:20px 0 20px 100px;">
+							<a href="{$basedomain}profile/{$val.author.authorid}" class="small-thumb"  style="position:relative" ><img src="{$val.author.profiles.image_fill_path}" /></a>
+							<div class="photo-author" style="text-align:left;">
+								<h4>PHOTO BY</h4>
+								<h3 style="padding:0">{$val.author.name} {$val.author.last_name}</h3>
+							</div><!-- END .photo-author -->
+						</div><!-- END .photoDesc -->
+					     {/foreach}
+					{/if}     
+                </div><!-- END #winnerBox -->
+            	<div class="the-content">
+                	<div class="box-title">
+                        <span class="line"></span>
+                    	<h3>All 10 finalist</h3>
+                    </div>
+                    <div class="section galleries center">
+					{if $gallery}	
+						{foreach $gallery as $key => $val}
+                        <div class="photoThumb">
+                            <div class="qitem"  style="overflow:hidden;height:100%">
+                                <a href="{$basedomain}challenge/photodetails/{$val.eventid}" class=""><img src="{$val.gallery.image_full_path}"></a>
+                                
+                            </div><!-- END .qitem -->
+							
+                          
+                        </div><!-- END .photoThumb -->
+                        {/foreach}
+					{/if}                          
+                	</div><!-- END .section -->
+                    <div class="whitebox">
+                        <h2 class="blue">belum menang?</h2>
+                        <h3>masih ada kesempatan lain bulan depan</h3>
+                    </div>
+                    {if  $nextchallenge}
+						{foreach $nextchallenge as $key => $val }
+							{if $key==0}
+							<div class="hot-content">
+								<a href="javascript:void(0)" class="bigthumb">
+									<img src="{$val.event.image_full_path}" />
+								</a>
+							</div><!-- END .hot-content -->
+							{/if}
+						{/foreach}
+					{/if}	
+                </div><!-- END .the-content -->
+            </div><!-- END .post-content -->
+             </div><!-- END .box-prof -->
+        </div><!-- END .post-container -->
+</div><!-- END .container -->
+ 

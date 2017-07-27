@@ -1,0 +1,16 @@
+<div class="popup" id="popup-notification">
+    <div class="popupContainer">
+		<a class="closePopup" href="#">[CLOSE X]</a>
+    	<div class="popup-head">
+        	<h2 class="bigTItle notifunread">NOTIFICATION</h2>
+        </div><!-- END .popup-head -->
+    	<div class="popup-entry">
+            <div id="notifList" style="height:500px;overflow:auto;">
+                
+               
+            </div><!-- end #notifList -->
+        </div><!-- END .popup-entry -->
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->
+
+{$notification_detail}

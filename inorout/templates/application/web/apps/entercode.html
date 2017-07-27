@@ -1,0 +1,97 @@
+<div id="entercodePage" class="container">
+	<div class="entry-container center">
+    	<img src="{$basedomain}assets/images/entercode.png" />
+    	<form method="POST" action="{$basedomain}/badges/inputcode" id="inputcodeform" >
+        	<input type="text" name="code" class="thecodes" maxlength="8"/>
+			<span class="messageinputcode" ></span>
+            <input type="submit" class="btnSubmit inputsubmitcode" value="&nbsp;" />
+			
+        </form>
+        <h3><a href="{$basedomain}about/howto" class="learnmore">learn how to get more badges &raquo;</a></h3>
+    </div>
+</div><!-- END .container -->
+<a href="#popup-get-badges" class="showPopup popupbadges" style="display:none" ></a>
+ {include file="application/web/widgets/popup-badges.html"}
+<script>
+
+var ebSession = '{$smarty.session.mop_sess_id}' ;
+	{literal}
+	
+	var updateoptions = {
+	dataType:  'json', 	
+	beforeSubmit: function(data) { 
+			 
+			/* $(".global-popup-inorout").trigger("click");	*/
+			
+			$(".badgesName").html("please wait");				  
+			$(".badgesdescs,.messageinputcode").html("");	
+$(".badgesdescs").attr('style','');			
+			$(".badgesimages").attr('src',"");	 
+			
+			$(".badgesimages").css( "display", "none" );	
+	 
+			$(".thecodes").val("");
+			 
+	},
+	success : function(data) {		
+			
+			if(data.result==true){
+						
+						 console.log(data);
+						$(".popupbadges").trigger("click"); 
+						$(".badgesName").html(data.badgesnames);				  
+						$(".badgesdescs").html(data.message);
+						$(".badgesdescription").html(data.badgesdesc);
+						if(data.messagetooltips_link!='')
+						{
+							$(".descWonBadges").html('<a href="'+data.messagetooltips_link+'" >'+data.messagetooltips+'</a>');
+						}
+						else
+						{
+							$(".descWonBadges").html(data.messagetooltips);
+						}
+						$(".badgesdescs").attr('style','text-align:center;width:100%;');
+						if(data.result){
+							$(".badgesimages").css( "display", "block" );				  	  
+							$(".badgesimages").attr('src',basedomain+"assets/images/badges/"+data.images);	
+						}
+					 					
+					 
+			}
+			else
+			{
+				$(".messageinputcode").html(data.message);	
+			}
+		//mmConversionTag('461577', this, '_self', null);		 
+	}
+	};					
+
+	$("#inputcodeform").ajaxForm(updateoptions);
+	$(document).ready(function() {
+	
+		mmConversionTag('461577', this, '_self', null);
+	});
+	</script>
+<script type='text/javascript'>
+
+// Conversion Name: 10. In or Out Submit Code Button (Red)
+
+
+
+var ebRand = Math.random()+'';
+
+ebRand = ebRand * 1000000;
+
+//<![CDATA[
+
+document.write('<scr'+'ipt src="HTTPS://bs.serving-sys.com/Serving/ActivityServer.bs?cn=as&ActivityID=468588&rnd=' + ebRand + '&Session='+ebSession+'"></scr' + 'ipt>');
+
+//]]>
+
+</script>
+{/literal}
+<noscript>
+
+<img width="1" height="1" style="border:0" src="HTTPS://bs.serving-sys.com/Serving/ActivityServer.bs?cn=as&ActivityID=468588&Session={$smarty.session.mop_sess_id}&ns=1"/>
+
+</noscript>

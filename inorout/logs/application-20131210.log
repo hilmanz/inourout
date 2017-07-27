@@ -1,0 +1,203 @@
+2013-12-10 13:41:19 Darkmatt3r-impstrg@yahoo.com
+2013-12-10 13:41:19 SELECT * FROM social_member WHERE email='impstrg@yahoo.com' AND n_status = 1 LIMIT 1
+2013-12-10 13:41:19 can login
+2013-12-10 13:41:21 SELECT COUNT(*) total FROM my_games WHERE gamesid=3 AND userid=7071 AND DATE(datetimes)=DATE('2013-12-10 13:41:21') GROUP BY gamesid 
+2013-12-10 13:41:21  get today hidden code: null
+2013-12-10 13:41:21  get hidden code 50 times : SELECT COUNT(*) total FROM my_games WHERE gamesid=3 AND DATE(datetimes)=DATE('2013-12-10 13:41:21') GROUP BY gamesid 
+2013-12-10 13:41:21  get hidden code 50 times : null
+2013-12-10 13:41:21  check : 0
+2013-12-10 13:41:21  query get code public :  
+					SELECT id, codeid, maskcode FROM  tbl_code_publicity public
+					WHERE 
+					channel='games hidden code' 
+					AND DATE(posted_date)<=DATE('2013-12-10 13:41:21') 
+					AND DATE(expired_date) >= DATE('2013-12-10 13:41:21') 
+					AND n_status = 1 
+					AND NOT EXISTS ( SELECT codepublicityid FROM tbl_code_inventory inv WHERE  inv.codepublicityid = public.id AND inv.userid = 7071 )
+					ORDER BY rand() 
+					LIMIT 1
+2013-12-10 13:41:21 
+		 
+		SELECT my.id, '' fromid, '' recipientid, '' fromwho,my.date_time datetime, my.n_status, '' name, '' last_name,0 type
+		FROM tbl_activity_log AS my 
+		LEFT JOIN social_member AS person 
+		ON my.user_id = person.id 
+		WHERE my.user_id = 7071 AND action_id IN (20,21,23,24,25,26,27,28,30,45) AND my.n_status IN (  0 ) AND person.id <>'' AND person.id IS NOT NULL
+		ORDER BY my.date_time DESC 
+		 
+		 
+		
+2013-12-10 13:41:21 
+		SELECT  my.id,my.fromid,my.recipientid,my.fromwho,my.datetime,my.n_status, sm.name,  sm.last_name, 1 type
+		FROM my_message my
+		LEFT JOIN social_member sm ON sm.id = my.recipientid		
+		WHERE my.recipientid = 7071  AND my.n_status = 0 
+		ORDER BY datetime DESC
+		
+2013-12-10 13:41:21 generate new code for loginpoint
+2013-12-10 13:41:21 publicity code exist
+2013-12-10 13:49:50 SELECT COUNT(*) total FROM my_games WHERE gamesid=3 AND userid=0 AND DATE(datetimes)=DATE('2013-12-10 13:49:50') GROUP BY gamesid 
+2013-12-10 13:49:50  get today hidden code: null
+2013-12-10 13:49:50  get hidden code 50 times : SELECT COUNT(*) total FROM my_games WHERE gamesid=3 AND DATE(datetimes)=DATE('2013-12-10 13:49:50') GROUP BY gamesid 
+2013-12-10 13:49:50  get hidden code 50 times : null
+2013-12-10 13:49:50  check : 0
+2013-12-10 13:49:50  query get code public :  
+					SELECT id, codeid, maskcode FROM  tbl_code_publicity public
+					WHERE 
+					channel='games hidden code' 
+					AND DATE(posted_date)<=DATE('2013-12-10 13:49:50') 
+					AND DATE(expired_date) >= DATE('2013-12-10 13:49:50') 
+					AND n_status = 1 
+					AND NOT EXISTS ( SELECT codepublicityid FROM tbl_code_inventory inv WHERE  inv.codepublicityid = public.id AND inv.userid = 0 )
+					ORDER BY rand() 
+					LIMIT 1
+2013-12-10 13:49:50 
+		 
+		SELECT my.id, '' fromid, '' recipientid, '' fromwho,my.date_time datetime, my.n_status, '' name, '' last_name,0 type
+		FROM tbl_activity_log AS my 
+		LEFT JOIN social_member AS person 
+		ON my.user_id = person.id 
+		WHERE my.user_id =  AND action_id IN (20,21,23,24,25,26,27,28,30,45) AND my.n_status IN (  0 ) AND person.id <>'' AND person.id IS NOT NULL
+		ORDER BY my.date_time DESC 
+		 
+		 
+		
+2013-12-10 13:49:50 
+		SELECT  my.id,my.fromid,my.recipientid,my.fromwho,my.datetime,my.n_status, sm.name,  sm.last_name, 1 type
+		FROM my_message my
+		LEFT JOIN social_member sm ON sm.id = my.recipientid		
+		WHERE my.recipientid =   AND my.n_status = 0 
+		ORDER BY datetime DESC
+		
+2013-12-10 13:50:19 SELECT COUNT(*) total FROM my_games WHERE gamesid=3 AND userid=7071 AND DATE(datetimes)=DATE('2013-12-10 13:50:19') GROUP BY gamesid 
+2013-12-10 13:50:19  get today hidden code: null
+2013-12-10 13:50:19  get hidden code 50 times : SELECT COUNT(*) total FROM my_games WHERE gamesid=3 AND DATE(datetimes)=DATE('2013-12-10 13:50:19') GROUP BY gamesid 
+2013-12-10 13:50:19  get hidden code 50 times : null
+2013-12-10 13:50:19  check : 0
+2013-12-10 13:50:19  query get code public :  
+					SELECT id, codeid, maskcode FROM  tbl_code_publicity public
+					WHERE 
+					channel='games hidden code' 
+					AND DATE(posted_date)<=DATE('2013-12-10 13:50:19') 
+					AND DATE(expired_date) >= DATE('2013-12-10 13:50:19') 
+					AND n_status = 1 
+					AND NOT EXISTS ( SELECT codepublicityid FROM tbl_code_inventory inv WHERE  inv.codepublicityid = public.id AND inv.userid = 7071 )
+					ORDER BY rand() 
+					LIMIT 1
+2013-12-10 13:50:19 
+		 
+		SELECT my.id, '' fromid, '' recipientid, '' fromwho,my.date_time datetime, my.n_status, '' name, '' last_name,0 type
+		FROM tbl_activity_log AS my 
+		LEFT JOIN social_member AS person 
+		ON my.user_id = person.id 
+		WHERE my.user_id = 7071 AND action_id IN (20,21,23,24,25,26,27,28,30,45) AND my.n_status IN (  0 ) AND person.id <>'' AND person.id IS NOT NULL
+		ORDER BY my.date_time DESC 
+		 
+		 
+		
+2013-12-10 13:50:19 
+		SELECT  my.id,my.fromid,my.recipientid,my.fromwho,my.datetime,my.n_status, sm.name,  sm.last_name, 1 type
+		FROM my_message my
+		LEFT JOIN social_member sm ON sm.id = my.recipientid		
+		WHERE my.recipientid = 7071  AND my.n_status = 0 
+		ORDER BY datetime DESC
+		
+2013-12-10 13:50:21 SELECT COUNT(*) total FROM my_games WHERE gamesid=3 AND userid=7071 AND DATE(datetimes)=DATE('2013-12-10 13:50:21') GROUP BY gamesid 
+2013-12-10 13:50:21  get today hidden code: null
+2013-12-10 13:50:21  get hidden code 50 times : SELECT COUNT(*) total FROM my_games WHERE gamesid=3 AND DATE(datetimes)=DATE('2013-12-10 13:50:21') GROUP BY gamesid 
+2013-12-10 13:50:21  get hidden code 50 times : null
+2013-12-10 13:50:21  check : 0
+2013-12-10 13:50:21  query get code public :  
+					SELECT id, codeid, maskcode FROM  tbl_code_publicity public
+					WHERE 
+					channel='games hidden code' 
+					AND DATE(posted_date)<=DATE('2013-12-10 13:50:21') 
+					AND DATE(expired_date) >= DATE('2013-12-10 13:50:21') 
+					AND n_status = 1 
+					AND NOT EXISTS ( SELECT codepublicityid FROM tbl_code_inventory inv WHERE  inv.codepublicityid = public.id AND inv.userid = 7071 )
+					ORDER BY rand() 
+					LIMIT 1
+2013-12-10 13:50:21 
+		 
+		SELECT my.id, '' fromid, '' recipientid, '' fromwho,my.date_time datetime, my.n_status, '' name, '' last_name,0 type
+		FROM tbl_activity_log AS my 
+		LEFT JOIN social_member AS person 
+		ON my.user_id = person.id 
+		WHERE my.user_id = 7071 AND action_id IN (20,21,23,24,25,26,27,28,30,45) AND my.n_status IN (  0 ) AND person.id <>'' AND person.id IS NOT NULL
+		ORDER BY my.date_time DESC 
+		 
+		 
+		
+2013-12-10 13:50:21 
+		SELECT  my.id,my.fromid,my.recipientid,my.fromwho,my.datetime,my.n_status, sm.name,  sm.last_name, 1 type
+		FROM my_message my
+		LEFT JOIN social_member sm ON sm.id = my.recipientid		
+		WHERE my.recipientid = 7071  AND my.n_status = 0 
+		ORDER BY datetime DESC
+		
+2013-12-10 13:50:41 SELECT COUNT(*) total FROM my_games WHERE gamesid=3 AND userid=7071 AND DATE(datetimes)=DATE('2013-12-10 13:50:41') GROUP BY gamesid 
+2013-12-10 13:50:41  get today hidden code: null
+2013-12-10 13:50:41  get hidden code 50 times : SELECT COUNT(*) total FROM my_games WHERE gamesid=3 AND DATE(datetimes)=DATE('2013-12-10 13:50:41') GROUP BY gamesid 
+2013-12-10 13:50:41  get hidden code 50 times : null
+2013-12-10 13:50:41  check : 0
+2013-12-10 13:50:41  query get code public :  
+					SELECT id, codeid, maskcode FROM  tbl_code_publicity public
+					WHERE 
+					channel='games hidden code' 
+					AND DATE(posted_date)<=DATE('2013-12-10 13:50:41') 
+					AND DATE(expired_date) >= DATE('2013-12-10 13:50:41') 
+					AND n_status = 1 
+					AND NOT EXISTS ( SELECT codepublicityid FROM tbl_code_inventory inv WHERE  inv.codepublicityid = public.id AND inv.userid = 7071 )
+					ORDER BY rand() 
+					LIMIT 1
+2013-12-10 13:50:41 
+		 
+		SELECT my.id, '' fromid, '' recipientid, '' fromwho,my.date_time datetime, my.n_status, '' name, '' last_name,0 type
+		FROM tbl_activity_log AS my 
+		LEFT JOIN social_member AS person 
+		ON my.user_id = person.id 
+		WHERE my.user_id = 7071 AND action_id IN (20,21,23,24,25,26,27,28,30,45) AND my.n_status IN (  0 ) AND person.id <>'' AND person.id IS NOT NULL
+		ORDER BY my.date_time DESC 
+		 
+		 
+		
+2013-12-10 13:50:41 
+		SELECT  my.id,my.fromid,my.recipientid,my.fromwho,my.datetime,my.n_status, sm.name,  sm.last_name, 1 type
+		FROM my_message my
+		LEFT JOIN social_member sm ON sm.id = my.recipientid		
+		WHERE my.recipientid = 7071  AND my.n_status = 0 
+		ORDER BY datetime DESC
+		
+2013-12-10 13:50:46 SELECT COUNT(*) total FROM my_games WHERE gamesid=3 AND userid=7071 AND DATE(datetimes)=DATE('2013-12-10 13:50:46') GROUP BY gamesid 
+2013-12-10 13:50:46  get today hidden code: null
+2013-12-10 13:50:46  get hidden code 50 times : SELECT COUNT(*) total FROM my_games WHERE gamesid=3 AND DATE(datetimes)=DATE('2013-12-10 13:50:46') GROUP BY gamesid 
+2013-12-10 13:50:46  get hidden code 50 times : null
+2013-12-10 13:50:46  check : 0
+2013-12-10 13:50:46  query get code public :  
+					SELECT id, codeid, maskcode FROM  tbl_code_publicity public
+					WHERE 
+					channel='games hidden code' 
+					AND DATE(posted_date)<=DATE('2013-12-10 13:50:46') 
+					AND DATE(expired_date) >= DATE('2013-12-10 13:50:46') 
+					AND n_status = 1 
+					AND NOT EXISTS ( SELECT codepublicityid FROM tbl_code_inventory inv WHERE  inv.codepublicityid = public.id AND inv.userid = 7071 )
+					ORDER BY rand() 
+					LIMIT 1
+2013-12-10 13:50:46 
+		 
+		SELECT my.id, '' fromid, '' recipientid, '' fromwho,my.date_time datetime, my.n_status, '' name, '' last_name,0 type
+		FROM tbl_activity_log AS my 
+		LEFT JOIN social_member AS person 
+		ON my.user_id = person.id 
+		WHERE my.user_id = 7071 AND action_id IN (20,21,23,24,25,26,27,28,30,45) AND my.n_status IN (  0 ) AND person.id <>'' AND person.id IS NOT NULL
+		ORDER BY my.date_time DESC 
+		 
+		 
+		
+2013-12-10 13:50:46 
+		SELECT  my.id,my.fromid,my.recipientid,my.fromwho,my.datetime,my.n_status, sm.name,  sm.last_name, 1 type
+		FROM my_message my
+		LEFT JOIN social_member sm ON sm.id = my.recipientid		
+		WHERE my.recipientid = 7071  AND my.n_status = 0 
+		ORDER BY datetime DESC
+		

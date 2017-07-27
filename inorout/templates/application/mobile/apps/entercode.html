@@ -1,0 +1,51 @@
+<div id="entercodePage" class="container">
+	<div class="entry-container center">
+    	<div class="image-code">
+    		<img src="{$basedomain}assets/images/mobile/submit-code.png" />
+        </div>
+    	<form method="POST" action="{$basedomain}/entercode/inputcode" id="inputcodeform" >
+        	<input type="text" name="code" class="thecodes" maxlength="8"  />
+			<span class="messageinputcode" ></span>
+			<span class="errorCode" >{$message}</span>
+			<input type="submit" class="btnSubmit" value="&nbsp;" onclick="mmConversionTag(468588, this, '_self', '{$basedomain}entercode');" class="inputsubmitcode" />
+			
+        </form>
+        <h3><a href="{$basedomain}/about/howto" class="learnmore">learn how to get more badges &raquo;</a></h3>
+    </div>
+</div><!-- END .container -->
+
+{literal}
+<script>
+	/*
+	var updateoptions = {
+	dataType:  'json', 	
+	beforeSubmit: function(data) { 
+			 
+			//$(".global-popup-inorout").trigger("click");	
+			$(".messageinputcode").html("please wait");
+			$(".thecodes").val("");
+			 
+	},
+	success : function(data) {		
+			
+			if(data){
+						
+						var html ="";
+						html = "<p class='postSucces'>"+data.message+"</p>";
+						if (data.images) html += "<img class='badgesimages' src='"+basedomain+"/assets/images/badges/"+data.images+"' style='display: block;'>";
+						// $(".global-popup-inorout").trigger("click"); 		
+						$(".messageinputcode").html(html);				  
+					 
+			}
+				 
+	}
+	};					
+
+	$("#inputcodeform").ajaxForm(updateoptions);
+	*/
+	$(document).ready(function() {
+	
+		mmConversionTag('461577', this, '_self', null);
+	});
+</script>
+{/literal}

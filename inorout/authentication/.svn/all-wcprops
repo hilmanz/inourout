@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/authentication
+END
+.htaccess
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/authentication/.htaccess
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/authentication/index.php
+END
+common.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/marlboro-in-or-out/!svn/ver/20/trunk/inorout/authentication/common.php
+END

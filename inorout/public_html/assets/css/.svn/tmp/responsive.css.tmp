@@ -1,0 +1,119 @@
+<<<<<<< .mine
+/*
+Theme Name:  Marlboro In Or Out
+Version: 1.0
+Author: Acit Jazz 2013
+*/
+@media only screen and (max-width: 1400px) {
+#buttonDown{
+	margin:-10px 0 0 -54px
+}
+#tallent6{
+	margin:2630px 0 0 -20%;
+}
+#text5{
+	margin:-2435px 0 0 -32%;
+	width:30%;
+}
+#text6{
+	margin:2000px 0 0 -30%;
+}
+#cube9{
+	margin:1700px 0 0 -30%;
+}
+#cube7{
+	margin:2615px 0 0 -13%;
+	width:7%;
+}
+#prize{
+	margin:-2250px 0 0 -20%;
+}
+#videoBox{
+	margin:-2632px 0 0 7%;
+}
+#step5 #btnLoginMop{
+	margin:2680px 0 0 -380px;
+}
+#step5 #btnRegisterMop{
+	margin:2680px 0 0 -240px;
+}
+#textSign{
+	margin:90px 0 0 -380px;
+	font-size:30px;
+}
+@media only screen and (max-width: 1360px) {
+	
+	.ui-tooltip-content::after {
+		display:none;
+	}
+=======
+/*
+Theme Name:  Marlboro In Or Out
+Version: 1.0
+Author: Acit Jazz 2013
+*/
+@media only screen and (max-width: 1400px) {
+#buttonDown{
+	margin:-10px 0 0 -54px
+}
+#tallent6{
+	margin:2672px 0 0 -20%;
+}
+#text2{
+	margin:-620px 0 0 -30%;
+}
+#tokyo{
+	margin:-420px 0 0 -20%;
+}
+#tallent3{
+	margin:450px 0 0 -35%;
+}
+#text3{
+	margin:-1100px 0 0 -30%;
+}
+#tallent4{
+	margin:720px 0 0 -3%;
+}
+#text4{
+	margin:-1595px 0 0 -30%;
+}
+#tallent5{
+	margin:1550px 0 0 -25%;
+}
+#text5{
+	margin:-2435px 0 0 -32%;
+	width:30%;
+}
+#text6{
+	margin:1840px 0 0 -30%;
+}
+#cube9{
+	margin:1700px 0 0 -30%;
+}
+#cube7{
+	margin:2630px 0 0 -13%;
+	width:7%;
+}
+#prize{
+	margin:-2375px 0 0 -20%%;
+}
+#videoBox{
+	margin:-2632px 0 0 7%;
+}
+#step5 #btnLoginMop{
+	margin:2738px 0 0 -380px;
+}
+#step5 #btnRegisterMop{
+	margin:2738px 0 0 -240px;
+}
+#textSign{
+	margin:106px 0 0 -370px;
+	font-size:30px;
+}
+@media only screen and (max-width: 1360px) {
+	
+	.ui-tooltip-content::after {
+		display:none;
+	}
+>>>>>>> .r199
+}

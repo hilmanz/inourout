@@ -1,0 +1,35 @@
+.ie7 .ps50 table{
+	margin-left:-35px;
+}
+.ie7 #main-menu li li a{
+	line-height:12px;
+	padding:10px 20px;
+}
+.ie8 #tallent6,
+.ie7 #tallent6{
+	margin-top:2155px;
+}
+.ie8 #text5,
+.ie7 #text5{
+	margin-top:-1950px;
+	margin-left:-40%;
+}
+.ie8 #cube7,
+.ie7 #cube7{
+	margin-top:2126px;
+}
+.ie8 #step5 #btnLoginMop, .ie8 #step5 #btnRegisterMop,
+.ie7 #step5 #btnLoginMop, .ie7 #step5 #btnRegisterMop{
+	margin-top:2170px;
+}
+.ie7 .profilenav a{
+	font-size:11px;
+}
+.ie8 .btnIncrease,
+.ie7 .btnIncrease{
+	padding-left:25px;
+}
+.ie7 .badgesForRedeem table{
+	width:100%;
+	table-layout:fixed;
+}

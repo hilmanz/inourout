@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/marlboro-in-or-out/!svn/ver/139/trunk/inorout/db
+END
+events_gallery.sql
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/marlboro-in-or-out/!svn/ver/128/trunk/inorout/db/events_gallery.sql
+END
+marlboro_inorout_admin.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/marlboro-in-or-out/!svn/ver/57/trunk/inorout/db/marlboro_inorout_admin.sql
+END
+badges.sql
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/marlboro-in-or-out/!svn/ver/79/trunk/inorout/db/badges.sql
+END
+city_reference.sql
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/marlboro-in-or-out/!svn/ver/49/trunk/inorout/db/city_reference.sql
+END
+marlboro_inorout_web.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/marlboro-in-or-out/!svn/ver/41/trunk/inorout/db/marlboro_inorout_web.sql
+END
+marlboro_inorout_reports.sql
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/marlboro-in-or-out/!svn/ver/27/trunk/inorout/db/marlboro_inorout_reports.sql
+END
+marlboro_inorout_web_badges.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/marlboro-in-or-out/!svn/ver/93/trunk/inorout/db/marlboro_inorout_web_badges.sql
+END
+my_aspiration.sql
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/marlboro-in-or-out/!svn/ver/75/trunk/inorout/db/my_aspiration.sql
+END
+collectables_new_tables_please updates.sql
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/marlboro-in-or-out/!svn/ver/139/trunk/inorout/db/collectables_new_tables_please%20updates.sql
+END
+marlboro_inorout_web_alter_tables_badges.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/marlboro-in-or-out/!svn/ver/54/trunk/inorout/db/marlboro_inorout_web_alter_tables_badges.sql
+END
+marlboro_inorout_logs.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/marlboro-in-or-out/!svn/ver/27/trunk/inorout/db/marlboro_inorout_logs.sql
+END

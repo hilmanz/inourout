@@ -1,0 +1,68 @@
+<div class="popup" id="popup-edit-photo">
+    <div class="popupContainer">
+		<a class="closePopup" href="#">[CLOSE X]</a>
+    	<div class="popup-head">
+        	<h2 class="bigTItle">Edit Photo</h2>
+        </div><!-- END .popup-head -->
+    	<div class="popup-entry">
+            <div id="editPhotoBox">
+                <form id="editPhotoForm" class="uploadForm" action="{$basedomain}profile/editPhoto" method="post" enctype="multipart/form-data" >
+                    <input type="hidden" name="editPhoto" value="1">
+                        <div class="fakeUpload">
+                            <input type="text" class="uploadpath" />
+                            <label class="orangebtn fakebtn">
+                                browse
+                                <span>
+                                    {*}<input type="file" class="uploadfile"  name="profile_photo" />{/*}
+                                    <input id="uploadImage" type="file" class="uploadfile" accept="image/jpeg" name="profile_photo" />
+                                </span>
+                            </label>
+                        </div><!-- END .fakeUpload -->
+                        <div class="previewBox">                         
+                        	<img id="defaultIMG" src="{$basedomain}assets/images/blank_image.png" />
+                            <img id="uploadPreview" style="display:none;" width="300" />
+                            {*}
+                            <div class="loader"><img src="{$basedomain}assets/images/loader.gif" /></div>
+                            {/*}
+                        </div><!-- END .previewBox -->
+
+                    <!-- hidden inputs -->
+                    <input type="hidden" id="x" name="x" />
+                    <input type="hidden" id="x2" name="x2" />
+                    <input type="hidden" id="y" name="y" />
+                    <input type="hidden" id="y2" name="y2" />
+                    <input type="hidden" id="w" name="w" />
+                    <input type="hidden" id="h" name="h" />
+                    <input type="submit" name="submit" value="SAVE" class="orangebtn savebtn">
+                    <a class="orangebtn savebtn" style="display:none;text-align:center;"></a>
+                    <small>Max size: 2MB, Type File: jpg, png</small>
+                </form>
+            </div><!-- end #editPhotoBox -->
+        </div><!-- END .popup-entry -->
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->
+<script type="text/javascript">
+    {literal}
+    var updateoptions = {
+        dataType:  'json',  
+        beforeSubmit: function(response) { 
+            var div = $('#editPhotoForm');
+            div.find('input[name="submit"]').hide();
+            div.find('input[name="submit"]').next().text('Saving...').show();
+        },
+        success : function(response) {      
+                
+            $('html, body').animate({scrollTop: '0px'});
+            $('#popup-edit-photo').hide();
+            $('#popup-global').fadeIn();
+            $('#popup-global .popup-entry').html('<h3>'+response.msg+'</h3>');
+            
+            setTimeout(function () {
+               window.location.href = basedomain+"profile";
+            }, 2000); 
+        }
+    };                  
+
+    $("#editPhotoForm").ajaxForm(updateoptions);
+    {/literal}
+</script>

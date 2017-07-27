@@ -1,0 +1,43 @@
+<script src="jquery-1.8.2.js" ></script>
+<script src="jquery.form.js" ></script>
+
+<h1>SANDBOX</h1>
+
+<div>
+	LOGIN
+	<form class="former" id="loginform" action="http://preview.kanadigital.com/marlboro_inorout/public_html/service/login/account"  method="POST"  >
+				
+					<div style="padding:10px;border-collapse:collapse;"> USERNAME<input type="text" name="username" /></div>
+					<div style="padding:10px;border-collapse:collapse;">   	PASSWORD <input type="password" name="password" /></div>
+					<input type="hidden" value="1" name="login">
+					
+					<input type="submit" value="Login">
+	</form>
+</div> 
+ 
+<div style="width:50%;height:100%;overflow:auto;float:right;position:fixed;top:0;right:0;padding:10px;border-collapse:collapse;border:1px solid"> 
+					<span >OUTPUT</span>
+					<p id="kluardisini" ></p>
+				</div> 
+
+
+<script>
+var basedomain = "http://preview.kanadigital.com/marlboro_inorout/public_html/service/";
+
+	var updateoptions = {
+						dataType : "html",
+						beforeSubmit: function(data) { 
+										$('#kluardisini').html("<blink>loading please wait</blink>");
+							},
+						success : function(data) {									
+									 $('#kluardisini').html("<p>"+data+"</p>");
+						}
+					};					
+					
+
+$("#loginform").ajaxForm(updateoptions);
+
+ 
+
+
+</script>

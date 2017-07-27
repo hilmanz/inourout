@@ -1,0 +1,35 @@
+<div id="tradePage" class="container">
+	<div class="entry-container">
+    	<div id="box-content">
+        	<div id="head-content" class="bg-head-trading">
+                <h3>Trade badge kamu dengan peserta lain <br />
+untuk melengkapi koleksimu <a href="#popup-mekanisme-trading" class="showPopup">[Mekanisme]</a></h3>
+            </div><!-- END #head-content -->
+            <div id="entry-content">
+                <div id="tabs">
+                  <div id="tabNavigation">
+                      <ul id="tabNav">
+                        <li><a href="#AllTrades" onclick="load_all_trade({},0);">All Trades</a></li>
+                        <li><a href="#CreateTrade">Create a Trade</a></li>
+                        <li><a href="#MyTrade">My Trades</a></li>
+                      </ul>
+                  </div><!-- END #tabNavigation -->
+                  <div id="AllTrades">
+					{include file="application/web/widgets/trade-all.html"}
+                  </div><!-- END #AllTrades -->
+                  <div id="CreateTrade">
+					{include file="application/web/widgets/trade-create.html"}
+                  </div><!-- END #CreateTrade -->
+                  <div id="MyTrade">
+					{include file="application/web/widgets/trade-user.html"}
+                  </div><!-- END #MyTrade -->
+                </div><!-- END #tabs -->
+            </div><!-- END #entry-content -->
+        </div><!-- END #box-content -->
+    </div><!-- END .entry-container -->
+</div><!-- END .container -->
+{include file="application/web/widgets/popup-findtrade.html"}
+{include file="application/web/widgets/popup-mekanisme-trading.html"}
+{include file="application/web/widgets/popup-create-trade-confirm.html"}
+{include file="application/web/widgets/popup-trade-confirm.html"}
+{include file="application/web/widgets/popup-trade-success.html"}

@@ -1,0 +1,123 @@
+<div id="challengePage" class="container">
+	<div class="entry-container">
+        <div class="post-container">
+        	<div class="post-header">
+            	<div class="header-challange">
+				<img src="{$basedomain}assets/images/mobile/content/challangeOftheWeek.png" />
+                </div>
+            </div><!-- END .post-header -->
+            <div class="post-content">
+                <div class="box-prof whitebox">
+                    <h3>Tunjukan foto seru kamu sesuai tema bulan ini,</h3>
+                    <h2>& MENANGKAN BADGE UNTUK KOLEKSIMU</h2>
+                    <a href="{$basedomain}challenge/rules" class="greybtn">Baca Aturan Main & </a>
+            	{if  $challenge}
+				{foreach $challenge as $key => $val}
+				<div class="post-content">
+                    <div class="hot-content">
+                        
+						<a {*}href="{if $val.n_status==1}{$basedomain}challenge/categories/{$val.id}{else if $val.n_status==2}{$basedomain}challenge/winner/{$val.id}{else}#{/if}"{/*} class="bigthumb">
+                            <img src="{$val.event.image_full_path}" />
+                        </a>
+						
+						<div class="bt-cotw tokyo">
+						{if $val.n_status==1}
+							{if $val.total_finalist eq '10'}
+							<a href="{$basedomain}challenge/finalist/{$val.id}" class="showwinner">SHOW FINALISTS</a>
+							{else}
+							<a href="{$basedomain}challenge/categories/{$val.id}" class="showwinner CuploadPhoto">Upload Photo</a>
+							{/if}
+						{else if $val.n_status==2}
+							<a href="{$basedomain}challenge/winner/{$val.id}" class="showwinner">SHOW WINNER</a>
+							{else}<span class="text-comingSoon">COMING SOON</span>
+						{/if}
+						</div>
+						
+                    </div><!-- END .hot-content -->
+                </div><!-- END .post-content -->
+				{/foreach}
+				
+					<a href="{$basedomain}challenge/uploadphoto/{$challenge_id}" class="uploadphoto">&nbsp;</a>
+				{else}
+					<div class="post-header">
+                    <img src="{$basedomain}assets/images/closing.png" style="width:100%;" />
+					</div><!-- END .post-header -->
+                {/if}
+                <div id="galleryphoto">
+                	<h3>YOUR UPLOADED PHOTOS</h3>
+                    <div class="galleryphoto">
+                        <div id="photo-list">
+                             <div class="jcarousel-wrapper">
+                                <div class="jcarousel">
+                                    <ul>
+                                        {if $gallery}	
+										{foreach $gallery as $key => $val}
+										<li>
+                                            <div class="photoThumb">
+                                             <a class="img-thumb"><img src="{$val.gallery.image_full_path}"></a>
+                                            </div>
+                                        </li>
+										{/foreach}
+                                        {/if}
+										
+										{*}
+                                        <li>
+                                            <div class="photoThumb">
+                                             <a class="img-thumb"><img src="{$basedomain}assets/content/photos/200x200.jpg"></a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="photoThumb">
+                                             <a class="img-thumb"><img src="{$basedomain}assets/content/photos/200x200.jpg"></a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="photoThumb">
+                                             <a class="img-thumb"><img src="{$basedomain}assets/content/photos/200x200.jpg"></a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="photoThumb">
+                                             <a class="img-thumb"><img src="{$basedomain}assets/content/photos/200x200.jpg"></a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="photoThumb">
+                                             <a class="img-thumb"><img src="{$basedomain}assets/content/photos/200x200.jpg"></a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="photoThumb">
+                                             <a class="img-thumb"><img src="{$basedomain}assets/content/photos/200x200.jpg"></a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="photoThumb">
+                                             <a class="img-thumb"><img src="{$basedomain}assets/content/photos/200x200.jpg"></a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="photoThumb">
+                                             <a class="img-thumb"><img src="{$basedomain}assets/content/photos/200x200.jpg"></a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="photoThumb">
+                                             <a class="img-thumb"><img src="{$basedomain}assets/content/photos/200x200.jpg"></a>
+                                            </div>
+                                        </li>
+										{/*}
+                                    </ul>
+                                </div>
+                                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                            </div>
+                        </div><!-- END #photo-list -->
+                    </div>
+                </div>
+            </div><!-- END .post-content -->
+            </div><!-- END .box-prof -->
+        </div><!-- END .post-container -->
+    </div>
+</div><!-- END .container -->
+{include file="application/web/widgets/popup-upload-photo.html"}

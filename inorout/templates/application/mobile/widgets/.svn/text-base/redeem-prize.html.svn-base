@@ -1,0 +1,161 @@
+<div id="reddemPrize" class="container">
+	<div class="entry-container center">
+    	<div id="box-content" class="relative">
+        	<a class="closing" href="{$basedomain}badges/collectibles">[CLOSE X]</a>
+            <div class="placingBid-head">
+                <h2><img src="{$basedomain}assets/images/mobile/redeem-logo.png" /></h2>
+                <h3>You are about to redeem: <span class="prizeName">{$merchname}</span></h3>
+           	</div>
+            <div id="entry-content">
+            	<form method="post" action="{$basedomain}badges/redeemForm" id="redeemNow">
+				
+				<div class="box-prof">
+            	<div class="row info-bidding">
+                    <div class="image-bids">
+                        <div id="prizeBox">
+                             <a href="#" class="thumbPrizes"><img src="{$merchimage}" /></a>
+                             <h3>{$merchname}</h3>
+                        </div>
+                    </div>
+                    <div class="currentPlacing">
+                        <div id="currentBid" class="bidsideBox">
+                            <h3>POINTS REQUIRED:</h3>
+                            <h2 class="bidValue myofferingrequired" data-myofferingrequired='{$merchpoint}'>{$merchpoint|number_format}</h2>
+                        </div><!-- END #currentBid -->
+                        <div id="yourBid" class="bidsideBox">
+                        		<h3>your Points:</h3>
+                            	<h2 class="bidValue myofferingpoint" >0</h2>
+                        </div><!-- END #yourBid -->
+                        <p class="fr infoyourBid">You need <span>(<span class="myofferingpointsubbed" currentbidder="{$myofferingpointsubbed}" >{$myofferingpointsubbed|number_format}</span>)</span> more points out of your badge value.</p>
+                        <div class="row btnPlacebid">
+                        {*}<a href="{$basedomain}badges/redeemForm" class="orangebtn fl" id="redeemBtn">REDEEM Now &raquo;</a>{/*}
+						<input type="submit" name="submit" value="REDEEM &raquo;" class="orangebtn fl" id="redeemBtn"/>
+						<input type="hidden" name="token" value="1"/>
+						<input type="hidden" name="merchid" value="{$merchid}"/>
+						<input type="hidden" name="badgeid"  class="badgestoform" value="0" /> 
+						<input type="hidden" name="badgeamount"  class="amounttoform" value="0" /> 
+						<input type="hidden" name="merchimage" value="{$merchimage}" /> 
+						
+						</div>
+                    </div>
+                </div><!-- END .info-bidding -->
+                </div>
+                <div class="box-prof">
+                <div class="badgesListAll">
+                	
+					{foreach $currentbadges as $key => $val}
+					<div class="boxBadges">
+                        <a class="badges badges-m {if $val.total!=0}{else}grayscale{/if}" href="#">
+                            <img src="{$basedomain}assets/images/badges/badges-{$val.id}.png" />
+                        </a>
+                        <h4 class="badgesCount"><span class="counterBadges black {if $val.total!=0}black{else}red{/if}">[{$val.total}]</span> BADGES LEFT</h4>
+                        <input type="text" class="spinnerbid badgesvaluetemps" value="0" badgesid="{$val.id}" badgesnames="{$val.name}" amountpoint="0" currentpoint="0" max="{$val.total}" badgesvalues="{$val.point}" readonly="readonly" name="badges_{$val.id}"/>
+						
+						
+                    </div><!-- END .boxBadges -->
+					{/foreach}
+					
+					{*}
+                    <div class="boxBadges">
+                        <a class="badges badges-m" href="#">
+                            <img src="{$basedomain}assets/images/badges/badges-2.png" />
+                        </a>
+                        <h4 class="badgesCount"><span class="counterBadges black">[6]</span> BADGES LEFT</h4>
+                        <input type="text" class="spinnerbid" value="0"  readonly="readonly"/>
+                    </div><!-- END .boxBadges -->
+                    <div class="boxBadges">
+                        <a class="badges badges-m" href="#">
+                            <img src="{$basedomain}assets/images/badges/badges-3.png" />
+                        </a>
+                        <h4 class="badgesCount"><span class="counterBadges black">[5]</span> BADGES LEFT</h4>
+                        <input type="text" class="spinnerbid" value="0"  readonly="readonly"/>
+                    </div><!-- END .boxBadges -->
+                    <div class="boxBadges">
+                        <a class="badges badges-m" href="#">
+                            <img src="{$basedomain}assets/images/badges/badges-4.png" />
+                        </a>
+                        <h4 class="badgesCount"><span class="counterBadges black">[13]</span> BADGES LEFT</h4>
+                        <input type="text" class="spinnerbid" value="0"  readonly="readonly"/>
+                    </div><!-- END .boxBadges -->
+                    <div class="boxBadges">
+                        <a class="badges badges-m grayscale" href="#">
+                            <img src="{$basedomain}assets/images/badges/badges-5.png" />
+                        </a>
+                        <h4 class="badgesCount"><span class="counterBadges red">[0]</span> BADGES LEFT</h4>
+                        <input type="text" class="spinnerbid" value="0"  readonly="readonly"/>
+                    </div><!-- END .boxBadges -->
+                    <div class="boxBadges">
+                        <a class="badges badges-m" href="#">
+                            <img src="{$basedomain}assets/images/badges/badges-6.png" />
+                        </a>
+                        <h4 class="badgesCount"><span class="counterBadges black">[10]</span> BADGES LEFT</h4>
+                        <input type="text" class="spinnerbid" value="0"  readonly="readonly"/>
+                    </div><!-- END .boxBadges -->
+                    <div class="boxBadges">
+                        <a class="badges badges-m" href="#">
+                            <img src="{$basedomain}assets/images/badges/badges-7.png" />
+                        </a>
+                        <h4 class="badgesCount"><span class="counterBadges black">[12]</span> BADGES LEFT</h4>
+                        <input type="text" class="spinnerbid" value="0"  readonly="readonly"/>
+                    </div><!-- END .boxBadges -->
+                    <div class="boxBadges">
+                        <a class="badges badges-m" href="#">
+                            <img src="{$basedomain}assets/images/badges/badges-8.png" />
+                        </a>
+                        <h4 class="badgesCount"><span class="counterBadges black">[2]</span> BADGES LEFT</h4>
+                        <input type="text" class="spinnerbid" value="0"  readonly="readonly"/>
+                    </div><!-- END .boxBadges -->
+                    <div class="boxBadges">
+                        <a class="badges badges-m grayscale" href="#">
+                            <img src="{$basedomain}assets/images/badges/badges-9.png" />
+                        </a>
+                        <h4 class="badgesCount"><span class="counterBadges red">[0]</span> BADGES LEFT</h4>
+                        <input type="text" class="spinnerbid" value="0"  readonly="readonly"/>
+                    </div><!-- END .boxBadges -->
+                    <div class="boxBadges">
+                        <a class="badges badges-m grayscale" href="#">
+                            <img src="{$basedomain}assets/images/badges/badges-10.png" />
+                        </a>
+                        <h4 class="badgesCount"><span class="counterBadges red">[0]</span> BADGES LEFT</h4>
+                        <input type="text" class="spinnerbid" value="0"  readonly="readonly"/>
+                    </div><!-- END .boxBadges -->
+                    <div class="boxBadges">
+                        <a class="badges badges-m" href="#">
+                            <img src="{$basedomain}assets/images/badges/badges-11.png" />
+                        </a>
+                        <h4 class="badgesCount"><span class="counterBadges black">[8]</span> BADGES LEFT</h4>
+                        <input type="text" class="spinnerbid" value="0"  readonly="readonly"/>
+                    </div><!-- END .boxBadges -->
+                    <div class="boxBadges">
+                        <a class="badges badges-m grayscale" href="#">
+                            <img src="{$basedomain}assets/images/badges/badges-12.png" />
+                        </a>
+                        <h4 class="badgesCount"><span class="counterBadges red">[0]</span> BADGES LEFT</h4>
+                        <input type="text" class="spinnerbid" value="0"  readonly="readonly"/>
+                    </div><!-- END .boxBadges -->
+					{/*}
+                </div><!-- END .badgesListAll -->
+                </div>
+				
+                </form>
+            </div><!-- END .entry-conten -->
+         </div><!-- END .box-content -->
+    </div><!-- END .entry-container -->
+</div><!-- END .placingBid -->
+
+{literal}
+<script>
+	$(document).on('submit','#redeemNow', function(){
+		
+		var point = parseInt($('.myofferingpoint').html());
+		var required = parseInt($('.myofferingrequired').attr('data-myofferingrequired'));
+		
+		if (point<=0 || point<required) 
+		{
+			
+			return false;
+		}
+		
+	})
+</script>
+{/literal}

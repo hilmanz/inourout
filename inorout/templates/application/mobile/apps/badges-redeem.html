@@ -1,0 +1,141 @@
+<div id="badgesPage" class="container">
+	<div class="entry-container center">
+    	<div id="box-content">
+        	<div class="box-prof">
+                <div id="head-content" class="bg-head-redeem">
+                    <h1><span class="reds">Limited</span> <span class="white">Collectibles</span></h1>
+                    <h3>Collect or Pass. Decide now. <br />Gunakan badge untuk mendapatkan hadiah limited edition</br>
+                    <span><a class="fl" href="{$basedomain}badges/redeemRules">[mekanisme]</a></span></h3>
+                </div><!-- END #head-content -->
+            </div>
+            <div id="entry-content">
+					<div id="badgesRedeem">
+						<div class="tabEntry">
+							
+							{foreach $merchandise as $key => $val}
+							<form method="post" action="{$basedomain}badges/redeemPrize">
+							<div class="box-prof">
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							  <tr class="{$val.queue}">
+								<td valign="top">
+									<div class="prizeAuction">
+										<a href="#" class="thumbPrizes"><img src="{$val.collectibles.image_full_path}" /></a>
+									</div>
+									<div class="prizeDesc">
+										<h3>{$val.name}</h3>
+										<p>{$val.detail}</p>
+									</div><!-- END .prizeDesc -->
+									<div class="row">
+										<div class="BadgesRequired">
+											<h3>Points required*:</h3>
+											<div class="badgesForRedeem">
+												<h2 class="points">{$val.point|number_format} Points</h2>
+												{*}
+												{if $val.calculateBadges}
+												{foreach $val.calculateBadges as $key => $v}
+												{if $key>0}+{/if}
+												<img src="{$basedomain}assets/images/badges/{$v.image}" width="50px"/> 
+												{/foreach}
+												{/if}
+												{/*}
+											</div><!-- END .badgesForRedeem -->
+											<p class="information">Redemption period: {$val.postdate|date_format:"%e %B"} - {$val.enddates|date_format:"%e %B %Y"}</p>
+										</div><!-- END .BadgesRequired -->
+									</div>
+									<div class="action-btn">
+										{*}<a class="orangebtn" href="{$basedomain}badges/redeemPrize">REDEEM &raquo;</a>{/*}
+										<input type="hidden" name="merchid" value="{$val.id}"/>
+										<input type="hidden" name="merchimage" value="{$val.collectibles.image_full_path}"/>
+										<input type="hidden" name="merchname" value="{$val.name}"/>
+										<input type="hidden" name="merchpoint" value="{$val.point}"/>
+										<input type="hidden" name="token" value="1"/>
+										{if !$hasredeem.result}
+											{*}<a class="orangebtn" href="javascript:void(0)">ITEM ALREADY REDEEMED</a>{/*}
+										{else}
+										<input type="submit" name="submit" value="REDEEM &raquo;" class="orangebtn"/>
+										{/if}
+									</div><!-- END .action-btn -->
+								</td>
+								</tr>
+								</table>
+							</div>
+							</form>
+							{/foreach}
+							{*}
+							
+							  <div class="box-prof">
+							  <table>
+							  <tr class="even">
+								<td valign="top">
+									<div class="prizeAuction">
+										<a href="#" class="thumbPrizes"><img src="{$basedomain}assets/content/prizes/prizes8.png" /></a>
+									</div>
+									<div class="prizeDesc">
+										<h3>LUGGAGE TAG</h3>
+										<p>Identity is as important as it gets. Create a singular mark on your stuff and make it truly yours</p>
+									</div><!-- END .prizeDesc -->
+									<div class="row">
+										<div class="BadgesRequired">
+											<h3>Points required*:</h3>
+											<div class="badgesForRedeem">
+												<h2 class="points"><img src="{$basedomain}assets/images/mobile/bagdes-required2.png" /></h2>
+											</div><!-- END .badgesForRedeem -->
+											<p class="information">Redemption period: 4 October - 10 october 2013</p>
+										</div><!-- END .BadgesRequired -->
+									</div>
+									<div class="action-btn">
+										<a class="orangebtn" href="{$basedomain}badges/redeemPrize">REDEEM &raquo;</a>
+									</div><!-- END .action-btn -->
+								</td>
+							  </tr>
+							</table>
+							</div>{/*}
+							{*}
+							<div class="box-prof loadMore">
+								<a href="javascript:void(0)" >LOAD MORE</a>
+							</div>{/*}
+							<h3 class="fr info">*Poin ditentukan dari jumlah nilai keseluruhan badge.</h3> 
+						</div><!-- END .tabEntry -->
+                </div><!-- END #badgesRedeem -->
+            </div><!-- END #entry-content -->
+        </div><!-- END #box-content -->
+    </div><!-- END .entry-container -->
+</div><!-- END .container -->
+
+{include file="application/web/widgets/popup-redeem.html"}
+{include file="application/web/widgets/popup-redeem-form.html"}
+{include file="application/web/widgets/popup-redeem-success.html"}
+{literal}
+<script>
+
+$(document).on('click','.sendmerchandiseitem',function(){
+ 
+	var merchid=  $(this).attr('merchid');
+	var merchimage= $(this).attr('merchimage');
+	var merchname= $(this).attr('merchname');
+	var merchpoint= $(this).attr('merchpoint');
+
+	//add preload..
+		console.log('wait...........');
+	if(merchid==0){
+		console.log(' not found');
+	}else{
+		console.log(' OKeh merhcn');
+		$('.midtoform').val(merchid);
+		$('.badgestoform').val(0);
+		$('.amounttoform').val(0);
+	 
+	 
+		$('.merchimagesbid').attr('src',merchimage);
+		$('.merchdescbid').html(merchname);
+		
+		$('.merchcurrentbid').html(merchpoint);
+		$('.myofferingpointsubbed').html(merchpoint);
+		
+		$('.myofferingpointsubbed').attr('currentbidder',merchpoint);
+ 
+	}
+	
+});	
+</script>
+{/literal}
